@@ -1,0 +1,17 @@
+---
+title: "Tree Biomass"
+author: "Anthony Gardella"
+date: "Wednesday, February 25, 2015"
+output: html_document
+---
+
+```{r}
+dat=read.csv("2011-13 Tree Biomass.csv", header=TRUE)
+
+dat.11<-dat[dat$year==2011,]
+
+dat.13<-dat[dat$year==2013,]
+
+
+
+```
