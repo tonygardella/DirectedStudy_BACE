@@ -1,0 +1,1669 @@
+TreeID,species,Plot,tree_plot,height,diam10 cm,wt (stem),Bag Type,Stem Mass (dry),wt (leaves),weight leaves,year,Total Mass,Total Branch Mass
+26,Betula lenta,7,W,12.8,3.2,4.03,lg envelope,0.972,NA,NA,2011,NA,NA
+26,Betula lenta,7,W,9.9,NA,3.63,lg envelope,0.572,NA,NA,2011,NA,NA
+26,Betula lenta,7,W,51,2.6,5.57,lg envelope,2.512,NA,NA,2011,NA,NA
+29,Betula lenta,8,N,47.2,5.8,11.33,lg envelope,8.272,NA,NA,2011,NA,NA
+31,Betula lenta,8,S,52.2,5.9,15.03,snack,9.538,NA,NA,2011,NA,NA
+33,Betula lenta,9,N,142,12.6,113.09,lunch lite,102.225,81.67,34.347,2011,NA,NA
+41,Betula lenta,11,N,72,3.0,7.31,lg envelope,4.252,5.16,NA,2011,NA,NA
+64,Betula lenta,16,E,49.3,2.7,5.53,lg envelope,2.472,NA,NA,2011,NA,NA
+77,Betula lenta,20,N,NA,NA,NA,NA,NA,64.54,53.643,2011,NA,NA
+80,Betula lenta,20,E,65.6,NA,10.47,snack,4.978,24.19,13.293,2011,NA,NA
+173,Acer rubrum,8,N,77,8.0,54.04,lunch lite,43.143,NA,NA,2011,NA,NA
+180,Acer rubrum,9,E,34.9,2.4,0.97,none,0.97,NA,NA,2011,NA,NA
+183,Acer rubrum,10,S,42.5,4.4,5.63,lg envelope,2.572,NA,NA,2011,NA,NA
+195,Acer rubrum,13,W,17.5,3.4,4.40,lg envelope,1.342,NA,NA,2011,NA,NA
+210,Acer rubrum,16,E,50.1,4.8,10.15,snack,4.658,NA,NA,2011,NA,NA
+215,Acer rubrum,18,N,35.1,3.7,5.43,lg envelope,2.372,NA,NA,2011,NA,NA
+218,Acer rubrum,18,E,35.5,2.3,1.66,none,1.66,NA,NA,2011,NA,NA
+247,Acer rubrum,26,N,46.1,5.6,9.16,lg envelope,6.102,NA,NA,2011,NA,NA
+255,Acer rubrum,28,N,40.1,2.9,4.96,lg envelope,1.902,NA,NA,2011,NA,NA
+262,Acer rubrum,29,E,43,4.5,10.41,snack,4.918,NA,NA,2011,NA,NA
+263,Acer rubrum,30,N,14.1,1.4,5.33,lg envelope,2.272,NA,NA,2011,NA,NA
+271,Acer rubrum,32,N,23.4,2.2,5.86,lg envelope,2.802,NA,NA,2011,NA,NA
+325,Pinus strobus,13,S,25.5,1.9,3.91,lg envelope,0.852,NA,NA,2011,NA,NA
+354,Pinus strobus,20,E,49.5,9.6,23.38,snack,17.888,NA,NA,2011,NA,NA
+389,Pinus strobus,29,S,35.1,3.8,6.41,lg envelope,3.352,NA,NA,2011,NA,NA
+394,Pinus strobus,30,E,28,3.5,4.93,lg envelope,1.872,NA,NA,2011,NA,NA
+400,Pinus strobus,32,W,26.8,4.1,5.69,lg envelope,2.632,NA,NA,2011,NA,NA
+411,Pinus strobus,35,N,35,4.2,7.47,lg envelope,4.412,NA,NA,2011,NA,NA
+413,Pinus strobus,35,S,25.1,4.5,6.51,lg envelope,3.452,NA,NA,2011,NA,NA
+424,Quercus rubra,2,W,16.5,4.2,1.40,none,1.4,NA,NA,2011,NA,NA
+425,Quercus rubra,2,S,35,4.4,7.92,none,7.92,NA,NA,2011,NA,NA
+441,Quercus rubra,6,S,12.7,3.8,4.10,lg envelope,1.042,NA,NA,2011,NA,NA
+447,Quercus rubra,8,N,86.9,8.3,45.11,lunch lite,34.213,NA,NA,2011,NA,NA
+462,Quercus rubra,11,E,NA,NA,NA,NA,NA,8.94,3.287,2011,NA,NA
+488,Quercus rubra,18,W,19.2,2.6,5.79,lg envelope,2.732,NA,NA,2011,NA,NA
+504,Quercus rubra,22,W,25.5,3.9,6.59,lg envelope,3.532,NA,NA,2011,NA,NA
+520,Quercus rubra,16,W,35,5.0,9.70,lg envelope,6.642,NA,NA,2011,NA,NA
+528,Quercus rubra,28,W,17.8,2.5,4.21,lg envelope,1.152,NA,NA,2011,NA,NA
+534,Quercus rubra,29,E,21,2.8,6.66,lg envelope,3.602,NA,NA,2011,NA,NA
+535,Quercus rubra,30,N,10.5,1.6,3.69,lg envelope,0.632,NA,NA,2011,NA,NA
+537,Quercus rubra,30,S,7.4,NA,4.43,lg envelope,1.372,NA,NA,2011,NA,NA
+562,Quercus rubra,36,W,23.1,3.4,6.19,lg envelope,3.132,NA,NA,2011,NA,NA
+584,Pinus strobus,30,E,16,2.1,3.65,lg envelope,0.592,NA,NA,2011,NA,NA
+586,Pinus strobus,34,E,15.8,1.8,3.80,lg envelope,0.742,NA,NA,2011,NA,NA
+1001,Betula nigra,1,W,14.5,0.6,3.50,lg envelope,0.442,NA,NA,2011,NA,NA
+1002,Betula nigra,1,S,56.5,3.1,5.72,lg envelope,2.662,NA,NA,2011,NA,NA
+1017,Betula nigra,5,W,80,7.5,27.72,lunch lite,24.662,NA,NA,2011,NA,NA
+1025,Betula nigra,7,W,89,7.8,25.27,lunch lite,22.212,NA,NA,2011,NA,NA
+1033,Betula nigra,9,E,63,4.5,10.92,snack,7.862,NA,NA,2011,NA,NA
+1045,Betula nigra,12,W,24.1,2.1,3.89,lg envelope,0.832,NA,NA,2011,NA,NA
+1053,Betula nigra,14,W,48.6,2.1,4.29,lg envelope,1.232,NA,NA,2011,NA,NA
+1067,Betula nigra,17,E,98.5,6.3,15.42,lg envelope,12.362,NA,NA,2011,NA,NA
+1069,Betula nigra,18,W,97.7,5.7,14.50,snack,11.442,NA,NA,2011,NA,NA
+1072,Betula nigra,19,N,77.3,6.0,13.45,snack,10.392,NA,NA,2011,NA,NA
+1075,Betula nigra,19,E,89,6.1,20.41,lunch bag,17.352,NA,NA,2011,NA,NA
+1088,Betula nigra,23,N,28.5,2.9,4.22,lg envelope,1.162,NA,NA,2011,NA,NA
+1110,Betula nigra,28,S,51.1,4.0,5.98,lg envelope,2.922,NA,NA,2011,NA,NA
+1111,Betula nigra,28,E,74.7,6.0,16.65,snack,13.592,NA,NA,2011,NA,NA
+1114,Betula nigra,29,S,53.8,3.7,5.70,lg envelope,2.642,NA,NA,2011,NA,NA
+1118,Betula nigra,30,S,54.1,5.4,10.78,snack,7.722,NA,NA,2011,NA,NA
+1132,Betula nigra,34,N,12.3,1.5,3.44,lg envelope,0.382,NA,NA,2011,NA,NA
+1138,Betula nigra,11,W,5.7,NA,0.16,none,-2.898,NA,NA,2011,NA,NA
+1145,Betula nigra,42,W,86,2.5,10.90,lg envelope,7.842,NA,NA,2011,NA,NA
+1149,Quercus rubra,41,W,3,NA,3.75,lg envelope,0.692,NA,NA,2011,NA,NA
+1163,Quercus rubra,2,E,9.3,NA,3.83,lg envelope,0.772,NA,NA,2011,NA,NA
+1168,Quercus rubra,4,N,23.9,2.0,4.12,lg envelope,1.062,NA,NA,2011,NA,NA
+1176,Quercus rubra,6,N,19.5,2.2,4.27,lg envelope,1.212,NA,NA,2011,NA,NA
+1178,Quercus rubra,6,S,34.6,2.3,4.44,lg envelope,1.382,NA,NA,2011,NA,NA
+1184,Quercus rubra,8,N,19.6,1.6,4.38,lg envelope,1.322,NA,NA,2011,NA,NA
+1186,Quercus rubra,8,S,19.1,1.5,0.46,none,0.46,NA,NA,2011,NA,NA
+1191,Quercus rubra,8,E,24,3.6,6.46,lg envelope,3.402,NA,NA,2011,NA,NA
+1193,Quercus rubra,10,W,11,2.3,3.69,lg envelope,0.632,NA,NA,2011,NA,NA
+1194,Quercus rubra,10,S,9.5,NA,0.86,none,0.86,NA,NA,2011,NA,NA
+1196,Quercus rubra,11,N,NA,NA,6.16,snack,0.668,NA,NA,2011,NA,NA
+1197,Quercus rubra,11,W,NA,NA,5.65,lg envelope,2.592,NA,NA,2011,NA,NA
+1198,Quercus rubra,11,S,20.1,1.6,4.62,lg envelope,1.562,2.49,NA,2011,NA,NA
+1206,Quercus rubra,13,S,17.8,2.1,3.89,lg envelope,0.832,NA,NA,2011,NA,NA
+1210,Quercus rubra,14,S,20,2.4,3.74,lg envelope,0.682,NA,NA,2011,NA,NA
+1214,Quercus rubra,15,S,NA,NA,0.33,none,0.33,NA,NA,2011,NA,NA
+1217,Quercus rubra,16,W,20.4,2.7,1.04,none,1.04,NA,NA,2011,NA,NA
+1249,Quercus rubra,24,W,8.9,NA,3.60,lg envelope,0.542,NA,NA,2011,NA,NA
+1261,Quercus rubra,27,W,7.2,NA,3.54,lg envelope,0.482,NA,NA,2011,NA,NA
+1263,Quercus rubra,27,E,21.9,2.4,3.96,lg envelope,0.902,NA,NA,2011,NA,NA
+1266,Quercus rubra,28,S,17.3,2.0,4.05,lg envelope,0.992,NA,NA,2011,NA,NA
+1267,Quercus rubra,28,E,17.1,2.7,3.85,lg envelope,0.792,NA,NA,2011,NA,NA
+1272,Quercus rubra,30,N,20.3,1.2,0.55,none,0.55,NA,NA,2011,NA,NA
+1273,Quercus rubra,30,W,7.7,NA,4.02,lg envelope,0.962,NA,NA,2011,NA,NA
+1275,Quercus rubra,30,E,7.9,NA,3.43,lg envelope,0.372,NA,NA,2011,NA,NA
+1279,Quercus rubra,31,E,18.6,2.4,4.00,lg envelope,0.942,NA,NA,2011,NA,NA
+1284,Quercus rubra,33,N,24.4,2.8,5.51,lg envelope,2.452,NA,NA,2011,NA,NA
+1297,Quercus rubra,36,S,22.4,3.7,6.29,lg envelope,3.232,NA,NA,2011,NA,NA
+1298,Quercus rubra,36,E,23.8,3.7,6.51,lg envelope,3.452,NA,NA,2011,NA,NA
+1300,Quercus rubra,42,N,9.7,NA,2.34,sm envelope,0.781,NA,NA,2011,NA,NA
+1307,Quercus rubra,41,W,11.7,NA,4.01,lg envelope,0.952,NA,NA,2011,NA,NA
+1309,Quercus rubra,40,W,9.2,NA,4.24,lg envelope,1.182,NA,NA,2011,NA,NA
+1326,Acer rubrum,4,S,34,2.2,0.78,none,0.78,NA,NA,2011,NA,NA
+1332,Acer rubrum,6,N,26,1.7,0.61,none,0.61,0.29,0.29,2011,NA,NA
+1337,Acer rubrum,7,N,8.6,NA,4.01,lg envelope,0.952,NA,NA,2011,NA,NA
+1359,Acer rubrum,12,E,21.5,1.5,5.44,lg envelope,2.382,NA,NA,2011,NA,NA
+1364,Acer rubrum,14,S,30,2.7,1.18,none,1.18,NA,NA,2011,NA,NA
+1371,Acer rubrum,15,E,29.5,3.0,4.66,lg envelope,1.602,NA,NA,2011,NA,NA
+1371,Acer rubrum,15,E,40.4,3.2,6.32,lg envelope,3.262,NA,NA,2011,NA,NA
+1383,Acer rubrum,18,E,17,2.3,3.68,lg envelope,0.622,NA,NA,2011,NA,NA
+1384,Acer rubrum,19,N,21.6,2.2,3.82,lg envelope,0.762,NA,NA,2011,NA,NA
+1422,Acer rubrum,28,S,9.7,NA,3.37,lg envelope,0.312,NA,NA,2011,NA,NA
+1436,Acer rubrum,32,N,28.3,1.3,0.33,none,0.33,NA,NA,2011,NA,NA
+1456,Acer rubrum,42,N,10.5,2.0,2.13,sm envelope,0.571,NA,NA,2011,NA,NA
+1491,Acer rubrum,29,E,30.9,1.7,0.62,none,0.62,NA,NA,2011,NA,NA
+2014,Pinus strobus,28,E,11.8,1.2,3.45,lg envelope,0.392,NA,NA,2011,NA,NA
+2052,Pinus strobus,29,S,15.5,2.1,3.58,lg envelope,0.522,NA,NA,2011,NA,NA
+2131,Betula nigra,12,E,?,3.8,2.36,none,-0.698,NA,NA,2011,NA,NA
+2139,Betula nigra,29,E,76.9,5.1,11.21,snack,8.152,NA,NA,2011,NA,NA
+2156,Quercus rubra,15,W,12,2.1,4.03,lg envelope,0.972,NA,NA,2011,NA,NA
+2164,Quercus rubra,22,S,22.7,1.6,4.41,lg envelope,1.352,NA,NA,2011,NA,NA
+2166,Quercus rubra,2,S,23,1.6,3.91,lg envelope,0.852,NA,NA,2011,NA,NA
+2183,Quercus rubra,5,S,26.6,3.5,5.26,lg envelope,2.202,NA,NA,2011,NA,NA
+456 or 1193,Quercus rubra,10,W,NA,NA,0.11,none,0.11,0.96,0.96,2011,NA,NA
+NA,Betula lenta,5,NA,NA,NA,NA,NA,NA,0.19,0.19,2011,NA,NA
+C44,Betula lenta,40,S,17.8,NA,5.34,lg envelope,2.282,NA,NA,2011,NA,NA
+C7,Betula lenta,42,E,11,2.4,5.30,lg envelope,2.242,NA,NA,2011,NA,NA
+145,Acer rubrum,1,N,52,6.1,11,lg envelope,7.942,NA,NA,2011,NA,NA
+275,Pinus strobus,1,N,30.5,4.8,5.05,lg envelope,1.992,NA,NA,2011,NA,NA
+276,Pinus strobus,1,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+278,Pinus strobus,1,E,NA,8.6,NA,NA,NA,NA,NA,2011,NA,NA
+420,Quercus rubra,1,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+421,Quercus rubra,1,S,42,6.2,14.71,lg envelope,11.652,NA,NA,2011,NA,NA
+1156,Quercus rubra,1,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1312,Acer rubrum,1,N,27.5,2.6,3.05,small envelope,1.491,NA,NA,2011,NA,NA
+1315,Acer rubrum,1,E,24.3,2.3,4.2,lg envelope,1.142,NA,NA,2011,NA,NA
+2000,Pinus strobus,1,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+148,Acer rubrum,1,E,62,7.4,15.69,lg envelope,12.632,NA,NA,2011,NA,NA
+149,Acer rubrum,2,N,50.6,4.9,9.49,lg envelope,6.432,NA,NA,2011,NA,NA
+150,Acer rubrum,2,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+151,Acer rubrum,2,S,45,6.4,13.98,lg envelope,10.922,NA,NA,2011,NA,NA
+152,Acer rubrum,2,E,22.5,4.9,6.26,lg envelope,3.202,NA,NA,2011,NA,NA
+279,Pinus strobus,2,N,55,8.4,23.3,lunch,12.8,NA,NA,2011,NA,NA
+423,Quercus rubra,2,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1160,Quercus rubra,2,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1317,Acer rubrum,2,W,10.8,1.6,2.38,1pt3s,NA,NA,NA,2011,NA,NA
+1481,Acer rubrum,2,N,34.5,2.5,4.75,lg envelope,1.692,NA,NA,2011,NA,NA
+283,Pinus strobus,3,N,43,8,21.3,lunch,10.8,NA,NA,2011,NA,NA
+286,Pinus strobus,3,E,36,4.7,7.49,lg envelope,4.432,NA,NA,2011,NA,NA
+1008,betula nigra,3,N,54,3,5.43,lg envelope,2.372,NA,NA,2011,NA,NA
+1320,Acer rubrum,3,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1321,Acer rubrum,3,W,36,2.5,NA,NA,NA,NA,NA,2011,NA,NA
+2002,Pinus strobus,3,S,19,3.2,4.62,lg envelope,1.562,NA,NA,2011,NA,NA
+158,Acer rubrum,4,W,NA,NA,4.3,lg envelope,1.242,NA,NA,2011,NA,NA
+160,Acer rubrum,4,E,34,2.5,5.78,lg envelope,2.722,NA,NA,2011,NA,NA
+287,Pinus strobus,4,N,40,4.1,6.58,lg envelope,3.522,NA,NA,2011,NA,NA
+288,Pinus strobus,4,W,45,6.7,18.01,lunch,7.51,NA,NA,2011,NA,NA
+433,Quercus rubra,4,S,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1012,betula nigra,4,N,73,6.7,19.38,lunch,16.322,NA,NA,2011,NA,NA
+1015,betula nigra,4,E,64,5.5,15.71,lunch,12.652,NA,NA,2011,NA,NA
+1171,Quercus rubra,4,E,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1324,Acer rubrum,4,N,29,2.2,4.39,lg envelope,1.332,NA,NA,2011,NA,NA
+1327,Acer rubrum,4,E,23.2,1.8,4.08,lg envelope,1.022,NA,NA,2011,NA,NA
+17,Betula lenta,5,N,76,2.8,21.41,lunch,10.91,NA,NA,2011,NA,NA
+292,Pinus strobus,5,W,46.5,8.2,21.95,lunch lite,11.39,NA,NA,2011,NA,NA
+294,Pinus strobus,5,E,54,7.3,20.93,lunch,10.43,NA,NA,2011,NA,NA
+1016,betula nigra,5,N,92,9,35.98,lunch,32.922,NA,NA,2011,NA,NA
+1173,Quercus rubra,5,N,21,3.1,5.56,lg envelope,2.502,NA,NA,2011,NA,NA
+1331,Acer rubrum,5,E,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+22,Betula lenta,6,W,74,5.3,24.72,lunch,14.22,NA,NA,2011,NA,NA
+165,Acer rubrum,6,N,102,9,24.93,snack,19.438,NA,NA,2011,NA,NA
+167,Acer rubrum,6,S,58,3.7,19.97,lunch,9.47,NA,NA,2011,NA,NA
+295,Pinus strobus,6,N,56,11.6,39.39,lunch lite,28.83,NA,NA,2011,NA,NA
+296,Pinus strobus,6,W,44.5,6.3,10.62,lg envelope,7.562,NA,NA,2011,NA,NA
+297,Pinus strobus,6,S,47.5,8.5,27.46,lunch,16.96,NA,NA,2011,NA,NA
+581,Pinus strobus,6,E,34.5,5.1,7.55,lg envelope,4.492,NA,NA,2011,NA,NA
+1021,betula nigra,6,W,86,9,31.54,lunch,28.482,NA,NA,2011,NA,NA
+1022,betula nigra,6,S,88,7.4,27.45,lunch,24.392,NA,NA,2011,NA,NA
+1023,betula nigra,6,E,89,8.4,27.63,lunch,24.572,NA,NA,2011,NA,NA
+1179,Quercus rubra,6,E,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1332,Acer rubrum,6,N,NA,NA,6.1,lg envelope,3.042,NA,NA,2011,NA,NA
+1334,Acer rubrum,6,S,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+2144,betula nigra,6,N,94,7.5,61.92,grocery,58.862,NA,NA,2011,NA,NA
+28,Betula lenta,7,E,50,2.4,5.03,lg envelope,1.972,NA,NA,2011,NA,NA
+299,Pinus strobus,7,N,70,9.5,26.82,snack,21.328,15.42,12.362,2011,NA,NA
+300,Pinus strobus,7,W,49.5,7.4,15.92,snack,10.428,10.34,7.282,2011,NA,NA
+301,Pinus strobus,7,S,65.8,13,48.9,lunch lite,38.34,NA,NA,2011,NA,NA
+302,Pinus strobus,7,E,75,14.2,62.62,lunch lite,52.06,48.4,42.908,2011,NA,NA
+1024,betula nigra,7,N,NA,NA,NA,NA,#VALUE!,NA,NA,2011,NA,NA
+1026,betula nigra,7,S,77,5.7,13.06,lg envelope,10.002,NA,NA,2011,NA,NA
+1181,Quercus rubra,7,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1336,Acer rubrum,7,N,33,2.3,4.5,lg envelope,1.442,NA,NA,2011,NA,NA
+1337,Acer rubrum,7,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+32,Betula lenta,8,E,78.5,6.6,17.3,snack,11.808,NA,NA,2011,NA,NA
+176,Acer rubrum,8,E,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+303,Pinus strobus,8,N,6908,11.8,45.5,lunch lite,34.94,31.33,25.838,2011,NA,NA
+304,Pinus strobus,8,W,144,23.3,243.43,grocery,198.098,66.01,60.518,2011,NA,NA
+305,Pinus strobus,8,S,93,19.3,84.39,lunch lite,73.83,NA,NA,2011,NA,NA
+306,Pinus strobus,8,E,83.5,14.6,67.75,lunch lite,57.19,NA,NA,2011,NA,NA
+448,Quercus rubra,8,W,60,8,20.06,snack,14.568,NA,NA,2011,NA,NA
+1029,betula nigra,8,W,119,13.1,53.53,lunch,50.472,NA,NA,2011,NA,NA
+1185,Quercus rubra,8,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1187,Quercus rubra,8,E,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1340,Acer rubrum,8,N,32,2.9,6.05,lg envelope,2.992,NA,NA,2011,NA,NA
+1342,Acer rubrum,8,S,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1343,Acer rubrum,8,E,28,2.5,NA,NA,NA,NA,NA,2011,NA,NA
+34,Betula lenta,9,W,153,22.7,298.08,grocery,252.748,NA,NA,2011,NA,NA
+35,Betula lenta,9,S,149,12.9,106.84,grocery,61.508,NA,NA,2011,NA,NA
+36,Betula lenta,9,E,199,16.3,232.69,grocery,187.358,NA,NA,2011,NA,NA
+178,Acer rubrum,9,W,185,12.1,147.97,lunch lite,137.41,NA,NA,2011,NA,NA
+179,Acer rubrum,9,S,223,32.9,584.4,grocery,539.068,NA,NA,2011,NA,NA
+180,Acer rubrum,9,E,209,20.8,NA,NA,NA,NA,NA,2011,NA,NA
+308,Pinus strobus,9,W,73,14.2,56.15,lunch,45.65,NA,NA,2011,NA,NA
+309,Pinus strobus,9,S,120.4,21.1,167,grocery,121.668,NA,NA,2011,NA,NA
+310,Pinus strobus,9,E,84,13.9,56.92,lunch lite,46.36,NA,NA,2011,NA,NA
+1344,Acer rubrum,9,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1498,Acer rubrum,9,E,NA,NA,10.61,snack,5.118,NA,NA,2011,NA,NA
+2143,betula nigra,9,E,154.5,14.6,78.85,lunch lite,75.792,NA,NA,2011,NA,NA
+37,Betula lenta,10,N,185,11.6,121.43,lunch lite,110.87,NA,NA,2011,NA,NA
+39,Betula lenta,10,S,228,23.7,335.41,grocery,290.078,NA,NA,2011,NA,NA
+40,Betula lenta,10,E,255,37.1,541.39,grocery,496.058,NA,NA,2011,NA,NA
+182,Acer rubrum,10,N,245,23.3,610.15,grocery,564.818,NA,NA,2011,NA,NA
+184,Acer rubrum,10,S,174.8,12.6,69.9,lunch lite,59.34,NA,NA,2011,NA,NA
+185,Acer rubrum,10,E,53,4,6.19,lg envelope,3.132,NA,NA,2011,NA,NA
+311,Pinus strobus,10,N,115,21.2,143.8,grocery,98.468,NA,NA,2011,NA,NA
+312,Pinus strobus,10,W,63.5,16.6,69.12,lunch lite,58.56,NA,NA,2011,NA,NA
+313,Pinus strobus,10,S,72,13.6,57.98,lunch lite,47.42,NA,NA,2011,NA,NA
+314,Pinus strobus,10,E,117,17.4,81.28,lunch lite,70.72,NA,NA,2011,NA,NA
+1036,betula nigra,10,N,92,7.2,50.53,lunch,47.472,NA,NA,2011,NA,NA
+1194,Quercus rubra,10,S,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1348,Acer rubrum,10,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+2103,betula nigra,10,S,144,9.5,40.54,lunch,37.482,NA,NA,2011,NA,NA
+41,Betula lenta,11,N,182,7.8,115.6,lunch lite,105.04,NA,NA,2011,NA,NA
+42,Betula lenta,11,W,173.8,13.9,77.92,lunch lite,67.36,NA,NA,2011,NA,NA
+43,Betula lenta,11,S,175.5,19.7,87.25,lunch lite,76.69,NA,NA,2011,NA,NA
+186,Acer rubrum,11,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+187,Acer rubrum,11,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+189,Acer rubrum,11,E,116,10.9,45.63,lunch lite,35.07,NA,NA,2011,NA,NA
+315,Pinus strobus,11,N,112,20.2,116.11,lunch lite,105.55,54.35,48.858,2011,NA,NA
+316,Pinus strobus,11,W,104,17.8,105.11,lunch lite,94.55,50.49,44.998,2011,NA,NA
+318,Pinus strobus,11,E,75,17.2,82.94,lunch lite,72.38,NA,NA,2011,NA,NA
+1040,betula nigra,11,N,129,9.8,42.75,lunch,39.692,NA,NA,2011,NA,NA
+1352,Acer rubrum,11,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1353,Acer rubrum,11,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1355,Acer rubrum,11,E,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+45,Betula lenta,12,N,NA,NA,48.18,lunch lite,37.62,NA,NA,2011,NA,NA
+46,Betula lenta,12,W,149,15.4,117.25,grocery,71.918,NA,NA,2011,NA,NA
+47,Betula lenta,12,S,88,5.9,22.9,lunch lite,12.34,NA,NA,2011,NA,NA
+190,Acer rubrum,12,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+191,Acer rubrum,12,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+193,Acer rubrum,12,E,124,11.2,46.94,lunch lite,36.38,NA,NA,2011,NA,NA
+319,Pinus strobus,12,N,80.5,13.8,63.25,lunch lite,52.69,31.84,26.348,2011,NA,NA
+320,Pinus strobus,12,W,73,12.6,53.34,lunch lite,42.78,NA,NA,2011,NA,NA
+321,Pinus strobus,12,S,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+322,Pinus strobus,12,E,89,13,57.04,lunch lite,46.48,30.34,24.848,2011,NA,NA
+587,Pinus strobus,12,S,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+1046,betula nigra,12,S,72,5.7,10.21,lg envelope,7.152,NA,NA,2011,NA,NA
+1202,Quercus rubra,12,S,29,1.7,5.8,lg envelope,2.742,NA,NA,2011,NA,NA
+1357,Acer rubrum,12,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+194,Acer rubrum,13,N,69.5,7.5,22.44,snack,16.948,NA,NA,2011,NA,NA
+196,Acer rubrum,13,S,67,5.2,14.24,snack,8.748,NA,NA,2011,NA,NA
+323,Pinus strobus,13,N,72,11,34.56,snack,29.068,NA,NA,2011,NA,NA
+324,Pinus strobus,13,W,39,8.2,18.55,snack,13.058,NA,NA,2011,NA,NA
+326,Pinus strobus,13,E,35,5.4,12.45,snack,6.958,NA,NA,2011,NA,NA
+1362,Acer rubrum,13,S,NA,NA,5.36,lg envelope,2.302,NA,NA,2011,NA,NA
+199,Acer rubrum,14,N,38,4.1,10.87,snack,5.378,NA,NA,2011,NA,NA
+200,Acer rubrum,14,W,37,5.5,9.85,snack,4.358,NA,NA,2011,NA,NA
+202,Acer rubrum,14,E,53.5,4.2,10.81,snack,5.318,NA,NA,2011,NA,NA
+327,Pinus strobus,14,N,50.5,6.6,16.41,snack,10.918,NA,NA,2011,NA,NA
+328,Pinus strobus,14,W,18.5,4,9.16,snack,3.668,NA,NA,2011,NA,NA
+329,Pinus strobus,14,S,64,9.3,8.36,snack,2.868,NA,NA,2011,NA,NA
+1052,betula nigra,14,N,72,6,17.46,snack,14.402,NA,NA,2011,NA,NA
+1211,Quercus rubra,14,E,NA,NA,8.8,snack,3.308,NA,NA,2011,NA,NA
+1365,Acer rubrum,14,N,15,1.5,4.33,lg envelope,1.272,NA,NA,2011,NA,NA
+60,Betula lenta,15,E,39,4,6.14,lg envelope,3.082,NA,NA,2011,NA,NA
+331,Pinus strobus,15,N,64,8.1,28.23,lunch lite,17.67,NA,NA,2011,NA,NA
+332,Pinus strobus,15,W,94.5,14.8,116.45,grocery,71.118,40.95,35.458,2011,NA,NA
+333,Pinus strobus,15,S,57.5,8.5,22.83,snack,17.338,NA,NA,2011,NA,NA
+1056,betula nigra,15,N,42,4.5,6.58,lg envelope,3.522,NA,NA,2011,NA,NA
+1057,betula nigra,15,W,85,8.2,31.09,lunch,28.032,NA,NA,2011,NA,NA
+1059,betula nigra,15,E,73,7,16.66,snack,13.602,NA,NA,2011,NA,NA
+1212,Quercus rubra,15,N,40,2.4,4.91,medium envelope,NA,NA,NA,2011,NA,NA
+1215,Quercus rubra,15,E,20.5,1.4,6.41,snack,0.918,NA,NA,2011,NA,NA
+1510,Acer rubrum,15,N,34,3,5.77,lg envelope,2.712,NA,NA,2011,NA,NA
+2042,Pinus strobus,15,E,32.5,5.8,9.2,lg envelope,6.142,NA,NA,2011,NA,NA
+209,Acer rubrum,16,S,37.5,2.6,7.44,snack,1.948,NA,NA,2011,NA,NA
+336,Pinus strobus,16,W,50,7.6,23.83,lunch lite,13.27,NA,NA,2011,NA,NA
+337,Pinus strobus,16,S,88.2,15.8,73.14,lunch lite,62.58,33.81,28.318,2011,NA,NA
+338,Pinus strobus,16,E,83.5,14,64.01,lunch lite,53.45,30.14,24.648,2011,NA,NA
+482,Quercus rubra,16,E,24,2.5,7.13,snack,1.638,NA,NA,2011,NA,NA
+1372,Acer rubrum,16,N,NA,NA,2.79,small envelope,1.231,NA,NA,2011,NA,NA
+2045,Pinus strobus,16,W,28.5,5.5,10.38,snack,4.888,NA,NA,2011,NA,NA
+66,Betula lenta,17,W,44.5,8.2,15.93,snack,10.438,NA,NA,2011,NA,NA
+339,Pinus strobus,17,N,48,6.1,13.94,snack,8.448,7.47,4.412,2011,NA,NA
+341,Pinus strobus,17,S,78.5,10.3,63.4,lunch lite,52.84,19.61,16.552,2011,NA,NA
+484,Quercus rubra,17,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+582,Pinus strobus,17,W,NA,NA,8.57,snack,3.078,NA,NA,2011,NA,NA
+1065,betula nigra,17,W,63.5,5.3,12.88,snack,9.822,NA,NA,2011,NA,NA
+1066,betula nigra,17,S,71,5.4,12.42,snack,9.362,NA,NA,2011,NA,NA
+2047,Pinus strobus,17,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+69,Betula lenta,18,N,127,15.4,139.83,grocery,94.498,NA,NA,2011,NA,NA
+344,Pinus strobus,18,W,88,14.7,69.23,lunch lite,58.67,52.98,47.488,2011,NA,NA
+346,Pinus strobus,18,E,102.5,16.1,83.17,lunch lite,72.61,45.23,39.738,2011,NA,NA
+2010,Pinus strobus,18,S,28,6.6,NA,NA,NA,NA,NA,2011,NA,NA
+73,Betula lenta,19,N,166,17.2,159.85,grocery,114.518,NA,NA,2011,NA,NA
+347,Pinus strobus,19,N,65,11,NA,NA,NA,36.24,25.68,2011,NA,NA
+348,Pinus strobus,19,W,98,21.5,137.45,lunch lite,126.89,69.2,63.708,2011,NA,NA
+349,Pinus strobus,19,S,64.5,16.8,89.19,lunch lite,78.63,NA,NA,2011,NA,NA
+350,Pinus strobus,19,E,136,20.8,219.59,grocery,174.258,86.25,80.758,2011,NA,NA
+588,Pinus strobus,19,N,45.4,7.3,15.75,snack,10.258,NA,NA,2011,NA,NA
+77,Betula lenta,20,N,162,15.5,189.79,grocery,144.458,NA,NA,2011,NA,NA
+79,Betula lenta,20,S,194,21.4,265.25,grocery,219.918,NA,NA,2011,NA,NA
+80,Betula lenta,20,E,151.4,26.5,360,grocery,314.668,NA,NA,2011,NA,NA
+223,Acer rubrum,20,N,54,6.2,11.39,snack,5.898,NA,NA,2011,NA,NA
+224,Acer rubrum,20,W,181.8,18.5,196.46,grocery,151.128,NA,NA,2011,NA,NA
+226,Acer rubrum,20,E,94.5,8,21.42,snack,15.928,NA,NA,2011,NA,NA
+351,Pinus strobus,20,N,58,13.7,85.94,grocery,40.608,NA,NA,2011,NA,NA
+352,Pinus strobus,20,W,105.8,19.1,155.93,grocery,110.598,NA,NA,2011,NA,NA
+353,Pinus strobus,20,S,124.2,23.6,221.63,grocery,176.298,79.74,74.248,2011,NA,NA
+497,Quercus rubra,20,S,145.5,12.5,71.05,lunch lite,60.49,NA,NA,2011,NA,NA
+1077,betula nigra,20,W,96,4.1,10.71,snack,7.652,NA,NA,2011,NA,NA
+1078,betula nigra,20,S,131,5.8,25.37,lunch,22.312,NA,NA,2011,NA,NA
+1388,Acer rubrum,20,N,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+227,Acer rubrum,21,N,53.5,5.2,17.19,lunch lite,6.63,NA,NA,2011,NA,NA
+228,Acer rubrum,21,W,62,7.4,17.64,snack,12.148,NA,NA,2011,NA,NA
+229,Acer rubrum,21,S,60,5.5,12.52,snack,7.028,NA,NA,2011,NA,NA
+355,Pinus strobus,21,N,75,11.1,40.27,lunch lite,29.71,NA,NA,2011,NA,NA
+356,Pinus strobus,21,W,40,6.5,12.96,snack,7.468,NA,NA,2011,NA,NA
+358,Pinus strobus,21,E,32.5,5,14.92,lunch lite,4.36,NA,NA,2011,NA,NA
+1513,Acer rubrum,21,N,27.5,2,2.83,1pt2s,0.685,NA,NA,2011,NA,NA
+231,Acer rubrum,22,N,NA,NA,7,lg envelope,3.942,NA,NA,2011,NA,NA
+232,Acer rubrum,22,W,NA,NA,6.24,lg envelope,3.182,NA,NA,2011,NA,NA
+359,Pinus strobus,22,N,80,18.6,56.55,lunch lite,45.99,20.39,14.898,2011,NA,NA
+362,Pinus strobus,22,E,56,8.5,61.44,grocery,16.108,NA,NA,2011,NA,NA
+1526,Acer rubrum,22,N,29.5,3,5.29,lg envelope,2.232,NA,NA,2011,NA,NA
+89,Betula lenta,23,N,92,8.6,73.08,grocery,27.748,NA,NA,2011,NA,NA
+235,Acer rubrum,23,N,124,9.7,41.64,lunch lite,31.08,NA,NA,2011,NA,NA
+363,Pinus strobus,23,N,116,18,94.3,lunch lite,83.74,NA,NA,2011,NA,NA
+364,Pinus strobus,23,W,107,13.5,81.52,lunch lite,70.96,NA,NA,2011,NA,NA
+365,Pinus strobus,23,S,61,12.8,38.8,lunch lite,28.24,NA,NA,2011,NA,NA
+366,Pinus strobus,23,E,80.9,14.4,49.29,light lunch,38.73,NA,NA,2011,NA,NA
+1089,betula nigra,23,W,54.5,4.1,8.23,snack,5.172,NA,NA,2011,NA,NA
+96,Betula lenta,24,E,123.5,13.1,108.67,grocery,63.338,NA,NA,2011,NA,NA
+239,Acer rubrum,24,N,155.2,24.9,202.04,grocery,156.708,NA,NA,2011,NA,NA
+242,Acer rubrum,24,E,100.1,10.4,43.71,lunch lite,33.15,NA,NA,2011,NA,NA
+367,Pinus strobus,24,N,50,8.4,12.85,snack,7.358,NA,NA,2011,NA,NA
+368,Pinus strobus,24,W,92.2,16.8,77.06,lunch lite,66.5,NA,NA,2011,NA,NA
+369,Pinus strobus,24,S,25,3.4,5.07,lg envelope,2.012,NA,NA,2011,NA,NA
+370,Pinus strobus,24,E,99.1,18.6,53.43,lunch lite,42.87,NA,NA,2011,NA,NA
+1250,Quercus rubra,24,S,25,2.5,5.42,lg envelope,2.362,NA,NA,2011,NA,NA
+1251,Quercus rubra,24,E,24,3,5.29,lg envelope,2.232,NA,NA,2011,NA,NA
+243,Acer rubrum,25,N,77,8.7,24.51,lunch lite,13.95,NA,NA,2011,NA,NA
+244,Acer rubrum,25,W,37,5,6.87,lg envelope,3.812,NA,NA,2011,NA,NA
+372,Pinus strobus,25,W,110,20.4,153.2,grocery,107.868,NA,NA,2011,NA,NA
+373,Pinus strobus,25,S,103.5,21.5,162.5,grocery,117.168,47.32,41.828,2011,NA,NA
+374,Pinus strobus,25,E,88.6,14.3,56,lunch lite,45.44,28.83,23.338,2011,NA,NA
+518,Quercus rubra,25,E,60,5.7,39.17,lunch,28.67,NA,NA,2011,NA,NA
+1253,Quercus rubra,25,W,51,4.6,11.07,snack,5.578,NA,NA,2011,NA,NA
+375,Pinus strobus,26,N,88,12.5,49.8,lunch lite,39.24,NA,NA,2011,NA,NA
+377,Pinus strobus,26,S,93,19.5,107.08,lunch lite,96.52,NA,NA,2011,NA,NA
+1257,Quercus rubra,26,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+2023,Pinus strobus,26,E,30,4.7,8.36,snack,2.868,NA,NA,2011,NA,NA
+379,Pinus strobus,27,N,42.5,5.7,12.43,snack,6.938,NA,NA,2011,NA,NA
+380,Pinus strobus,27,W,37,7,15.59,snack,10.098,NA,NA,2011,NA,NA
+382,Pinus strobus,27,E,66,11.9,38.41,lunch,27.91,NA,NA,2011,NA,NA
+258,Acer rubrum,28,E,15.5,4,14.37,lunch,3.87,NA,NA,2011,NA,NA
+383,Pinus strobus,28,N,46,6.3,19.72,lunch,9.22,NA,NA,2011,NA,NA
+384,Pinus strobus,28,W,52.5,8.1,24.92,lunch,14.42,NA,NA,2011,NA,NA
+530,Quercus rubra,28,E,52.5,5.1,17.15,lunch,6.65,NA,NA,2011,NA,NA
+1108,betula nigra,28,N,58,3.9,11.97,snack,8.912,NA,NA,2011,NA,NA
+2050,Pinus strobus,28,N,24,4.3,5.61,lg envelope,2.552,NA,NA,2011,NA,NA
+113,Betula lenta,29,N,42,2.3,9.86,snack,4.368,NA,NA,2011,NA,NA
+114,Pinus strobus,29,W,54.5,5.2,15.64,snack,10.148,NA,NA,2011,NA,NA
+259,Acer rubrum,29,N,36,2.8,9.33,snack,3.838,NA,NA,2011,NA,NA
+260,Acer rubrum,29,W,67,6.1,18.65,snack,13.158,NA,NA,2011,NA,NA
+261,Acer rubrum,29,S,39,5.6,10.95,snack,5.458,NA,NA,2011,NA,NA
+117,Betula lenta,30,N,38,2,3.03,1pt2s,0.885,NA,NA,2011,NA,NA
+118,Betula lenta,30,W,76,5.9,21.88,lunch,11.38,NA,NA,2011,NA,NA
+119,Betula lenta,30,S,60,3.8,19.73,lunch,9.23,NA,NA,2011,NA,NA
+264,Acer rubrum,30,W,29,3.3,5.98,lg envelope,2.922,NA,NA,2011,NA,NA
+266,Acer rubrum,30,E,67,6.5,21.05,lunch,10.55,NA,NA,2011,NA,NA
+391,Pinus strobus,30,N,55,10.6,33.72,lunch,23.22,NA,NA,2011,NA,NA
+392,Pinus strobus,30,W,41,5.9,19.05,lunch,8.55,NA,NA,2011,NA,NA
+393,Pinus strobus,30,S,55.5,10.7,32.23,lunch,21.73,NA,NA,2011,NA,NA
+536,Quercus rubra,30,W,44.5,4.1,14.59,lunch,4.09,NA,NA,2011,NA,NA
+1119,betula nigra,30,E,36,3.5,3.35,1pt2s,0.292,NA,NA,2011,NA,NA
+123,Betula lenta,31,S,58,4.5,18.25,lunch,7.75,NA,NA,2011,NA,NA
+267,Acer rubrum,31,N,71,4.2,15.92,lunch,5.42,NA,NA,2011,NA,NA
+270,Acer rubrum,31,E,39,3.9,6.36,1pt4s,3.78,NA,NA,2011,NA,NA
+395,Pinus strobus,31,N,89,13.6,64.21,x2 lunch lite,43.09,NA,NA,2011,NA,NA
+396,Pinus strobus,31,W,70,12.23,42.02,lunch lite,31.46,23.85,18.358,2011,NA,NA
+272,Acer rubrum,32,W,NA,NA,NA,NA,NA,NA,NA,2011,NA,NA
+399,Pinus strobus,32,N,79,15.75,61.19,lunch lite,50.63,NA,NA,2011,NA,NA
+1437,Acer rubrum,32,W,17.5,2.5,3.07,1pt2s,0.925,NA,NA,2011,NA,NA
+403,Pinus strobus,33,N,64,10.1,34.45,lunch lite,23.89,13.53,8.038,2011,NA,NA
+405,Pinus strobus,33,S,33.5,3.7,5.95,2pt2s,1.78,NA,NA,2011,NA,NA
+585,Pinus strobus,33,E,24.5,3.8,3.83,1pt2s,1.685,NA,NA,2011,NA,NA
+1129,betula nigra,33,W,46.5,4.2,4.84,1pt3s,1.782,NA,NA,2011,NA,NA
+1285,Quercus rubra,33,W,34.5,3.6,4.63,1pt4s,2.455,NA,NA,2011,NA,NA
+1287,Quercus rubra,33,E,38.5,4.1,13.41,lunch,2.91,NA,NA,2011,NA,NA
+1441,Acer rubrum,33,W,33,2.9,5.78,2pt2s,1.61,NA,NA,2011,NA,NA
+1443,Acer rubrum,33,E,18,1.9,2.67,1pt2s,0.525,NA,NA,2011,NA,NA
+1487,Acer rubrum,33,N,18.5,1.3,2.51,1pt2s,0.365,NA,NA,2011,NA,NA
+407,Pinus strobus,34,N,34,4.2,14.16,lunch,3.66,NA,NA,2011,NA,NA
+408,Pinus strobus,34,W,34.5,4.2,14.18,lunch,3.68,NA,NA,2011,NA,NA
+409,Pinus strobus,34,S,30,6.3,17.45,lunch,6.95,NA,NA,2011,NA,NA
+537,Acer rubrum,34,S,34,3.1,6.32,2pt2s,2.15,NA,NA,2011,NA,NA
+1514,Acer rubrum,34,W,19.5,2.6,2.81,1pt2s,0.665,NA,NA,2011,NA,NA
+1525,Acer rubrum,35,W,31,2.3,4.46,lg envelope,1.402,NA,NA,2011,NA,NA
+590,Pinus strobus,40,S,38,6.4,11.74,snack,6.248,NA,NA,2011,NA,NA
+c40,Pinus strobus,40,W,51,7.7,16.09,snack,10.598,NA,NA,2011,NA,NA
+1151,betula nigra,41,E,64,3.7,14.13,lunch lite,11.072,NA,NA,2011,NA,NA
+1305,Acer rubrum,41,W,23,3.7,5.94,lg envelope,2.882,NA,NA,2011,NA,NA
+1471,Acer rubrum,41,W,21,1.2,4.11,lg envelope,1.052,NA,NA,2011,NA,NA
+2011,Pinus strobus,41,S,49,6.8,11.39,snack,5.898,NA,NA,2011,NA,NA
+2017,Pinus strobus,41,E,53,6.3,13.96,snack,8.468,NA,NA,2011,NA,NA
+2040,Pinus strobus,41,W,19.5,1.8,4.13,lg envelope,1.072,NA,NA,2011,NA,NA
+c24,Pinus strobus,41,W,54,8.4,19.87,snack,14.378,NA,NA,2011,NA,NA
+c26,Pinus strobus,41,S,38.5,5.6,10.81,snack,5.318,NA,NA,2011,NA,NA
+c31,Pinus strobus,41,E,43,5.4,10.7,snack,5.208,NA,NA,2011,NA,NA
+589,Pinus strobus,42,S,50,7.7,14.67,snack,9.178,NA,NA,2011,NA,NA
+1146,betula nigra,42,S,98.5,10.8,68.18,grocery,65.122,NA,NA,2011,NA,NA
+c12,Pinus strobus,42,S,38,5.9,11.19,snack,5.698,NA,NA,2011,NA,NA
+c13,Pinus strobus,42,S,69,12.7,74.15,grocery,28.818,NA,NA,2011,NA,NA
+c16,Betula lenta,42,W,95,8.8,26.8,snack,21.308,NA,NA,2011,NA,NA
+c3,Betula lenta,42,N,69,5.7,23.44,snack,17.948,NA,NA,2011,NA,NA
+c6,Pinus strobus,42,E,67,9.4,24.61,snack,19.118,NA,NA,2011,NA,NA
+c8,Acer rubrum,42,E,50,5.3,11.33,snack,5.838,NA,NA,2011,NA,NA
+1028?,betula spp.,8,N,132,11,NA,NA,NA,NA,NA,2011,NA,NA
+4601,Quercus rubra,1,W,13,2.1,NA,NA,4.3231,NA,NA,2013,4.3231,NA
+4602,Quercus rubra,1,E,16,1.5,NA,NA,NA,NA,NA,2013,NA,NA
+4400,Pinus strobus,1,W,32,4.8,NA,NA,3.67,0.31,NA,2013,4.4,0.42
+4002,Betula lenta,1,E,35,3.3,NA,NA,NA,NA,NA,2013,NA,NA
+4401,Pinus strobus,1,W,38,5.7,NA,NA,6.52,3.55,NA,2013,12.08,2.01
+4402,Pinus strobus,1,E,39,5.9,NA,NA,13.23,11.68,NA,2013,30.56,5.65
+4603,Quercus rubra,1,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4201,Acer rubrum,1,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4200,Acer rubrum,1,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4600,Quercus rubra,1,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4001,Betula lenta,1,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4000,Betula lenta,1,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4403,Pinus strobus,1,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4202,Acer rubrum,1,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4003,Betula lenta,1,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4203,Acer rubrum,1,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4004,Betula lenta,2,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4604,Quercus rubra,2,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4404,Pinus strobus,2,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4204,Acer rubrum,2,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4205,Acer rubrum,2,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4605,Quercus rubra,2,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4005,Betula lenta,2,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4405,Pinus strobus,2,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4406,Pinus strobus,2,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4607,Quercus rubra,2,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4207,Acer rubrum,2,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4206,Acer rubrum,2,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4606,Quercus rubra,2,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4407,Pinus strobus,2,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4007,Betula lenta,2,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4006,Betula lenta,2,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4411,Pinus strobus,3,E,23,3.7,NA,NA,1.14,NA,NA,2013,1.14,NA
+4410,Pinus strobus,3,E,41,5.4,NA,NA,3.54,0.35,NA,2013,4.61,0.72
+4009,Betula lenta,3,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4608,Quercus rubra,3,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4609,Quercus rubra,3,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4208,Acer rubrum,3,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4409,Pinus strobus,3,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4209,Acer rubrum,3,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4408,Pinus strobus,3,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4008,Betula lenta,3,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4611,Quercus rubra,3,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4211,Acer rubrum,3,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4010,Betula lenta,3,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4610,Quercus rubra,3,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4210,Acer rubrum,3,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4011,Betula lenta,3,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4212,Acer rubrum,4,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4612,Quercus rubra,4,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4412,Pinus strobus,4,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4213,Acer rubrum,4,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4013,Betula lenta,4,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4613,Quercus rubra,4,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4413,Pinus strobus,4,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4012,Betula lenta,4,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4414,Pinus strobus,4,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4415,Pinus strobus,4,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4014,Betula lenta,4,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4214,Acer rubrum,4,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4614,Quercus rubra,4,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4769,Quercus rubra,4,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4015,Betula lenta,4,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4215,Acer rubrum,4,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4616,Quercus rubra,5,W,14.5,1.5,NA,NA,NA,NA,NA,2013,NA,NA
+4217,Acer rubrum,5,W,18,2.9,NA,NA,NA,NA,NA,2013,NA,NA
+4418,Pinus strobus,5,E,24,3,NA,NA,NA,NA,NA,2013,NA,NA
+4216,Acer rubrum,5,W,27,2.2,NA,NA,NA,NA,NA,2013,NA,NA
+4416,Pinus strobus,5,W,31,5.3,NA,NA,10.68,7.24,NA,2013,21.06,3.14
+4417,Pinus strobus,5,W,39,5.7,NA,NA,9.78,8.39,NA,2013,25.34,7.17
+4017,Betula lenta,5,W,73.5,6.9,NA,NA,2.18,NA,NA,2013,2.18,NA
+4419,Pinus strobus,5,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4617,Quercus rubra,5,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4016,Betula lenta,5,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4218,Acer rubrum,5,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4019,Betula lenta,5,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4618,Quercus rubra,5,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4619,Quercus rubra,5,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4018,Betula lenta,5,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4219,Acer rubrum,5,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4221,Acer rubrum,6,W,11.5,0.7,NA,NA,NA,NA,NA,2013,NA,NA
+4222,Acer rubrum,6,E,17.5,3,NA,NA,NA,NA,NA,2013,NA,NA
+4622,Quercus rubra,6,E,31.5,4.9,NA,NA,9.34,NA,NA,2013,9.34,NA
+4423,Pinus strobus,6,E,54,9.4,NA,NA,19.13,9.01,NA,2013,33.67,5.53
+4421,Pinus strobus,6,W,59.5,10.5,NA,NA,50.32,36.79,NA,2013,116.36,29.25
+4023,Betula lenta,6,E,76,6.2,NA,NA,38.06,NA,NA,2013,44.87,6.81
+4021,Betula lenta,6,W,79.5,6.9,NA,NA,17.08,NA,NA,2013,17.08,NA
+4022,Betula lenta,6,E,118,7.8,NA,NA,2.5438,NA,NA,2013,2.5438,NA
+4420,Pinus strobus,6,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4020,Betula lenta,6,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4620,Quercus rubra,6,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4220,Acer rubrum,6,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4770,Quercus rubra,6,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4223,Acer rubrum,6,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4623,Quercus rubra,6,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4422,Pinus strobus,6,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4627,Quercus rubra,7,E,3,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4624,Quercus rubra,7,W,10,1.9,NA,NA,0.49,NA,NA,2013,0.49,NA
+4225,Acer rubrum,7,W,18,2.1,NA,NA,0.38,NA,NA,2013,0.38,NA
+4224,Acer rubrum,7,W,18.5,2.6,NA,NA,0.78,NA,NA,2013,0.78,NA
+4625,Quercus rubra,7,W,38.5,4.7,NA,NA,6.26,NA,NA,2013,6.26,NA
+4424,Pinus strobus,7,W,45,8.5,NA,NA,23.3,12.64,NA,2013,43.8,7.86
+4427,Pinus strobus,7,E,51,11.4,NA,NA,44.5,18.46,NA,2013,91.22,28.26
+4426,Pinus strobus,7,E,60,8.5,NA,NA,33.22,17.06,NA,2013,64.44,14.16
+4025,Betula lenta,7,W,110,8.5,NA,NA,24.78,NA,NA,2013,24.78,NA
+4027,Betula lenta,7,E,126.5,10.8,NA,NA,47.96,NA,NA,2013,65.78,17.82
+4024,Betula lenta,7,W,131,12.5,NA,NA,78.44,NA,NA,2013,93.53,15.09
+4227,Acer rubrum,7,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4026,Betula lenta,7,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4425,Pinus strobus,7,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4226,Acer rubrum,7,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4626,Quercus rubra,7,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4630,Quercus rubra,8,E,8.5,1,NA,NA,NA,NA,NA,2013,NA,NA
+4231,Acer rubrum,8,E,9,0.9,NA,NA,NA,NA,NA,2013,NA,NA
+4628,Quercus rubra,8,W,17,3.6,NA,NA,1.09,NA,NA,2013,1.09,NA
+4228,Acer rubrum,8,W,24,2.9,NA,NA,1.22,NA,NA,2013,1.34,0.12
+4431,Pinus strobus,8,E,44.5,7.8,NA,NA,17.11,6.39,NA,2013,29.51,6.01
+4428,Pinus strobus,8,W,52,8.8,NA,NA,24.9,15.77,NA,2013,52.1,11.43
+4429,Pinus strobus,8,W,57.5,11,NA,NA,29.21,16.03,NA,2013,62.58,17.34
+4031,Betula lenta,8,E,75.5,7.4,NA,NA,NA,NA,NA,2013,NA,NA
+4029,Betula lenta,8,W,117,10.3,NA,NA,51.72,NA,NA,2013,82.98,31.26
+4030,Betula lenta,8,E,121,11.5,NA,NA,71.22,NA,NA,2013,91,19.78
+4028,Betula lenta,8,W,130.5,11.5,NA,NA,64.84,NA,NA,2013,88.11,23.27
+4629,Quercus rubra,8,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4229,Acer rubrum,8,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4230,Acer rubrum,8,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4573,Pinus strobus,8,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4631,Quercus rubra,8,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4234,Acer rubrum,9,E,12.5,1.3,NA,NA,NA,NA,NA,2013,NA,NA
+4235,Acer rubrum,9,E,13.5,1.8,NA,NA,0.8823,NA,NA,2013,0.8823,NA
+4633,Quercus rubra,9,W,18,3.6,NA,NA,4.7,NA,NA,2013,4.7,NA
+4632,Quercus rubra,9,W,27,5,NA,NA,7.02,NA,NA,2013,7.02,NA
+4435,Pinus strobus,9,E,49,7.4,NA,NA,14.75,NA,NA,2013,22.26,2.56
+4034,Betula lenta,9,E,70.5,5.6,NA,NA,8.1,NA,NA,2013,8.1,NA
+4035,Betula lenta,9,E,74.5,7,NA,NA,19.6,NA,NA,2013,19.6,NA
+4033,Betula lenta,9,W,121.5,10.9,NA,NA,43.14,NA,NA,2013,43.14,NA
+4032,Betula lenta,9,W,127,10.2,NA,NA,48.26,NA,NA,2013,57,8.74
+4233,Acer rubrum,9,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4433,Pinus strobus,9,W,NA,NA,NA,NA,1.17,NA,NA,2013,1.17,NA
+4232,Acer rubrum,9,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4432,Pinus strobus,9,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4434,Pinus strobus,9,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4634,Quercus rubra,9,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4237,Acer rubrum,10,W,1,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4236,Acer rubrum,10,W,2,1.6,NA,NA,NA,NA,NA,2013,NA,NA
+4636,Quercus rubra,10,W,8,2.1,NA,NA,NA,NA,NA,2013,NA,NA
+4238,Acer rubrum,10,E,9.5,1.8,NA,NA,NA,NA,NA,2013,NA,NA
+4637,Quercus rubra,10,W,18,4.3,NA,NA,0.97,NA,NA,2013,0.97,NA
+4639,Quercus rubra,10,E,28.5,4.4,NA,NA,4.29,NA,NA,2013,4.29,NA
+4638,Quercus rubra,10,E,37,4.5,NA,NA,7.96,NA,NA,2013,7.96,NA
+4438,Pinus strobus,10,E,38,5.8,NA,NA,8.06,NA,NA,2013,9.41,1.35
+4437,Pinus strobus,10,W,43.5,8.5,NA,NA,12.83,NA,NA,2013,18.2,4.54
+4439,Pinus strobus,10,E,47,9.6,NA,NA,19.73,NA,NA,2013,28.42,8.69
+4436,Pinus strobus,10,W,51,8.9,NA,NA,30.08,2.98,NA,2013,39.47,6.41
+4037,Betula lenta,10,W,150.5,15.5,NA,NA,123.17,NA,NA,2013,188.95,65.78
+4038,Betula lenta,10,E,171.5,15.9,NA,NA,135.4,NA,NA,2013,184.96,49.56
+4039,Betula lenta,10,E,187.5,16.1,NA,NA,100.74,NA,NA,2013,142.28,41.54
+4036,Betula lenta,10,W,205,15.8,NA,NA,159.46,NA,NA,2013,221.99,62.53
+4239,Acer rubrum,10,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4242,Acer rubrum,11,E,2.5,NA,NA,NA,0.48,NA,NA,2013,0.48,NA
+4643,Quercus rubra,11,E,16,2.2,NA,NA,NA,NA,NA,2013,NA,NA
+4641,Quercus rubra,11,W,17.5,2.6,NA,NA,NA,NA,NA,2013,NA,NA
+4443,Pinus strobus,11,E,20.5,3,NA,NA,1.66,NA,NA,2013,1.66,NA
+4642,Quercus rubra,11,E,35,5,NA,NA,8.63,NA,NA,2013,8.63,NA
+4442,Pinus strobus,11,E,38.5,5.9,NA,NA,9.04,NA,NA,2013,11.1,1.52
+4440,Pinus strobus,11,W,53,8.2,NA,NA,18.89,2.69,NA,2013,26.57,4.99
+4040,Betula lenta,11,W,105,9.1,NA,NA,25.98,NA,NA,2013,25.98,NA
+4043,Betula lenta,11,E,106,8,NA,NA,39.86,NA,NA,2013,39.86,NA
+4041,Betula lenta,11,W,156,9.2,NA,NA,65.19,NA,NA,2013,87.07,21.88
+4042,Betula lenta,11,E,178.5,15.4,NA,NA,NA,NA,NA,2013,NA,NA
+4243,Acer rubrum,11,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4441,Pinus strobus,11,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4241,Acer rubrum,11,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4640,Quercus rubra,11,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4240,Acer rubrum,11,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4644,Quercus rubra,12,W,9,0.9,NA,NA,NA,NA,NA,2013,NA,NA
+4645,Quercus rubra,12,W,9.5,0.7,NA,NA,NA,NA,NA,2013,NA,NA
+4647,Quercus rubra,12,E,23.5,3.8,NA,NA,2.95,NA,NA,2013,2.95,NA
+4646,Quercus rubra,12,E,28.5,3.2,NA,NA,2.13,NA,NA,2013,2.13,NA
+4445,Pinus strobus,12,W,48,8.6,NA,NA,NA,NA,NA,2013,NA,NA
+4045,Betula lenta,12,W,68.5,5.2,NA,NA,5.19,NA,NA,2013,5.19,NA
+4047,Betula lenta,12,E,97.5,8,NA,NA,31.08,NA,NA,2013,31.08,NA
+4046,Betula lenta,12,E,128,8.7,NA,NA,72.58,NA,NA,2013,93.3,20.72
+4044,Betula lenta,12,W,178.5,16.2,NA,NA,194.37,NA,NA,2013,275.93,81.56
+4244,Acer rubrum,12,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4559,Pinus strobus,12,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4245,Acer rubrum,12,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4447,Pinus strobus,12,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4246,Acer rubrum,12,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4446,Pinus strobus,12,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4247,Acer rubrum,12,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4648,Quercus rubra,13,W,15.5,1.9,NA,NA,2.65,NA,NA,2013,2.65,NA
+4651,Quercus rubra,13,E,15.5,2.6,NA,NA,NA,NA,NA,2013,NA,NA
+4451,Pinus strobus,13,E,21,2.2,NA,NA,NA,NA,NA,2013,NA,NA
+4249,Acer rubrum,13,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4449,Pinus strobus,13,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4649,Quercus rubra,13,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4248,Acer rubrum,13,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4048,Betula lenta,13,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4448,Pinus strobus,13,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4049,Betula lenta,13,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4250,Acer rubrum,13,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4251,Acer rubrum,13,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4050,Betula lenta,13,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4650,Quercus rubra,13,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4051,Betula lenta,13,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4450,Pinus strobus,13,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4254,Acer rubrum,14,E,13,2.9,NA,NA,1.06,NA,NA,2013,1.06,NA
+4653,Quercus rubra,14,W,16,2.1,NA,NA,0.47,NA,NA,2013,0.47,NA
+4053,Betula lenta,14,W,40.5,2.4,NA,NA,NA,NA,NA,2013,NA,NA
+4455,Pinus strobus,14,E,44,7.9,NA,NA,18.78,6.08,NA,2013,31.07,6.21
+4453,Pinus strobus,14,W,NA,NA,NA,NA,0.67,NA,NA,2013,0.67,NA
+4452,Pinus strobus,14,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4253,Acer rubrum,14,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4652,Quercus rubra,14,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4052,Betula lenta,14,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4252,Acer rubrum,14,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4655,Quercus rubra,14,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4255,Acer rubrum,14,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4654,Quercus rubra,14,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4055,Betula lenta,14,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4454,Pinus strobus,14,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4054,Betula lenta,14,E,NA,NA,NA,NA,0.46,NA,NA,2013,0.46,NA
+4259,Acer rubrum,15,E,6.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4658,Quercus rubra,15,E,10,1.8,NA,NA,NA,NA,NA,2013,NA,NA
+4257,Acer rubrum,15,W,11.5,0.9,NA,NA,0.35,NA,NA,2013,0.35,NA
+4256,Acer rubrum,15,W,16,1.1,NA,NA,0.4033,NA,NA,2013,0.4033,NA
+4657,Quercus rubra,15,W,16.5,2.9,NA,NA,NA,NA,NA,2013,NA,NA
+4656,Quercus rubra,15,W,20,3.2,NA,NA,3.01,NA,NA,2013,3.01,NA
+4457,Pinus strobus,15,W,31.5,6.2,NA,NA,7.99,4.19,NA,2013,15.8,3.62
+4459,Pinus strobus,15,E,33.5,5,NA,NA,10.98,2.23,NA,2013,16.96,3.75
+4456,Pinus strobus,15,W,35.5,8.5,NA,NA,17.05,14.43,NA,2013,39.72,8.24
+4056,Betula lenta,15,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4057,Betula lenta,15,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4058,Betula lenta,15,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4059,Betula lenta,15,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4258,Acer rubrum,15,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4772,Quercus rubra,15,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4458,Pinus strobus,15,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4662,Quercus rubra,16,E,3.5,NA,NA,NA,0.56,NA,NA,2013,0.56,NA
+4060,Betula lenta,16,W,5.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4660,Quercus rubra,16,W,8.5,0.8,NA,NA,NA,NA,NA,2013,NA,NA
+4263,Acer rubrum,16,E,10.5,0.6,NA,NA,NA,NA,NA,2013,NA,NA
+4260,Acer rubrum,16,W,17,1.7,NA,NA,NA,NA,NA,2013,NA,NA
+4261,Acer rubrum,16,W,21,2,NA,NA,NA,NA,NA,2013,NA,NA
+4461,Pinus strobus,16,W,24,3.7,NA,NA,3.66,1.21,NA,2013,6.83,0.75
+4063,Betula lenta,16,E,27.5,3.6,NA,NA,NA,NA,NA,2013,NA,NA
+4460,Pinus strobus,16,W,40,6,NA,NA,9.75,3.8,NA,2013,19.3,5.75
+4262,Acer rubrum,16,E,41.5,4.5,NA,NA,4.04,NA,NA,2013,4.04,NA
+4474,Pinus strobus,16,E,46,7.2,NA,NA,27.23,23.06,NA,2013,65.85,15.56
+4062,Betula lenta,16,E,68.5,5,NA,NA,NA,NA,NA,2013,NA,NA
+4661,Quercus rubra,16,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4061,Betula lenta,16,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4663,Quercus rubra,16,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4475,Pinus strobus,16,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4064,Betula lenta,17,W,3.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4665,Quercus rubra,17,W,6.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4666,Quercus rubra,17,E,10,0.3,NA,NA,NA,NA,NA,2013,NA,NA
+4067,Betula lenta,17,E,13,3.1,NA,NA,NA,NA,NA,2013,NA,NA
+4065,Betula lenta,17,W,16,1,NA,NA,0.36,NA,NA,2013,0.36,NA
+4478,Pinus strobus,17,E,26.5,4.4,NA,NA,7.51,4.17,NA,2013,13.74,2.06
+4264,Acer rubrum,17,W,28,2.8,NA,NA,2.24,NA,NA,2013,2.24,NA
+4477,Pinus strobus,17,W,29.5,4,NA,NA,4.11,0.49,NA,2013,4.91,0.31
+4265,Acer rubrum,17,W,32,3.8,NA,NA,3.85,NA,NA,2013,4.01,0.16
+4476,Pinus strobus,17,W,36,5.1,NA,NA,9.52,2.36,NA,2013,13.06,1.18
+4066,Betula lenta,17,E,59.5,3.9,NA,NA,7.83,NA,NA,2013,9.39,1.56
+4664,Quercus rubra,17,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4667,Quercus rubra,17,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4267,Acer rubrum,17,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4479,Pinus strobus,17,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4266,Acer rubrum,17,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4269,Acer rubrum,18,W,11,0.6,NA,NA,NA,NA,NA,2013,NA,NA
+4068,Betula lenta,18,W,12,3,NA,NA,0.85,NA,NA,2013,0.85,NA
+4668,Quercus rubra,18,W,15.5,2.1,NA,NA,NA,NA,NA,2013,NA,NA
+4481,Pinus strobus,18,W,17,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+4567,Pinus strobus,18,E,18.5,2.2,NA,NA,2.52,1.42,NA,2013,4.18,0.24
+4482,Pinus strobus,18,E,25.5,6.2,NA,NA,6.73,6.15,NA,2013,15.14,2.26
+4670,Quercus rubra,18,E,27,6.2,NA,NA,3.5,NA,NA,2013,3.5,NA
+4271,Acer rubrum,18,E,28,3.4,NA,NA,5.35,NA,NA,2013,5.35,NA
+4480,Pinus strobus,18,W,33,9.3,NA,NA,5.01,NA,NA,2013,8.17,0.93
+4071,Betula lenta,18,E,60.5,4.9,NA,NA,NA,NA,NA,2013,NA,NA
+4070,Betula lenta,18,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4268,Acer rubrum,18,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4669,Quercus rubra,18,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4671,Quercus rubra,18,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4270,Acer rubrum,18,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4486,Pinus strobus,19,E,31,6.6,NA,NA,NA,NA,NA,2013,NA,NA
+4485,Pinus strobus,19,W,34,6.7,NA,NA,11.37,9.5,NA,2013,25.7,4.83
+4675,Quercus rubra,19,E,35.5,5.1,NA,NA,10.32,NA,NA,2013,10.32,NA
+4073,Betula lenta,19,W,39,3.5,NA,NA,74.24,NA,NA,2013,92.15,17.91
+4075,Betula lenta,19,E,62,4.5,NA,NA,1.43,NA,NA,2013,1.43,NA
+4275,Acer rubrum,19,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4570,Pinus strobus,19,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4673,Quercus rubra,19,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4272,Acer rubrum,19,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4672,Quercus rubra,19,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4273,Acer rubrum,19,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4484,Pinus strobus,19,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4072,Betula lenta,19,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4274,Acer rubrum,19,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4074,Betula lenta,19,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4674,Quercus rubra,19,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4679,Quercus rubra,20,E,5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4676,Quercus rubra,20,W,16,4,NA,NA,NA,NA,NA,2013,NA,NA
+4489,Pinus strobus,20,W,31.5,4.5,NA,NA,3.57,0.32,NA,2013,4.44,0.55
+4488,Pinus strobus,20,W,32.5,4,NA,NA,1.69,NA,NA,2013,1.69,NA
+4077,Betula lenta,20,W,46,3.6,NA,NA,NA,NA,NA,2013,NA,NA
+4279,Acer rubrum,20,E,54.5,4.7,NA,NA,9.44,NA,NA,2013,9.44,NA
+4490,Pinus strobus,20,E,56,11,NA,NA,36.16,23.89,NA,2013,75.23,15.18
+4079,Betula lenta,20,E,139.5,12.1,NA,NA,NA,NA,NA,2013,NA,NA
+4277,Acer rubrum,20,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4076,Betula lenta,20,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4677,Quercus rubra,20,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4276,Acer rubrum,20,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4678,Quercus rubra,20,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4491,Pinus strobus,20,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4278,Acer rubrum,20,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4078,Betula lenta,20,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4493,Pinus strobus,21,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4280,Acer rubrum,21,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4681,Quercus rubra,21,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4492,Pinus strobus,21,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4081,Betula lenta,21,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4080,Betula lenta,21,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4281,Acer rubrum,21,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4680,Quercus rubra,21,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4561,Pinus strobus,21,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4683,Quercus rubra,21,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4682,Quercus rubra,21,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4564,Pinus strobus,21,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4082,Betula lenta,21,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4282,Acer rubrum,21,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4083,Betula lenta,21,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4283,Acer rubrum,21,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4084,Betula lenta,22,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4684,Quercus rubra,22,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4685,Quercus rubra,22,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4496,Pinus strobus,22,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4085,Betula lenta,22,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4497,Pinus strobus,22,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4284,Acer rubrum,22,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4285,Acer rubrum,22,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4462,Pinus strobus,22,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4463,Pinus strobus,22,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4287,Acer rubrum,22,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4087,Betula lenta,22,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4686,Quercus rubra,22,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4687,Quercus rubra,22,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4086,Betula lenta,22,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4286,Acer rubrum,22,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4689,Quercus rubra,23,W,2,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4691,Quercus rubra,23,E,10,0.9,NA,NA,1.67,NA,NA,2013,1.67,NA
+4464,Pinus strobus,23,W,22.5,5,NA,NA,NA,NA,NA,2013,NA,NA
+4089,Betula lenta,23,W,40.5,3.7,NA,NA,NA,NA,NA,2013,NA,NA
+4091,Betula lenta,23,E,109,9.9,NA,NA,23.7,NA,NA,2013,23.7,NA
+4465,Pinus strobus,23,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4288,Acer rubrum,23,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4088,Betula lenta,23,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4289,Acer rubrum,23,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4688,Quercus rubra,23,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4290,Acer rubrum,23,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4466,Pinus strobus,23,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4467,Pinus strobus,23,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4690,Quercus rubra,23,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4090,Betula lenta,23,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4291,Acer rubrum,23,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4692,Quercus rubra,24,W,1,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4695,Quercus rubra,24,E,5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4771,Quercus rubra,24,W,10,1.4,NA,NA,NA,NA,NA,2013,NA,NA
+4471,Pinus strobus,24,E,10.5,1.1,NA,NA,NA,NA,NA,2013,NA,NA
+4293,Acer rubrum,24,W,14,1.4,NA,NA,0.26,NA,NA,2013,0.3,0.04
+4093,Betula lenta,24,W,107.5,9.6,NA,NA,22.36,NA,NA,2013,22.36,NA
+4092,Betula lenta,24,W,126,10,NA,NA,21.66,NA,NA,2013,21.66,NA
+4292,Acer rubrum,24,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4468,Pinus strobus,24,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4572,Pinus strobus,24,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4095,Betula lenta,24,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4694,Quercus rubra,24,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4470,Pinus strobus,24,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4295,Acer rubrum,24,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4094,Betula lenta,24,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4294,Acer rubrum,24,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4498,Pinus strobus,25,E,21,2.7,NA,NA,NA,NA,NA,2013,NA,NA
+4472,Pinus strobus,25,W,35,5.5,NA,NA,NA,NA,NA,2013,NA,NA
+4499,Pinus strobus,25,E,46,6.5,NA,NA,46.59,NA,NA,2013,101.59,19.27
+4696,Quercus rubra,25,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4697,Quercus rubra,25,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4097,Betula lenta,25,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4563,Pinus strobus,25,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4096,Betula lenta,25,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4297,Acer rubrum,25,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4296,Acer rubrum,25,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4699,Quercus rubra,25,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4098,Betula lenta,25,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4099,Betula lenta,25,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4298,Acer rubrum,25,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4698,Quercus rubra,25,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4299,Acer rubrum,25,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4102,Betula lenta,26,E,4,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4700,Quercus rubra,26,W,9.5,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+4703,Quercus rubra,26,E,10,1.3,NA,NA,NA,NA,NA,2013,NA,NA
+4301,Acer rubrum,26,W,10.5,1,NA,NA,NA,NA,NA,2013,NA,NA
+4100,Betula lenta,26,W,11.5,2.4,NA,NA,NA,NA,NA,2013,NA,NA
+4701,Quercus rubra,26,W,12,3.2,NA,NA,0.84,NA,NA,2013,0.84,NA
+4702,Quercus rubra,26,E,14.5,4.3,NA,NA,4.34,NA,NA,2013,4.34,NA
+4501,Pinus strobus,26,W,19.5,2.6,NA,NA,NA,NA,NA,2013,NA,NA
+4302,Acer rubrum,26,E,33,3,NA,NA,NA,NA,NA,2013,NA,NA
+4500,Pinus strobus,26,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4101,Betula lenta,26,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4300,Acer rubrum,26,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4503,Pinus strobus,26,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4574,Pinus strobus,26,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4303,Acer rubrum,26,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4103,Betula lenta,26,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4707,Quercus rubra,27,E,3,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4705,Quercus rubra,27,W,11,2.7,NA,NA,NA,NA,NA,2013,NA,NA
+4104,Betula lenta,27,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4704,Quercus rubra,27,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4105,Betula lenta,27,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4304,Acer rubrum,27,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4571,Pinus strobus,27,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4504,Pinus strobus,27,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4305,Acer rubrum,27,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4307,Acer rubrum,27,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4106,Betula lenta,27,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4706,Quercus rubra,27,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4507,Pinus strobus,27,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4306,Acer rubrum,27,E,NA,NA,NA,NA,0.47,NA,NA,2013,0.47,NA
+4506,Pinus strobus,27,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4107,Betula lenta,27,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4711,Quercus rubra,28,E,7,NA,NA,NA,0.54,NA,NA,2013,0.54,NA
+4311,Acer rubrum,28,E,12.5,1.6,NA,NA,0.6,NA,NA,2013,0.6,NA
+4710,Quercus rubra,28,E,23,2.7,NA,NA,0.63,NA,NA,2013,0.63,NA
+4708,Quercus rubra,28,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4556,Pinus strobus,28,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4357,Acer rubrum,28,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4308,Acer rubrum,28,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4709,Quercus rubra,28,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4109,Betula lenta,28,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4509,Pinus strobus,28,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4108,Betula lenta,28,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4557,Pinus strobus,28,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4111,Betula lenta,28,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4110,Betula lenta,28,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4569,Pinus strobus,28,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4310,Acer rubrum,28,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4714,Quercus rubra,29,E,4,NA,NA,NA,2.03,NA,NA,2013,2.03,NA
+4314,Acer rubrum,29,E,5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4715,Quercus rubra,29,E,11.5,1,NA,NA,0.4428,NA,NA,2013,0.4428,NA
+4513,Pinus strobus,29,W,14.5,1.6,NA,NA,0.24,NA,NA,2013,0.24,NA
+4515,Pinus strobus,29,E,20,3,NA,NA,1.09,NA,NA,2013,1.09,NA
+4112,Betula lenta,29,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4312,Acer rubrum,29,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4713,Quercus rubra,29,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4312,Pinus strobus,29,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4358,Acer rubrum,29,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4113,Betula lenta,29,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4712,Quercus rubra,29,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4115,Betula lenta,29,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4315,Acer rubrum,29,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4514,Pinus strobus,29,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4114,Betula lenta,29,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4518,Pinus strobus,30,E,2,4.6,NA,NA,NA,NA,NA,2013,NA,NA
+4718,Quercus rubra,30,E,7.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4317,Acer rubrum,30,W,14,1.5,NA,NA,0.51,NA,NA,2013,0.51,NA
+4316,Acer rubrum,30,W,29,2.2,NA,NA,1.64,NA,NA,2013,1.64,NA
+4516,Pinus strobus,30,W,33,6.3,NA,NA,7.59,9.77,NA,2013,19.75,2.39
+4517,Pinus strobus,30,W,41,5.8,NA,NA,11.24,11.66,NA,2013,26.3,3.4
+4116,Betula lenta,30,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4716,Quercus rubra,30,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4717,Quercus rubra,30,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4117,Betula lenta,30,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4318,Acer rubrum,30,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4319,Acer rubrum,30,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4719,Quercus rubra,30,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4519,Pinus strobus,30,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4118,Betula lenta,30,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4119,Betula lenta,30,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4723,Quercus rubra,31,E,5.5,1.1,NA,NA,NA,NA,NA,2013,NA,NA
+4722,Quercus rubra,31,E,7,3.1,NA,NA,NA,NA,NA,2013,NA,NA
+4120,Betula lenta,31,W,9,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+4322,Acer rubrum,31,E,10,1.2,NA,NA,0.21,NA,NA,2013,0.21,NA
+4720,Quercus rubra,31,W,17,2.2,NA,NA,1.48,NA,NA,2013,1.48,NA
+4523,Pinus strobus,31,E,20.5,3.5,NA,NA,1,NA,NA,2013,1,NA
+4522,Pinus strobus,31,E,39,7.4,NA,NA,20.62,7.23,NA,2013,38.27,10.42
+4321,Acer rubrum,31,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4721,Quercus rubra,31,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4121,Betula lenta,31,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4521,Pinus strobus,31,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4520,Pinus strobus,31,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4320,Acer rubrum,31,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4122,Betula lenta,31,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4323,Acer rubrum,31,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4123,Betula lenta,31,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4126,Betula lenta,32,E,4,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4726,Quercus rubra,32,E,21,3.9,NA,NA,1.31,NA,NA,2013,1.31,NA
+4527,Pinus strobus,32,E,36,6.7,NA,NA,10.13,1.01,NA,2013,14.09,2.95
+4526,Pinus strobus,32,E,40,6.4,NA,NA,NA,NA,NA,2013,NA,NA
+4124,Betula lenta,32,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4125,Betula lenta,32,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4324,Acer rubrum,32,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4525,Pinus strobus,32,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4524,Pinus strobus,32,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4725,Quercus rubra,32,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4325,Acer rubrum,32,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4724,Quercus rubra,32,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4326,Acer rubrum,32,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4727,Quercus rubra,32,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4327,Acer rubrum,32,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4127,Betula lenta,32,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4329,Acer rubrum,33,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4328,Acer rubrum,33,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4528,Pinus strobus,33,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4729,Quercus rubra,33,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4128,Betula lenta,33,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4728,Quercus rubra,33,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4129,Betula lenta,33,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4529,Pinus strobus,33,W,NA,NA,NA,NA,1.03,NA,NA,2013,1.03,NA
+4531,Pinus strobus,33,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4731,Quercus rubra,33,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4130,Betula lenta,33,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4331,Acer rubrum,33,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4356,Acer rubrum,33,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4730,Quercus rubra,33,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4131,Betula lenta,33,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4565,Pinus strobus,33,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4733,Quercus rubra,34,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4533,Pinus strobus,34,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4133,Betula lenta,34,W,NA,NA,NA,NA,0.57,NA,NA,2013,0.57,NA
+4333,Acer rubrum,34,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4132,Betula lenta,34,W,NA,NA,NA,NA,0.49,NA,NA,2013,0.49,NA
+4332,Acer rubrum,34,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4732,Quercus rubra,34,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4532,Pinus strobus,34,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4135,Betula lenta,34,E,NA,NA,NA,NA,0.83,NA,NA,2013,0.83,NA
+4734,Quercus rubra,34,E,NA,NA,NA,NA,1.69,NA,NA,2013,1.69,NA
+4134,Betula lenta,34,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4335,Acer rubrum,34,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4334,Acer rubrum,34,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4735,Quercus rubra,34,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4535,Pinus strobus,34,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4534,Pinus strobus,34,E,NA,NA,NA,NA,0.1,NA,NA,2013,0.1,NA
+4536,Pinus strobus,35,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4336,Acer rubrum,35,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4737,Quercus rubra,35,W,NA,NA,NA,NA,1.36,NA,NA,2013,1.36,NA
+4337,Acer rubrum,35,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4537,Pinus strobus,35,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4736,Quercus rubra,35,W,NA,NA,NA,NA,0.81,NA,NA,2013,0.81,NA
+4136,Betula lenta,35,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4137,Betula lenta,35,W,NA,NA,NA,NA,0.51,NA,NA,2013,0.51,NA
+4560,Pinus strobus,35,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4139,Betula lenta,35,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4566,Pinus strobus,35,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4738,Quercus rubra,35,E,NA,NA,NA,NA,0.74,NA,NA,2013,0.74,NA
+4138,Betula lenta,35,E,NA,NA,NA,NA,0.53,NA,NA,2013,0.53,NA
+4339,Acer rubrum,35,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4739,Quercus rubra,35,E,NA,NA,NA,NA,0.47,NA,NA,2013,0.47,NA
+4338,Acer rubrum,35,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4540,Pinus strobus,36,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4141,Betula lenta,36,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4340,Acer rubrum,36,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4740,Quercus rubra,36,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4541,Pinus strobus,36,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4341,Acer rubrum,36,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4140,Betula lenta,36,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4741,Quercus rubra,36,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4543,Pinus strobus,36,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4542,Pinus strobus,36,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4743,Quercus rubra,36,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4143,Betula lenta,36,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4742,Quercus rubra,36,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4342,Acer rubrum,36,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4142,Betula lenta,36,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4343,Acer rubrum,36,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4744,Quercus rubra,40,W,9.5,1.4,NA,NA,NA,NA,NA,2013,NA,NA
+4347,Acer rubrum,40,E,11,0.9,NA,NA,NA,NA,NA,2013,NA,NA
+4144,Betula lenta,40,W,23,1.1,NA,NA,NA,NA,NA,2013,NA,NA
+4745,Quercus rubra,40,W,27,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+4545,Pinus strobus,40,W,34,6.6,NA,NA,20.35,5.42,NA,2013,29.98,4.21
+4145,Betula lenta,40,W,44,3.3,NA,NA,NA,NA,NA,2013,NA,NA
+4147,Betula lenta,40,E,48,3.7,NA,NA,NA,NA,NA,2013,NA,NA
+4146,Betula lenta,40,E,59,5.3,NA,NA,7.25,NA,NA,2013,7.39,0.14
+4746,Quercus rubra,40,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4544,Pinus strobus,40,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4344,Acer rubrum,40,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4345,Acer rubrum,40,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4546,Pinus strobus,40,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4346,Acer rubrum,40,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4547,Pinus strobus,40,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4747,Quercus rubra,40,E,NA,NA,NA,NA,1.83,NA,NA,2013,1.83,NA
+4750,Quercus rubra,41,E,5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4751,Quercus rubra,41,E,16.5,4,NA,NA,NA,NA,NA,2013,NA,NA
+4351,Acer rubrum,41,E,19,2.3,NA,NA,NA,NA,NA,2013,NA,NA
+4551,Pinus strobus,41,E,21.5,3.7,NA,NA,NA,NA,NA,2013,NA,NA
+4148,Betula lenta,41,W,23.5,1.7,NA,NA,NA,NA,NA,2013,NA,NA
+4350,Acer rubrum,41,E,26,3,NA,NA,0.5,NA,NA,2013,0.5,NA
+4149,Betula lenta,41,W,31.5,2.9,NA,NA,NA,NA,NA,2013,NA,NA
+4151,Betula lenta,41,E,45,4.4,NA,NA,4.61,NA,NA,2013,4.61,NA
+4150,Betula lenta,41,E,54.5,5.3,NA,NA,4.96,NA,NA,2013,4.96,NA
+4549,Pinus strobus,41,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4548,Pinus strobus,41,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4749,Quercus rubra,41,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4349,Acer rubrum,41,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4748,Quercus rubra,41,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4348,Acer rubrum,41,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4550,Pinus strobus,41,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4355,Acer rubrum,42,E,11,1.2,NA,NA,0.19,NA,NA,2013,0.19,NA
+4755,Quercus rubra,42,E,12,1.6,NA,NA,NA,NA,NA,2013,NA,NA
+4354,Acer rubrum,42,E,16,0.7,NA,NA,NA,NA,NA,2013,NA,NA
+4352,Acer rubrum,42,W,18,3.1,NA,NA,0.53,NA,NA,2013,0.53,NA
+4552,Pinus strobus,42,W,18.5,3.1,NA,NA,2.75,0.46,NA,2013,3.34,0.13
+4555,Pinus strobus,42,E,22,3.4,NA,NA,2.14,1.27,NA,2013,3.75,0.17
+4153,Betula lenta,42,W,29,3.9,NA,NA,1.85,NA,NA,2013,1.85,NA
+4554,Pinus strobus,42,E,34.5,5.4,NA,NA,19.35,16.19,NA,2013,43.65,8.11
+4155,Betula lenta,42,E,36,2.1,NA,NA,NA,NA,NA,2013,NA,NA
+4152,Betula lenta,42,W,42,3.2,NA,NA,0.76,NA,NA,2013,0.76,NA
+4752,Quercus rubra,42,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4553,Pinus strobus,42,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4353,Acer rubrum,42,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4753,Quercus rubra,42,W,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4154,Betula lenta,42,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+4754,Quercus rubra,42,E,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6401,P. serotina,1,N,1.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6600,U. americana,1,N,24,1.1,NA,NA,0.9,NA,NA,2013,0.9,NA
+6601,U. americana,1,N,28,1.6,NA,NA,0.92,NA,NA,2013,0.94,0.02
+6001,B. populifolia,1,N,44,NA,NA,NA,2.38,NA,NA,2013,2.38,NA
+6602,U. americana,1,S,45.5,4.2,NA,NA,8.32,NA,NA,2013,8.32,NA
+6313,B. populifolia,1,N,84,4.2,NA,NA,NA,NA,NA,2013,NA,NA
+6201,P. grandidentata,1,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6400,P. serotina,1,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6200,P. grandidentata,1,N,NA,7.2,NA,NA,NA,NA,NA,2013,NA,NA
+6003,B. populifolia,1,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6202,P. grandidentata,1,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6002,B. populifolia,1,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6403,P. serotina,1,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6402,P. serotina,1,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6603,U. americana,1,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6203,P. grandidentata,1,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6606,U. americana,2,S,24.5,2.2,NA,NA,12.44,NA,NA,2013,12.44,NA
+6604,U. americana,2,N,34.5,2.6,NA,NA,0.55,NA,NA,2013,0.55,NA
+6607,U. americana,2,S,43,6.3,NA,NA,10.41,NA,NA,2013,13.59,3.18
+6004,B. populifolia,2,N,46,4,NA,NA,4.85,NA,NA,2013,4.85,NA
+6005,B. populifolia,2,N,74.5,7.5,NA,NA,21.44,NA,NA,2013,28.47,7.03
+6605,U. americana,2,N,104,91,NA,NA,108.87,NA,NA,2013,139.75,30.88
+6205,P. grandidentata,2,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6204,P. grandidentata,2,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6405,P. serotina,2,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6404,P. serotina,2,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6407,P. serotina,2,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6406,P. serotina,2,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6006,B. populifolia,2,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6007,B. populifolia,2,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6206,P. grandidentata,2,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6207,P. grandidentata,2,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6610,U. americana,3,S,5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6408,P. serotina,3,N,8,1.5,NA,NA,0.41,NA,NA,2013,0.41,NA
+6409,P. serotina,3,N,10,1.2,NA,NA,2.21,NA,NA,2013,3.06,0.85
+6611,U. americana,3,S,34.5,3.9,NA,NA,NA,NA,NA,2013,NA,NA
+6609,U. americana,3,N,37.5,2.4,NA,NA,0.87,NA,NA,2013,0.87,NA
+6608,U. americana,3,N,50,3.8,NA,NA,9.93,NA,NA,2013,10.41,0.48
+6009,B. populifolia,3,N,80,8.4,NA,NA,27.57,NA,NA,2013,35.23,7.66
+6208,P. grandidentata,3,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6008,B. populifolia,3,N,NA,NA,NA,NA,1.77,NA,NA,2013,1.77,NA
+6209,P. grandidentata,3,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6410,P. serotina,3,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6411,P. serotina,3,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6010,B. populifolia,3,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6210,P. grandidentata,3,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6211,P. grandidentata,3,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6156,B. populifolia,3,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6613,U. americana,4,N,25,1.8,NA,NA,0.37,NA,NA,2013,0.37,NA
+6615,U. americana,4,S,33,4.3,NA,NA,5.38,NA,NA,2013,5.88,0.5
+6012,B. populifolia,4,N,45,1.5,NA,NA,5.42,NA,NA,2013,5.51,0.09
+6213,P. grandidentata,4,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6013,B. populifolia,4,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6412,P. serotina,4,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6612,U. americana,4,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6212,P. grandidentata,4,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6413,P. serotina,4,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6414,P. serotina,4,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6215,P. grandidentata,4,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6214,P. grandidentata,4,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6014,B. populifolia,4,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6015,B. populifolia,4,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6415,P. serotina,4,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6614,U. americana,4,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6416,P. serotina,5,N,2,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6418,P. serotina,5,S,6,NA,NA,NA,1.61,NA,NA,2013,1.61,NA
+6619,U. americana,5,S,14.5,2.2,NA,NA,NA,NA,NA,2013,NA,NA
+6618,U. americana,5,S,22.5,6,NA,NA,NA,NA,NA,2013,NA,NA
+6017,B. populifolia,5,N,43.5,4.5,NA,NA,NA,NA,NA,2013,NA,NA
+6616,U. americana,5,N,46.5,7,NA,NA,21.6,NA,NA,2013,21.6,NA
+6617,U. americana,5,N,54.5,3.8,NA,NA,NA,NA,NA,2013,NA,NA
+6016,B. populifolia,5,N,56.5,5.5,NA,NA,NA,NA,NA,2013,NA,NA
+6417,P. serotina,5,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6216,P. grandidentata,5,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6217,P. grandidentata,5,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6218,P. grandidentata,5,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6419,P. serotina,5,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6019,B. populifolia,5,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6018,B. populifolia,5,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6219,P. grandidentata,5,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6421,P. serotina,6,N,4.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6022,B. populifolia,6,S,16.8,23.2,NA,NA,303.21,NA,NA,2013,489.65,186.44
+6620,U. americana,6,N,38.5,4.6,NA,NA,3.34,NA,NA,2013,3.34,NA
+6623,U. americana,6,S,52,4.5,NA,NA,10.19,NA,NA,2013,16.28,6.09
+6622,U. americana,6,S,54,6,NA,NA,21.71,NA,NA,2013,24.29,2.58
+6621,U. americana,6,N,58.8,7.4,NA,NA,30.01,NA,NA,2013,41.51,11.5
+6220,P. grandidentata,6,N,125.5,11,NA,NA,72.72,NA,NA,2013,92.18,19.46
+6020,B. populifolia,6,N,160.5,13.9,NA,NA,140.94,NA,NA,2013,236.41,95.47
+6021,B. populifolia,6,N,230,21.4,NA,NA,417.72,NA,NA,2013,665.87,248.15
+6420,P. serotina,6,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6221,P. grandidentata,6,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6422,P. serotina,6,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6223,P. grandidentata,6,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6423,P. serotina,6,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6222,P. grandidentata,6,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6023,B. populifolia,6,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6426,P. serotina,7,S,9,1,NA,NA,NA,NA,NA,2013,NA,NA
+6226,P. grandidentata,7,S,27,1.9,NA,NA,NA,NA,NA,2013,NA,NA
+6424,P. serotina,7,N,34.5,3.6,NA,NA,2.95,NA,NA,2013,2.95,NA
+6624,U. americana,7,N,42,3.2,NA,NA,NA,NA,NA,2013,NA,NA
+6625,U. americana,7,N,48.5,4.2,NA,NA,5.68,NA,NA,2013,5.68,NA
+6626,U. americana,7,S,53.5,4.8,NA,NA,10.27,NA,NA,2013,10.59,0.32
+6627,U. americana,7,S,55.5,4.9,NA,NA,3.89,NA,NA,2013,3.89,NA
+6025,B. populifolia,7,N,154.5,16,NA,NA,199.01,NA,NA,2013,273.31,74.3
+6027,B. populifolia,7,S,200.5,20.1,NA,NA,254.75,NA,NA,2013,430,175.25
+6024,B. populifolia,7,N,234.5,17.9,NA,NA,306.11,NA,NA,2013,478.72,172.61
+6026,B. populifolia,7,S,271.5,26.7,NA,NA,672.96,NA,NA,2013,1110.79,437.83
+6227,P. grandidentata,7,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6356,P. grandidentata,7,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6425,P. serotina,7,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6225,P. grandidentata,7,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6556,P. serotina,7,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6429,P. serotina,8,N,8,0.7,NA,NA,NA,NA,NA,2013,NA,NA
+6428,P. serotina,8,N,8.5,0.8,NA,NA,NA,NA,NA,2013,NA,NA
+6630,U. americana,8,S,16,1.8,NA,NA,0.58,NA,NA,2013,0.58,NA
+6628,U. americana,8,N,76,6,NA,NA,30.16,NA,NA,2013,30.16,NA
+6631,U. americana,8,S,92,7.2,NA,NA,36.16,NA,NA,2013,42.26,6.1
+6629,U. americana,8,N,95,9.1,NA,NA,48.67,NA,NA,2013,56.12,7.45
+6030,B. populifolia,8,S,99.5,7.8,NA,NA,85.08,NA,NA,2013,114.3,29.22
+6031,B. populifolia,8,S,127,13.6,NA,NA,128.85,NA,NA,2013,183.02,54.17
+6029,B. populifolia,8,N,185,16.1,NA,NA,282.52,NA,NA,2013,486.34,203.82
+6157,B. populifolia,8,N,220,17.5,NA,NA,406.05,NA,NA,2013,624.95,218.9
+6228,P. grandidentata,8,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6229,P. grandidentata,8,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6230,P. grandidentata,8,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6431,P. serotina,8,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6559,P. serotina,8,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6231,P. grandidentata,8,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6034,B. populifolia,9,S,14,1,NA,NA,0.24,NA,NA,2013,0.24,NA
+6435,P. serotina,9,S,36,3.9,NA,NA,6.97,NA,NA,2013,6.97,NA
+6234,P. grandidentata,9,S,55,5.3,NA,NA,NA,NA,NA,2013,NA,NA
+6632,U. americana,9,N,66,8.1,NA,NA,20.02,NA,NA,2013,25.28,5.26
+6633,U. americana,9,N,76,8.4,NA,NA,43.78,NA,NA,2013,49.48,5.7
+6434,P. serotina,9,S,77,4.6,NA,NA,NA,NA,NA,2013,NA,NA
+6635,U. americana,9,S,85,7.7,NA,NA,50.19,NA,NA,2013,58.55,8.36
+6634,U. americana,9,S,87,11.1,NA,NA,91.15,NA,NA,2013,112.71,21.56
+6033,B. populifolia,9,N,94,4.6,NA,NA,7.28,NA,NA,2013,7.28,NA
+6433,P. serotina,9,N,102,9.7,NA,NA,132.89,NA,NA,2013,166.98,34.09
+6432,P. serotina,9,N,104,7.7,NA,NA,NA,NA,NA,2013,NA,NA
+6235,P. grandidentata,9,S,162,12.9,NA,NA,123.49,NA,NA,2013,162.56,39.07
+6032,B. populifolia,9,N,194,22,NA,NA,329.37,NA,NA,2013,512.98,183.61
+6035,B. populifolia,9,S,218,26,NA,NA,502.98,NA,NA,2013,747.16,244.18
+6232,P. grandidentata,9,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6357,P. grandidentata,9,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6237,P. grandidentata,10,N,4,NA,NA,NA,0.57,NA,NA,2013,0.57,NA
+6236,P. grandidentata,10,N,6,NA,NA,NA,278.15,NA,NA,2013,415.16,137.01
+6437,P. serotina,10,N,24,3,NA,NA,NA,NA,NA,2013,NA,NA
+6637,U. americana,10,N,36.5,4.9,NA,NA,NA,NA,NA,2013,NA,NA
+6438,P. serotina,10,S,45,5,NA,NA,19.58,NA,NA,2013,19.58,NA
+6639,U. americana,10,S,58,4.7,NA,NA,9.69,NA,NA,2013,9.69,NA
+6238,P. grandidentata,10,S,68,4.8,NA,NA,2.11,NA,NA,2013,2.11,NA
+6638,U. americana,10,S,68.5,6.4,NA,NA,19.91,NA,NA,2013,20.95,1.04
+6636,U. americana,10,N,80,4.5,NA,NA,13.48,NA,NA,2013,13.67,0.19
+6436,P. serotina,10,N,112,8.8,NA,NA,57.56,NA,NA,2013,69.02,11.46
+6439,P. serotina,10,S,124.5,10.3,NA,NA,74.56,NA,NA,2013,89.65,15.09
+6239,P. grandidentata,10,S,169,16.5,NA,NA,210.27,NA,NA,2013,312.87,102.6
+6038,B. populifolia,10,S,169.5,14.4,NA,NA,114.93,NA,NA,2013,158.61,43.68
+6039,B. populifolia,10,S,241.5,24.6,NA,NA,495.18,NA,NA,2013,702.31,207.13
+6036,B. populifolia,10,N,244,31.7,NA,NA,NA,NA,NA,2013,NA,NA
+6037,B. populifolia,10,N,244,19.4,NA,NA,687.98,NA,NA,2013,1073.91,385.93
+6442,P. serotina,11,S,2.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6440,P. serotina,11,N,8,1.1,NA,NA,NA,NA,NA,2013,NA,NA
+6443,P. serotina,11,S,10,1,NA,NA,NA,NA,NA,2013,NA,NA
+6640,U. americana,11,N,10.5,1.4,NA,NA,NA,NA,NA,2013,NA,NA
+6242,P. grandidentata,11,S,12,2.9,NA,NA,NA,NA,NA,2013,NA,NA
+6641,U. americana,11,N,45.5,5.6,NA,NA,4.55,NA,NA,2013,4.56,0.01
+6441,P. serotina,11,N,59.5,6.9,NA,NA,7.74,NA,NA,2013,9.51,1.77
+6642,U. americana,11,S,66.5,5.5,NA,NA,6.4,NA,NA,2013,6.4,NA
+6643,U. americana,11,S,81.5,6,NA,NA,45.92,NA,NA,2013,45.92,NA
+6040,B. populifolia,11,N,126.5,8.4,NA,NA,33.22,NA,NA,2013,38.28,5.06
+6041,B. populifolia,11,N,189.5,187,NA,NA,267.13,NA,NA,2013,429.67,162.54
+6043,B. populifolia,11,S,221.5,28.6,NA,NA,505.39,NA,NA,2013,881.72,376.33
+6042,B. populifolia,11,S,252,32.3,NA,NA,643.91,NA,NA,2013,1091.22,447.31
+6241,P. grandidentata,11,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6240,P. grandidentata,11,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6243,P. grandidentata,11,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6246,P. grandidentata,12,S,21,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+6644,U. americana,12,N,38.5,3.6,NA,NA,NA,NA,NA,2013,NA,NA
+6244,P. grandidentata,12,N,43.5,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+6647,U. americana,12,S,46,3.7,NA,NA,4.08,NA,NA,2013,4.08,NA
+6444,P. serotina,12,N,51,7,NA,NA,11.31,NA,NA,2013,12.46,1.15
+6447,P. serotina,12,S,55.5,6,NA,NA,21.06,NA,NA,2013,23.52,2.46
+6645,U. americana,12,N,60,4.6,NA,NA,7.55,NA,NA,2013,7.55,NA
+6446,P. serotina,12,S,81.5,6.7,NA,NA,33.36,NA,NA,2013,38.13,4.77
+6646,U. americana,12,S,83,7.3,NA,NA,55.85,NA,NA,2013,68.18,12.33
+6445,P. serotina,12,N,107,6.3,NA,NA,31.65,NA,NA,2013,35.32,3.67
+6047,B. populifolia,12,S,113,16,NA,NA,137.27,NA,NA,2013,185.39,48.12
+6045,B. populifolia,12,N,123.4,14,NA,NA,79.96,NA,NA,2013,131.74,51.78
+6044,B. populifolia,12,N,193.5,21,NA,NA,428.2,NA,NA,2013,669.7,241.5
+6046,B. populifolia,12,S,255.5,29.6,NA,NA,936.32,NA,NA,2013,1394.3,457.98
+6245,P. grandidentata,12,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6247,P. grandidentata,12,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6651,U. americana,13,S,28,3.6,NA,NA,3.31,NA,NA,2013,3.55,0.24
+6650,U. americana,13,S,42.5,4.4,NA,NA,2.48,NA,NA,2013,2.48,NA
+6648,U. americana,13,N,47,5.5,NA,NA,8.94,NA,NA,2013,8.94,NA
+6649,U. americana,13,N,55.5,5,NA,NA,11.18,NA,NA,2013,11.18,NA
+6050,B. populifolia,13,S,58.5,5,NA,NA,2.77,NA,NA,2013,2.87,0.1
+6048,B. populifolia,13,N,NA,NA,NA,NA,2.81,NA,NA,2013,2.81,NA
+6448,P. serotina,13,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6451,P. serotina,13,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6248,P. grandidentata,13,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6049,B. populifolia,13,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6249,P. grandidentata,13,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6449,P. serotina,13,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6250,P. grandidentata,13,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6051,B. populifolia,13,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6450,P. serotina,13,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6251,P. grandidentata,13,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6453,P. serotina,14,N,6,3.5,NA,NA,NA,NA,NA,2013,NA,NA
+6452,P. serotina,14,N,8.5,2.1,NA,NA,NA,NA,NA,2013,NA,NA
+6455,P. serotina,14,S,8.5,0.7,NA,NA,NA,NA,NA,2013,NA,NA
+6454,P. serotina,14,S,12,2.7,NA,NA,NA,NA,NA,2013,NA,NA
+6655,U. americana,14,S,23.5,2.4,NA,NA,0.77,NA,NA,2013,0.77,NA
+6654,U. americana,14,S,44.5,8.7,NA,NA,5.71,NA,NA,2013,6.14,0.43
+6653,U. americana,14,N,52.5,4.4,NA,NA,5.34,NA,NA,2013,5.34,NA
+6054,B. populifolia,14,S,62.5,5,NA,NA,NA,NA,NA,2013,NA,NA
+6052,B. populifolia,14,N,63,6,NA,NA,3.32,NA,NA,2013,3.44,0.12
+6652,U. americana,14,N,71.5,5.4,NA,NA,7.27,NA,NA,2013,7.27,NA
+6053,B. populifolia,14,N,NA,NA,NA,NA,5.27,NA,NA,2013,5.66,0.39
+6252,P. grandidentata,14,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6253,P. grandidentata,14,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6255,P. grandidentata,14,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6055,B. populifolia,14,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6254,P. grandidentata,14,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6459,P. serotina,15,S,2,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6458,P. serotina,15,S,6,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6659,U. americana,15,S,8.5,0.9,NA,NA,NA,NA,NA,2013,NA,NA
+6457,P. serotina,15,N,12,1.9,NA,NA,NA,NA,NA,2013,NA,NA
+6059,B. populifolia,15,S,31.5,3.8,NA,NA,1.65,NA,NA,2013,1.65,NA
+6657,U. americana,15,N,53,5.2,NA,NA,8.32,NA,NA,2013,8.32,NA
+6056,B. populifolia,15,N,56,4.1,NA,NA,NA,NA,NA,2013,NA,NA
+6058,B. populifolia,15,S,71.5,7.7,NA,NA,21.4,NA,NA,2013,24.16,2.76
+6656,U. americana,15,N,75.5,5.2,NA,NA,35.32,NA,NA,2013,35.32,NA
+6658,U. americana,15,S,95.5,6.9,NA,NA,NA,NA,NA,2013,NA,NA
+6057,B. populifolia,15,N,177,20.9,NA,NA,259.89,NA,NA,2013,458.42,198.53
+6256,P. grandidentata,15,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6257,P. grandidentata,15,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6456,P. serotina,15,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6259,P. grandidentata,15,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6258,P. grandidentata,15,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6463,P. serotina,16,S,8.5,1.3,NA,NA,NA,NA,NA,2013,NA,NA
+6461,P. serotina,16,N,11,3,NA,NA,NA,NA,NA,2013,NA,NA
+6462,P. serotina,16,S,11,2.3,NA,NA,1.51,NA,NA,2013,1.51,NA
+6661,U. americana,16,N,44,4.6,NA,NA,NA,NA,NA,2013,NA,NA
+6662,U. americana,16,S,49,5.4,NA,NA,6.6,NA,NA,2013,6.6,NA
+6660,U. americana,16,N,50.5,5.3,NA,NA,NA,NA,NA,2013,NA,NA
+6663,U. americana,16,S,66.5,5.1,NA,NA,9.24,NA,NA,2013,9.24,NA
+6062,B. populifolia,16,S,104.5,10.8,NA,NA,65.58,NA,NA,2013,110.96,45.38
+6063,B. populifolia,16,S,113.5,11.2,NA,NA,65.89,NA,NA,2013,111.2,45.31
+6060,B. populifolia,16,N,177.5,19,NA,NA,274.31,NA,NA,2013,439.31,165
+6261,P. grandidentata,16,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6263,P. grandidentata,16,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6262,P. grandidentata,16,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6460,P. serotina,16,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6260,P. grandidentata,16,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6061,B. populifolia,16,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6467,P. serotina,17,S,3,NA,NA,NA,3.72,NA,NA,2013,3.72,NA
+6465,P. serotina,17,N,10,0.4,NA,NA,0.66,NA,NA,2013,0.66,NA
+6466,P. serotina,17,S,13,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+6666,U. americana,17,S,32.5,3.9,NA,NA,3.81,NA,NA,2013,3.81,NA
+6664,U. americana,17,N,54,5.2,NA,NA,NA,NA,NA,2013,NA,NA
+6667,U. americana,17,S,57,6.1,NA,NA,27.78,NA,NA,2013,29.37,1.59
+6665,U. americana,17,N,67.5,6.3,NA,NA,27.46,NA,NA,2013,28.82,1.36
+6067,B. populifolia,17,S,96,13.1,NA,NA,138.55,NA,NA,2013,233.1,94.55
+6065,B. populifolia,17,N,108,11.3,NA,NA,94.61,NA,NA,2013,191.7,97.09
+6064,B. populifolia,17,N,144,13.6,NA,NA,120.68,NA,NA,2013,185.55,64.87
+6066,B. populifolia,17,S,242,25.3,NA,NA,547.1,NA,NA,2013,993.92,446.82
+6464,P. serotina,17,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6264,P. grandidentata,17,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6265,P. grandidentata,17,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6364,P. grandidentata,17,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6267,P. grandidentata,17,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6469,P. serotina,18,N,5.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6468,P. serotina,18,N,10,2.5,NA,NA,0.53,NA,NA,2013,0.53,NA
+6668,U. americana,18,N,23.5,2.8,NA,NA,2.9814,NA,NA,2013,2.9814,NA
+6271,P. grandidentata,18,S,38.5,3.9,NA,NA,NA,NA,NA,2013,NA,NA
+6669,U. americana,18,N,43.5,3.9,NA,NA,3.38,NA,NA,2013,3.38,NA
+6670,U. americana,18,S,45.5,4.8,NA,NA,14.93,NA,NA,2013,18.98,4.05
+6671,U. americana,18,S,50.5,4.8,NA,NA,11.44,NA,NA,2013,11.87,0.43
+6071,B. populifolia,18,S,61,5.4,NA,NA,16.53,NA,NA,2013,20.01,3.48
+6470,P. serotina,18,S,93,6.2,NA,NA,NA,NA,NA,2013,NA,NA
+6070,B. populifolia,18,S,93.5,6.4,NA,NA,27.96,NA,NA,2013,35.98,8.02
+6068,B. populifolia,18,N,124,11.5,NA,NA,90.58,NA,NA,2013,135.53,44.95
+6069,B. populifolia,18,N,154,13.8,NA,NA,245.52,NA,NA,2013,317.02,71.5
+6359,P. grandidentata,18,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6268,P. grandidentata,18,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6558,P. serotina,18,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6270,P. grandidentata,18,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6488,P. serotina,19,N,9.5,1.4,NA,NA,NA,NA,NA,2013,NA,NA
+6675,U. americana,19,S,36,4.4,NA,NA,NA,NA,NA,2013,NA,NA
+6672,U. americana,19,N,39.5,4,NA,NA,NA,NA,NA,2013,NA,NA
+6673,U. americana,19,N,49,3.8,NA,NA,49.89,NA,NA,2013,52.96,3.07
+6674,U. americana,19,S,49.5,4.3,NA,NA,6.94,NA,NA,2013,6.94,NA
+6272,P. grandidentata,19,N,62.5,7.6,NA,NA,76.11,NA,NA,2013,96.34,20.23
+6075,B. populifolia,19,S,65.5,4.7,NA,NA,3.43,NA,NA,2013,3.62,0.19
+6273,P. grandidentata,19,N,74,5.4,NA,NA,47.95,NA,NA,2013,50.74,2.79
+6074,B. populifolia,19,S,88.5,10.7,NA,NA,49.34,NA,NA,2013,99.14,49.8
+6073,B. populifolia,19,N,90,6.2,NA,NA,11.26,NA,NA,2013,12.16,0.9
+6072,B. populifolia,19,N,112.5,7.3,NA,NA,46.39,NA,NA,2013,56.53,10.14
+6489,P. serotina,19,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6490,P. serotina,19,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6491,P. serotina,19,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6275,P. grandidentata,19,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6274,P. grandidentata,19,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6487,P. serotina,20,S,1,NA,NA,NA,1.76,NA,NA,2013,1.97,0.21
+6484,P. serotina,20,N,2,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6485,P. serotina,20,N,3,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6679,U. americana,20,S,35,2.3,NA,NA,2.35,NA,NA,2013,2.35,NA
+6678,U. americana,20,S,63.5,6.5,NA,NA,NA,NA,NA,2013,NA,NA
+6677,U. americana,20,N,97.5,7.6,NA,NA,54.61,NA,NA,2013,61.1,6.49
+6079,B. populifolia,20,S,103,8.1,NA,NA,43.51,NA,NA,2013,55.25,11.74
+6676,U. americana,20,N,119,7.9,NA,NA,NA,NA,NA,2013,NA,NA
+6486,P. serotina,20,S,119,9.2,NA,NA,96.77,NA,NA,2013,115.69,18.92
+6278,P. grandidentata,20,S,128,9.8,NA,NA,169.7,NA,NA,2013,235.53,65.83
+6076,B. populifolia,20,N,129.5,15.4,NA,NA,59.81,NA,NA,2013,105.26,45.45
+6078,B. populifolia,20,S,139,11.9,NA,NA,68.98,NA,NA,2013,87.51,18.53
+6276,P. grandidentata,20,N,156,12.2,NA,NA,163.01,NA,NA,2013,219.45,56.44
+6077,B. populifolia,20,N,187,29.4,NA,NA,554.87,NA,NA,2013,1038.04,483.17
+6370,P. grandidentata,20,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6279,P. grandidentata,20,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6481,P. serotina,21,N,7,NA,NA,NA,0.14,NA,NA,2013,0.14,NA
+6682,U. americana,21,S,12,1.9,NA,NA,0.24,NA,NA,2013,0.24,NA
+6681,U. americana,21,N,18,3.2,NA,NA,NA,NA,NA,2013,NA,NA
+6683,U. americana,21,S,25.5,3.2,NA,NA,1.17,NA,NA,2013,1.17,NA
+6680,U. americana,21,N,39,3.9,NA,NA,2.65,NA,NA,2013,2.7,0.05
+6081,B. populifolia,21,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6480,P. serotina,21,N,NA,NA,NA,NA,19.07,NA,NA,2013,19.07,NA
+6283,P. grandidentata,21,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6082,B. populifolia,21,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6280,P. grandidentata,21,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6360,P. grandidentata,21,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6080,B. populifolia,21,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6483,P. serotina,21,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6482,P. serotina,21,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6083,B. populifolia,21,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6282,P. grandidentata,21,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6684,U. americana,22,N,15.5,2.5,NA,NA,1,NA,NA,2013,1,NA
+6473,P. serotina,22,N,17,0.9,NA,NA,NA,NA,NA,2013,NA,NA
+6687,U. americana,22,S,20.5,2.6,NA,NA,0.93,NA,NA,2013,1.01,0.08
+6472,P. serotina,22,N,26,1.9,NA,NA,0.82,NA,NA,2013,0.82,NA
+6086,B. populifolia,22,S,27.5,5.3,NA,NA,0.2,NA,NA,2013,0.2,NA
+6685,U. americana,22,N,46,3.7,NA,NA,1.6603,NA,NA,2013,1.6603,NA
+6287,P. grandidentata,22,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6475,P. serotina,22,S,NA,NA,NA,NA,0.58,NA,NA,2013,0.58,NA
+6686,U. americana,22,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6087,B. populifolia,22,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6358,P. grandidentata,22,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6284,P. grandidentata,22,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6084,B. populifolia,22,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6085,B. populifolia,22,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6557,P. serotina,22,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6286,P. grandidentata,22,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6479,P. serotina,23,S,5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6477,P. serotina,23,N,10,1.9,NA,NA,NA,NA,NA,2013,NA,NA
+6478,P. serotina,23,S,23,3.8,NA,NA,0.17,NA,NA,2013,0.17,NA
+6688,U. americana,23,N,30,4.5,NA,NA,NA,NA,NA,2013,NA,NA
+6689,U. americana,23,N,60.5,2.9,NA,NA,NA,NA,NA,2013,NA,NA
+6690,U. americana,23,S,62.5,5.1,NA,NA,4.16,NA,NA,2013,5.47,1.31
+6691,U. americana,23,S,84.5,6.5,NA,NA,11.51,NA,NA,2013,13,1.49
+6088,B. populifolia,23,N,85.5,10.5,NA,NA,26.19,NA,NA,2013,36.031,9.841
+6090,B. populifolia,23,S,100.5,11.9,NA,NA,45.94,NA,NA,2013,58.49,12.55
+6089,B. populifolia,23,N,101.5,10.4,NA,NA,NA,NA,NA,2013,NA,NA
+6289,P. grandidentata,23,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6288,P. grandidentata,23,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6476,P. serotina,23,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6091,B. populifolia,23,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6291,P. grandidentata,23,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6290,P. grandidentata,23,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6492,P. serotina,24,N,4,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6695,U. americana,24,S,4,NA,NA,NA,0.19,NA,NA,2013,0.19,NA
+6494,P. serotina,24,S,7.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6493,P. serotina,24,N,10,0.9,NA,NA,NA,NA,NA,2013,NA,NA
+6694,U. americana,24,S,24,2.6,NA,NA,NA,NA,NA,2013,NA,NA
+6692,U. americana,24,N,44.5,3.3,NA,NA,1.51,NA,NA,2013,1.51,NA
+6693,U. americana,24,N,50.5,4.3,NA,NA,7.56,NA,NA,2013,7.56,NA
+6293,P. grandidentata,24,N,57.5,3.9,NA,NA,24.43,NA,NA,2013,24.43,NA
+6292,P. grandidentata,24,N,68.5,3.8,NA,NA,2.82,NA,NA,2013,2.82,NA
+6095,B. populifolia,24,S,110.5,9.6,NA,NA,122.4,NA,NA,2013,167.36,44.96
+6093,B. populifolia,24,N,159.5,21.6,NA,NA,249.69,NA,NA,2013,381.77,132.08
+6092,B. populifolia,24,N,212,24.8,NA,NA,238.79,NA,NA,2013,392.1,153.31
+6495,P. serotina,24,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6094,B. populifolia,24,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6295,P. grandidentata,24,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6294,P. grandidentata,24,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6297,P. grandidentata,25,N,14,0.8,NA,NA,NA,NA,NA,2013,NA,NA
+6698,U. americana,25,S,34.5,4.5,NA,NA,16.19,NA,NA,2013,16.19,NA
+6696,U. americana,25,N,55.5,3.9,NA,NA,16.44,NA,NA,2013,18.4,1.96
+6697,U. americana,25,N,NA,NA,NA,NA,1.59,NA,NA,2013,1.59,NA
+6097,B. populifolia,25,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6096,B. populifolia,25,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6296,P. grandidentata,25,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6497,P. serotina,25,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6496,P. serotina,25,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6099,B. populifolia,25,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6498,P. serotina,25,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6298,P. grandidentata,25,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6098,B. populifolia,25,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6699,U. americana,25,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6499,P. serotina,25,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6299,P. grandidentata,25,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6702,U. americana,26,S,5.5,NA,NA,NA,0.58,NA,NA,2013,0.58,NA
+6500,P. serotina,26,N,14.5,2,NA,NA,NA,NA,NA,2013,NA,NA
+6701,U. americana,26,N,25.5,1.4,NA,NA,4.04,NA,NA,2013,4.04,NA
+6700,U. americana,26,N,26,1.9,NA,NA,3.51,NA,NA,2013,3.51,NA
+6303,P. grandidentata,26,S,63,4.2,NA,NA,17.72,NA,NA,2013,19.6,1.88
+6103,B. populifolia,26,S,74.5,6.9,NA,NA,15.14,NA,NA,2013,16.29,1.15
+6102,B. populifolia,26,S,84.5,9.2,NA,NA,24.91,NA,NA,2013,33.9,8.99
+6101,B. populifolia,26,N,89,4.9,NA,NA,13.44,NA,NA,2013,14.18,0.74
+6301,P. grandidentata,26,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6703,U. americana,26,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6302,P. grandidentata,26,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6100,B. populifolia,26,N,NA,NA,NA,NA,2.5,NA,NA,2013,2.62,0.12
+6300,P. grandidentata,26,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6501,P. serotina,26,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6502,P. serotina,26,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6503,P. serotina,26,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6706,U. americana,27,S,2.2,33.5,NA,NA,2.1,NA,NA,2013,2.1,NA
+6705,U. americana,27,N,12,2.2,NA,NA,1.34,NA,NA,2013,1.34,NA
+6707,U. americana,27,S,49.5,4.1,NA,NA,14.1,NA,NA,2013,14.1,NA
+6704,U. americana,27,N,54.5,4.1,NA,NA,10.52,NA,NA,2013,10.52,NA
+6106,B. populifolia,27,S,60,4,NA,NA,33.74,NA,NA,2013,36.61,2.87
+6507,P. serotina,27,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6505,P. serotina,27,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6105,B. populifolia,27,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6305,P. grandidentata,27,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6104,B. populifolia,27,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6304,P. grandidentata,27,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6504,P. serotina,27,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6307,P. grandidentata,27,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6506,P. serotina,27,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6107,B. populifolia,27,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6306,P. grandidentata,27,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6709,U. americana,28,N,9,1.7,NA,NA,1.03,NA,NA,2013,1.03,NA
+6708,U. americana,28,N,19.5,1.3,NA,NA,2.18,NA,NA,2013,2.18,NA
+6710,U. americana,28,S,28,3.3,NA,NA,7.74,NA,NA,2013,7.81,0.07
+6711,U. americana,28,S,33.5,2.8,NA,NA,1.06,NA,NA,2013,1.06,NA
+6109,B. populifolia,28,N,79.5,8.4,NA,NA,51.11,NA,NA,2013,68.68,17.57
+6508,P. serotina,28,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6308,P. grandidentata,28,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6511,P. serotina,28,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6111,B. populifolia,28,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6108,B. populifolia,28,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6509,P. serotina,28,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6309,P. grandidentata,28,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6310,P. grandidentata,28,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6311,P. grandidentata,28,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6158,B. populifolia,28,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6510,P. serotina,28,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6715,U. americana,29,S,3.5,NA,NA,NA,0.95,NA,NA,2013,0.95,NA
+6714,U. americana,29,S,17,2.1,NA,NA,NA,NA,NA,2013,NA,NA
+6712,U. americana,29,N,33,2.6,NA,NA,4.32,NA,NA,2013,4.32,NA
+6713,U. americana,29,N,34.5,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+6515,P. serotina,29,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6513,P. serotina,29,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6512,P. serotina,29,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6312,P. grandidentata,29,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6112,B. populifolia,29,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6371,P. grandidentata,29,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6113,B. populifolia,29,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6115,B. populifolia,29,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6514,P. serotina,29,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6114,B. populifolia,29,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6314,P. grandidentata,29,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6361,P. grandidentata,29,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6517,P. serotina,30,N,3,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6519,P. serotina,30,S,7,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6518,P. serotina,30,S,8,1.2,NA,NA,NA,NA,NA,2013,NA,NA
+6316,P. grandidentata,30,N,11,1.5,NA,NA,NA,NA,NA,2013,NA,NA
+6516,P. serotina,30,N,12.5,1,NA,NA,NA,NA,NA,2013,NA,NA
+6718,U. americana,30,S,15.5,1.4,NA,NA,NA,NA,NA,2013,NA,NA
+6119,B. populifolia,30,S,29,1.5,NA,NA,1.52,NA,NA,2013,1.52,NA
+6717,U. americana,30,N,31.5,3.5,NA,NA,NA,NA,NA,2013,NA,NA
+6716,U. americana,30,N,33,2.1,NA,NA,NA,NA,NA,2013,NA,NA
+6719,U. americana,30,S,40.5,2.8,NA,NA,8.15,NA,NA,2013,8.22,0.07
+6118,B. populifolia,30,S,42.5,4.3,NA,NA,2.91,NA,NA,2013,3.44,0.53
+6117,B. populifolia,30,N,55,3.5,NA,NA,NA,NA,NA,2013,NA,NA
+6317,P. grandidentata,30,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6116,B. populifolia,30,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6318,P. grandidentata,30,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6319,P. grandidentata,30,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6523,P. serotina,31,S,2,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6323,P. grandidentata,31,S,15.5,1.6,NA,NA,NA,NA,NA,2013,NA,NA
+6721,U. americana,31,N,46.5,3.5,NA,NA,5.86,NA,NA,2013,5.86,NA
+6720,U. americana,31,N,54,5.1,NA,NA,12.33,NA,NA,2013,12.5,0.17
+6722,U. americana,31,S,61.5,5.6,NA,NA,9.84,NA,NA,2013,9.84,NA
+6723,U. americana,31,S,65,4.7,NA,NA,11.69,NA,NA,2013,11.69,NA
+6121,B. populifolia,31,N,94.5,10.6,NA,NA,79.69,NA,NA,2013,118.33,38.64
+6120,B. populifolia,31,N,96,8.6,NA,NA,40.84,NA,NA,2013,60.95,20.11
+6123,B. populifolia,31,S,218,24.6,NA,NA,434.57,NA,NA,2013,811.73,377.16
+6560,P. serotina,31,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6521,P. serotina,31,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6362,P. grandidentata,31,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6320,P. grandidentata,31,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6122,B. populifolia,31,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6322,P. grandidentata,31,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6522,P. serotina,31,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6524,P. serotina,32,N,10.5,0.7,NA,NA,1.86,NA,NA,2013,1.86,NA
+6527,P. serotina,32,S,11.5,1.3,NA,NA,0.54,NA,NA,2013,0.54,NA
+6525,P. serotina,32,N,13,2.7,NA,NA,1.12,NA,NA,2013,1.12,NA
+6326,P. grandidentata,32,S,16,1.4,NA,NA,NA,NA,NA,2013,NA,NA
+6726,U. americana,32,S,18.5,1.1,NA,NA,0.64,NA,NA,2013,0.64,NA
+6126,B. populifolia,32,S,37,2.7,NA,NA,NA,NA,NA,2013,NA,NA
+6725,U. americana,32,N,38.5,3.8,NA,NA,5.12,NA,NA,2013,5.12,NA
+6727,U. americana,32,S,42.5,3.7,NA,NA,2.65,NA,NA,2013,2.65,NA
+6724,U. americana,32,N,50.5,4.1,NA,NA,7.87,NA,NA,2013,8.08,0.21
+6124,B. populifolia,32,N,140.5,17.3,NA,NA,232.36,NA,NA,2013,318.4,86.04
+6125,B. populifolia,32,N,151,11.8,NA,NA,110.05,NA,NA,2013,156.3,46.25
+6127,B. populifolia,32,S,160.5,18.1,NA,NA,216.53,NA,NA,2013,320.61,104.08
+6325,P. grandidentata,32,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6372,P. grandidentata,32,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6526,P. serotina,32,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6327,P. grandidentata,32,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6731,U. americana,33,S,23,1.5,NA,NA,0.64,NA,NA,2013,0.64,NA
+6530,P. serotina,33,S,34.5,1.7,NA,NA,NA,NA,NA,2013,NA,NA
+6528,P. serotina,33,N,37.5,2.8,NA,NA,1.3,NA,NA,2013,1.34,0.04
+6129,B. populifolia,33,N,42,3.5,NA,NA,1.49,NA,NA,2013,1.49,NA
+6529,P. serotina,33,N,43,3.7,NA,NA,7.02,NA,NA,2013,7.02,NA
+6729,U. americana,33,N,45,5.2,NA,NA,3.57,NA,NA,2013,3.94,0.37
+6728,U. americana,33,N,77,7.3,NA,NA,12.55,NA,NA,2013,13.33,0.78
+6730,U. americana,33,S,82,6.8,NA,NA,12.47,NA,NA,2013,12.47,NA
+6329,P. grandidentata,33,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6128,B. populifolia,33,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6328,P. grandidentata,33,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6331,P. grandidentata,33,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6531,P. serotina,33,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6330,P. grandidentata,33,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6131,B. populifolia,33,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6130,B. populifolia,33,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6734,U. americana,34,S,3,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6732,U. americana,34,N,11,0.5,NA,NA,0.25,NA,NA,2013,0.25,NA
+6535,P. serotina,34,S,25.5,1.5,NA,NA,0.38,NA,NA,2013,0.38,NA
+6733,U. americana,34,N,28,1.8,NA,NA,0.93,NA,NA,2013,0.93,NA
+6735,U. americana,34,S,31.5,2.9,NA,NA,0.77,NA,NA,2013,0.77,NA
+6532,P. serotina,34,N,36,2,NA,NA,0.23,NA,NA,2013,0.23,NA
+6134,B. populifolia,34,S,37.5,3.9,NA,NA,2.73,NA,NA,2013,3.05,0.32
+6135,B. populifolia,34,S,47.5,4.8,NA,NA,3.36,NA,NA,2013,3.36,NA
+6133,B. populifolia,34,N,50,4,NA,NA,2.29,NA,NA,2013,2.71,0.42
+6334,P. grandidentata,34,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6333,P. grandidentata,34,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6132,B. populifolia,34,N,NA,NA,NA,NA,0.52,NA,NA,2013,0.52,NA
+6533,P. serotina,34,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6332,P. grandidentata,34,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6335,P. grandidentata,34,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6534,P. serotina,34,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6739,U. americana,35,S,3.5,NA,NA,NA,0.67,NA,NA,2013,0.67,NA
+6538,P. serotina,35,S,21,1.6,NA,NA,0.14,NA,NA,2013,0.14,NA
+6139,B. populifolia,35,S,25,2.6,NA,NA,2.87,NA,NA,2013,2.87,NA
+6536,P. serotina,35,N,28.5,1.7,NA,NA,NA,NA,NA,2013,NA,NA
+6738,U. americana,35,S,29,4.2,NA,NA,2.19,NA,NA,2013,2.43,0.24
+6136,B. populifolia,35,N,41,3.1,NA,NA,32.98,NA,NA,2013,38.73,5.75
+6736,U. americana,35,N,42.5,4.4,NA,NA,0.86,NA,NA,2013,0.86,NA
+6737,U. americana,35,N,50,4.9,NA,NA,4.93,NA,NA,2013,4.93,NA
+6537,P. serotina,35,N,50,1.7,NA,NA,0.65,NA,NA,2013,0.65,NA
+6137,B. populifolia,35,N,53.5,4.4,NA,NA,3.18,NA,NA,2013,3.47,0.29
+6138,B. populifolia,35,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6539,P. serotina,35,S,NA,NA,NA,NA,0.51,NA,NA,2013,0.51,NA
+6337,P. grandidentata,35,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6336,P. grandidentata,35,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6338,P. grandidentata,35,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6339,P. grandidentata,35,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6741,U. americana,36,N,2,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6743,U. americana,36,S,5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6140,B. populifolia,36,N,22,1.7,NA,NA,0.67,NA,NA,2013,0.67,NA
+6340,P. grandidentata,36,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6540,P. serotina,36,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6541,P. serotina,36,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6141,B. populifolia,36,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6740,U. americana,36,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6341,P. grandidentata,36,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6342,P. grandidentata,36,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6142,B. populifolia,36,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6742,U. americana,36,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6343,P. grandidentata,36,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6543,P. serotina,36,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6542,P. serotina,36,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6143,B. populifolia,36,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6344,P. grandidentata,40,N,5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6346,P. grandidentata,40,S,9,1.6,NA,NA,NA,NA,NA,2013,NA,NA
+6347,P. grandidentata,40,S,17.5,1.4,NA,NA,NA,NA,NA,2013,NA,NA
+6544,P. serotina,40,N,19,1.5,NA,NA,4.23,NA,NA,2013,4.23,NA
+6144,B. populifolia,40,N,19,1.2,NA,NA,0.39,NA,NA,2013,0.39,NA
+6745,U. americana,40,N,22,3,NA,NA,NA,NA,NA,2013,NA,NA
+6545,P. serotina,40,N,27.5,2.6,NA,NA,1.81,NA,NA,2013,1.81,NA
+6746,U. americana,40,S,32,2.4,NA,NA,0.43,NA,NA,2013,0.43,NA
+6744,U. americana,40,N,35,2.6,NA,NA,NA,NA,NA,2013,NA,NA
+6145,B. populifolia,40,N,86,7.1,NA,NA,19.44,NA,NA,2013,19.44,NA
+6146,B. populifolia,40,S,117.5,13.2,NA,NA,94.15,NA,NA,2013,143.29,49.14
+6345,P. grandidentata,40,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6546,P. serotina,40,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6547,P. serotina,40,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6147,B. populifolia,40,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6747,U. americana,40,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6550,P. serotina,41,S,1.5,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6551,P. serotina,41,S,9,1.9,NA,NA,NA,NA,NA,2013,NA,NA
+6349,P. grandidentata,41,N,17.5,1.4,NA,NA,NA,NA,NA,2013,NA,NA
+6549,P. serotina,41,N,39,3.6,NA,NA,NA,NA,NA,2013,NA,NA
+6751,U. americana,41,S,43,2.9,NA,NA,1.4956,NA,NA,2013,1.4956,NA
+6749,U. americana,41,N,45,3.2,NA,NA,2.87,NA,NA,2013,2.87,NA
+6748,U. americana,41,N,45.5,4.2,NA,NA,NA,NA,NA,2013,NA,NA
+6750,U. americana,41,S,50,3.9,NA,NA,2.05,NA,NA,2013,2.05,NA
+6150,B. populifolia,41,S,81.5,10.6,NA,NA,59.05,NA,NA,2013,71.31,12.26
+6151,B. populifolia,41,S,135.5,15.3,NA,NA,143.4,NA,NA,2013,261.46,118.06
+6348,P. grandidentata,41,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6548,P. serotina,41,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6148,B. populifolia,41,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6149,B. populifolia,41,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6351,P. grandidentata,41,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6350,P. grandidentata,41,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6553,P. serotina,42,N,7,NA,NA,NA,0.44,NA,NA,2013,0.44,NA
+6754,U. americana,42,S,20.5,1.3,NA,NA,NA,NA,NA,2013,NA,NA
+6162,B. populifolia,42,S,23,2.5,NA,NA,NA,NA,NA,2013,NA,NA
+6753,U. americana,42,N,33,2.9,NA,NA,1.78,NA,NA,2013,1.78,NA
+6752,U. americana,42,N,36,2.7,NA,NA,2.17,NA,NA,2013,2.17,NA
+6755,U. americana,42,S,46,4.6,NA,NA,8.16,NA,NA,2013,8.16,NA
+6152,B. populifolia,42,N,50.5,5.6,NA,NA,37.56,NA,NA,2013,41.01,3.45
+6552,P. serotina,42,N,54,6.5,NA,NA,0.6012,NA,NA,2013,0.6012,NA
+6154,B. populifolia,42,S,81,11.1,NA,NA,61.4,NA,NA,2013,78.71,17.31
+6555,P. serotina,42,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6153,B. populifolia,42,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6352,P. grandidentata,42,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6353,P. grandidentata,42,N,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6355,P. grandidentata,42,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6354,P. grandidentata,42,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
+6554,P. serotina,42,S,NA,NA,NA,NA,NA,NA,NA,2013,NA,NA
