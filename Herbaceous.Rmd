@@ -5,8 +5,30 @@ date: "Saturday, February 21, 2015"
 output: html_document
 ---
 
-Hello World. lets study biomass
+### Data Processing
 
-Maybe some trees too!
+```{r}
+dat.herb=read.csv("HerbaceousBiomass.csv",header=TRUE)
 
-Whos there
+## 2008 year/season Subset
+dat.08=dat.herb[dat.herb$Year==2008,]
+dat.08.fall=dat.08[dat.08$Season=="Fall",]
+dat.08.summ=dat.08[dat.08$Season=="Summer",]
+## Treatment Subset 2008
+wt.08=dat.08.fall[dat.08.fall$Treatment== "W",]
+wt.08=dat.08.summ[dat.08.summ$Treatment== "W",]
+dr.08=dat.08.fall[dat.08.fall$Treatment== "D",]
+dr.08=dat.08.summ[dat.08.summ$Treatment== "D",]
+ab.08=dat.08.fall[dat.08.fall$Treatment== "A",]
+ab.08=dat.08.summ[dat.08.summ$Treatment== "A",]
+##Treatment subsetted for mass
+w.h.08
+
+
+
+
+
+
+
+
+```
