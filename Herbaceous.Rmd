@@ -174,7 +174,95 @@ p33.08.s.m=sum(as.numeric(p33.08.s$Total.Mass)*2)
 p34.08.s.m=sum(as.numeric(p34.08.s$Total.Mass)*2)
 p35.08.s.m=sum(as.numeric(p35.08.s$Total.Mass)*2)
 
+```
 
+###2012 Data
+```{r}
+## 2012 year subsetted by season 
+dat.12=dat.herb[dat.herb$Year==2012,]
+## Seasonal subsetted by treatment
+wt.12.f=dat.12[dat.12$Treatment== "W",]
+dr.12.f=dat.12[dat.12$Treatment== "D",]
+ab.12.f=dat.12[dat.12$Treatment== "A",]
+##Treatment subsetted by mass
+wt.12.f.m=as.numeric(wt.12.f$Total.Mass)*2 
+dr.12.f.m=as.numeric(dr.12.f$Total.Mass)*2
+ab.12.f.m=as.numeric(ab.12.f$Total.Mass)*2
+## Seasonal subsetted by plot
+p1.12.f=dat.12[dat.12$Plot %in% 1,]
+p2.12.f=dat.12[dat.12$Plot %in% 2,]
+p3.12.f=dat.12[dat.12$Plot %in% 3,]
+p4.12.f=dat.12[dat.12Plot %in% 4,]
+p5.12.f=dat.12[dat.12$Plot %in% 5,]
+p6.12.f=dat.12[dat.12$Plot %in% 6,]
+p7.12.f=dat.12[dat.12$Plot %in% 7,]
+p8.12.f=dat.12[dat.12$Plot %in% 8,]
+p9.12.f=dat.12[dat.12$Plot %in% 9,]
+p10.12.f=dat.12[dat.12$Plot %in% 10,]
+p11.12.f=dat.12[dat.12$Plot %in% 11,]
+p12.12.f=dat.12[dat.12$Plot %in% 12,]
+p13.12.f=dat.12[dat.12$Plot %in% 13,]
+p14.12.f=dat.12[dat.12$Plot %in% 14,]
+p15.12.f=dat.12[dat.12$Plot %in% 15,]
+p16.12.f=dat.12[dat.12$Plot %in% 16,]
+p17.12.f=dat.12[dat.12$Plot %in% 17,]
+p18.12.f=dat.12[dat.12$Plot %in% 18,]
+p19.12.f=dat.12[dat.12$Plot %in% 19,]
+p20.12.f=dat.12[dat.12$Plot %in% 20,]
+p21.12.f=dat.12[dat.12$Plot %in% 21,]
+p22.12.f=dat.12[dat.12$Plot %in% 22,]
+p23.12.f=dat.12[dat.12$Plot %in% 23,]
+p24.12.f=dat.12[dat.12$Plot %in% 24,]
+p25.12.f=dat.12[dat.12$Plot %in% 25,]
+p26.12.f=dat.12[dat.12$Plot %in% 26,]
+p27.12.f=dat.12[dat.12$Plot %in% 27,]
+p28.12.f=dat.12[dat.12$Plot %in% 28,]
+p29.12.f=dat.12[dat.12$Plot %in% 29,]
+p30.12.f=dat.12[dat.12$Plot %in% 30,]
+p31.12.f=dat.12[dat.12$Plot %in% 31,]
+p32.12.f=dat.12[dat.12$Plot %in% 32,]
+p33.12.f=dat.12[dat.12$Plot %in% 33,]
+p34.12.f=dat.12[dat.12$Plot %in% 34,]
+p35.12.f=dat.12[dat.12$Plot %in% 35,]
+p36.12.f=dat.12[dat.12$Plot %in% 36,]
+
+#Plot subsetted by mass
+p1.12.f.m=sum(as.numeric(p1.12.f$Total.Mass)*2)
+p2.12.f.m=sum(as.numeric(p2.12.f$Total.Mass)*2)
+p3.12.f.m=sum(as.numeric(p3.12.f$Total.Mass)*2)
+p4.12.f.m=sum(as.numeric(p4.12.f$Total.Mass)*2)
+p5.12.f.m=sum(as.numeric(p5.12.f$Total.Mass)*2)
+p6.12.f.m=sum(as.numeric(p6.12.f$Total.Mass)*2)
+p7.12.f.m=sum(as.numeric(p7.12.f$Total.Mass)*2)
+p8.12.f.m=sum(as.numeric(p8.12.f$Total.Mass)*2)
+p9.12.f.m=sum(as.numeric(p9.12.f$Total.Mass)*2)
+p10.12.f.m=sum(as.numeric(p10.12.f$Total.Mass)*2)
+p11.12.f.m=sum(as.numeric(p11.12.f$Total.Mass)*2)
+p12.12.f.m=sum(as.numeric(p12.12.f$Total.Mass)*2)
+p13.12.f.m=sum(as.numeric(p13.12.f$Total.Mass)*2)
+p14.12.f.m=sum(as.numeric(p14.12.f$Total.Mass)*2)
+p15.12.f.m=sum(as.numeric(p15.12.f$Total.Mass)*2)
+p16.12.f.m=sum(as.numeric(p16.12.f$Total.Mass)*2)
+p17.12.f.m=sum(as.numeric(p17.12.f$Total.Mass)*2)
+p18.12.f.m=sum(as.numeric(p18.12.f$Total.Mass)*2)
+p19.12.f.m=sum(as.numeric(p19.12.f$Total.Mass)*2)
+p20.12.f.m=sum(as.numeric(p20.12.f$Total.Mass)*2)
+p21.12.f.m=sum(as.numeric(p21.12.f$Total.Mass)*2)
+p22.12.f.m=sum(as.numeric(p22.12.f$Total.Mass)*2)
+p23.12.f.m=sum(as.numeric(p23.12.f$Total.Mass)*2)
+p24.12.f.m=sum(as.numeric(p24.12.f$Total.Mass)*2)
+p25.12.f.m=sum(as.numeric(p25.12.f$Total.Mass)*2)
+p26.12.f.m=sum(as.numeric(p26.12.f$Total.Mass)*2)
+p27.12.f.m=sum(as.numeric(p27.12.f$Total.Mass)*2)
+p28.12.f.m=sum(as.numeric(p28.12.f$Total.Mass)*2)
+p29.12.f.m=sum(as.numeric(p29.12.f$Total.Mass)*2)
+p30.12.f.m=sum(as.numeric(p30.12.f$Total.Mass)*2)
+p31.12.f.m=sum(as.numeric(p31.12.f$Total.Mass)*2)
+p32.12.f.m=sum(as.numeric(p32.12.f$Total.Mass)*2)
+p33.12.f.m=sum(as.numeric(p33.12.f$Total.Mass)*2)
+p34.12.f.m=sum(as.numeric(p34.12.f$Total.Mass)*2)
+p35.12.f.m=sum(as.numeric(p35.12.f$Total.Mass)*2)
+p36.12.f.m=sum(as.numeric(p36.12.f$Total.Mass)*2)
 
 
 ```
