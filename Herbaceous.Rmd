@@ -21,6 +21,7 @@ dr.08.f=dat.08.fall[dat.08.fall$Treatment== "D",]
 dr.08.s=dat.08.summ[dat.08.summ$Treatment== "D",]
 ab.08.f=dat.08.fall[dat.08.fall$Treatment== "A",]
 ab.08.s=dat.08.summ[dat.08.summ$Treatment== "A",]
+
 ##Treatment subsetted by mass
 wt.08.f.m=as.numeric(wt.08.f$Total.Mass)*2 
 wt.08.s.m=as.numeric(wt.08.s$Total.Mass)*2
@@ -28,6 +29,7 @@ dr.08.f.m=as.numeric(dr.08.f$Total.Mass)*2
 dr.08.s.m=as.numeric(dr.08.s$Total.Mass)*2
 ab.08.f.m=as.numeric(ab.08.f$Total.Mass)*2
 ab.08.s.m=as.numeric(ab.08.s$Total.Mass)*2
+
 ## Seasonal subsetted by plot
 p1.08.f=dat.08.fall[dat.08.fall$Plot %in% 1,]
 p2.08.f=dat.08.fall[dat.08.fall$Plot %in% 2,]
@@ -64,6 +66,7 @@ p32.08.f=dat.08.fall[dat.08.fall$Plot %in% 32,]
 p33.08.f=dat.08.fall[dat.08.fall$Plot %in% 33,]
 p34.08.f=dat.08.fall[dat.08.fall$Plot %in% 34,]
 p35.08.f=dat.08.fall[dat.08.fall$Plot %in% 35,]
+p36.08.f=dat.08.fall[dat.08.fall$Plot %in% 36,]
 
 p1.08.s=dat.08.summ[dat.08.summ$Plot %in% 1,]
 p2.08.s=dat.08.summ[dat.08.summ$Plot %in% 2,]
@@ -100,6 +103,7 @@ p32.08.s=dat.08.summ[dat.08.summ$Plot %in% 32,]
 p33.08.s=dat.08.summ[dat.08.summ$Plot %in% 33,]
 p34.08.s=dat.08.summ[dat.08.summ$Plot %in% 34,]
 p35.08.s=dat.08.summ[dat.08.summ$Plot %in% 35,]
+p36.08.s=dat.08.summ[dat.08.summ$Plot %in% 36,]
 
 #Plot subsetted by mass
 p1.08.f.m=sum(as.numeric(p1.08.f$Total.Mass)*2)
@@ -137,6 +141,7 @@ p32.08.f.m=sum(as.numeric(p32.08.f$Total.Mass)*2)
 p33.08.f.m=sum(as.numeric(p33.08.f$Total.Mass)*2)
 p34.08.f.m=sum(as.numeric(p34.08.f$Total.Mass)*2)
 p35.08.f.m=sum(as.numeric(p35.08.f$Total.Mass)*2)
+p36.08.f.m=sum(as.numeric(p36.08.f$Total.Mass)*2)
 
 p1.08.s.m=sum(as.numeric(p1.08.s$Total.Mass)*2)
 p2.08.s.m=sum(as.numeric(p2.08.s$Total.Mass)*2)
@@ -173,7 +178,7 @@ p32.08.s.m=sum(as.numeric(p32.08.s$Total.Mass)*2)
 p33.08.s.m=sum(as.numeric(p33.08.s$Total.Mass)*2)
 p34.08.s.m=sum(as.numeric(p34.08.s$Total.Mass)*2)
 p35.08.s.m=sum(as.numeric(p35.08.s$Total.Mass)*2)
-
+p36.08.s.m=sum(as.numeric(p36.08.s$Total.Mass)*2)
 ```
 
 ###2012 Data
