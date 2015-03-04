@@ -186,7 +186,7 @@ meanmass=c(352.9,344.9)
 plot(year,meanmass)
 ```
 
-#combine masses for year and plot mean mass over time as total and per treatment.
+#combine masses for year and plot mean/range of biomass over time as total and per treatment
 #plot over time
 #treatment over time
 #neighborhood effects
