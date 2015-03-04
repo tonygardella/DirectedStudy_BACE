@@ -1,2 +1,3 @@
 # DirectedStudy_BACE
-Directed Study for Anthony Gardella and Sam Worley
+
+This is an Independant study by Anthony Gardella and Sam Worley on biomass data from the Boston Area Climate Experiment. 
