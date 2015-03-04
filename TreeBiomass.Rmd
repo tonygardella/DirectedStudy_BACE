@@ -5,28 +5,29 @@ date: "Wednesday, February 25, 2015"
 output: html_document
 ---
 
-### Data Processing 
+### Data Processin 
 
 ```{r}
 dat.tree=read.csv("2011-13 Tree Biomass.csv", header=TRUE)
-colnames(dat)<-c("ID","species","Plot","subplot","height","d10","init.stem.weight","bag","tot.stem.mass","leaf.mass","year","tot.mass","tot.branch.mass")
-
+colnames(dat.tree)<-c("ID","species","Plot","subplot","height","d10","init.stem.weight","bag","tot.stem.mass","leaf.mass","year","tot.mass","tot.branch.mass")
+year=c("2011","2012")
+totalmass=as.numeric(dat.tree$tot.mass)
 #2011 data
-dat.11<-dat[dat$year==2011,]
+dat.11<-dat.tree[dat.tree$year==2011,]
 ##2011 height subset
 h.11<-as.numeric(dat.11$height)
 ##2011 mass subset
 mass.11<-as.numeric(dat.11$tot.mass)
 ##2011 Treatment Subset
-wt.11<-dat.11[dat.11$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
-dr.11<-dat.11[dat.11$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
-ab.11<-dat.11[dat.11$Plot %in% c(5,6,7,8,13,14,15,16,29,30,31,32),]
-w.11.h=as.numeric(wt.11$height)
-w.11.tm=as.numeric(wt.11$tot.mass)
-d.11.h=as.numeric(dr.11$height)
-d.11.tm=as.numeric(dr.11$tot.mass)
-a.11.h=as.numeric(ab.11$height)
-a.11.tm=as.numeric(ab.11$tot.mass)
+w.11<-dat.11[dat.11$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
+d.11<-dat.11[dat.11$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
+a.11<-dat.11[dat.11$Plot %in% c(5,6,7,8,13,14,15,16,29,30,31,32),]
+w.11.h=as.numeric(w.11$height)
+w.11.tm=as.numeric(w.11$tot.mass)
+d.11.h=as.numeric(d.11$height)
+d.11.tm=as.numeric(d.11$tot.mass)
+a.11.h=as.numeric(a.11$height)
+a.11.tm=as.numeric(a.11$tot.mass)
 ##2011 Plot subset
 p1.11=dat.11[dat.11$Plot %in% 1,]
 p2.11=dat.11[dat.11$Plot %in% 2,]
@@ -67,13 +68,13 @@ p35.11=dat.11[dat.11$Plot %in% 35,]
 
 
 #2013 data
-dat.13<-dat[dat$year==2013,]
-##2011 height subset
+dat.13<-dat.tree[dat.tree$year==2013,]
+##2013 height subset
 h.13<-as.numeric(dat.13$height)
-##2011 mass subset
+##2013 mass subset
 mass.13<-as.numeric(dat.13$tot.mass)
 #Treatment subset
-wt.13<-dat.13[dat.13$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28), ]
+wt.13<-dat.13[dat.13$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
 dr.13<-dat.13[dat.13$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
 ab.13<-dat.13[dat.13$Plot %in% c(5,6,7,8,13,14,15,16,29,30,31,32),]
 w.13.h=as.numeric(wt.13$height)
@@ -116,11 +117,78 @@ p31.13=dat.13[dat.13$Plot %in% 31,]
 p32.13=dat.13[dat.13$Plot %in% 32,]
 p33.13=dat.13[dat.13$Plot %in% 33,]
 p34.13=dat.13[dat.13$Plot %in% 34,]
+p35.13=dat.13[dat.13$Plot %in% 35,]
+p36.13=dat.13[dat.13$Plot %in% 36,]
 ```
 
 ```{r}
-
-
-
-
+p1.13.m=as.numeric(p1.13$tot.mass)
+p2.13.m=as.numeric(p2.13$tot.mass)
+p3.13.m=as.numeric(p3.13$tot.mass)
+p4.13.m=as.numeric(p4.13$tot.mass)
+p5.13.m=as.numeric(p5.13$tot.mass)
+p6.13.m=as.numeric(p6.13$tot.mass)
+p7.13.m=as.numeric(p7.13$tot.mass)
+p8.13.m=as.numeric(p8.13$tot.mass)
+p9.13.m=as.numeric(p9.13$tot.mass)
+p10.13.m=as.numeric(p10.13$tot.mass)
+p11.13.m=as.numeric(p11.13$tot.mass)
+p12.13.m=as.numeric(p12.13$tot.mass)
+p13.13.m=as.numeric(p13.13$tot.mass)
+p14.13.m=as.numeric(p14.13$tot.mass)
+p15.13.m=as.numeric(p15.13$tot.mass)
+p16.13.m=as.numeric(p16.13$tot.mass)
+p17.13.m=as.numeric(p17.13$tot.mass)
+p18.13.m=as.numeric(p18.13$tot.mass)
+p19.13.m=as.numeric(p19.13$tot.mass)
+p20.13.m=as.numeric(p20.13$tot.mass)
+p21.13.m=as.numeric(p21.13$tot.mass)
+p22.13.m=as.numeric(p22.13$tot.mass)
+p23.13.m=as.numeric(p23.13$tot.mass)
+p24.13.m=as.numeric(p24.13$tot.mass)
+p25.13.m=as.numeric(p25.13$tot.mass)
+p26.13.m=as.numeric(p26.13$tot.mass)
+p27.13.m=as.numeric(p27.13$tot.mass)
+p28.13.m=as.numeric(p28.13$tot.mass)
+p29.13.m=as.numeric(p29.13$tot.mass)
+p30.13.m=as.numeric(p30.13$tot.mass)
+p31.13.m=as.numeric(p31.13$tot.mass)
+p32.13.m=as.numeric(p32.13$tot.mass)
+p33.13.m=as.numeric(p33.13$tot.mass)
+p34.13.m=as.numeric(p34.13$tot.mass)
+p35.13.m=as.numeric(p35.13$tot.mass)
+p36.13.m=as.numeric(p36.13$tot.mass)
 ```
+
+```{r}
+summary(w.11.tm)
+summary(d.11.tm)
+summary(a.11.tm)
+
+wseq=1:143
+plot(wseq,w.11.tm)
+points(d.11.tm,col=2)
+points(a.11.tm,col=3)
+
+summary(w.13.tm)
+summary(d.13.tm)
+summary(a.13.tm)
+wseq=1:382
+plot(wseq,w.13.tm)
+points(d.13.tm,col=2)
+points(a.13.tm,col=3)
+
+
+
+plot(w.11.tm,w.13.tm)
+year=c("2011","2013")
+meanmass=c(352.9,344.9)
+plot(year,meanmass)
+```
+
+#combine masses for year and plot mean mass over time as total and per treatment.
+#plot over time
+#treatment over time
+#neighborhood effects
+#random block effects, consistently better or worse. spacial effects not explained by covariate
+#
