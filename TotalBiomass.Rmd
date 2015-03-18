@@ -546,13 +546,11 @@ AB.08.s=dat.08.summ[dat.08.summ$Annl.Biennial,]
 #2011 data
 ```{r}
 dat.11<-dat.tree[dat.tree$year==2011,]
-```
-
-#2011 height and mass subsets
-```{r}
-h.11<-as.numeric(dat.11$height)
-#mass subset
-mass.11<-as.numeric(dat.11$tot.mass)
+dat.11.fall.m=as.numeric(dat.11$tot.mass)
+#Means,95% intervals, standarad deviation, 
+dat.11.fall.95=quantile(dat.11.fall.m,c(.05,.95),na.rm=TRUE)
+dat.11.fall.mean=mean(dat.11.fall.m,na.rm=TRUE)
+dat.11.fall.sd=sd(dat.11.fall.m,na.rm=TRUE)
 ```
 
 ##2011 Treatment Subset
@@ -560,12 +558,21 @@ mass.11<-as.numeric(dat.11$tot.mass)
 w.11<-dat.11[dat.11$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
 d.11<-dat.11[dat.11$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
 a.11<-dat.11[dat.11$Plot %in% c(5,6,7,8,13,14,15,16,29,30,31,32),]
-w.11.h=as.numeric(w.11$height)
 w.11.tm=as.numeric(w.11$tot.mass)
-d.11.h=as.numeric(d.11$height)
 d.11.tm=as.numeric(d.11$tot.mass)
-a.11.h=as.numeric(a.11$height)
 a.11.tm=as.numeric(a.11$tot.mass)
+##Summary Stats
+w.11.fall.95=quantile(w.11.tm,c(.05,.95),na.rm=TRUE)
+w.11.fall.mean=mean(w.11.tm,na.rm=TRUE)
+w.11.fall.sd=sd(w.11.tm,na.rm=TRUE)
+
+a.11.fall.95=quantile(a.11.tm,c(.05,.95),na.rm=TRUE)
+a.11.fall.mean=mean(a.11.tm,na.rm=TRUE)
+a.11.fall.sd=sd(a.11.tm,na.rm=TRUE)
+
+d.11.fall.95=quantile(d.11.tm,c(.05,.95),na.rm=TRUE)
+d.11.fall.mean=mean(d.11.tm,na.rm=TRUE)
+d.11.fall.sd=sd(d.11.tm,na.rm=TRUE)
 ```
 
 #2011 Plot subset
@@ -609,18 +616,37 @@ p35.11=dat.11[dat.11$Plot %in% 35,]
 
 ## 2012 year subsetted by season 
 ```{r}
+## 2012 year subsetted by season 
 dat.12=dat.herb[dat.herb$Year==2012,]
+dat.12.fall=dat.12[dat.12$Season=="Fall",]
+dat.12.fall.m=as.numeric(dat.12.fall$Total.Mass)
+#Means,95% intervals, standarad deviation, 
+dat.12.fall.95=quantile(dat.12.fall.m,c(.05,.95))
+dat.12.fall.mean=mean(dat.12.fall.m)
+dat.12.fall.sd=sd(dat.12.fall.m)
 ```
 
 ##2012 Seasonal subsetted by treatment
 ```{r}
-wt.12.f=dat.12[dat.12$Treatment== "W",]
-dr.12.f=dat.12[dat.12$Treatment== "D",]
-ab.12.f=dat.12[dat.12$Treatment== "A",]
+wt.12.f=dat.12[dat.12.fall$Treatment== "W",]
+dr.12.f=dat.12[dat.12.fall$Treatment== "D",]
+ab.12.f=dat.12[dat.12.fall$Treatment== "A",]
 ##Treatment subsetted by mass
 wt.12.f.m=as.numeric(wt.12.f$Total.Mass) 
 dr.12.f.m=as.numeric(dr.12.f$Total.Mass)
 ab.12.f.m=as.numeric(ab.12.f$Total.Mass)
+#Summary data
+w.12.fall.95=quantile(wt.12.f.m,c(.05,.95),na.rm=TRUE)
+w.12.fall.mean=mean(wt.12.f.m,na.rm=TRUE)
+w.12.fall.sd=sd(wt.12.f.m,na.rm=TRUE)
+
+a.12.fall.95=quantile(ab.12.f.m,c(.05,.95),na.rm=TRUE)
+a.12.fall.mean=mean(ab.12.f.m,na.rm=TRUE)
+a.12.fall.sd=sd(ab.12.f.m,na.rm=TRUE)
+
+d.12.fall.95=quantile(dr.12.f.m,c(.05,.95),na.rm=TRUE)
+d.12.fall.mean=mean(dr.12.f.m,na.rm=TRUE)
+d.12.fall.sd=sd(dr.12.f.m,na.rm=TRUE)
 ```
 
 ##2012 Seasonal subsetted by plot
@@ -704,28 +730,33 @@ p36.12.f.m=sum(as.numeric(p36.12.f$Total.Mass))
 #2013 data
 ```{r}
 dat.13<-dat.tree[dat.tree$year==2013,]
+dat.13.fall.m=as.numeric(dat.13$tot.mass)
+#Means,95% intervals, standarad deviation, 
+dat.13.fall.95=quantile(dat.13.fall.m,c(.05,.95),na.rm=TRUE)
+dat.13.fall.mean=mean(dat.13.fall.m,na.rm=TRUE)
+dat.13.fall.sd=sd(dat.13.fall.m,na.rm=TRUE)
 ```
 
 #2013 height and mass subsets
 ```{r}
-h.13<-as.numeric(dat.13$height)
-##2013 mass subset
-mass.13<-as.numeric(dat.13$tot.mass)
-```
+w.13<-dat.13[dat.13$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
+d.13<-dat.13[dat.13$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
+a.13<-dat.13[dat.13$Plot %in% c(5,6,7,8,13,14,15,16,29,30,31,32),]
+w.13.tm=as.numeric(w.13$tot.mass)
+d.13.tm=as.numeric(d.13$tot.mass)
+a.13.tm=as.numeric(a.13$tot.mass)
+##Summary Stats
+w.13.fall.95=quantile(w.13.tm,c(.05,.95),na.rm=TRUE)
+w.13.fall.mean=mean(w.13.tm,na.rm=TRUE)
+w.13.fall.sd=sd(w.13.tm,na.rm=TRUE)
 
-#2013 Treatment subsets
-```{r}
-#Treatment subset
-wt.13<-dat.13[dat.13$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
-dr.13<-dat.13[dat.13$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
-ab.13<-dat.13[dat.13$Plot %in% c(5,6,7,8,13,14,15,16,29,30,31,32),]
-#height and mass subsets for treatments
-w.13.h=as.numeric(wt.13$height)
-w.13.tm=as.numeric(wt.13$tot.mass)
-d.13.h=as.numeric(dr.13$height)
-d.13.tm=as.numeric(dr.13$tot.mass)
-a.13.h=as.numeric(ab.13$height)
-a.13.tm=as.numeric(ab.13$tot.mass)
+a.13.fall.95=quantile(a.13.tm,c(.05,.95),na.rm=TRUE)
+a.13.fall.mean=mean(a.13.tm,na.rm=TRUE)
+a.13.fall.sd=sd(a.13.tm,na.rm=TRUE)
+
+d.13.fall.95=quantile(d.13.tm,c(.05,.95),na.rm=TRUE)
+d.13.fall.mean=mean(d.13.tm,na.rm=TRUE)
+d.13.fall.sd=sd(d.13.tm,na.rm=TRUE)
 ```
 
 ### 2013 Plot Subsets
@@ -810,6 +841,11 @@ p36.13.m=as.numeric(p36.13$tot.mass)
 ## 2014 year subsetted by season 
 dat.14=dat.herb[dat.herb$Year==2014,]
 dat.14.fall=dat.14[dat.14$Season=="Fall",]
+dat.14.fall.m=as.numeric(dat.14.fall$Total.Mass)
+#Means,95% intervals, standarad deviation, 
+dat.14.fall.95=quantile(dat.14.fall.m,c(.05,.95))
+dat.14.fall.mean=mean(dat.14.fall.m)
+dat.14.fall.sd=sd(dat.14.fall.m)
 ```
 
 ##2014 subsetted by treatment
@@ -823,6 +859,18 @@ ab.14.f=dat.14.fall[dat.14.fall$Treatment== "A",]
 wt.14.f.m=as.numeric(wt.14.f$Total.Mass) 
 dr.14.f.m=as.numeric(dr.14.f$Total.Mass)
 ab.14.f.m=as.numeric(ab.14.f$Total.Mass)
+#Summary data
+w.14.fall.95=quantile(wt.14.f.m,c(.05,.95),na.rm=TRUE)
+w.14.fall.mean=mean(wt.14.f.m,na.rm=TRUE)
+w.14.fall.sd=sd(wt.14.f.m,na.rm=TRUE)
+
+a.14.fall.95=quantile(ab.14.f.m,c(.05,.95),na.rm=TRUE)
+a.14.fall.mean=mean(ab.14.f.m,na.rm=TRUE)
+a.14.fall.sd=sd(ab.14.f.m,na.rm=TRUE)
+
+d.14.fall.95=quantile(dr.14.f.m,c(.05,.95),na.rm=TRUE)
+d.14.fall.mean=mean(dr.14.f.m,na.rm=TRUE)
+d.14.fall.sd=sd(dr.14.f.m,na.rm=TRUE)
 ```
 
 ##2014 subsetted by plot
@@ -904,5 +952,45 @@ p33.14.f.m=sum(as.numeric(p33.14.f$Total.Mass))
 p34.14.f.m=sum(as.numeric(p34.14.f$Total.Mass))
 p35.14.f.m=sum(as.numeric(p35.14.f$Total.Mass))
 p36.14.f.m=sum(as.numeric(p36.14.f$Total.Mass))
+
+```
+
+AGGREGATE PLOTS and TABLE
+```{r}
+years=c(1:14)
+m.bm=c(dat.08.summ.mean,dat.08.fall.mean,dat.09.summ.mean, dat.09.fall.mean,NA,NA,NA,dat.11.fall.mean,NA,dat.12.fall.mean,NA,dat.13.fall.mean,NA,dat.14.fall.mean)
+
+## Mean Biomass Time Series
+plot(years,m.bm)
+
+## Treatments Mean Biomass  Time Series
+wet.m.bm=c(w.08.fall.mean,w.08.summ.mean,w.09.fall.mean,w.09.summ.mean,NA,NA,NA,w.11.fall.mean,NA,w.12.fall.mean,NA,w.13.fall.mean,NA,w.14.fall.mean)
+
+amb.m.bm=c(a.08.fall.mean,a.08.summ.mean,a.09.fall.mean,a.09.summ.mean,NA,NA,NA,a.11.fall.mean,NA,a.12.fall.mean,NA,a.13.fall.mean,NA,a.14.fall.mean)
+
+dry.m.bm=c(d.08.fall.mean,d.08.summ.mean,d.09.fall.mean,d.09.summ.mean,NA,NA,NA,d.11.fall.mean,NA,d.12.fall.mean,NA,d.13.fall.mean,NA,d.14.fall.mean)
+
+plot(years,wet.m.bm,ylab="Mass")
+points(years,amb.m.bm,col=2)
+points(years,dry.m.bm,col=3)
+
+
+
+standev.m=c(dat.08.summ.sd,dat.08.fall.sd,dat.09.summ.sd,dat.09.fall.sd,NA,NA,NA,dat.11.fall.sd,NA,dat.12.fall.sd,NA,dat.13.fall.sd,NA,dat.14.fall.sd)
+
+w.standev.m=c(w.08.summ.sd,w.08.fall.sd,w.09.summ.sd,w.09.fall.sd,NA,NA,NA,w.11.fall.sd,NA,w.12.fall.sd,NA,w.13.fall.sd,NA,w.14.fall.sd)
+
+a.standev.m=c(a.08.summ.sd,a.08.fall.sd,a.09.summ.sd,a.09.fall.sd,NA,NA,NA,a.11.fall.sd,NA,a.12.fall.sd,NA,a.13.fall.sd,NA,a.14.fall.sd)
+
+d.standev.m=c(d.08.summ.sd,d.08.fall.sd,d.09.summ.sd,d.09.fall.sd,NA,NA,NA,d.11.fall.sd,NA,d.12.fall.sd,NA,d.13.fall.sd,NA,d.14.fall.sd)
+
+conf.int=c(dat.08.summ.95,dat.08.fall.95,dat.09.summ.95,dat.09.fall.95,NA,NA,NA,dat.11.fall.95,NA,dat.12.fall.95,NA,dat.13.fall.95,NA,dat.14.fall.95)
+
+w.int=c(w.08.summ.95,w.08.fall.95,w.09.summ.95,w.09.fall.95,NA,NA,NA,w.11.fall.95,NA,w.12.fall.95,NA,w.13.fall.95,NA,w.14.fall.95)
+
+d.int=c(d.08.summ.95,d.08.fall.95,d.09.summ.95,d.09.fall.95,NA,NA,NA,d.11.fall.95,NA,d.12.fall.95,NA,d.13.fall.95,NA,d.14.fall.95)
+
+a.int=c(d.08.summ.95,a.08.fall.95,a.09.summ.95,a.09.fall.95,NA,NA,NA,a.11.fall.95,NA,a.12.fall.95,NA,a.13.fall.95,NA,a.14.fall.95)
+
 
 ```
