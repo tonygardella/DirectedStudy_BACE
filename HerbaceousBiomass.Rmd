@@ -454,3 +454,8 @@ Pr.08.s=dat.08.summ[dat.08.summ$Perennial,]
 AB.08.f=dat.08.fall[dat.08.fall$Annl.Biennial,]
 AB.08.s=dat.08.summ[dat.08.summ$Annl.Biennial,]
 ```
+
+Time series
+  biomass 
+    per plot
+    pertreatment
