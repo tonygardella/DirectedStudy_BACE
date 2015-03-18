@@ -12,6 +12,7 @@ colnames(dat.tree)<-c("ID","species","Plot","subplot","height","d10","init.stem.
 year=c("2011","2012")
 totalmass=as.numeric(dat.tree$tot.mass)
 ```
+
 ##2011 data
 ```{r}
 dat.11<-dat.tree[dat.tree$year==2011,]
@@ -173,29 +174,4 @@ p35.13.m=as.numeric(p35.13$tot.mass)
 p36.13.m=as.numeric(p36.13$tot.mass)
 ```
 
-```{r}
-summary(w.11.tm)
-summary(d.11.tm)
-summary(a.11.tm)
-
-wseq=1:143
-plot(wseq,w.11.tm)
-points(d.11.tm,col=2)
-points(a.11.tm,col=3)
-
-summary(w.13.tm)
-summary(d.13.tm)
-summary(a.13.tm)
-wseq=1:382
-plot(wseq,w.13.tm)
-points(d.13.tm,col=2)
-points(a.13.tm,col=3)
-
-
-
-plot(w.11.tm,w.13.tm)
-year=c("2011","2013")
-meanmass=c(352.9,344.9)
-plot(year,meanmass)
-```
 
