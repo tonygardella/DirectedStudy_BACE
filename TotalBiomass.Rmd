@@ -955,8 +955,30 @@ p36.14.f.m=sum(as.numeric(p36.14.f$Total.Mass))
 
 ```
 
-AGGREGATE PLOTS and TABLE
+##AGGREGATE PLOTS and TABLE
 ```{r}
+hist(dat.08.fall.m,probability=TRUE)
+f.08.dist=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+lines(1:78,f.08.dist,col=2,type='s')
+hist(dat.08.summ.m,probability=TRUE)
+lines(1:300,dnorm(1:300,dat.08.summ.mean,dat.08.summ.sd),col=2,type='s')
+hist(dat.09.fall.m,probability=TRUE)
+lines(1:160,dnorm(1:160,dat.09.fall.mean,dat.09.fall.sd),col=2,type='s')
+hist(dat.09.summ.m,probability=TRUE)
+lines(1:60,dnorm(1:60,dat.09.summ.mean,dat.09.summ.sd),col=2,type='s')
+hist(dat.11.fall.m,probability=TRUE)
+lines(1:750,dnorm(1:750,dat.11.fall.mean,dat.11.fall.sd),col=2,type='s')
+hist(dat.12.fall.m,probability=TRUE)
+lines(1:120,dnorm(1:120,dat.12.fall.mean,dat.12.fall.sd),col=2,type='s')
+hist(dat.13.fall.m,probability=TRUE)
+lines(1:730,dnorm(1:730,dat.13.fall.mean,dat.13.fall.sd),col=2,type='s')
+hist(dat.14.fall.m,probability=TRUE)
+lines(1:370,dnorm(1:370,dat.14.fall.mean,dat.14.fall.sd),col=2,type='s')
+
+#check lognormal, gamma, weibull and create glms
+#response to interannual variability systematic, plot effect
+#treatment fixed,random plot,fixed year efect
+
 years=c(1:14)
 m.bm=c(dat.08.summ.mean,dat.08.fall.mean,dat.09.summ.mean, dat.09.fall.mean,NA,NA,NA,dat.11.fall.mean,NA,dat.12.fall.mean,NA,dat.13.fall.mean,NA,dat.14.fall.mean)
 
@@ -992,5 +1014,7 @@ d.int=c(d.08.summ.95,d.08.fall.95,d.09.summ.95,d.09.fall.95,NA,NA,NA,d.11.fall.9
 
 a.int=c(d.08.summ.95,a.08.fall.95,a.09.summ.95,a.09.fall.95,NA,NA,NA,a.11.fall.95,NA,a.12.fall.95,NA,a.13.fall.95,NA,a.14.fall.95)
 
+summary.data=c(years,m.bm,standev.m)
 
+summary.table=matrix(summary.data,nrow=14,ncol=4,byrow=FALSE,)
 ```
