@@ -192,7 +192,6 @@ p36.08.s.m=sum(as.numeric(p36.08.s$Total.Mass))
 
 #2009 subsetted by season
 ```{r}
-2009
 ## 2009 year subsetted by season 
 dat.09=dat.herb[dat.herb$Year==2009,]
 dat.09.fall=dat.09[dat.09$Season=="Fall",]
@@ -369,7 +368,6 @@ p33.09.s.m=sum(as.numeric(p33.09.s$Total.Mass))
 p34.09.s.m=sum(as.numeric(p34.09.s$Total.Mass))
 p35.09.s.m=sum(as.numeric(p35.09.s$Total.Mass))
 p36.09.s.m=sum(as.numeric(p36.09.s$Total.Mass))
-2012 Data
 
 ## 2012 year subsetted by season 
 dat.12=dat.herb[dat.herb$Year==2012,]
@@ -456,9 +454,8 @@ p33.12.f.m=sum(as.numeric(p33.12.f$Total.Mass))
 p34.12.f.m=sum(as.numeric(p34.12.f$Total.Mass))
 p35.12.f.m=sum(as.numeric(p35.12.f$Total.Mass))
 p36.12.f.m=sum(as.numeric(p36.12.f$Total.Mass))
-seq1=c(1,1.5,2,2.5,5)
-seq1
 
+seq1=c(1,1.5,2,2.5,5)
 plot(seq1,c(p36.08.s.m,p36.08.f.m,p36.09.s.m,p36.09.f.m,p36.12.f.m),type="b")
 
 #functional groups
