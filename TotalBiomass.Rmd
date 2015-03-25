@@ -543,75 +543,408 @@ AB.08.f=dat.08.fall[dat.08.fall$Annl.Biennial,]
 AB.08.s=dat.08.summ[dat.08.summ$Annl.Biennial,]
 ```
 
-#2011 data
+#2010 Herbaceous season subset
 ```{r}
-dat.11<-dat.tree[dat.tree$year==2011,]
-dat.11.fall.m=as.numeric(dat.11$tot.mass)
+## 2010 year subsetted by season 
+dat.10=dat.herb[dat.herb$Year==2010,]
+dat.10.summ=dat.10[dat.10$Season=="Summer",]
+dat.10.summ.m=as.numeric(dat.10.summ$Total.Mass)
 #Means,95% intervals, standarad deviation, 
-dat.11.fall.95=quantile(dat.11.fall.m,c(.05,.95),na.rm=TRUE)
-dat.11.fall.mean=mean(dat.11.fall.m,na.rm=TRUE)
-dat.11.fall.sd=sd(dat.11.fall.m,na.rm=TRUE)
+dat.10.summ.95=quantile(dat.10.summ.m,c(.05,.95))
+dat.10.summ.mean=mean(dat.10.summ.m)
+dat.10.summ.sd=sd(dat.10.summ.m)
 ```
 
-##2011 Treatment Subset
+#2010 Herb Subseted by treatment
 ```{r}
-w.11<-dat.11[dat.11$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
-d.11<-dat.11[dat.11$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
-a.11<-dat.11[dat.11$Plot %in% c(5,6,7,8,13,14,15,16,29,30,31,32),]
-w.11.tm=as.numeric(w.11$tot.mass)
-d.11.tm=as.numeric(d.11$tot.mass)
-a.11.tm=as.numeric(a.11$tot.mass)
+## Seasonal subsetted by treatment
+wt.10.s=dat.10.summ[dat.10.summ$Treatment== "W",]
+dr.10.s=dat.10.summ[dat.10.summ$Treatment== "D",]
+ab.10.s=dat.10.summ[dat.10.summ$Treatment== "A",]
+
+##Treatment subsetted by mass
+wt.10.s.m=as.numeric(wt.10.s$Total.Mass) 
+dr.10.s.m=as.numeric(dr.10.s$Total.Mass)
+ab.10.s.m=as.numeric(ab.10.s$Total.Mass)
+
+#Summary data
+w.10.summ.95=quantile(wt.10.s.m,c(.05,.95),na.rm=TRUE)
+w.10.summ.mean=mean(wt.10.s.m,na.rm=TRUE)
+w.10.summ.sd=sd(wt.10.s.m,na.rm=TRUE)
+
+a.10.summ.95=quantile(ab.10.s.m,c(.05,.95),na.rm=TRUE)
+a.10.summ.mean=mean(ab.10.s.m,na.rm=TRUE)
+a.10.summ.sd=sd(ab.10.s.m,na.rm=TRUE)
+
+d.10.summ.95=quantile(dr.10.s.m,c(.05,.95),na.rm=TRUE)
+d.10.summ.mean=mean(dr.10.s.m,na.rm=TRUE)
+d.10.summ.sd=sd(dr.10.s.m,na.rm=TRUE)
+```
+
+#2010 Herb subsetted by plot
+```{r}
+## Seasonal subsetted by plot
+p1.10.s=dat.10.sall[dat.10.sall$Plot %in% 1,]
+p2.10.s=dat.10.sall[dat.10.sall$Plot %in% 2,]
+p3.10.s=dat.10.sall[dat.10.sall$Plot %in% 3,]
+p4.10.s=dat.10.sall[dat.10.sall$Plot %in% 4,]
+p5.10.s=dat.10.sall[dat.10.sall$Plot %in% 5,]
+p6.10.s=dat.10.sall[dat.10.sall$Plot %in% 6,]
+p7.10.s=dat.10.sall[dat.10.sall$Plot %in% 7,]
+p8.10.s=dat.10.sall[dat.10.sall$Plot %in% 8,]
+p9.10.s=dat.10.sall[dat.10.sall$Plot %in% 9,]
+p10.10.s=dat.10.sall[dat.10.sall$Plot %in% 10,]
+p11.10.s=dat.10.sall[dat.10.sall$Plot %in% 11,]
+p12.10.s=dat.10.sall[dat.10.sall$Plot %in% 12,]
+p13.10.s=dat.10.sall[dat.10.sall$Plot %in% 13,]
+p14.10.s=dat.10.sall[dat.10.sall$Plot %in% 14,]
+p15.10.s=dat.10.sall[dat.10.sall$Plot %in% 15,]
+p16.10.s=dat.10.sall[dat.10.sall$Plot %in% 16,]
+p17.10.s=dat.10.sall[dat.10.sall$Plot %in% 17,]
+p18.10.s=dat.10.sall[dat.10.sall$Plot %in% 18,]
+p19.10.s=dat.10.sall[dat.10.sall$Plot %in% 19,]
+p20.10.s=dat.10.sall[dat.10.sall$Plot %in% 20,]
+p21.10.s=dat.10.sall[dat.10.sall$Plot %in% 21,]
+p22.10.s=dat.10.sall[dat.10.sall$Plot %in% 22,]
+p23.10.s=dat.10.sall[dat.10.sall$Plot %in% 23,]
+p24.10.s=dat.10.sall[dat.10.sall$Plot %in% 24,]
+p25.10.s=dat.10.sall[dat.10.sall$Plot %in% 25,]
+p26.10.s=dat.10.sall[dat.10.sall$Plot %in% 26,]
+p27.10.s=dat.10.sall[dat.10.sall$Plot %in% 27,]
+p28.10.s=dat.10.sall[dat.10.sall$Plot %in% 28,]
+p29.10.s=dat.10.sall[dat.10.sall$Plot %in% 29,]
+p30.10.s=dat.10.sall[dat.10.sall$Plot %in% 30,]
+p31.10.s=dat.10.sall[dat.10.sall$Plot %in% 31,]
+p32.10.s=dat.10.sall[dat.10.sall$Plot %in% 32,]
+p33.10.s=dat.10.sall[dat.10.sall$Plot %in% 33,]
+p34.10.s=dat.10.sall[dat.10.sall$Plot %in% 34,]
+p35.10.s=dat.10.sall[dat.10.sall$Plot %in% 35,]
+p36.10.s=dat.10.sall[dat.10.sall$Plot %in% 36,]
+
+
+#Plot subsetted by mass
+p1.10.s.m=sum(as.numeric(p1.10.s$Total.Mass))
+p2.10.s.m=sum(as.numeric(p2.10.s$Total.Mass))
+p3.10.s.m=sum(as.numeric(p3.10.s$Total.Mass))
+p4.10.s.m=sum(as.numeric(p4.10.s$Total.Mass))
+p5.10.s.m=sum(as.numeric(p5.10.s$Total.Mass))
+p6.10.s.m=sum(as.numeric(p6.10.s$Total.Mass))
+p7.10.s.m=sum(as.numeric(p7.10.s$Total.Mass))
+p8.10.s.m=sum(as.numeric(p8.10.s$Total.Mass))
+p9.10.s.m=sum(as.numeric(p9.10.s$Total.Mass))
+p10.10.s.m=sum(as.numeric(p10.10.s$Total.Mass))
+p11.10.s.m=sum(as.numeric(p10.10.s$Total.Mass))
+p12.10.s.m=sum(as.numeric(p12.10.s$Total.Mass))
+p10.10.s.m=sum(as.numeric(p10.10.s$Total.Mass))
+p14.10.s.m=sum(as.numeric(p14.10.s$Total.Mass))
+p15.10.s.m=sum(as.numeric(p15.10.s$Total.Mass))
+p16.10.s.m=sum(as.numeric(p16.10.s$Total.Mass))
+p17.10.s.m=sum(as.numeric(p17.10.s$Total.Mass))
+p18.10.s.m=sum(as.numeric(p18.10.s$Total.Mass))
+p19.10.s.m=sum(as.numeric(p19.10.s$Total.Mass))
+p20.10.s.m=sum(as.numeric(p20.10.s$Total.Mass))
+p21.10.s.m=sum(as.numeric(p21.10.s$Total.Mass))
+p22.10.s.m=sum(as.numeric(p22.10.s$Total.Mass))
+p23.10.s.m=sum(as.numeric(p23.10.s$Total.Mass))
+p24.10.s.m=sum(as.numeric(p24.10.s$Total.Mass))
+p25.10.s.m=sum(as.numeric(p25.10.s$Total.Mass))
+p26.10.s.m=sum(as.numeric(p26.10.s$Total.Mass))
+p27.10.s.m=sum(as.numeric(p27.10.s$Total.Mass))
+p28.10.s.m=sum(as.numeric(p28.10.s$Total.Mass))
+p29.10.s.m=sum(as.numeric(p29.10.s$Total.Mass))
+p30.10.s.m=sum(as.numeric(p30.10.s$Total.Mass))
+p31.10.s.m=sum(as.numeric(p31.10.s$Total.Mass))
+p32.10.s.m=sum(as.numeric(p32.10.s$Total.Mass))
+p33.10.s.m=sum(as.numeric(p33.10.s$Total.Mass))
+p34.10.s.m=sum(as.numeric(p34.10.s$Total.Mass))
+p35.10.s.m=sum(as.numeric(p35.10.s$Total.Mass))
+p36.10.s.m=sum(as.numeric(p36.10.s$Total.Mass))
+
+
+```
+
+
+#2011 Tree data
+```{r}
+dat.11t<-dat.tree[dat.tree$year==2011,]
+dat.11t.fall.m=as.numeric(dat.11t$tot.mass)
+#Means,95% intervals, standarad deviation, 
+dat.11t.fall.95=quantile(dat.11t.fall.m,c(.05,.95),na.rm=TRUE)
+dat.11t.fall.mean=mean(dat.11t.fall.m,na.rm=TRUE)
+dat.11t.fall.sd=sd(dat.11t.fall.m,na.rm=TRUE)
+```
+
+##2011 TreeTreatment Subset
+```{r}
+w.11t<-dat.11t[dat.11t$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
+d.11t<-dat.11t[dat.11t$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
+a.11t<-dat.11t[dat.11t$Plot %in% c(5,6,7,8,13,14,15,16,29,30,31,32),]
+w.11t.tm=as.numeric(w.11t$tot.mass)
+d.11t.tm=as.numeric(d.11t$tot.mass)
+a.11t.tm=as.numeric(a.11t$tot.mass)
 ##Summary Stats
-w.11.fall.95=quantile(w.11.tm,c(.05,.95),na.rm=TRUE)
-w.11.fall.mean=mean(w.11.tm,na.rm=TRUE)
-w.11.fall.sd=sd(w.11.tm,na.rm=TRUE)
+w.11t.fall.95=quantile(w.11t.tm,c(.05,.95),na.rm=TRUE)
+w.11t.fall.mean=mean(w.11t.tm,na.rm=TRUE)
+w.11t.fall.sd=sd(w.11t.tm,na.rm=TRUE)
 
-a.11.fall.95=quantile(a.11.tm,c(.05,.95),na.rm=TRUE)
-a.11.fall.mean=mean(a.11.tm,na.rm=TRUE)
-a.11.fall.sd=sd(a.11.tm,na.rm=TRUE)
+a.11t.fall.95=quantile(a.11t.tm,c(.05,.95),na.rm=TRUE)
+a.11t.fall.mean=mean(a.11t.tm,na.rm=TRUE)
+a.11t.fall.sd=sd(a.11t.tm,na.rm=TRUE)
 
-d.11.fall.95=quantile(d.11.tm,c(.05,.95),na.rm=TRUE)
-d.11.fall.mean=mean(d.11.tm,na.rm=TRUE)
-d.11.fall.sd=sd(d.11.tm,na.rm=TRUE)
+d.11t.fall.95=quantile(d.11t.tm,c(.05,.95),na.rm=TRUE)
+d.11t.fall.mean=mean(d.11t.tm,na.rm=TRUE)
+d.11t.fall.sd=sd(d.11t.tm,na.rm=TRUE)
 ```
 
-#2011 Plot subset
+#2011 Tree Plot subset
 ```{r}
-p1.11=dat.11[dat.11$Plot %in% 1,]
-p2.11=dat.11[dat.11$Plot %in% 2,]
-p3.11=dat.11[dat.11$Plot %in% 3,]
-p4.11=dat.11[dat.11$Plot %in% 4,]
-p5.11=dat.11[dat.11$Plot %in% 5,]
-p6.11=dat.11[dat.11$Plot %in% 6,]
-p7.11=dat.11[dat.11$Plot %in% 7,]
-p8.11=dat.11[dat.11$Plot %in% 8,]
-p9.11=dat.11[dat.11$Plot %in% 9,]
-p10.11=dat.11[dat.11$Plot %in% 10,]
-p11.11=dat.11[dat.11$Plot %in% 11,]
-p12.11=dat.11[dat.11$Plot %in% 12,]
-p13.11=dat.11[dat.11$Plot %in% 13,]
-p14.11=dat.11[dat.11$Plot %in% 14,]
-p15.11=dat.11[dat.11$Plot %in% 15,]
-p16.11=dat.11[dat.11$Plot %in% 16,]
-p17.11=dat.11[dat.11$Plot %in% 17,]
-p18.11=dat.11[dat.11$Plot %in% 18,]
-p19.11=dat.11[dat.11$Plot %in% 19,]
-p20.11=dat.11[dat.11$Plot %in% 20,]
-p21.11=dat.11[dat.11$Plot %in% 21,]
-p22.11=dat.11[dat.11$Plot %in% 22,]
-p23.11=dat.11[dat.11$Plot %in% 23,]
-p24.11=dat.11[dat.11$Plot %in% 24,]
-p25.11=dat.11[dat.11$Plot %in% 25,]
-p26.11=dat.11[dat.11$Plot %in% 26,]
-p27.11=dat.11[dat.11$Plot %in% 27,]
-p28.11=dat.11[dat.11$Plot %in% 28,]
-p29.11=dat.11[dat.11$Plot %in% 29,]
-p30.11=dat.11[dat.11$Plot %in% 30,]
-p31.11=dat.11[dat.11$Plot %in% 31,]
-p32.11=dat.11[dat.11$Plot %in% 32,]
-p33.11=dat.11[dat.11$Plot %in% 33,]
-p34.11=dat.11[dat.11$Plot %in% 34,]
-p35.11=dat.11[dat.11$Plot %in% 35,]
+p1.11t=dat.11t[dat.11t$Plot %in% 1,]
+p2.11t=dat.11t[dat.11t$Plot %in% 2,]
+p3.11t=dat.11t[dat.11t$Plot %in% 3,]
+p4.11t=dat.11t[dat.11t$Plot %in% 4,]
+p5.11t=dat.11t[dat.11t$Plot %in% 5,]
+p6.11t=dat.11t[dat.11t$Plot %in% 6,]
+p7.11t=dat.11t[dat.11t$Plot %in% 7,]
+p8.11t=dat.11t[dat.11t$Plot %in% 8,]
+p9.11t=dat.11t[dat.11t$Plot %in% 9,]
+p10.11t=dat.11t[dat.11t$Plot %in% 10,]
+p11t.11t=dat.11t[dat.11t$Plot %in% 11,]
+p12.11t=dat.11t[dat.11t$Plot %in% 12,]
+p13.11t=dat.11t[dat.11t$Plot %in% 13,]
+p14.11t=dat.11t[dat.11t$Plot %in% 14,]
+p15.11t=dat.11t[dat.11t$Plot %in% 15,]
+p16.11t=dat.11t[dat.11t$Plot %in% 16,]
+p17.11t=dat.11t[dat.11t$Plot %in% 17,]
+p18.11t=dat.11t[dat.11t$Plot %in% 18,]
+p19.11t=dat.11t[dat.11t$Plot %in% 19,]
+p20.11t=dat.11t[dat.11t$Plot %in% 20,]
+p21.11t=dat.11t[dat.11t$Plot %in% 21,]
+p22.11t=dat.11t[dat.11t$Plot %in% 22,]
+p23.11t=dat.11t[dat.11t$Plot %in% 23,]
+p24.11t=dat.11t[dat.11t$Plot %in% 24,]
+p25.11t=dat.11t[dat.11t$Plot %in% 25,]
+p26.11t=dat.11t[dat.11t$Plot %in% 26,]
+p27.11t=dat.11t[dat.11t$Plot %in% 27,]
+p28.11t=dat.11t[dat.11t$Plot %in% 28,]
+p29.11t=dat.11t[dat.11t$Plot %in% 29,]
+p30.11t=dat.11t[dat.11t$Plot %in% 30,]
+p31.11t=dat.11t[dat.11t$Plot %in% 31,]
+p32.11t=dat.11t[dat.11t$Plot %in% 32,]
+p33.11t=dat.11t[dat.11t$Plot %in% 33,]
+p34.11t=dat.11t[dat.11t$Plot %in% 34,]
+p35.11t=dat.11t[dat.11t$Plot %in% 35,]
+```
+
+#2011 Herbaceous season subset
+```{r}
+## 2011 year subsetted by season 
+dat.11=dat.herb[dat.herb$Year==2011,]
+dat.11.fall=dat.11[dat.11$Season=="Fall",]
+dat.11.summ=dat.11[dat.11$Season=="Summer",]
+dat.11.fall.m=as.numeric(dat.11.fall$Total.Mass)
+dat.11.summ.m=as.numeric(dat.11.summ$Total.Mass)
+#Means,95% intervals, standarad deviation, 
+dat.11.fall.95=quantile(dat.11.fall.m,c(.05,.95))
+dat.11.summ.95=quantile(dat.11.summ.m,c(.05,.95))
+dat.11.fall.mean=mean(dat.11.fall.m)
+dat.11.summ.mean=mean(dat.11.summ.m)
+dat.11.fall.sd=sd(dat.11.fall.m)
+dat.11.summ.sd=sd(dat.11.summ.m)
+```
+
+#2011 Herb Subseted by treatment
+```{r}
+## Seasonal subsetted by treatment
+wt.11.f=dat.11.fall[dat.11.fall$Treatment== "W",]
+wt.11.s=dat.11.summ[dat.11.summ$Treatment== "W",]
+dr.11.f=dat.11.fall[dat.11.fall$Treatment== "D",]
+dr.11.s=dat.11.summ[dat.11.summ$Treatment== "D",]
+ab.11.f=dat.11.fall[dat.11.fall$Treatment== "A",]
+ab.11.s=dat.11.summ[dat.11.summ$Treatment== "A",]
+
+##Treatment subsetted by mass
+wt.11.f.m=as.numeric(wt.11.f$Total.Mass) 
+wt.11.s.m=as.numeric(wt.11.s$Total.Mass)
+dr.11.f.m=as.numeric(dr.11.f$Total.Mass)
+dr.11.s.m=as.numeric(dr.11.s$Total.Mass)
+ab.11.f.m=as.numeric(ab.11.f$Total.Mass)
+ab.11.s.m=as.numeric(ab.11.s$Total.Mass)
+
+#Summary data
+w.11.fall.95=quantile(wt.11.f.m,c(.05,.95),na.rm=TRUE)
+w.11.summ.95=quantile(wt.11.s.m,c(.05,.95),na.rm=TRUE)
+w.11.fall.mean=mean(wt.11.f.m,na.rm=TRUE)
+w.11.summ.mean=mean(wt.11.s.m,na.rm=TRUE)
+w.11.fall.sd=sd(wt.11.f.m,na.rm=TRUE)
+w.11.summ.sd=sd(wt.11.s.m,na.rm=TRUE)
+
+a.11.fall.95=quantile(ab.11.f.m,c(.05,.95),na.rm=TRUE)
+a.11.summ.95=quantile(ab.11.s.m,c(.05,.95),na.rm=TRUE)
+a.11.fall.mean=mean(ab.11.f.m,na.rm=TRUE)
+a.11.summ.mean=mean(ab.11.s.m,na.rm=TRUE)
+a.11.fall.sd=sd(ab.11.f.m,na.rm=TRUE)
+a.11.summ.sd=sd(ab.11.s.m,na.rm=TRUE)
+
+d.11.fall.95=quantile(dr.11.f.m,c(.05,.95),na.rm=TRUE)
+d.11.summ.95=quantile(dr.11.s.m,c(.05,.95),na.rm=TRUE)
+d.11.fall.mean=mean(dr.11.f.m,na.rm=TRUE)
+d.11.summ.mean=mean(dr.11.s.m,na.rm=TRUE)
+d.11.fall.sd=sd(dr.11.f.m,na.rm=TRUE)
+d.11.summ.sd=sd(dr.11.s.m,na.rm=TRUE)
+```
+
+#2011 Herb subsetted by plot
+```{r}
+## Seasonal subsetted by plot
+p1.11.f=dat.11.fall[dat.11.fall$Plot %in% 1,]
+p2.11.f=dat.11.fall[dat.11.fall$Plot %in% 2,]
+p3.11.f=dat.11.fall[dat.11.fall$Plot %in% 3,]
+p4.11.f=dat.11.fall[dat.11.fall$Plot %in% 4,]
+p5.11.f=dat.11.fall[dat.11.fall$Plot %in% 5,]
+p6.11.f=dat.11.fall[dat.11.fall$Plot %in% 6,]
+p7.11.f=dat.11.fall[dat.11.fall$Plot %in% 7,]
+p8.11.f=dat.11.fall[dat.11.fall$Plot %in% 8,]
+p9.11.f=dat.11.fall[dat.11.fall$Plot %in% 9,]
+p10.11.f=dat.11.fall[dat.11.fall$Plot %in% 10,]
+p11.11.f=dat.11.fall[dat.11.fall$Plot %in% 11,]
+p12.11.f=dat.11.fall[dat.11.fall$Plot %in% 12,]
+p13.11.f=dat.11.fall[dat.11.fall$Plot %in% 13,]
+p14.11.f=dat.11.fall[dat.11.fall$Plot %in% 14,]
+p15.11.f=dat.11.fall[dat.11.fall$Plot %in% 15,]
+p16.11.f=dat.11.fall[dat.11.fall$Plot %in% 16,]
+p17.11.f=dat.11.fall[dat.11.fall$Plot %in% 17,]
+p18.11.f=dat.11.fall[dat.11.fall$Plot %in% 18,]
+p19.11.f=dat.11.fall[dat.11.fall$Plot %in% 19,]
+p20.11.f=dat.11.fall[dat.11.fall$Plot %in% 20,]
+p21.11.f=dat.11.fall[dat.11.fall$Plot %in% 21,]
+p22.11.f=dat.11.fall[dat.11.fall$Plot %in% 22,]
+p23.11.f=dat.11.fall[dat.11.fall$Plot %in% 23,]
+p24.11.f=dat.11.fall[dat.11.fall$Plot %in% 24,]
+p25.11.f=dat.11.fall[dat.11.fall$Plot %in% 25,]
+p26.11.f=dat.11.fall[dat.11.fall$Plot %in% 26,]
+p27.11.f=dat.11.fall[dat.11.fall$Plot %in% 27,]
+p28.11.f=dat.11.fall[dat.11.fall$Plot %in% 28,]
+p29.11.f=dat.11.fall[dat.11.fall$Plot %in% 29,]
+p30.11.f=dat.11.fall[dat.11.fall$Plot %in% 30,]
+p31.11.f=dat.11.fall[dat.11.fall$Plot %in% 31,]
+p32.11.f=dat.11.fall[dat.11.fall$Plot %in% 32,]
+p33.11.f=dat.11.fall[dat.11.fall$Plot %in% 33,]
+p34.11.f=dat.11.fall[dat.11.fall$Plot %in% 34,]
+p35.11.f=dat.11.fall[dat.11.fall$Plot %in% 35,]
+p36.11.f=dat.11.fall[dat.11.fall$Plot %in% 36,]
+
+p1.11.s=dat.11.summ[dat.11.summ$Plot %in% 1,]
+p2.11.s=dat.11.summ[dat.11.summ$Plot %in% 2,]
+p3.11.s=dat.11.summ[dat.11.summ$Plot %in% 3,]
+p4.11.s=dat.11.summ[dat.11.summ$Plot %in% 4,]
+p5.11.s=dat.11.summ[dat.11.summ$Plot %in% 5,]
+p6.11.s=dat.11.summ[dat.11.summ$Plot %in% 6,]
+p7.11.s=dat.11.summ[dat.11.summ$Plot %in% 7,]
+p8.11.s=dat.11.summ[dat.11.summ$Plot %in% 8,]
+p9.11.s=dat.11.summ[dat.11.summ$Plot %in% 9,]
+p10.11.s=dat.11.summ[dat.11.summ$Plot %in% 10,]
+p11.11.s=dat.11.summ[dat.11.summ$Plot %in% 11,]
+p12.11.s=dat.11.summ[dat.11.summ$Plot %in% 12,]
+p13.11.s=dat.11.summ[dat.11.summ$Plot %in% 13,]
+p14.11.s=dat.11.summ[dat.11.summ$Plot %in% 14,]
+p15.11.s=dat.11.summ[dat.11.summ$Plot %in% 15,]
+p16.11.s=dat.11.summ[dat.11.summ$Plot %in% 16,]
+p17.11.s=dat.11.summ[dat.11.summ$Plot %in% 17,]
+p18.11.s=dat.11.summ[dat.11.summ$Plot %in% 18,]
+p19.11.s=dat.11.summ[dat.11.summ$Plot %in% 19,]
+p20.11.s=dat.11.summ[dat.11.summ$Plot %in% 20,]
+p21.11.s=dat.11.summ[dat.11.summ$Plot %in% 21,]
+p22.11.s=dat.11.summ[dat.11.summ$Plot %in% 22,]
+p23.11.s=dat.11.summ[dat.11.summ$Plot %in% 23,]
+p24.11.s=dat.11.summ[dat.11.summ$Plot %in% 24,]
+p25.11.s=dat.11.summ[dat.11.summ$Plot %in% 25,]
+p26.11.s=dat.11.summ[dat.11.summ$Plot %in% 26,]
+p27.11.s=dat.11.summ[dat.11.summ$Plot %in% 27,]
+p28.11.s=dat.11.summ[dat.11.summ$Plot %in% 28,]
+p29.11.s=dat.11.summ[dat.11.summ$Plot %in% 29,]
+p30.11.s=dat.11.summ[dat.11.summ$Plot %in% 30,]
+p31.11.s=dat.11.summ[dat.11.summ$Plot %in% 31,]
+p32.11.s=dat.11.summ[dat.11.summ$Plot %in% 32,]
+p33.11.s=dat.11.summ[dat.11.summ$Plot %in% 33,]
+p34.11.s=dat.11.summ[dat.11.summ$Plot %in% 34,]
+p35.11.s=dat.11.summ[dat.11.summ$Plot %in% 35,]
+p36.11.s=dat.11.summ[dat.11.summ$Plot %in% 36,]
+
+#Plot subsetted by mass
+p1.11.f.m=sum(as.numeric(p1.11.f$Total.Mass))
+p2.11.f.m=sum(as.numeric(p2.11.f$Total.Mass))
+p3.11.f.m=sum(as.numeric(p3.11.f$Total.Mass))
+p4.11.f.m=sum(as.numeric(p4.11.f$Total.Mass))
+p5.11.f.m=sum(as.numeric(p5.11.f$Total.Mass))
+p6.11.f.m=sum(as.numeric(p6.11.f$Total.Mass))
+p7.11.f.m=sum(as.numeric(p7.11.f$Total.Mass))
+p8.11.f.m=sum(as.numeric(p8.11.f$Total.Mass))
+p9.11.f.m=sum(as.numeric(p9.11.f$Total.Mass))
+p10.11.f.m=sum(as.numeric(p10.11.f$Total.Mass))
+p11.11.f.m=sum(as.numeric(p11.11.f$Total.Mass))
+p12.11.f.m=sum(as.numeric(p12.11.f$Total.Mass))
+p13.11.f.m=sum(as.numeric(p13.11.f$Total.Mass))
+p14.11.f.m=sum(as.numeric(p14.11.f$Total.Mass))
+p15.11.f.m=sum(as.numeric(p15.11.f$Total.Mass))
+p16.11.f.m=sum(as.numeric(p16.11.f$Total.Mass))
+p17.11.f.m=sum(as.numeric(p17.11.f$Total.Mass))
+p18.11.f.m=sum(as.numeric(p18.11.f$Total.Mass))
+p19.11.f.m=sum(as.numeric(p19.11.f$Total.Mass))
+p20.11.f.m=sum(as.numeric(p20.11.f$Total.Mass))
+p21.11.f.m=sum(as.numeric(p21.11.f$Total.Mass))
+p22.11.f.m=sum(as.numeric(p22.11.f$Total.Mass))
+p23.11.f.m=sum(as.numeric(p23.11.f$Total.Mass))
+p24.11.f.m=sum(as.numeric(p24.11.f$Total.Mass))
+p25.11.f.m=sum(as.numeric(p25.11.f$Total.Mass))
+p26.11.f.m=sum(as.numeric(p26.11.f$Total.Mass))
+p27.11.f.m=sum(as.numeric(p27.11.f$Total.Mass))
+p28.11.f.m=sum(as.numeric(p28.11.f$Total.Mass))
+p29.11.f.m=sum(as.numeric(p29.11.f$Total.Mass))
+p30.11.f.m=sum(as.numeric(p30.11.f$Total.Mass))
+p31.11.f.m=sum(as.numeric(p31.11.f$Total.Mass))
+p32.11.f.m=sum(as.numeric(p32.11.f$Total.Mass))
+p33.11.f.m=sum(as.numeric(p33.11.f$Total.Mass))
+p34.11.f.m=sum(as.numeric(p34.11.f$Total.Mass))
+p35.11.f.m=sum(as.numeric(p35.11.f$Total.Mass))
+p36.11.f.m=sum(as.numeric(p36.11.f$Total.Mass))
+
+p1.11.s.m=sum(as.numeric(p1.11.s$Total.Mass))
+p2.11.s.m=sum(as.numeric(p2.11.s$Total.Mass))
+p3.11.s.m=sum(as.numeric(p3.11.s$Total.Mass))
+p4.11.s.m=sum(as.numeric(p4.11.s$Total.Mass))
+p5.11.s.m=sum(as.numeric(p5.11.s$Total.Mass))
+p6.11.s.m=sum(as.numeric(p6.11.s$Total.Mass))
+p7.11.s.m=sum(as.numeric(p7.11.s$Total.Mass))
+p8.11.s.m=sum(as.numeric(p8.11.s$Total.Mass))
+p9.11.s.m=sum(as.numeric(p9.11.s$Total.Mass))
+p10.11.s.m=sum(as.numeric(p10.11.s$Total.Mass))
+p11.11.s.m=sum(as.numeric(p11.11.s$Total.Mass))
+p12.11.s.m=sum(as.numeric(p12.11.s$Total.Mass))
+p13.11.s.m=sum(as.numeric(p13.11.s$Total.Mass))
+p14.11.s.m=sum(as.numeric(p14.11.s$Total.Mass))
+p15.11.s.m=sum(as.numeric(p15.11.s$Total.Mass))
+p16.11.s.m=sum(as.numeric(p16.11.s$Total.Mass))
+p17.11.s.m=sum(as.numeric(p17.11.s$Total.Mass))
+p18.11.s.m=sum(as.numeric(p18.11.s$Total.Mass))
+p19.11.s.m=sum(as.numeric(p19.11.s$Total.Mass))
+p20.11.s.m=sum(as.numeric(p20.11.s$Total.Mass))
+p21.11.s.m=sum(as.numeric(p21.11.s$Total.Mass))
+p22.11.s.m=sum(as.numeric(p22.11.s$Total.Mass))
+p23.11.s.m=sum(as.numeric(p23.11.s$Total.Mass))
+p24.11.s.m=sum(as.numeric(p24.11.s$Total.Mass))
+p25.11.s.m=sum(as.numeric(p25.11.s$Total.Mass))
+p26.11.s.m=sum(as.numeric(p26.11.s$Total.Mass))
+p27.11.s.m=sum(as.numeric(p27.11.s$Total.Mass))
+p28.11.s.m=sum(as.numeric(p28.11.s$Total.Mass))
+p29.11.s.m=sum(as.numeric(p29.11.s$Total.Mass))
+p30.11.s.m=sum(as.numeric(p30.11.s$Total.Mass))
+p31.11.s.m=sum(as.numeric(p31.11.s$Total.Mass))
+p32.11.s.m=sum(as.numeric(p32.11.s$Total.Mass))
+p33.11.s.m=sum(as.numeric(p33.11.s$Total.Mass))
+p34.11.s.m=sum(as.numeric(p34.11.s$Total.Mass))
+p35.11.s.m=sum(as.numeric(p35.11.s$Total.Mass))
+p36.11.s.m=sum(as.numeric(p36.11.s$Total.Mass))
+
 ```
 
 ## 2012 year subsetted by season 
@@ -727,7 +1060,7 @@ p35.12.f.m=sum(as.numeric(p35.12.f$Total.Mass))
 p36.12.f.m=sum(as.numeric(p36.12.f$Total.Mass))
 ```
 
-#2013 data
+#2013 Tree data
 ```{r}
 dat.13<-dat.tree[dat.tree$year==2013,]
 dat.13.fall.m=as.numeric(dat.13$tot.mass)
@@ -737,7 +1070,7 @@ dat.13.fall.mean=mean(dat.13.fall.m,na.rm=TRUE)
 dat.13.fall.sd=sd(dat.13.fall.m,na.rm=TRUE)
 ```
 
-#2013 height and mass subsets
+#2013 Tree height and mass subsets
 ```{r}
 w.13<-dat.13[dat.13$Plot %in% c(9,10,11,12,17,18,19,20,25,26,27,28),]
 d.13<-dat.13[dat.13$Plot %in% c(1,2,3,4,21,22,23,24,33,34,35,36),]
@@ -759,7 +1092,7 @@ d.13.fall.mean=mean(d.13.tm,na.rm=TRUE)
 d.13.fall.sd=sd(d.13.tm,na.rm=TRUE)
 ```
 
-### 2013 Plot Subsets
+# 2013 Tree Plot Subsets
 ```{r}
 p1.13=dat.13[dat.13$Plot %in% 1,]
 p2.13=dat.13[dat.13$Plot %in% 2,]
@@ -835,6 +1168,127 @@ p34.13.m=as.numeric(p34.13$tot.mass)
 p35.13.m=as.numeric(p35.13$tot.mass)
 p36.13.m=as.numeric(p36.13$tot.mass)
 ```
+
+#2013 Herbaceous season subset
+```{r}
+## 2013 year subsetted by season 
+dat.13=dat.herb[dat.herb$Year==2013,]
+dat.13.fall=dat.13[dat.13$Season=="Fall",]
+dat.13.fall.m=as.numeric(dat.13.fall$Total.Mass)
+#Means,95% intervals, standarad deviation, 
+dat.13.fall.95=quantile(dat.13.fall.m,c(.05,.95))
+dat.13.fall.mean=mean(dat.13.fall.m)
+dat.13.fall.sd=sd(dat.13.fall.m)
+```
+
+#2013 Herb Subseted by treatment
+```{r}
+## Seasonal subsetted by treatment
+wt.13.f=dat.13.fall[dat.13.fall$Treatment== "W",]
+dr.13.f=dat.13.fall[dat.13.fall$Treatment== "D",]
+ab.13.f=dat.13.fall[dat.13.fall$Treatment== "A",]
+
+##Treatment subsetted by mass
+wt.13.f.m=as.numeric(wt.13.f$Total.Mass) 
+dr.13.f.m=as.numeric(dr.13.f$Total.Mass)
+ab.13.f.m=as.numeric(ab.13.f$Total.Mass)
+
+#Summary data
+w.13.fall.95=quantile(wt.13.f.m,c(.05,.95),na.rm=TRUE)
+w.13.fall.mean=mean(wt.13.f.m,na.rm=TRUE)
+w.13.fall.sd=sd(wt.13.f.m,na.rm=TRUE)
+
+a.13.fall.95=quantile(ab.13.f.m,c(.05,.95),na.rm=TRUE)
+a.13.fall.mean=mean(ab.13.f.m,na.rm=TRUE)
+a.13.fall.sd=sd(ab.13.f.m,na.rm=TRUE)
+
+d.13.fall.95=quantile(dr.13.f.m,c(.05,.95),na.rm=TRUE)
+d.13.fall.mean=mean(dr.13.f.m,na.rm=TRUE)
+d.13.fall.sd=sd(dr.13.f.m,na.rm=TRUE)
+```
+
+#2013 Herb subsetted by plot
+```{r}
+## Seasonal subsetted by plot
+p1.13.f=dat.13.fall[dat.13.fall$Plot %in% 1,]
+p2.13.f=dat.13.fall[dat.13.fall$Plot %in% 2,]
+p3.13.f=dat.13.fall[dat.13.fall$Plot %in% 3,]
+p4.13.f=dat.13.fall[dat.13.fall$Plot %in% 4,]
+p5.13.f=dat.13.fall[dat.13.fall$Plot %in% 5,]
+p6.13.f=dat.13.fall[dat.13.fall$Plot %in% 6,]
+p7.13.f=dat.13.fall[dat.13.fall$Plot %in% 7,]
+p8.13.f=dat.13.fall[dat.13.fall$Plot %in% 8,]
+p9.13.f=dat.13.fall[dat.13.fall$Plot %in% 9,]
+p10.13.f=dat.13.fall[dat.13.fall$Plot %in% 10,]
+p11.13.f=dat.13.fall[dat.13.fall$Plot %in% 11,]
+p12.13.f=dat.13.fall[dat.13.fall$Plot %in% 12,]
+p13.13.f=dat.13.fall[dat.13.fall$Plot %in% 13,]
+p14.13.f=dat.13.fall[dat.13.fall$Plot %in% 14,]
+p15.13.f=dat.13.fall[dat.13.fall$Plot %in% 15,]
+p16.13.f=dat.13.fall[dat.13.fall$Plot %in% 16,]
+p17.13.f=dat.13.fall[dat.13.fall$Plot %in% 17,]
+p18.13.f=dat.13.fall[dat.13.fall$Plot %in% 18,]
+p19.13.f=dat.13.fall[dat.13.fall$Plot %in% 19,]
+p20.13.f=dat.13.fall[dat.13.fall$Plot %in% 20,]
+p21.13.f=dat.13.fall[dat.13.fall$Plot %in% 21,]
+p22.13.f=dat.13.fall[dat.13.fall$Plot %in% 22,]
+p23.13.f=dat.13.fall[dat.13.fall$Plot %in% 23,]
+p24.13.f=dat.13.fall[dat.13.fall$Plot %in% 24,]
+p25.13.f=dat.13.fall[dat.13.fall$Plot %in% 25,]
+p26.13.f=dat.13.fall[dat.13.fall$Plot %in% 26,]
+p27.13.f=dat.13.fall[dat.13.fall$Plot %in% 27,]
+p28.13.f=dat.13.fall[dat.13.fall$Plot %in% 28,]
+p29.13.f=dat.13.fall[dat.13.fall$Plot %in% 29,]
+p30.13.f=dat.13.fall[dat.13.fall$Plot %in% 30,]
+p31.13.f=dat.13.fall[dat.13.fall$Plot %in% 31,]
+p32.13.f=dat.13.fall[dat.13.fall$Plot %in% 32,]
+p33.13.f=dat.13.fall[dat.13.fall$Plot %in% 33,]
+p34.13.f=dat.13.fall[dat.13.fall$Plot %in% 34,]
+p35.13.f=dat.13.fall[dat.13.fall$Plot %in% 35,]
+p36.13.f=dat.13.fall[dat.13.fall$Plot %in% 36,]
+
+
+#Plot subsetted by mass
+p1.13.f.m=sum(as.numeric(p1.13.f$Total.Mass))
+p2.13.f.m=sum(as.numeric(p2.13.f$Total.Mass))
+p3.13.f.m=sum(as.numeric(p3.13.f$Total.Mass))
+p4.13.f.m=sum(as.numeric(p4.13.f$Total.Mass))
+p5.13.f.m=sum(as.numeric(p5.13.f$Total.Mass))
+p6.13.f.m=sum(as.numeric(p6.13.f$Total.Mass))
+p7.13.f.m=sum(as.numeric(p7.13.f$Total.Mass))
+p8.13.f.m=sum(as.numeric(p8.13.f$Total.Mass))
+p9.13.f.m=sum(as.numeric(p9.13.f$Total.Mass))
+p10.13.f.m=sum(as.numeric(p10.13.f$Total.Mass))
+p11.13.f.m=sum(as.numeric(p13.13.f$Total.Mass))
+p12.13.f.m=sum(as.numeric(p12.13.f$Total.Mass))
+p13.13.f.m=sum(as.numeric(p13.13.f$Total.Mass))
+p14.13.f.m=sum(as.numeric(p14.13.f$Total.Mass))
+p15.13.f.m=sum(as.numeric(p15.13.f$Total.Mass))
+p16.13.f.m=sum(as.numeric(p16.13.f$Total.Mass))
+p17.13.f.m=sum(as.numeric(p17.13.f$Total.Mass))
+p18.13.f.m=sum(as.numeric(p18.13.f$Total.Mass))
+p19.13.f.m=sum(as.numeric(p19.13.f$Total.Mass))
+p20.13.f.m=sum(as.numeric(p20.13.f$Total.Mass))
+p21.13.f.m=sum(as.numeric(p21.13.f$Total.Mass))
+p22.13.f.m=sum(as.numeric(p22.13.f$Total.Mass))
+p23.13.f.m=sum(as.numeric(p23.13.f$Total.Mass))
+p24.13.f.m=sum(as.numeric(p24.13.f$Total.Mass))
+p25.13.f.m=sum(as.numeric(p25.13.f$Total.Mass))
+p26.13.f.m=sum(as.numeric(p26.13.f$Total.Mass))
+p27.13.f.m=sum(as.numeric(p27.13.f$Total.Mass))
+p28.13.f.m=sum(as.numeric(p28.13.f$Total.Mass))
+p29.13.f.m=sum(as.numeric(p29.13.f$Total.Mass))
+p30.13.f.m=sum(as.numeric(p30.13.f$Total.Mass))
+p31.13.f.m=sum(as.numeric(p31.13.f$Total.Mass))
+p32.13.f.m=sum(as.numeric(p32.13.f$Total.Mass))
+p33.13.f.m=sum(as.numeric(p33.13.f$Total.Mass))
+p34.13.f.m=sum(as.numeric(p34.13.f$Total.Mass))
+p35.13.f.m=sum(as.numeric(p35.13.f$Total.Mass))
+p36.13.f.m=sum(as.numeric(p36.13.f$Total.Mass))
+
+
+```
+
 
 #2014 subsetted by season
 ```{r}
@@ -955,42 +1409,67 @@ p36.14.f.m=sum(as.numeric(p36.14.f$Total.Mass))
 
 ```
 
-##AGGREGATE PLOTS and TABLE
+##AGGREGATE PLOTS and TABLES
 ```{r}
+#summer and fall 2008
 hist(dat.08.fall.m,probability=TRUE)
-f.08.dist=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
 lines(1:78,f.08.dist,col=2,type='s')
 hist(dat.08.summ.m,probability=TRUE)
 lines(1:300,dnorm(1:300,dat.08.summ.mean,dat.08.summ.sd),col=2,type='s')
+#summer and fall 2009
 hist(dat.09.fall.m,probability=TRUE)
 lines(1:160,dnorm(1:160,dat.09.fall.mean,dat.09.fall.sd),col=2,type='s')
 hist(dat.09.summ.m,probability=TRUE)
 lines(1:60,dnorm(1:60,dat.09.summ.mean,dat.09.summ.sd),col=2,type='s')
+# summer 2010
+hist(dat.10.summ.m,probability=TRUE)
+lines(1:200,dnorm(1:200,dat.10.summ.mean,dat.10.summ.sd),col=2,type='s')
+# summer and fall 2011
+hist(dat.11.summ.m,probability=TRUE)
+lines(1:750,dnorm(1:750,dat.11.summ.mean,dat.11.summ.sd),col=2,type='s')
 hist(dat.11.fall.m,probability=TRUE)
-lines(1:750,dnorm(1:750,dat.11.fall.mean,dat.11.fall.sd),col=2,type='s')
-hist(dat.12.fall.m,probability=TRUE)
 lines(1:120,dnorm(1:120,dat.12.fall.mean,dat.12.fall.sd),col=2,type='s')
+#  fall 2012
+hist(dat.12.fall.m,probability=TRUE)
+lines(1:730,dnorm(1:730,dat.12.fall.mean,dat.12.fall.sd),col=2,type='s')
+# fall 2013
 hist(dat.13.fall.m,probability=TRUE)
-lines(1:730,dnorm(1:730,dat.13.fall.mean,dat.13.fall.sd),col=2,type='s')
+lines(1:370,dnorm(1:370,dat.13.fall.mean,dat.13.fall.sd),col=2,type='s')
+# fall 2014
 hist(dat.14.fall.m,probability=TRUE)
 lines(1:370,dnorm(1:370,dat.14.fall.mean,dat.14.fall.sd),col=2,type='s')
 
-#check lognormal, gamma, weibull and create glms
-#response to interannual variability systematic, plot effect
-#treatment fixed,random plot,fixed year efect
 
+```
+
+##Distributions tests
+```{r}
+norm.08.dist.s=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.08.dist.f=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.09.dist.s=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.09.dist.f=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.10.dist.s=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.11.dist.s=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.11.dist.f=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.12.dist.f=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.13.dist.f=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+norm.14.dist.f=dnorm(1:78,dat.08.fall.mean,dat.08.fall.sd)
+
+```
+
+```{r}
 years=c(1:14)
-m.bm=c(dat.08.summ.mean,dat.08.fall.mean,dat.09.summ.mean, dat.09.fall.mean,NA,NA,NA,dat.11.fall.mean,NA,dat.12.fall.mean,NA,dat.13.fall.mean,NA,dat.14.fall.mean)
+m.bm=c(dat.08.summ.mean,dat.08.fall.mean,dat.09.summ.mean, dat.09.fall.mean,NA,dat.10.summ.mean,dat.11.summ.mean,dat.11.fall.mean,NA,dat.12.fall.mean,NA,dat.13.fall.mean,NA,dat.14.fall.mean)
 
 ## Mean Biomass Time Series
 plot(years,m.bm)
 
 ## Treatments Mean Biomass  Time Series
-wet.m.bm=c(w.08.fall.mean,w.08.summ.mean,w.09.fall.mean,w.09.summ.mean,NA,NA,NA,w.11.fall.mean,NA,w.12.fall.mean,NA,w.13.fall.mean,NA,w.14.fall.mean)
+wet.m.bm=c(w.08.summ.mean,w.08.fall.mean,w.09.summ.mean, w.09.fall.mean,NA,w.10.summ.mean,w.11.summ.mean,w.11.fall.mean,NA,w.12.fall.mean,NA,w.13.fall.mean,NA,w.14.fall.mean)
 
-amb.m.bm=c(a.08.fall.mean,a.08.summ.mean,a.09.fall.mean,a.09.summ.mean,NA,NA,NA,a.11.fall.mean,NA,a.12.fall.mean,NA,a.13.fall.mean,NA,a.14.fall.mean)
+amb.m.bm=c(a.08.summ.mean,a.08.fall.mean,a.09.summ.mean, a.09.fall.mean,NA,a.10.summ.mean,a.11.summ.mean,a.11.fall.mean,NA,a.12.fall.mean,NA,a.13.fall.mean,NA,a.14.fall.mean)
 
-dry.m.bm=c(d.08.fall.mean,d.08.summ.mean,d.09.fall.mean,d.09.summ.mean,NA,NA,NA,d.11.fall.mean,NA,d.12.fall.mean,NA,d.13.fall.mean,NA,d.14.fall.mean)
+dry.m.bm=c(d.08.summ.mean,d.08.fall.mean,d.09.summ.mean, d.09.fall.mean,NA,d.10.summ.mean,d.11.summ.mean,d.11.fall.mean,NA,d.12.fall.mean,NA,d.13.fall.mean,NA,d.14.fall.mean)
 
 plot(years,wet.m.bm,ylab="Mass")
 points(years,amb.m.bm,col=2)
