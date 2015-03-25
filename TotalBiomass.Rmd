@@ -733,6 +733,7 @@ p32.11t=dat.11t[dat.11t$Plot %in% 32,]
 p33.11t=dat.11t[dat.11t$Plot %in% 33,]
 p34.11t=dat.11t[dat.11t$Plot %in% 34,]
 p35.11t=dat.11t[dat.11t$Plot %in% 35,]
+p36.11t=dat.11t[dat.11t$Plot %in% 36,]
 ```
 
 #2011 Herbaceous season subset
