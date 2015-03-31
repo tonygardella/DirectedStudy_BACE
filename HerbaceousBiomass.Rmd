@@ -667,6 +667,25 @@ p34.14.f.m=sum(as.numeric(p34.14.f$Total.Mass))
 p35.14.f.m=sum(as.numeric(p35.14.f$Total.Mass))
 p36.14.f.m=sum(as.numeric(p36.14.f$Total.Mass))
 
+seq1=c(1,2,3,4,5,7,8,10,12,14)
+seq1
+plot(seq1,c(p36.08.s.m,p36.08.f.m,p36.09.s.m,p36.09.f.m,p36.10.s.m,p36.11.f.m,p36.11.s.m,p36.12.f.m,p36.13.f.m,p36.14.f.m),type="b",ylab="plot 36 biomass")
+
+
+
+#functional groups
+dat.08=dat.herb[dat.herb$Year==2008,]
+dat.08.fall=dat.08[dat.08$Season=="Fall",]
+dat.08.summ=dat.08[dat.08$Season=="Summer",]
+## Seasonal subsetted by treatment
+c4.08.f=dat.08.fall[dat.08.fall$C4,]
+c4.08.s=dat.08.summ[dat.08.summ$C4,]
+c3.08.f=dat.08.fall[dat.08.fall$C3,]
+c3.08.s=dat.08.summ[dat.08.summ$C3,]
+Pr.08.f=dat.08.fall[dat.08.fall$Perennial,]
+Pr.08.s=dat.08.summ[dat.08.summ$Perennial,]
+AB.08.f=dat.08.fall[dat.08.fall$Annl.Biennial,]
+AB.08.s=dat.08.summ[dat.08.summ$Annl.Biennial,]
 ```
 
 

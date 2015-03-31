@@ -1410,43 +1410,6 @@ p36.14.f.m=sum(as.numeric(p36.14.f$Total.Mass))
 
 ```
 
-##AGGREGATE PLOTS and TABLES
-```{r}
-#summer and fall 2008
-hist(dat.08.fall.m,probability=TRUE)
-lines(1:78,f.08.dist,col=2,type='s')
-hist(dat.08.summ.m,probability=TRUE)
-lines(1:300,dgamma(1:300,dat.08.summ.mean,dat.08.summ.sd),col=2,type='s')
-#summer and fall 2009
-hist(dat.09.fall.m,probability=TRUE)
-lines(1:160,dgamma(1:160,dat.09.fall.mean,dat.09.fall.sd),col=2,type='s')
-hist(dat.09.summ.m,probability=TRUE)
-lines(1:60,dgamma(1:60,dat.09.summ.mean,dat.09.summ.sd),col=2,type='s')
-# summer 2010
-hist(dat.10.summ.m,probability=TRUE)
-lines(1:200,dgamma(1:200,dat.10.summ.mean,dat.10.summ.sd),col=2,type='s')
-# summer and fall 2011
-hist(dat.11.summ.m,probability=TRUE)
-lines(1:750,dgamma(1:750,dat.11.summ.mean,dat.11.summ.sd),col=2,type='s')
-hist(dat.11.fall.m,probability=TRUE)
-lines(1:120,dgamma(1:120,dat.12.fall.mean,dat.12.fall.sd),col=2,type='s')
-#  fall 2012
-hist(dat.12.fall.m,probability=TRUE)
-lines(1:730,dgamma(1:730,dat.12.fall.mean,dat.12.fall.sd),col=2,type='s')
-# fall 2013
-hist(dat.13.fall.m,probability=TRUE)
-lines(1:370,dgamma(1:370,dat.13.fall.mean,dat.13.fall.sd),col=2,type='s')
-# fall 2014
-hist(dat.14.fall.m,probability=TRUE)
-lines(1:370,dgamma(1:370,dat.14.fall.mean,dat.14.fall.sd),col=2,type='s')
-
-
-```
-
-##Distributions tests
-```{r}
-
-```
 
 ```{r}
 years=c(1:14)
@@ -1487,4 +1450,27 @@ a.int=c(d.08.summ.95,a.08.fall.95,a.09.summ.95,a.09.fall.95,NA,NA,NA,a.11.fall.9
 summary.data=c(years,m.bm,standev.m)
 
 summary.table=matrix(summary.data,nrow=14,ncol=4,byrow=FALSE,)
+```
+
+```{r}
+seq1=c(1,2,3,4,5,7,8,10,12,14)
+seq1
+plot(seq1,c(p36.08.s.m,p36.08.f.m,p36.09.s.m,p36.09.f.m,p36.10.s.m,p36.11.f.m,p36.11.s.m,p36.12.f.m,p36.13.f.m,p36.14.f.m),type="b",ylab="plot 36 biomass")
+
+
+#functional groups
+dat.08=dat.herb[dat.herb$Year==2008,]
+dat.08.fall=dat.08[dat.08$Season=="Fall",]
+dat.08.summ=dat.08[dat.08$Season=="Summer",]
+## Seasonal subsetted by treatment
+c4.08.f=dat.08.fall[dat.08.fall$C4,]
+c4.08.s=dat.08.summ[dat.08.summ$C4,]
+c3.08.f=dat.08.fall[dat.08.fall$C3,]
+c3.08.s=dat.08.summ[dat.08.summ$C3,]
+Pr.08.f=dat.08.fall[dat.08.fall$Perennial,]
+Pr.08.s=dat.08.summ[dat.08.summ$Perennial,]
+AB.08.f=dat.08.fall[dat.08.fall$Annl.Biennial,]
+AB.08.s=dat.08.summ[dat.08.summ$Annl.Biennial,]
+
+plot()
 ```
