@@ -228,7 +228,7 @@ p36.08.s.m=sum(as.numeric(p36.08.s$Total.Mass))
 
 #2009 subsetted by season
 ```{r}
-2009
+
 ## 2009 year subsetted by season 
 dat.09=dat.herb[dat.herb$Year==2009,]
 dat.09.fall=dat.09[dat.09$Season=="Fall",]
@@ -436,9 +436,11 @@ p33.09.s.m=sum(as.numeric(p33.09.s$Total.Mass))
 p34.09.s.m=sum(as.numeric(p34.09.s$Total.Mass))
 p35.09.s.m=sum(as.numeric(p35.09.s$Total.Mass))
 p36.09.s.m=sum(as.numeric(p36.09.s$Total.Mass))
-2012 Data
+```
 
-## 2012 year subsetted by season 
+## 2012 year subsetted by season
+```{r}
+ ## 2012 year subsetted by season
 dat.12=dat.herb[dat.herb$Year==2012,]
 ## Seasonal subsetted by treatment
 wt.12.f=dat.12[dat.12$Treatment== "W",]
@@ -523,24 +525,7 @@ p33.12.f.m=sum(as.numeric(p33.12.f$Total.Mass))
 p34.12.f.m=sum(as.numeric(p34.12.f$Total.Mass))
 p35.12.f.m=sum(as.numeric(p35.12.f$Total.Mass))
 p36.12.f.m=sum(as.numeric(p36.12.f$Total.Mass))
-seq1=c(1,1.5,2,2.5,5)
-seq1
 
-plot(seq1,c(p36.08.s.m,p36.08.f.m,p36.09.s.m,p36.09.f.m,p36.12.f.m),type="b")
-
-#functional groups
-dat.08=dat.herb[dat.herb$Year==2008,]
-dat.08.fall=dat.08[dat.08$Season=="Fall",]
-dat.08.summ=dat.08[dat.08$Season=="Summer",]
-## Seasonal subsetted by treatment
-c4.08.f=dat.08.fall[dat.08.fall$C4,]
-c4.08.s=dat.08.summ[dat.08.summ$C4,]
-c3.08.f=dat.08.fall[dat.08.fall$C3,]
-c3.08.s=dat.08.summ[dat.08.summ$C3,]
-Pr.08.f=dat.08.fall[dat.08.fall$Perennial,]
-Pr.08.s=dat.08.summ[dat.08.summ$Perennial,]
-AB.08.f=dat.08.fall[dat.08.fall$Annl.Biennial,]
-AB.08.s=dat.08.summ[dat.08.summ$Annl.Biennial,]
 ```
 
 #2010 Herbaceous season subset
@@ -1425,9 +1410,9 @@ amb.m.bm=c(a.08.summ.mean,a.08.fall.mean,a.09.summ.mean, a.09.fall.mean,NA,a.10.
 
 dry.m.bm=c(d.08.summ.mean,d.08.fall.mean,d.09.summ.mean, d.09.fall.mean,NA,d.10.summ.mean,d.11.summ.mean,d.11.fall.mean,NA,d.12.fall.mean,NA,d.13.fall.mean,NA,d.14.fall.mean)
 
-plot(years,wet.m.bm,ylab="Mass")
-points(years,amb.m.bm,col=2)
-points(years,dry.m.bm,col=3)
+plot(years,wet.m.bm,ylab="Mass", type="b")
+points(years,amb.m.bm,col=2,type="b")
+points(years,dry.m.bm,col=3,type="b")
 
 
 
@@ -1462,15 +1447,117 @@ plot(seq1,c(p36.08.s.m,p36.08.f.m,p36.09.s.m,p36.09.f.m,p36.10.s.m,p36.11.f.m,p3
 dat.08=dat.herb[dat.herb$Year==2008,]
 dat.08.fall=dat.08[dat.08$Season=="Fall",]
 dat.08.summ=dat.08[dat.08$Season=="Summer",]
-## Seasonal subsetted by treatment
-c4.08.f=dat.08.fall[dat.08.fall$C4,]
-c4.08.s=dat.08.summ[dat.08.summ$C4,]
-c3.08.f=dat.08.fall[dat.08.fall$C3,]
-c3.08.s=dat.08.summ[dat.08.summ$C3,]
-Pr.08.f=dat.08.fall[dat.08.fall$Perennial,]
-Pr.08.s=dat.08.summ[dat.08.summ$Perennial,]
-AB.08.f=dat.08.fall[dat.08.fall$Annl.Biennial,]
-AB.08.s=dat.08.summ[dat.08.summ$Annl.Biennial,]
+## Seasonal subsetted by functional group
+#2008
+c4.08.f=dat.08.fall[dat.08.fall$C4>0,]
+c4.08.s=dat.08.summ[dat.08.summ$C4>0,]
+c3.08.f=dat.08.fall[dat.08.fall$C3>0,]
+c3.08.s=dat.08.summ[dat.08.summ$C3>0,]
+Pr.08.f=dat.08.fall[dat.08.fall$Perennial>0,]
+Pr.08.s=dat.08.summ[dat.08.summ$Perennial>0,]
+AB.08.f=dat.08.fall[dat.08.fall$Annl.Biennial>0,]
+AB.08.s=dat.08.summ[dat.08.summ$Annl.Biennial>0,]
 
-plot()
+c4.08.f.m=sum(as.numeric(c4.08.f$C4))
+
+##c4.08.f.seq=cc(c4.08.f$C4,c4.08.f$Plot) Trying to get plots with data, should try the ;line before tomorrow, its bedtime
+
+c4.08.s.m=sum(as.numeric(c4.08.s$C4))
+c3.08.f.m=sum(as.numeric(c3.08.f$C3))
+c3.08.s.m=sum(as.numeric(c3.08.s$C3))
+Pr.08.f.m=sum(as.numeric(Pr.08.f$Perennial))
+Pr.08.s.m=sum(as.numeric(Pr.08.s$Perennial))
+AB.08.f.m=sum(as.numeric(AB.08.f$Annl.Biennial))
+AB.08.s.m=sum(as.numeric(AB.08.s$Annl.Biennial))
+
+#2009
+c4.09.f=dat.09.fall[dat.09.fall$C4>0,]
+c4.09.s=dat.09.summ[dat.09.summ$C4>0,]
+c3.09.f=dat.09.fall[dat.09.fall$C3>0,]
+c3.09.s=dat.09.summ[dat.09.summ$C3>0,]
+Pr.09.f=dat.09.fall[dat.09.fall$Perennial>0,]
+Pr.09.s=dat.09.summ[dat.09.summ$Perennial>0,]
+AB.09.f=dat.09.fall[dat.09.fall$Annl.Biennial>0,]
+AB.09.s=dat.09.summ[dat.09.summ$Annl.Biennial>0,]
+
+c4.09.f.m=sum(as.numeric(c4.09.f$C4))
+c4.09.s.m=sum(as.numeric(c4.09.s$C4))
+c3.09.f.m=sum(as.numeric(c3.09.f$C3))
+c3.09.s.m=sum(as.numeric(c3.09.s$C3))
+Pr.09.f.m=sum(as.numeric(Pr.09.f$Perennial))
+Pr.09.s.m=sum(as.numeric(Pr.09.s$Perennial))
+AB.09.f.m=sum(as.numeric(AB.09.f$Annl.Biennial))
+AB.09.s.m=sum(as.numeric(AB.09.s$Annl.Biennial))
+
+#2010
+c4.10.s=dat.10.summ[dat.10.summ$C4>0,]
+c3.10.s=dat.10.summ[dat.10.summ$C3>0,]
+Pr.10.s=dat.10.summ[dat.10.summ$Perennial>0,]
+AB.10.s=dat.10.summ[dat.10.summ$Annl.Biennial>0,]
+
+c4.10.s.m=sum(as.numeric(c4.10.s$C4))
+c3.10.s.m=sum(as.numeric(c3.10.s$C3))
+Pr.10.s.m=sum(as.numeric(Pr.10.s$Perennial))
+AB.10.s.m=sum(as.numeric(AB.10.s$Annl.Biennial))
+
+#2011
+c4.11.f=dat.11.fall[dat.11.fall$C4>0,]
+c4.11.s=dat.11.summ[dat.11.summ$C4>0,]
+c3.11.f=dat.11.fall[dat.11.fall$C3>0,]
+c3.11.s=dat.11.summ[dat.11.summ$C3>0,]
+Pr.11.f=dat.11.fall[dat.11.fall$Perennial>0,]
+Pr.11.s=dat.11.summ[dat.11.summ$Perennial>0,] #check and update csv with correct 2011 files
+AB.11.f=dat.11.fall[dat.11.fall$Annl.Biennial>0,]
+AB.11.s=dat.11.summ[dat.11.summ$Annl.Biennial>0,]
+
+c4.11.f.m=sum(as.numeric(c4.11.f$C4))
+c4.11.s.m=sum(as.numeric(c4.11.s$C4))
+c3.11.f.m=sum(as.numeric(c3.11.f$C3))
+c3.11.s.m=sum(as.numeric(c3.11.s$C3))
+Pr.11.f.m=sum(as.numeric(Pr.11.f$Perennial))
+Pr.11.s.m=sum(as.numeric(Pr.11.s$Perennial))
+AB.11.f.m=sum(as.numeric(AB.11.f$Annl.Biennial))
+AB.11.s.m=sum(as.numeric(AB.11.s$Annl.Biennial))
+
+#2012
+c4.12.f=dat.12.fall[dat.12.fall$C4>0,]
+c3.12.f=dat.12.fall[dat.12.fall$C3>0,]
+Pr.12.f=dat.12.fall[dat.12.fall$Perennial>0,]
+AB.12.f=dat.12.fall[dat.12.fall$Annl.Biennial>0,]
+
+c4.12.f.m=sum(as.numeric(c4.12.f$C4))
+c3.12.f.m=sum(as.numeric(c3.12.f$C3))
+Pr.12.f.m=sum(as.numeric(Pr.12.f$Perennial))
+AB.12.f.m=sum(as.numeric(AB.12.f$Annl.Biennial))
+
+#2013
+c4.13.f=dat.13.fall[dat.13.fall$C4>0,]
+c3.13.f=dat.13.fall[dat.13.fall$C3>0,]
+Pr.13.f=dat.13.fall[dat.13.fall$Perennial>0,] ##plot 17 is negative
+AB.13.f=dat.13.fall[dat.13.fall$Annl.Biennial>0,]
+
+c4.13.f.m=sum(as.numeric(c4.13.f$C4))
+c3.13.f.m=sum(as.numeric(c3.13.f$C3))
+Pr.13.f.m=sum(as.numeric(Pr.13.f$Perennial))
+AB.13.f.m=sum(as.numeric(AB.13.f$Annl.Biennial))
+
+#2014
+c4.14.f=dat.14.fall[dat.14.fall$C4>0,]
+c3.14.f=dat.14.fall[dat.14.fall$C3>0,]
+Pr.14.f=dat.14.fall[dat.14.fall$Perennial>0,]
+AB.14.f=dat.14.fall[dat.14.fall$Annl.Biennial>0,]
+
+c4.14.f.m=sum(as.numeric(c4.14.f$C4))
+c3.14.f.m=sum(as.numeric(c3.14.f$C3))
+Pr.14.f.m=sum(as.numeric(Pr.14.f$Perennial))
+AB.14.f.m=sum(as.numeric(AB.14.f$Annl.Biennial))
+
+#C4 Grasses over time
+plot(seq1,c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.14.f.m),type="b",ylab="C4 Grasses over time")
+#C3 Grasses over time
+plot(seq1,c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.14.f.m),type="b",ylab="C3 Grasses over time")
+#Perennial Forbs over time
+plot(seq1,c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.14.f.m),type="b",ylab="Perennial Forbs over time")
+#Annual/Biennial Forbs over time
+plot(seq1,c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.14.f.m),type="b",ylab="Annual/Biennial Forbs over time")
 ```
