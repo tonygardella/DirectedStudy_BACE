@@ -1326,39 +1326,40 @@ gammall<-function(alpha,x){
 
 ###Optimized Normal Likelihoods
 ```{r}
-#Wet Normal
-w.08.f.nll=optim(c(0,1),normll,x=w.08.f.m)
-w.08.s.nll=optim(w.08.s.m,normll)
-w.09.f.nll=optim(w.09.f.m,normll)
-w.09.s.nll=optim(w.09.s.m,normll)
-w.10.s.nll=optim(w.10.s.m,normll)
-w.11.s.nll=optim(w.11.s.m,normll)
-w.11.f.nll=optim(w.11.f.m,normll)
-w.12.f.nll=optim(w.12.f.m,normll)
-w.13.f.nll=optim(w.13.f.m,normll)
-w.14.f.nll=optim(w.14.f.m,normll)
-#Dry Normal
-d.08.f.nll=optim(d.08.f.m,normll)
-d.08.s.nll=optim(d.08.s.m,normll)
-d.09.f.nll=optim(d.09.f.m,normll)
-d.09.s.nll=optim(d.09.s.m,normll)
-d.10.s.nll=optim(d.10.s.m,normll)
-d.11.s.nll=optim(d.11.s.m,normll)
-d.11.f.nll=optim(d.11.f.m,normll)
-d.12.f.nll=optim(d.12.f.m,normll)
-d.13.f.nll=optim(d.13.f.m,normll)
-d.14.f.nll=optim(d.14.f.m,normll)
-#Ambient Normal
-a.08.f.nll=optim(a.08.f.m,normll)
-a.08.s.nll=optim(a.08.s.m,normll)
-a.09.f.nll=optim(a.09.f.m,normll)
-a.09.s.nll=optim(a.09.s.m,normll)
-a.10.s.nll=optim(a.10.s.m,normll)
-a.11.s.nll=optim(a.11.s.m,normll)
-a.11.f.nll=optim(a.11.f.m,normll)
-a.12.f.nll=optim(a.12.f.m,normll)
-a.13.f.nll=optim(a.13.f.m,normll)
-a.14.f.nll=optim(a.14.f.m,normll)
+w.dat.list=list(w.08.s.m,w.08.f.m,w.09.s.m,w.09.f.m,w.10.s.m,w.11.s.m,w.11.f.m,w.12.f.m,w.13.f.m,w.14.f.m)
+
+a.dat.list=list(a.08.s.m,a.08.f.m,a.09.s.m,a.09.f.m,a.10.s.m,a.11.s.m,a.11.f.m,a.12.f.m,a.13.f.m,a.14.f.m)
+
+d.dat.list=list(d.08.s.m,d.08.f.m,d.09.s.m,d.09.f.m,d.10.s.m,d.11.s.m,d.11.f.m,d.12.f.m,d.13.f.m,d.14.f.m)
+
+w.norm.aic=matrix(1:10,ncol=1)
+d.norm.aic=matrix(1:10,ncol=1)
+a.norm.aic=matrix(1:10,ncol=1)
+
+w.lnorm.aic=matrix(1:10,ncol=1)
+d.lnorm.aic=matrix(1:10,ncol=1)
+a.lnorm.aic=matrix(1:10,ncol=1)
+  
+w.gam.aic=matrix(1:10,ncol=1)
+d.gam.aic=matrix(1:10,ncol=1)
+a.gam.aic=matrix(1:10,ncol=1)
+
+for(i in 1:10){
+  w.norm.aic[i]=optim(c(0,1),normll,x=w.dat.list[[i]])$value
+  d.norm.aic[i]=optim(c(0,1),normll,x=d.dat.list[[i]])$value
+  a.norm.aic[i]=optim(c(0,1),normll,x=a.dat.list[[i]])$value
+  
+  w.lnorm.aic[i]=optim(c(1,1),lognormll,x=w.dat.list[[i]])$value
+  d.lnorm.aic[i]=optim(c(1,1),lognormll,x=d.dat.list[[i]])$value
+  a.lnorm.aic[i]=optim(c(1,1),lognormll,x=a.dat.list[[i]])$value
+  
+  w.gam.aic[i]=optim(c(1,1),gammall,x=w.dat.list[[i]])$value
+  d.gam.aic[i]=optim(c(1,1),gammall,x=d.dat.list[[i]])$value
+  a.gam.aic[i]=optim(c(1,1),gammall,x=a.dat.list[[i]])$value
+
+}
+
+
 ```
 
 ###Optimized Lognormal Likelihoods
@@ -1612,43 +1613,6 @@ aic.table=matrix(c(year,Treatment,dist,Aic),ncol=4)
 
 ```
 
-###AICResult
-08s.w=normal
-08s.a=normal
-08s.d=normal
-08f.w=normal
-08f.a=normal
-08f.d=normal
-
-09s.w=lognormal
-09s.a=normal
-09s.d=normal
-09f.w=normal
-09f.a=lognormal
-09f.d=normal
-
-10s.w=normal
-10s.a=normal
-10s.d=normal
-
-11s.w=normal
-11s.a=normal
-11s.d=normal
-11f.w=normal
-11f.a=normal
-11f.d=normal
-
-12f.w=normal
-12f.a=normal
-12f.d=normal
-
-13f.w=normal
-13f.a=normal
-13f.d=normal
-
-14f.w=normal
-14f.a=normal
-14f.d=normal
 
 ##GLM 
 ```{r}
