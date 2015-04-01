@@ -1307,59 +1307,59 @@ p36.14.f.m=sum(as.numeric(p36.14.f$Total.Mass))
 
 ###Liklihood Functions
 ```{r}
-normll<-function(x){
-  mu=mean(x)
-  sd=sd(x)
+normll<-function(alpha,x){
+  mu=alpha[1]
+  sd=alpha[2]
     -sum(dnorm(x,mu,sd,log=TRUE))
 }
 
-lognormll<-function(x){
-    lmu=log(mean(x))
-    lsd=log(sd(x))
+lognormll<-function(alpha,x){
+    lmu=alpha[1]
+    lsd=alpha[2]
     -sum(dlnorm(x,lmu,lsd,log=TRUE))
 }
 
-gammall<-function(x){
-    alpha=1
-    -sum(dgamma(x,alpha,log=TRUE))
+gammall<-function(alpha,x){
+    -sum(dgamma(x,alpha[1],alpha[2],log=TRUE))
 }
 ```
 
 ###Optimized Normal Likelihoods
 ```{r}
-#Wet Normal
-w.08.f.nll=optim(w.08.f.m,normll)
-w.08.s.nll=optim(w.08.s.m,normll)
-w.09.f.nll=optim(w.09.f.m,normll)
-w.09.s.nll=optim(w.09.s.m,normll)
-w.10.s.nll=optim(w.10.s.m,normll)
-w.11.s.nll=optim(w.11.s.m,normll)
-w.11.f.nll=optim(w.11.f.m,normll)
-w.12.f.nll=optim(w.12.f.m,normll)
-w.13.f.nll=optim(w.13.f.m,normll)
-w.14.f.nll=optim(w.14.f.m,normll)
-#Dry Normal
-d.08.f.nll=optim(d.08.f.m,normll)
-d.08.s.nll=optim(d.08.s.m,normll)
-d.09.f.nll=optim(d.09.f.m,normll)
-d.09.s.nll=optim(d.09.s.m,normll)
-d.10.s.nll=optim(d.10.s.m,normll)
-d.11.s.nll=optim(d.11.s.m,normll)
-d.11.f.nll=optim(d.11.f.m,normll)
-d.12.f.nll=optim(d.12.f.m,normll)
-d.13.f.nll=optim(d.13.f.m,normll)
-d.14.f.nll=optim(d.14.f.m,normll)
-#Ambient Normal
-a.08.f.nll=optim(a.08.f.m,normll)
-a.08.s.nll=optim(a.08.s.m,normll)
-a.09.f.nll=optim(a.09.f.m,normll)
-a.09.s.nll=optim(a.09.s.m,normll)
-a.10.s.nll=optim(a.10.s.m,normll)
-a.11.s.nll=optim(a.11.s.m,normll)
-a.11.f.nll=optim(a.11.f.m,normll)
-a.12.f.nll=optim(a.12.f.m,normll)
-a.13.f.nll=optim(a.13.f.m,normll)
-a.14.f.nll=optim(a.14.f.m,normll)
+w.dat.list=list(w.08.s.m,w.08.f.m,w.09.s.m,w.09.f.m,w.10.s.m,w.11.s.m,w.11.f.m,w.12.f.m,w.13.f.m,w.14.f.m)
+
+a.dat.list=list(a.08.s.m,a.08.f.m,a.09.s.m,a.09.f.m,a.10.s.m,a.11.s.m,a.11.f.m,a.12.f.m,a.13.f.m,a.14.f.m)
+
+d.dat.list=list(d.08.s.m,d.08.f.m,d.09.s.m,d.09.f.m,d.10.s.m,d.11.s.m,d.11.f.m,d.12.f.m,d.13.f.m,d.14.f.m)
+
+w.norm.aic=matrix(1:10,ncol=1)
+d.norm.aic=matrix(1:10,ncol=1)
+a.norm.aic=matrix(1:10,ncol=1)
+
+w.lnorm.aic=matrix(1:10,ncol=1)
+d.lnorm.aic=matrix(1:10,ncol=1)
+a.lnorm.aic=matrix(1:10,ncol=1)
+  
+w.gam.aic=matrix(1:10,ncol=1)
+d.gam.aic=matrix(1:10,ncol=1)
+a.gam.aic=matrix(1:10,ncol=1)
+
+for(i in 1:10){
+  w.norm.aic[i]=optim(c(0,1),normll,x=w.dat.list[[i]])$value
+  d.norm.aic[i]=optim(c(0,1),normll,x=d.dat.list[[i]])$value
+  a.norm.aic[i]=optim(c(0,1),normll,x=a.dat.list[[i]])$value
+  
+  w.lnorm.aic[i]=optim(c(1,1),lognormll,x=w.dat.list[[i]])$value
+  d.lnorm.aic[i]=optim(c(1,1),lognormll,x=d.dat.list[[i]])$value
+  a.lnorm.aic[i]=optim(c(1,1),lognormll,x=a.dat.list[[i]])$value
+  
+  w.gam.aic[i]=optim(c(1,1),gammall,x=w.dat.list[[i]])$value
+  d.gam.aic[i]=optim(c(1,1),gammall,x=d.dat.list[[i]])$value
+  a.gam.aic[i]=optim(c(1,1),gammall,x=a.dat.list[[i]])$value
+
+}
+
+
 ```
 
 ###Optimized Lognormal Likelihoods
@@ -1402,7 +1402,7 @@ a.14.f.lnll=optim(a.14.f.m,lognormll)
 ###Optimized Gamma Likelihoods
 ```{r}
 #Wet Normal
-w.08.f.gll=optim(w.08.f.m,gammall)
+w.08.f.gll=optim(c(1,1),gammall,x=w.08.f.m)
 w.08.s.gll=optim(w.08.s.m,gammall)
 w.09.f.gll=optim(w.09.f.m,gammall)
 w.09.s.gll=optim(w.09.s.m,gammall)
@@ -1578,10 +1578,50 @@ Aic=c(w.08.s.nAIC,w.08.s.lnAIC,w.08.s.gAIC,
      w.14.f.nAIC,w.14.f.lnAIC,w.14.f.gAIC,
      a.14.f.nAIC,a.14.f.lnAIC,a.14.f.gAIC,
      d.14.f.nAIC,d.14.f.lnAIC,d.14.f.gAIC)
-aic.table=matrix(c(year,Treatment,Aic))
+dist=c("normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma"
+       )
+aic.table=matrix(c(year,Treatment,dist,Aic),ncol=4)
 
 ```
+
+
+##GLM 
+```{r}
+w.08.glm=glm(w.08.s.m~w.08.f.m,gaussian)
+plot(w.08.s.m,w.08.f.m)
+
 ```
+
+
 
 ```{r}
 years=c(1:14)
