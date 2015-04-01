@@ -1,0 +1,72 @@
+---
+title: "StateSpaceHerbaceous"
+author: "Samuel Worley"
+date: "Wednesday, April 01, 2015"
+output: html_document
+---
+```{r}
+library(rjags)
+library(R2WinBUGS)
+```
+
+```{r}
+fit.norm = "model{
+#priors
+r ~ dnorm(0.05,0.01)
+tau ~ dgamma(0.1,0.01)
+x[1]~ dnorm(0.05,0.01)
+sigma ~ dgamma(0.1,0.01)
+#process
+  for (i in 2:n) {
+    u[i] <- x[i-1] + r
+    x[i] ~ dnorm(u[i],sigma)
+  }
+  for (t in 1:n){
+    y[t] ~ dnorm(x[t],tau)
+    py[t]~ dnorm(x[t],tau)
+}
+}
+"
+
+init.cond1 <- list()
+init.cond1[[1]] = list("r"=0.1,"sigma"=0.1,"tau"=0.1)
+init.cond1[[2]] = list("r"=0.3,"sigma"=1,"tau"=1)
+init.cond1[[3]] = list("r"=0.5,"sigma"=10,"tau"=10)
+
+
+data = list(n=10,y=c4.total)
+init = init.cond1
+  ## compile JAGS model
+  j.model   <- jags.model (file = textConnection(fit.norm),
+                           data = data,
+                           inits = init,
+                           n.chains = 3)
+  ## burn-in
+  b1   <- coda.samples (model = j.model,
+                              variable.names = c("r","x","py","sigma","tau"),
+                              n.iter = 20000)
+
+```
+
+```{r}
+bmcmc <- b1
+bmcmc.data <- as.data.frame(as.matrix(bmcmc))
+
+grep.x <- grep("x",names(bmcmc.data))
+X <- apply(bmcmc.data[,grep.x],2,quantile,c(0.025,0.5,0.975))
+grep.py <- grep("py",names(bmcmc.data))
+PY <- apply(bmcmc.data[,grep.py],2,quantile,c(0.025,0.5,0.975))
+
+#plot
+plot(seq1,c4.total)
+#CI's
+lines(seq1,(X[1,]),col=5) #2.5%
+lines(seq1,(X[2,]))  #50
+lines(seq1,(X[3,]),col=5)  #97.5%
+#Pi's
+lines(seq1,(PY[1,]),col=3) #2.5%
+lines(seq1,(PY[2,]),col=2)  #50
+lines(seq1,(PY[3,]),col=3)  #97.5%
+```
+
+
