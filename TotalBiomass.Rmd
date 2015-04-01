@@ -1785,6 +1785,10 @@ c3.total=c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m
 Pr.total=c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.14.f.m)
 AB.total=c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.14.f.m)
 
+c4.total=c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.14.f.m)
+c3.total=c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.14.f.m)
+Pr.total=c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.14.f.m)
+AB.total=c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.14.f.m)
 
 #C4 Grasses over time
 plot(seq1,c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.14.f.m),type="b",ylab="C4 Grasses over time")
