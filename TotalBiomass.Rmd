@@ -1307,28 +1307,27 @@ p36.14.f.m=sum(as.numeric(p36.14.f$Total.Mass))
 
 ###Liklihood Functions
 ```{r}
-normll<-function(x){
-  mu=mean(x)
-  sd=sd(x)
+normll<-function(alpha,x){
+  mu=alpha[1]
+  sd=alpha[2]
     -sum(dnorm(x,mu,sd,log=TRUE))
 }
 
-lognormll<-function(x){
-    lmu=log(mean(x))
-    lsd=log(sd(x))
+lognormll<-function(alpha,x){
+    lmu=alpha[1]
+    lsd=alpha[2]
     -sum(dlnorm(x,lmu,lsd,log=TRUE))
 }
 
-gammall<-function(x){
-    alpha=1
-    -sum(dgamma(x,alpha,log=TRUE))
+gammall<-function(alpha,x){
+    -sum(dgamma(x,alpha[1],alpha[2],log=TRUE))
 }
 ```
 
 ###Optimized Normal Likelihoods
 ```{r}
 #Wet Normal
-w.08.f.nll=optim(w.08.f.m,normll)
+w.08.f.nll=optim(c(0,1),normll,x=w.08.f.m)
 w.08.s.nll=optim(w.08.s.m,normll)
 w.09.f.nll=optim(w.09.f.m,normll)
 w.09.s.nll=optim(w.09.s.m,normll)
@@ -1402,7 +1401,7 @@ a.14.f.lnll=optim(a.14.f.m,lognormll)
 ###Optimized Gamma Likelihoods
 ```{r}
 #Wet Normal
-w.08.f.gll=optim(w.08.f.m,gammall)
+w.08.f.gll=optim(c(1,1),gammall,x=w.08.f.m)
 w.08.s.gll=optim(w.08.s.m,gammall)
 w.09.f.gll=optim(w.09.f.m,gammall)
 w.09.s.gll=optim(w.09.s.m,gammall)
