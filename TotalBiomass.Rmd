@@ -1578,10 +1578,87 @@ Aic=c(w.08.s.nAIC,w.08.s.lnAIC,w.08.s.gAIC,
      w.14.f.nAIC,w.14.f.lnAIC,w.14.f.gAIC,
      a.14.f.nAIC,a.14.f.lnAIC,a.14.f.gAIC,
      d.14.f.nAIC,d.14.f.lnAIC,d.14.f.gAIC)
-aic.table=matrix(c(year,Treatment,Aic))
+dist=c("normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma",
+       "normal","lognormal","gamma"
+       )
+aic.table=matrix(c(year,Treatment,dist,Aic),ncol=4)
 
 ```
+
+###AICResult
+08s.w=normal
+08s.a=normal
+08s.d=normal
+08f.w=normal
+08f.a=normal
+08f.d=normal
+
+09s.w=lognormal
+09s.a=normal
+09s.d=normal
+09f.w=normal
+09f.a=lognormal
+09f.d=normal
+
+10s.w=normal
+10s.a=normal
+10s.d=normal
+
+11s.w=normal
+11s.a=normal
+11s.d=normal
+11f.w=normal
+11f.a=normal
+11f.d=normal
+
+12f.w=normal
+12f.a=normal
+12f.d=normal
+
+13f.w=normal
+13f.a=normal
+13f.d=normal
+
+14f.w=normal
+14f.a=normal
+14f.d=normal
+
+##GLM 
+```{r}
+w.08.glm=glm(w.08.s.m~w.08.f.m,gaussian)
+plot(w.08.s.m,w.08.f.m)
+
 ```
+
+
 
 ```{r}
 years=c(1:14)
