@@ -29,15 +29,15 @@ sigma ~ dgamma(0.1,0.01)
 "
 
 init.cond1 <- list()
-init.cond1[[1]] = list("r"=0.1,"sigma"=0.1,"tau"=0.1)
-init.cond1[[2]] = list("r"=0.3,"sigma"=1,"tau"=1)
-init.cond1[[3]] = list("r"=0.5,"sigma"=10,"tau"=10)
+init.cond1[[1]] = list("r"=0.1,"sigma"=1,"tau"=0.1)
+init.cond1[[2]] = list("r"=1,"sigma"=1,"tau"=1)
+init.cond1[[3]] = list("r"=10,"sigma"=1,"tau"=10)
 
 
 data = list(n=10,y=c4.total)
 init = init.cond1
   ## compile JAGS model
-  j.model   <- jags.model (file = textConnection(fit.norm),
+  j.model <- jags.model(file = textConnection(fit.norm),
                            data = data,
                            inits = init,
                            n.chains = 3)
