@@ -1071,10 +1071,20 @@ p36.13.m=as.numeric(p36.13$tot.mass)
 dat.13=dat.herb[dat.herb$Year==2013,]
 dat.13.fall=dat.13[dat.13$Season=="Fall",]
 dat.13.fall.m=as.numeric(dat.13.fall$Total.Mass)
+
 #Means,95% intervals, standarad deviation, 
 dat.13.fall.95=quantile(dat.13.fall.m,c(.05,.95))
 dat.13.fall.mean=mean(dat.13.fall.m)
 dat.13.fall.sd=sd(dat.13.fall.m)
+
+## 2013 year subsetted by season 
+dat.13=dat.herb[dat.herb$Year==2013,]
+dat.13.summ=dat.13[dat.13$Season=="Summer",]
+dat.13.summ.m=as.numeric(dat.13.summ$Total.Mass)
+#Means,95% intervals, standarad deviation, 
+dat.13.summ.95=quantile(dat.13.summ.m,c(.05,.95))
+dat.13.summ.mean=mean(dat.13.summ.m)
+dat.13.summ.sd=sd(dat.13.summ.m)
 ```
 
 #2013 Herb Subseted by treatment
@@ -1083,24 +1093,39 @@ dat.13.fall.sd=sd(dat.13.fall.m)
 w.13.f=dat.13.fall[dat.13.fall$Treatment== "W",]
 d.13.f=dat.13.fall[dat.13.fall$Treatment== "D",]
 a.13.f=dat.13.fall[dat.13.fall$Treatment== "A",]
+w.13.s=dat.13.summ[dat.13.summ$Treatment== "W",]
+d.13.s=dat.13.summ[dat.13.summ$Treatment== "D",]
+a.13.s=dat.13.summ[dat.13.summ$Treatment== "A",]
 
 ##Treatment subsetted by mass
 w.13.f.m=as.numeric(w.13.f$Total.Mass[1:24]) 
 d.13.f.m=as.numeric(d.13.f$Total.Mass[1:24])
 a.13.f.m=as.numeric(a.13.f$Total.Mass[1:24])
+w.13.s.m=as.numeric(w.13.s$Total.Mass[1:24]) 
+d.13.s.m=as.numeric(d.13.s$Total.Mass[1:24])
+a.13.s.m=as.numeric(a.13.s$Total.Mass[1:24])
 
 #Summary data
 w.13.fall.95=quantile(w.13.f.m,c(.05,.95),na.rm=TRUE)
 w.13.fall.mean=mean(w.13.f.m,na.rm=TRUE)
 w.13.fall.sd=sd(w.13.f.m,na.rm=TRUE)
+w.13.summ.95=quantile(w.13.s.m,c(.05,.95),na.rm=TRUE)
+w.13.summ.mean=mean(w.13.s.m,na.rm=TRUE)
+w.13.summ.sd=sd(w.13.s.m,na.rm=TRUE)
 
 a.13.fall.95=quantile(a.13.f.m,c(.05,.95),na.rm=TRUE)
 a.13.fall.mean=mean(a.13.f.m,na.rm=TRUE)
 a.13.fall.sd=sd(a.13.f.m,na.rm=TRUE)
+a.13.summ.95=quantile(a.13.s.m,c(.05,.95),na.rm=TRUE)
+a.13.summ.mean=mean(a.13.s.m,na.rm=TRUE)
+a.13.summ.sd=sd(a.13.s.m,na.rm=TRUE)
 
 d.13.fall.95=quantile(d.13.f.m,c(.05,.95),na.rm=TRUE)
 d.13.fall.mean=mean(d.13.f.m,na.rm=TRUE)
 d.13.fall.sd=sd(d.13.f.m,na.rm=TRUE)
+d.13.summ.95=quantile(d.13.s.m,c(.05,.95),na.rm=TRUE)
+d.13.summ.mean=mean(d.13.s.m,na.rm=TRUE)
+d.13.summ.sd=sd(d.13.s.m,na.rm=TRUE)
 ```
 
 #2013 Herb subsetted by plot
@@ -1143,6 +1168,43 @@ p34.13.f=dat.13.fall[dat.13.fall$Plot %in% 34,]
 p35.13.f=dat.13.fall[dat.13.fall$Plot %in% 35,]
 p36.13.f=dat.13.fall[dat.13.fall$Plot %in% 36,]
 
+p1.13.s=dat.13.summ[dat.13.summ$Plot %in% 1,]
+p2.13.s=dat.13.summ[dat.13.summ$Plot %in% 2,]
+p3.13.s=dat.13.summ[dat.13.summ$Plot %in% 3,]
+p4.13.s=dat.13.summ[dat.13.summ$Plot %in% 4,]
+p5.13.s=dat.13.summ[dat.13.summ$Plot %in% 5,]
+p6.13.s=dat.13.summ[dat.13.summ$Plot %in% 6,]
+p7.13.s=dat.13.summ[dat.13.summ$Plot %in% 7,]
+p8.13.s=dat.13.summ[dat.13.summ$Plot %in% 8,]
+p9.13.s=dat.13.summ[dat.13.summ$Plot %in% 9,]
+p10.13.s=dat.13.summ[dat.13.summ$Plot %in% 10,]
+p11.13.s=dat.13.summ[dat.13.summ$Plot %in% 11,]
+p12.13.s=dat.13.summ[dat.13.summ$Plot %in% 12,]
+p13.13.s=dat.13.summ[dat.13.summ$Plot %in% 13,]
+p14.13.s=dat.13.summ[dat.13.summ$Plot %in% 14,]
+p15.13.s=dat.13.summ[dat.13.summ$Plot %in% 15,]
+p16.13.s=dat.13.summ[dat.13.summ$Plot %in% 16,]
+p17.13.s=dat.13.summ[dat.13.summ$Plot %in% 17,]
+p18.13.s=dat.13.summ[dat.13.summ$Plot %in% 18,]
+p19.13.s=dat.13.summ[dat.13.summ$Plot %in% 19,]
+p20.13.s=dat.13.summ[dat.13.summ$Plot %in% 20,]
+p21.13.s=dat.13.summ[dat.13.summ$Plot %in% 21,]
+p22.13.s=dat.13.summ[dat.13.summ$Plot %in% 22,]
+p23.13.s=dat.13.summ[dat.13.summ$Plot %in% 23,]
+p24.13.s=dat.13.summ[dat.13.summ$Plot %in% 24,]
+p25.13.s=dat.13.summ[dat.13.summ$Plot %in% 25,]
+p26.13.s=dat.13.summ[dat.13.summ$Plot %in% 26,]
+p27.13.s=dat.13.summ[dat.13.summ$Plot %in% 27,]
+p28.13.s=dat.13.summ[dat.13.summ$Plot %in% 28,]
+p29.13.s=dat.13.summ[dat.13.summ$Plot %in% 29,]
+p30.13.s=dat.13.summ[dat.13.summ$Plot %in% 30,]
+p31.13.s=dat.13.summ[dat.13.summ$Plot %in% 31,]
+p32.13.s=dat.13.summ[dat.13.summ$Plot %in% 32,]
+p33.13.s=dat.13.summ[dat.13.summ$Plot %in% 33,]
+p34.13.s=dat.13.summ[dat.13.summ$Plot %in% 34,]
+p35.13.s=dat.13.summ[dat.13.summ$Plot %in% 35,]
+p36.13.s=dat.13.summ[dat.13.summ$Plot %in% 36,]
+
 
 #Plot subsetted by mass
 p1.13.f.m=sum(as.numeric(p1.13.f$Total.Mass))
@@ -1181,6 +1243,43 @@ p33.13.f.m=sum(as.numeric(p33.13.f$Total.Mass))
 p34.13.f.m=sum(as.numeric(p34.13.f$Total.Mass))
 p35.13.f.m=sum(as.numeric(p35.13.f$Total.Mass))
 p36.13.f.m=sum(as.numeric(p36.13.f$Total.Mass))
+
+p1.13.s.m=sum(as.numeric(p1.13.s$Total.Mass))
+p2.13.s.m=sum(as.numeric(p2.13.s$Total.Mass))
+p3.13.s.m=sum(as.numeric(p3.13.s$Total.Mass))
+p4.13.s.m=sum(as.numeric(p4.13.s$Total.Mass))
+p5.13.s.m=sum(as.numeric(p5.13.s$Total.Mass))
+p6.13.s.m=sum(as.numeric(p6.13.s$Total.Mass))
+p7.13.s.m=sum(as.numeric(p7.13.s$Total.Mass))
+p8.13.s.m=sum(as.numeric(p8.13.s$Total.Mass))
+p9.13.s.m=sum(as.numeric(p9.13.s$Total.Mass))
+p10.13.s.m=sum(as.numeric(p10.13.s$Total.Mass))
+p11.13.s.m=sum(as.numeric(p13.13.s$Total.Mass))
+p12.13.s.m=sum(as.numeric(p12.13.s$Total.Mass))
+p13.13.s.m=sum(as.numeric(p13.13.s$Total.Mass))
+p14.13.s.m=sum(as.numeric(p14.13.s$Total.Mass))
+p15.13.s.m=sum(as.numeric(p15.13.s$Total.Mass))
+p16.13.s.m=sum(as.numeric(p16.13.s$Total.Mass))
+p17.13.s.m=sum(as.numeric(p17.13.s$Total.Mass))
+p18.13.s.m=sum(as.numeric(p18.13.s$Total.Mass))
+p19.13.s.m=sum(as.numeric(p19.13.s$Total.Mass))
+p20.13.s.m=sum(as.numeric(p20.13.s$Total.Mass))
+p21.13.s.m=sum(as.numeric(p21.13.s$Total.Mass))
+p22.13.s.m=sum(as.numeric(p22.13.s$Total.Mass))
+p23.13.s.m=sum(as.numeric(p23.13.s$Total.Mass))
+p24.13.s.m=sum(as.numeric(p24.13.s$Total.Mass))
+p25.13.s.m=sum(as.numeric(p25.13.s$Total.Mass))
+p26.13.s.m=sum(as.numeric(p26.13.s$Total.Mass))
+p27.13.s.m=sum(as.numeric(p27.13.s$Total.Mass))
+p28.13.s.m=sum(as.numeric(p28.13.s$Total.Mass))
+p29.13.s.m=sum(as.numeric(p29.13.s$Total.Mass))
+p30.13.s.m=sum(as.numeric(p30.13.s$Total.Mass))
+p31.13.s.m=sum(as.numeric(p31.13.s$Total.Mass))
+p32.13.s.m=sum(as.numeric(p32.13.s$Total.Mass))
+p33.13.s.m=sum(as.numeric(p33.13.s$Total.Mass))
+p34.13.s.m=sum(as.numeric(p34.13.s$Total.Mass))
+p35.13.s.m=sum(as.numeric(p35.13.s$Total.Mass))
+p36.13.s.m=sum(as.numeric(p36.13.s$Total.Mass))
 
 
 ```
@@ -1422,15 +1521,12 @@ summary.table=matrix(summary.data,nrow=14,ncol=4,byrow=FALSE,)
 
 ### FunctionalGroup/Plot 
 ```{r}
-seq1=c(1,2,3,4,5,7,8,10,12,14)
+seq1=c(2008,2008.5,2009,2009.5,2010,2011,2011.5,2012.5,2013,2013.5,2014.5)
 seq1
 plot(seq1,c(p36.08.s.m,p36.08.f.m,p36.09.s.m,p36.09.f.m,p36.10.s.m,p36.11.f.m,p36.11.s.m,p36.12.f.m,p36.13.f.m,p36.14.f.m),type="b",ylab="plot 36 biomass")
 
 
-#functional groups
-dat.08=dat.herb[dat.herb$Year==2008,]
-dat.08.fall=dat.08[dat.08$Season=="Fall",]
-dat.08.summ=dat.08[dat.08$Season=="Summer",]
+
 ## Seasonal subsetted by functional group
 #2008
 c4.08.f=dat.08.fall[dat.08.fall$C4>0,]
@@ -1520,10 +1616,20 @@ c3.13.f=dat.13.fall[dat.13.fall$C3>0,]
 Pr.13.f=dat.13.fall[dat.13.fall$Perennial>0,] ##plot 17 is negative
 AB.13.f=dat.13.fall[dat.13.fall$Annl.Biennial>0,]
 
+c4.13.s=dat.13.summ[dat.13.summ$C4>0,]
+c3.13.s=dat.13.summ[dat.13.summ$C3>0,]
+Pr.13.s=dat.13.summ[dat.13.summ$Perennial>0,] 
+AB.13.s=dat.13.summ[dat.13.summ$Annl.Biennial>0,]
+
 c4.13.f.m=sum(as.numeric(c4.13.f$C4))
 c3.13.f.m=sum(as.numeric(c3.13.f$C3))
-Pr.13.f.m=sum(as.numeric(Pr.13.f$Perennial))
+Pr.13.f.m=sum(as.numeric(Pr.13.f$Perennial),na.rm=TRUE)
 AB.13.f.m=sum(as.numeric(AB.13.f$Annl.Biennial))
+
+c4.13.s.m=sum(as.numeric(c4.13.s$C4))
+c3.13.s.m=sum(as.numeric(c3.13.s$C3))
+Pr.13.s.m=sum(as.numeric(Pr.13.s$Perennial))
+AB.13.s.m=sum(as.numeric(AB.13.s$Annl.Biennial))
 
 #2014
 c4.14.f=dat.14.fall[dat.14.fall$C4>0,]
@@ -1536,22 +1642,19 @@ c3.14.f.m=sum(as.numeric(c3.14.f$C3))
 Pr.14.f.m=sum(as.numeric(Pr.14.f$Perennial))
 AB.14.f.m=sum(as.numeric(AB.14.f$Annl.Biennial))
 
-c4.total=c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.14.f.m)
-c3.total=c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.14.f.m)
-Pr.total=c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.14.f.m)
-AB.total=c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.14.f.m)
+c4.total=c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.13.s.m,c4.14.f.m)
+c3.total=c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.13.s.m,c3.14.f.m)
+Pr.total=c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.13.s.m,Pr.14.f.m)
+AB.total=c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.13.s.m,AB.14.f.m)
 
-c4.total=c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.14.f.m)
-c3.total=c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.14.f.m)
-Pr.total=c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.14.f.m)
-AB.total=c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.14.f.m)
+c4.matrix = matrix
 
 #C4 Grasses over time
-plot(seq1,c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.14.f.m),type="b",ylab="C4 Grasses over time")
+plot(seq1,c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.13.s.m,c4.14.f.m),type="b",ylab="C4 Grass Biomass (g) ")
 #C3 Grasses over time
-plot(seq1,c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.14.f.m),type="b",ylab="C3 Grasses over time")
+plot(seq1,c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.13.s.m,c3.14.f.m),type="b",ylab="C3 Grass Biomass (g)")
 #Perennial Forbs over time
-plot(seq1,c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.14.f.m),type="b",ylab="Perennial Forbs over time")
+plot(seq1,c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.13.s.m,Pr.14.f.m),type="b",ylab="Perennial Forbs Biomass (g)")
 #Annual/Biennial Forbs over time
-plot(seq1,c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.14.f.m),type="b",ylab="Annual/Biennial Forbs over time")
+plot(seq1,c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.13.s.m,AB.14.f.m),type="b",ylab="Annual/Biennial Forbs Biomass(g)")
 ```
