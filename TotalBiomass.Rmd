@@ -1071,6 +1071,7 @@ p36.13.m=as.numeric(p36.13$tot.mass)
 dat.13=dat.herb[dat.herb$Year==2013,]
 dat.13.fall=dat.13[dat.13$Season=="Fall",]
 dat.13.fall.m=as.numeric(dat.13.fall$Total.Mass)
+
 #Means,95% intervals, standarad deviation, 
 dat.13.fall.95=quantile(dat.13.fall.m,c(.05,.95))
 dat.13.fall.mean=mean(dat.13.fall.m)
@@ -1769,10 +1770,7 @@ seq1
 plot(seq1,c(p36.08.s.m,p36.08.f.m,p36.09.s.m,p36.09.f.m,p36.10.s.m,p36.11.f.m,p36.11.s.m,p36.12.f.m,p36.13.f.m,p36.14.f.m),type="b",ylab="plot 36 biomass")
 
 
-#functional groups
-dat.08=dat.herb[dat.herb$Year==2008,]
-dat.08.fall=dat.08[dat.08$Season=="Fall",]
-dat.08.summ=dat.08[dat.08$Season=="Summer",]
+
 ## Seasonal subsetted by functional group
 #2008
 c4.08.f=dat.08.fall[dat.08.fall$C4>0,]
@@ -1869,7 +1867,7 @@ AB.13.s=dat.13.summ[dat.13.summ$Annl.Biennial>0,]
 
 c4.13.f.m=sum(as.numeric(c4.13.f$C4))
 c3.13.f.m=sum(as.numeric(c3.13.f$C3))
-Pr.13.f.m=sum(as.numeric(Pr.13.f$Perennial))
+Pr.13.f.m=sum(as.numeric(Pr.13.f$Perennial),na.rm=TRUE)
 AB.13.f.m=sum(as.numeric(AB.13.f$Annl.Biennial))
 
 c4.13.s.m=sum(as.numeric(c4.13.s$C4))
@@ -1893,17 +1891,14 @@ c3.total=c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m
 Pr.total=c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.13.s.m,Pr.14.f.m)
 AB.total=c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.13.s.m,AB.14.f.m)
 
-c4.total=c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.14.f.m)
-c3.total=c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.14.f.m)
-Pr.total=c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.14.f.m)
-AB.total=c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.14.f.m)
+c4.matrix = matrix
 
 #C4 Grasses over time
-plot(seq1,c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.13.s.m,c4.14.f.m),type="b",ylab="C4 Grasses over time")
+plot(seq1,c(c4.08.s.m,c4.08.f.m,c4.09.s.m,c4.09.f.m,c4.10.s.m,c4.11.s.m,c4.11.f.m,c4.12.f.m,c4.13.f.m,c4.13.s.m,c4.14.f.m),type="b",ylab="C4 Grass Biomass (g) ")
 #C3 Grasses over time
-plot(seq1,c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.14.f.m),type="b",ylab="C3 Grasses over time")
+plot(seq1,c(c3.08.s.m,c3.08.f.m,c3.09.s.m,c3.09.f.m,c3.10.s.m,c3.11.s.m,c3.11.f.m,c3.12.f.m,c3.13.f.m,c3.13.s.m,c3.14.f.m),type="b",ylab="C3 Grass Biomass (g)")
 #Perennial Forbs over time
-plot(seq1,c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.14.f.m),type="b",ylab="Perennial Forbs over time")
+plot(seq1,c(Pr.08.s.m,Pr.08.f.m,Pr.09.s.m,Pr.09.f.m,Pr.10.s.m,Pr.11.s.m,Pr.11.f.m,Pr.12.f.m,Pr.13.f.m,Pr.13.s.m,Pr.14.f.m),type="b",ylab="Perennial Forbs Biomass (g)")
 #Annual/Biennial Forbs over time
-plot(seq1,c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.14.f.m),type="b",ylab="Annual/Biennial Forbs over time")
+plot(seq1,c(AB.08.s.m,AB.08.f.m,AB.09.s.m,AB.09.f.m,AB.10.s.m,AB.11.s.m,AB.11.f.m,AB.12.f.m,AB.13.f.m,AB.13.s.m,AB.14.f.m),type="b",ylab="Annual/Biennial Forbs Biomass(g)")
 ```
