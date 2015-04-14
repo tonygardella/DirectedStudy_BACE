@@ -1421,6 +1421,9 @@ lognormll<-function(alpha,x){
 gammall<-function(alpha,x){
     -sum(dgamma(x,alpha[1],alpha[2],log=TRUE))
 }
+weill<-function(alpha,x){
+  -sum(dweibull(x,alpha[1],alpha[2],log=TRUE))
+}
 ```
 
 ###Optimized Normal Likelihoods
@@ -1445,6 +1448,10 @@ w.gam.aic=matrix(1:10,ncol=1)
 d.gam.aic=matrix(1:10,ncol=1)
 a.gam.aic=matrix(1:10,ncol=1)
 
+w.wei.aic=matrix(1:10,ncol=1)
+d.wei.aic=matrix(1:10,ncol=1)
+a.wei.aic=matrix(1:10,ncol=1)
+
 treat.AIC=matrix(1:90,ncol=3,nrow=30)
 
 for(i in 1:30){
@@ -1459,12 +1466,22 @@ for(i in 1:30){
   w.gam.aic[i]=2*(optim(c(1,1),gammall,x=w.dat.list[[i]])$value)+3
   d.gam.aic[i]=2*(optim(c(1,1),gammall,x=d.dat.list[[i]])$value)+3
   a.gam.aic[i]=2*(optim(c(1,1),gammall,x=a.dat.list[[i]])$value)+3
+  
+  w.wei.aic[i]=2*(optim(c(1,1),weill,x=w.dat.list[[i]])$value)+3
+  d.wei.aic[i]=2*(optim(c(1,1),weill,x=d.dat.list[[i]])$value)+3
+  a.wei.aic[i]=2*(optim(c(1,1),weill,x=a.dat.list[[i]])$value)+3
 
 }
 
-w.AIC=cbind(w.norm.aic,w.lnorm.aic,w.gam.aic)
-a.AIC=cbind(a.norm.aic,a.lnorm.aic,a.gam.aic)
-d.AIC=cbind(d.norm.aic,d.lnorm.aic,d.gam.aic)
+w.AIC=cbind(w.norm.aic,w.lnorm.aic,w.gam.aic,w.wei.aic)
+a.AIC=cbind(a.norm.aic,a.lnorm.aic,a.gam.aic,a.wei.aic)
+d.AIC=cbind(d.norm.aic,d.lnorm.aic,d.gam.aic,d.wei.aic)
+
+col.names=c("w.norm","w.lnorm","w.gam","w.wei","a.norm","a.lnorm","a.gam","a.wei","d.norm","d.lnorm","d.gam","d.wei")
+AIC.tab=cbind(w.AIC,a.AIC,d.AIC)
+colnames(AIC.tab)<-col.names
+year=c("08S", "08F", "09S", "09F", "10S", "11S", "11F", "12F", "13F", "14F")
+rownames(AIC.tab)<-year
 
 
 ```
@@ -1473,6 +1490,22 @@ d.AIC=cbind(d.norm.aic,d.lnorm.aic,d.gam.aic)
 ```{r}
 w.08.glm=glm(w.08.s.m~w.08.f.m,gaussian)
 plot(w.08.s.m,w.08.f.m)
+totmass.glm=glm(totmass~1,Gamma)
+
+
+wet.glm=glm(w.tot.m~1,Gamma)
+amb.glm=glm(a.tot.m~1,Gamma)
+dry.glm=glm(d.tot.m~1,Gamma)
+
+wa.glm=glm(w.tot.m~a.tot.m,Gamma)
+wd.glm=glm(a.tot.m~d.tot.m,Gamma)
+
+aw.glm=glm(a.tot.m~w.tot.m,Gamma)
+ad.glm=glm(a.tot.m~d.tot.m,Gamma)
+
+dw.glm=glm(d.tot.m~w.tot.m,Gamma)
+da.glm=glm(d.tot.m~a.tot.m,Gamma)
+
 
 ```
 
