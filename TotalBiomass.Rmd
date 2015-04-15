@@ -1488,14 +1488,46 @@ rownames(AIC.tab)<-year
 
 ##GLM 
 ```{r}
-
 totmass.glm=glm(totmass~1,Gamma)
+
+tot.08.m=c(dat.08.fall.m,dat.08.summ.m)
+tot.09.m=c(dat.09.fall.m,dat.09.summ.m)
+
+tot.0809.glm=glm(tot.08.m~tot.09.m,family=Gamma(inverse))
+tot.0809.summ=summary(tot.0809.glm)
+plot(tot.08.m~tot.09.m)
+seq<-seq(0,160,length=24)
+lines(seq,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*seq)^-1)
+tot0809glmean=mean((tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*seq)^-1)
+
+seq2=c(2008,2008.5,2009,2009.5)
+wet.bm.0809=c(w.08.summ.mean,w.08.fall.mean,w.09.summ.mean, w.09.fall.mean)
+plot(seq2,wet.bm.0809,ylab="Wet plot Aboveground BioMass", type="b",ylim=c(0,100))
+points(2008,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*w.08.summ.mean)^-1)
+points(2008.5,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*w.08.fall.mean)^-1)
+points(2009,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*w.09.summ.mean)^-1)
+points(2009.5,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*w.09.fall.mean)^-1)
+
+
+estimate bias,test bias of fall vs spring.
+
+
+
+
+
+
+
+
+
+
+
+
 
 wet.glm=glm(w.tot.m~1,Gamma)
 amb.glm=glm(a.tot.m~1,Gamma)
 dry.glm=glm(d.tot.m~1,Gamma)
 
-wet.glm=glm(w.08.s.m~w.08.s.m+w.08.f.m+w.09.s.m+w.09.f.m+w.10.s.m+w.11.s.m+w.11.f.m+w.12.f.m+w.13.f.m+w.14.f.m,family=Gamma(inverse))
+wet.glm=glm(w.tot.m~a.tot.m,family=Gamma(inverse))
 amb.glm=glm(a.tot.m~1,Gamma)
 dry.glm=glm(d.tot.m~1,Gamma)
 ```
@@ -1566,8 +1598,10 @@ lines(seq,(w14fsumm$coefficient[1]+w14fsumm$coefficient[2]*seq)^-1)
 w14fglmean=mean((w14fsumm$coefficient[1]+w14fsumm$coefficient[2]*seq)^-1)
 
 wetglmeans=c(NA,w08fglmean,w09sglmean,w09fglmean,w10sglmean,NA,w11sglmean,w11fglmean,NA,w12fglmean,NA,w13fglmean,NA,w14fglmean)
-plot(seq1,wet.m.bm,ylab="Wet plot Abovegroungd BioMass", type="b",ylim=c(0,150))
+plot(seq1,wet.m.bm,ylab="Wet plot Aboveground BioMass", type="b",ylim=c(0,150))
 points(seq1,wetglmeans,col=2)
+
+
 
 ```
 
