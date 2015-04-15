@@ -1497,7 +1497,20 @@ wet.glm=glm(w.tot.m~1,Gamma)
 amb.glm=glm(a.tot.m~1,Gamma)
 dry.glm=glm(d.tot.m~1,Gamma)
 
-wa.glm=glm(w.tot.m~a.tot.m,Gamma)
+w.08.f.glm=glm(w.08.f.m~w.09.f.m,family=Gamma(inverse))
+w08fsumm=summary(w.08.f.glm)
+plot(w.08.f.m~w.09.f.m)
+seq<-seq(0,155,length=24)
+lines(seq,(w08fsumm$coefficient[1]+w08fsumm$coefficient[2]*seq)^-1)
+
+
+w.08.s.glm=glm(w.08.s.m~w.09.s.m,family=Gamma(inverse))
+w08ssumm=summary(w.08.s.glm)
+plot(w.08.s.m~w.09.s.m)
+seq<-seq(0,155,length=24)
+lines(seq,(w08ssumm$coefficient[1]+w08ssumm$coefficient[2]*seq)^-1)
+
+
 wd.glm=glm(a.tot.m~d.tot.m,Gamma)
 
 aw.glm=glm(a.tot.m~w.tot.m,Gamma)
