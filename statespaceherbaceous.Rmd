@@ -2109,14 +2109,14 @@ c4.fit.norm = "model{
 #priors
 r ~ dnorm(1,0.5)
 tau ~ dgamma(0.05,0.1)
-x[1]~ dnorm(0,0.01)
+x[1,1]~ dnorm(0,0.01)
 sigma ~ dgamma(0.1,0.05)
 #process
   
 for (i  in 1:36){     # 36 plots
   for (t in 2:n) {    #years process model
-    u[t] <- x[t-1] + r
-    x[t] ~ dnorm(u[t],sigma)
+    u[t,i] <- x[t-1,i] + r
+    x[t,i] ~ dnorm(u[t,i],sigma)
   }
   for (t in 1:n){       #years data model
     y[t,i] ~ dnorm(x[t,i],tau)
