@@ -1488,17 +1488,19 @@ rownames(AIC.tab)<-year
 
 ##GLM 
 ```{r}
-w.08.glm=glm(w.08.s.m~w.08.f.m,gaussian)
-plot(w.08.s.m,w.08.f.m)
-totmass.glm=glm(totmass~1,Gamma)
 
+totmass.glm=glm(totmass~1,Gamma)
 
 wet.glm=glm(w.tot.m~1,Gamma)
 amb.glm=glm(a.tot.m~1,Gamma)
 dry.glm=glm(d.tot.m~1,Gamma)
+
+wet.glm=glm(w.08.s.m~w.08.s.m+w.08.f.m+w.09.s.m+w.09.f.m+w.10.s.m+w.11.s.m+w.11.f.m+w.12.f.m+w.13.f.m+w.14.f.m,family=Gamma(inverse))
+amb.glm=glm(a.tot.m~1,Gamma)
+dry.glm=glm(d.tot.m~1,Gamma)
 ```
 
-Wet GLM
+Wet GLM Point Estimates 
 ```{r}
 w.08.f.glm=glm(w.08.f.m~w.08.s.m,family=Gamma(inverse))
 w08fsumm=summary(w.08.f.glm)
@@ -1512,53 +1514,60 @@ w09ssumm=summary(w.09.s.glm)
 plot(w.09.s.m~w.08.f.m)
 seq<-seq(0,50,length=24)
 lines(seq,(w09ssumm$coefficient[1]+w09ssumm$coefficient[2]*seq)^-1)
+w09sglmean=mean((w09ssumm$coefficient[1]+w09ssumm$coefficient[2]*seq)^-1)
 
 w.09.f.glm=glm(w.09.f.m~w.09.s.m,family=Gamma(inverse))
 w09fsumm=summary(w.09.f.glm)
 plot(w.09.f.m~w.09.s.m)
 seq<-seq(0,45,length=24)
 lines(seq,(w09fsumm$coefficient[1]+w09fsumm$coefficient[2]*seq)^-1)
+w09fglmean=mean((w09fsumm$coefficient[1]+w09fsumm$coefficient[2]*seq)^-1)
 
 w.10.s.glm=glm(w.10.s.m~w.09.f.m,family=Gamma(inverse))
 w10ssumm=summary(w.10.s.glm)
 plot(w.10.s.m~w.09.f.m)
 seq<-seq(0,155,length=24)
 lines(seq,(w10ssumm$coefficient[1]+w10ssumm$coefficient[2]*seq)^-1)
+w10sglmean=mean((w10ssumm$coefficient[1]+w10ssumm$coefficient[2]*seq)^-1)
 
 w.11.s.glm=glm(w.11.s.m~w.10.s.m,family=Gamma(inverse))
 w11ssumm=summary(w.11.s.glm)
 plot(w.11.s.m~w.10.s.m)
 seq<-seq(0,180,length=24)
 lines(seq,(w11ssumm$coefficient[1]+w11ssumm$coefficient[2]*seq)^-1)
+w11sglmean=mean((w11ssumm$coefficient[1]+w11ssumm$coefficient[2]*seq)^-1)
 
 w.11.f.glm=glm(w.11.f.m~w.11.s.m,family=Gamma(inverse))
 w11fsumm=summary(w.11.f.glm)
 plot(w.11.f.m~w.11.s.m)
 seq<-seq(0,105,length=24)
 lines(seq,(w11fsumm$coefficient[1]+w11fsumm$coefficient[2]*seq)^-1)
+w11fglmean=mean((w11fsumm$coefficient[1]+w11fsumm$coefficient[2]*seq)^-1)
 
 w.12.f.glm=glm(w.12.f.m~w.11.f.m,family=Gamma(inverse))
 w12fsumm=summary(w.12.f.glm)
 plot(w.12.f.m~w.11.f.m)
 seq<-seq(0,370,length=24)
 lines(seq,(w12fsumm$coefficient[1]+w12fsumm$coefficient[2]*seq)^-1)
-
+w12fglmean=mean((w12fsumm$coefficient[1]+w12fsumm$coefficient[2]*seq)^-1)
 
 w.13.f.glm=glm(w.13.f.m~w.12.f.m,family=Gamma(inverse))
 w13fsumm=summary(w.13.f.glm)
 plot(w.13.f.m~w.12.f.m)
 seq<-seq(0,120,length=24)
 lines(seq,(w13fsumm$coefficient[1]+w13fsumm$coefficient[2]*seq)^-1)
-
+w13fglmean=mean((w13fsumm$coefficient[1]+w13fsumm$coefficient[2]*seq)^-1)
 
 w.14.f.glm=glm(w.14.f.m~w.13.f.m,family=Gamma(inverse))
 w14fsumm=summary(w.14.f.glm)
 plot(w.14.f.m~w.13.f.m)
 seq<-seq(0,60,length=24)
 lines(seq,(w14fsumm$coefficient[1]+w14fsumm$coefficient[2]*seq)^-1)
+w14fglmean=mean((w14fsumm$coefficient[1]+w14fsumm$coefficient[2]*seq)^-1)
 
-
-
+wetglmeans=c(NA,w08fglmean,w09sglmean,w09fglmean,w10sglmean,NA,w11sglmean,w11fglmean,NA,w12fglmean,NA,w13fglmean,NA,w14fglmean)
+plot(seq1,wet.m.bm,ylab="Wet plot Abovegroungd BioMass", type="b",ylim=c(0,150))
+points(seq1,wetglmeans,col=2)
 
 ```
 
@@ -1572,7 +1581,7 @@ m.bm=c(dat.08.summ.mean,dat.08.fall.mean,dat.09.summ.mean, dat.09.fall.mean,NA,d
 plot(years,m.bm)
 
 ## Treatments Mean Biomass  Time Series
-wet.m.bm=c(w.08.summ.mean,w.08.fall.mean,w.09.summ.mean, w.09.fall.mean,NA,w.10.summ.mean,w.11.summ.mean,w.11.fall.mean,NA,w.12.fall.mean,NA,w.13.fall.mean,NA,w.14.fall.mean)
+wet.m.bm=c(w.08.summ.mean,w.08.fall.mean,w.09.summ.mean, w.09.fall.mean,w.10.summ.mean,NA,w.11.summ.mean,w.11.fall.mean,NA,w.12.fall.mean,NA,w.13.fall.mean,NA,w.14.fall.mean)
 
 amb.m.bm=c(a.08.summ.mean,a.08.fall.mean,a.09.summ.mean, a.09.fall.mean,NA,a.10.summ.mean,a.11.summ.mean,a.11.fall.mean,NA,a.12.fall.mean,NA,a.13.fall.mean,NA,a.14.fall.mean)
 
@@ -1607,7 +1616,6 @@ summary.table=matrix(summary.data,nrow=14,ncol=4,byrow=FALSE,)
 
 ### FunctionalGroup/Plot 
 ```{r}
-seq1=c(2008,2008.5,2009,2009.5,2010,2011,2011.5,2012.5,2013,2013.5,2014.5)
 seq1
 plot(seq1,c(p36.08.s.m,p36.08.f.m,p36.09.s.m,p36.09.f.m,p36.10.s.m,p36.11.f.m,p36.11.s.m,p36.12.f.m,p36.13.f.m,p36.14.f.m),type="b",ylab="plot 36 biomass")
 
