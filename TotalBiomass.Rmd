@@ -1421,6 +1421,9 @@ lognormll<-function(alpha,x){
 gammall<-function(alpha,x){
     -sum(dgamma(x,alpha[1],alpha[2],log=TRUE))
 }
+weill<-function(alpha,x){
+  -sum(dweibull(x,alpha[1],alpha[2],log=TRUE))
+}
 ```
 
 ###Optimized Normal Likelihoods
@@ -1430,6 +1433,8 @@ w.dat.list=list(w.08.s.m,w.08.f.m,w.09.s.m,w.09.f.m,w.10.s.m,w.11.s.m,w.11.f.m,w
 a.dat.list=list(a.08.s.m,a.08.f.m,a.09.s.m,a.09.f.m,a.10.s.m,a.11.s.m,a.11.f.m,a.12.f.m,a.13.f.m,a.14.f.m)
 
 d.dat.list=list(d.08.s.m,d.08.f.m,d.09.s.m,d.09.f.m,d.10.s.m,d.11.s.m,d.11.f.m,d.12.f.m,d.13.f.m,d.14.f.m)
+
+mass.list=list(w.08.s.m,w.08.f.m,w.09.s.m,w.09.f.m,w.10.s.m,w.11.s.m,w.11.f.m,w.12.f.m,w.13.f.m,w.14.f.m,a.08.s.m,a.08.f.m,a.09.s.m,a.09.f.m,a.10.s.m,a.11.s.m,a.11.f.m,a.12.f.m,a.13.f.m,a.14.f.m,d.08.s.m,d.08.f.m,d.09.s.m,d.09.f.m,d.10.s.m,d.11.s.m,d.11.f.m,d.12.f.m,d.13.f.m,d.14.f.m)
 
 w.norm.aic=matrix(1:10,ncol=1)
 d.norm.aic=matrix(1:10,ncol=1)
@@ -1443,280 +1448,117 @@ w.gam.aic=matrix(1:10,ncol=1)
 d.gam.aic=matrix(1:10,ncol=1)
 a.gam.aic=matrix(1:10,ncol=1)
 
-for(i in 1:10){
-  w.norm.aic[i]=optim(c(0,1),normll,x=w.dat.list[[i]])$value
-  d.norm.aic[i]=optim(c(0,1),normll,x=d.dat.list[[i]])$value
-  a.norm.aic[i]=optim(c(0,1),normll,x=a.dat.list[[i]])$value
+w.wei.aic=matrix(1:10,ncol=1)
+d.wei.aic=matrix(1:10,ncol=1)
+a.wei.aic=matrix(1:10,ncol=1)
+
+treat.AIC=matrix(1:90,ncol=3,nrow=30)
+
+for(i in 1:30){
+  w.norm.aic[i]=2*(optim(c(0,1),normll,x=w.dat.list[[i]])$value)+3
+  d.norm.aic[i]=2*(optim(c(0,1),normll,x=d.dat.list[[i]])$value)+3
+  a.norm.aic[i]=2*(optim(c(0,1),normll,x=a.dat.list[[i]])$value)+3
   
-  w.lnorm.aic[i]=optim(c(1,1),lognormll,x=w.dat.list[[i]])$value
-  d.lnorm.aic[i]=optim(c(1,1),lognormll,x=d.dat.list[[i]])$value
-  a.lnorm.aic[i]=optim(c(1,1),lognormll,x=a.dat.list[[i]])$value
+  w.lnorm.aic[i]=2*(optim(c(1,1),lognormll,x=w.dat.list[[i]])$value)+3
+  d.lnorm.aic[i]=2*(optim(c(1,1),lognormll,x=d.dat.list[[i]])$value)+3
+  a.lnorm.aic[i]=2*(optim(c(1,1),lognormll,x=a.dat.list[[i]])$value)+3
   
-  w.gam.aic[i]=optim(c(1,1),gammall,x=w.dat.list[[i]])$value
-  d.gam.aic[i]=optim(c(1,1),gammall,x=d.dat.list[[i]])$value
-  a.gam.aic[i]=optim(c(1,1),gammall,x=a.dat.list[[i]])$value
+  w.gam.aic[i]=2*(optim(c(1,1),gammall,x=w.dat.list[[i]])$value)+3
+  d.gam.aic[i]=2*(optim(c(1,1),gammall,x=d.dat.list[[i]])$value)+3
+  a.gam.aic[i]=2*(optim(c(1,1),gammall,x=a.dat.list[[i]])$value)+3
+  
+  w.wei.aic[i]=2*(optim(c(1,1),weill,x=w.dat.list[[i]])$value)+3
+  d.wei.aic[i]=2*(optim(c(1,1),weill,x=d.dat.list[[i]])$value)+3
+  a.wei.aic[i]=2*(optim(c(1,1),weill,x=a.dat.list[[i]])$value)+3
 
 }
 
+w.AIC=cbind(w.norm.aic,w.lnorm.aic,w.gam.aic,w.wei.aic)
+a.AIC=cbind(a.norm.aic,a.lnorm.aic,a.gam.aic,a.wei.aic)
+d.AIC=cbind(d.norm.aic,d.lnorm.aic,d.gam.aic,d.wei.aic)
+
+col.names=c("w.norm","w.lnorm","w.gam","w.wei","a.norm","a.lnorm","a.gam","a.wei","d.norm","d.lnorm","d.gam","d.wei")
+AIC.tab=cbind(w.AIC,a.AIC,d.AIC)
+colnames(AIC.tab)<-col.names
+year=c("08S", "08F", "09S", "09F", "10S", "11S", "11F", "12F", "13F", "14F")
+rownames(AIC.tab)<-year
+
 
 ```
-
-###Optimized Lognormal Likelihoods
-```{r}
-#Wet Normal
-w.08.f.lnll=optim(w.08.f.m,lognormll)
-w.08.s.lnll=optim(w.08.s.m,lognormll)
-w.09.f.lnll=optim(w.09.f.m,lognormll)
-w.09.s.lnll=optim(w.09.s.m,lognormll)
-w.10.s.lnll=optim(w.10.s.m,lognormll)
-w.11.s.lnll=optim(w.11.s.m,lognormll)
-w.11.f.lnll=optim(w.11.f.m,lognormll)
-w.12.f.lnll=optim(w.12.f.m,lognormll)
-w.13.f.lnll=optim(w.13.f.m,lognormll)
-w.14.f.lnll=optim(w.14.f.m,lognormll)
-#Dry Normal
-d.08.f.lnll=optim(d.08.f.m,lognormll)
-d.08.s.lnll=optim(d.08.s.m,lognormll)
-d.09.f.lnll=optim(d.09.f.m,lognormll)
-d.09.s.lnll=optim(d.09.s.m,lognormll)
-d.10.s.lnll=optim(d.10.s.m,lognormll)
-d.11.s.lnll=optim(d.11.s.m,lognormll)
-d.11.f.lnll=optim(d.11.f.m,lognormll)
-d.12.f.lnll=optim(d.12.f.m,lognormll)
-d.13.f.lnll=optim(d.13.f.m,lognormll)
-d.14.f.lnll=optim(d.14.f.m,lognormll)
-#Ambient Normal
-a.08.f.lnll=optim(a.08.f.m,lognormll)
-a.08.s.lnll=optim(a.08.s.m,lognormll)
-a.09.f.lnll=optim(a.09.f.m,lognormll)
-a.09.s.lnll=optim(a.09.s.m,lognormll)
-a.10.s.lnll=optim(a.10.s.m,lognormll)
-a.11.s.lnll=optim(a.11.s.m,lognormll)
-a.11.f.lnll=optim(a.11.f.m,lognormll)
-a.12.f.lnll=optim(a.12.f.m,lognormll)
-a.13.f.lnll=optim(a.13.f.m,lognormll)
-a.14.f.lnll=optim(a.14.f.m,lognormll)
-```
-
-###Optimized Gamma Likelihoods
-```{r}
-#Wet Normal
-w.08.f.gll=optim(c(1,1),gammall,x=w.08.f.m)
-w.08.s.gll=optim(w.08.s.m,gammall)
-w.09.f.gll=optim(w.09.f.m,gammall)
-w.09.s.gll=optim(w.09.s.m,gammall)
-w.10.s.gll=optim(w.10.s.m,gammall)
-w.11.s.gll=optim(w.11.s.m,gammall)
-w.11.f.gll=optim(w.11.f.m,gammall)
-w.12.f.gll=optim(w.12.f.m,gammall)
-w.13.f.gll=optim(w.13.f.m,gammall)
-w.14.f.gll=optim(w.14.f.m,gammall)
-#Dry Normal
-d.08.f.gll=optim(d.08.f.m,gammall)
-d.08.s.gll=optim(d.08.s.m,gammall)
-d.09.f.gll=optim(d.09.f.m,gammall)
-d.09.s.gll=optim(d.09.s.m,gammall)
-d.10.s.gll=optim(d.10.s.m,gammall)
-d.11.s.gll=optim(d.11.s.m,gammall)
-d.11.f.gll=optim(d.11.f.m,gammall)
-d.12.f.gll=optim(d.12.f.m,gammall)
-d.13.f.gll=optim(d.13.f.m,gammall)
-d.14.f.gll=optim(d.14.f.m,gammall)
-#Ambient Normal
-a.08.f.gll=optim(a.08.f.m,gammall)
-a.08.s.gll=optim(a.08.s.m,gammall)
-a.09.f.gll=optim(a.09.f.m,gammall)
-a.09.s.gll=optim(a.09.s.m,gammall)
-a.10.s.gll=optim(a.10.s.m,gammall)
-a.11.s.gll=optim(a.11.s.m,gammall)
-a.11.f.gll=optim(a.11.f.m,gammall)
-a.12.f.gll=optim(a.12.f.m,gammall)
-a.13.f.gll=optim(a.13.f.m,gammall)
-a.14.f.gll=optim(a.14.f.m,gammall)
-```
-
-###AIC nll
-```{r}
-w.08.f.nAIC=2*(w.08.f.nll$value)+2
-w.08.s.nAIC=2*(w.08.s.nll$value)+2
-w.09.f.nAIC=2*(w.09.f.nll$value)+2
-w.09.s.nAIC=2*(w.09.s.nll$value)+2
-w.10.s.nAIC=2*(w.10.s.nll$value)+2
-w.11.f.nAIC=2*(w.11.f.nll$value)+2
-w.11.s.nAIC=2*(w.11.s.nll$value)+2
-w.12.f.nAIC=2*(w.12.f.nll$value)+2
-w.13.f.nAIC=2*(w.13.f.nll$value)+2
-w.14.f.nAIC=2*(w.14.f.nll$value)+2
-
-a.08.f.nAIC=2*(a.08.f.nll$value)+2
-a.08.s.nAIC=2*(a.08.s.nll$value)+2
-a.09.f.nAIC=2*(a.09.f.nll$value)+2
-a.09.s.nAIC=2*(a.09.s.nll$value)+2
-a.10.s.nAIC=2*(a.10.s.nll$value)+2
-a.11.f.nAIC=2*(a.11.f.nll$value)+2
-a.11.s.nAIC=2*(a.11.s.nll$value)+2
-a.12.f.nAIC=2*(a.12.f.nll$value)+2
-a.13.f.nAIC=2*(a.13.f.nll$value)+2
-a.14.f.nAIC=2*(a.14.f.nll$value)+2
-
-d.08.f.nAIC=2*(d.08.f.nll$value)+2
-d.08.s.nAIC=2*(d.08.s.nll$value)+2
-d.09.f.nAIC=2*(d.09.f.nll$value)+2
-d.09.s.nAIC=2*(d.09.s.nll$value)+2
-d.10.s.nAIC=2*(d.10.s.nll$value)+2
-d.11.f.nAIC=2*(d.11.f.nll$value)+2
-d.11.s.nAIC=2*(d.11.s.nll$value)+2
-d.12.f.nAIC=2*(d.12.f.nll$value)+2
-d.13.f.nAIC=2*(d.13.f.nll$value)+2
-d.14.f.nAIC=2*(d.14.f.nll$value)+2
-```
-
-###AIC lnll
-```{r}
-w.08.f.lnAIC=2*(w.08.f.lnll$value)+2
-w.08.s.lnAIC=2*(w.08.s.lnll$value)+2
-w.09.f.lnAIC=2*(w.09.f.lnll$value)+2
-w.09.s.lnAIC=2*(w.09.s.lnll$value)+2
-w.10.s.lnAIC=2*(w.10.s.lnll$value)+2
-w.11.f.lnAIC=2*(w.11.f.lnll$value)+2
-w.11.s.lnAIC=2*(w.11.s.lnll$value)+2
-w.12.f.lnAIC=2*(w.12.f.lnll$value)+2
-w.13.f.lnAIC=2*(w.13.f.lnll$value)+2
-w.14.f.lnAIC=2*(w.14.f.lnll$value)+2
-
-a.08.f.lnAIC=2*(a.08.f.lnll$value)+2
-a.08.s.lnAIC=2*(a.08.s.lnll$value)+2
-a.09.f.lnAIC=2*(a.09.f.lnll$value)+2
-a.09.s.lnAIC=2*(a.09.s.lnll$value)+2
-a.10.s.lnAIC=2*(a.10.s.lnll$value)+2
-a.11.f.lnAIC=2*(a.11.f.lnll$value)+2
-a.11.s.lnAIC=2*(a.11.s.lnll$value)+2
-a.12.f.lnAIC=2*(a.12.f.lnll$value)+2
-a.13.f.lnAIC=2*(a.13.f.lnll$value)+2
-a.14.f.lnAIC=2*(a.14.f.lnll$value)+2
-
-d.08.f.lnAIC=2*(d.08.f.lnll$value)+2
-d.08.s.lnAIC=2*(d.08.s.lnll$value)+2
-d.09.f.lnAIC=2*(d.09.f.lnll$value)+2
-d.09.s.lnAIC=2*(d.09.s.lnll$value)+2
-d.10.s.lnAIC=2*(d.10.s.lnll$value)+2
-d.11.f.lnAIC=2*(d.11.f.lnll$value)+2
-d.11.s.lnAIC=2*(d.11.s.lnll$value)+2
-d.12.f.lnAIC=2*(d.12.f.lnll$value)+2
-d.13.f.lnAIC=2*(d.13.f.lnll$value)+2
-d.14.f.lnAIC=2*(d.14.f.lnll$value)+2
-```
-
-###AIC gll
-```{r}
-w.08.f.gAIC=2*(w.08.f.gll$value)+2
-w.08.s.gAIC=2*(w.08.s.gll$value)+2
-w.09.f.gAIC=2*(w.09.f.gll$value)+2
-w.09.s.gAIC=2*(w.09.s.gll$value)+2
-w.10.s.gAIC=2*(w.10.s.gll$value)+2
-w.11.f.gAIC=2*(w.11.f.gll$value)+2
-w.11.s.gAIC=2*(w.11.s.gll$value)+2
-w.12.f.gAIC=2*(w.12.f.gll$value)+2
-w.13.f.gAIC=2*(w.13.f.gll$value)+2
-w.14.f.gAIC=2*(w.14.f.gll$value)+2
-
-a.08.f.gAIC=2*(a.08.f.gll$value)+2
-a.08.s.gAIC=2*(a.08.s.gll$value)+2
-a.09.f.gAIC=2*(a.09.f.gll$value)+2
-a.09.s.gAIC=2*(a.09.s.gll$value)+2
-a.10.s.gAIC=2*(a.10.s.gll$value)+2
-a.11.f.gAIC=2*(a.11.f.gll$value)+2
-a.11.s.gAIC=2*(a.11.s.gll$value)+2
-a.12.f.gAIC=2*(a.12.f.gll$value)+2
-a.13.f.gAIC=2*(a.13.f.gll$value)+2
-a.14.f.gAIC=2*(a.14.f.gll$value)+2
-
-d.08.f.gAIC=2*(d.08.f.gll$value)+2
-d.08.s.gAIC=2*(d.08.s.gll$value)+2
-d.09.f.gAIC=2*(d.09.f.gll$value)+2
-d.09.s.gAIC=2*(d.09.s.gll$value)+2
-d.10.s.gAIC=2*(d.10.s.gll$value)+2
-d.11.f.gAIC=2*(d.11.f.gll$value)+2
-d.11.s.gAIC=2*(d.11.s.gll$value)+2
-d.12.f.gAIC=2*(d.12.f.gll$value)+2
-d.13.f.gAIC=2*(d.13.f.gll$value)+2
-d.14.f.gAIC=2*(d.14.f.gll$value)+2
-```
-
-###AIC comparison
-```{r}
-year=c("08S", "-","-","-","-","-","-","-","-","08F","-","-", "-","-","-","-","-","-", "09S", "-","-","-","-","-","-","-","-","09F", "-","-","-","-","-","-","-","-", "10S", "-","-","-","-","-","-","-","-", "11S", "-","-","-","-","-","-","-","-", "11F", "-","-","-","-","-","-","-","-","12F", "-","-","-","-","-","-","-","-","13F", "-","-","-","-","-","-","-","-","14F", "-","-","-","-","-","-","-","-")
-Treatment=c("Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-","Wet","-","-","Ambient","-","-","Dry","-","-")
-Aic=c(w.08.s.nAIC,w.08.s.lnAIC,w.08.s.gAIC,
-     a.08.s.nAIC,a.08.s.lnAIC,a.08.s.gAIC,
-     d.08.s.nAIC,d.08.s.lnAIC,d.08.s.gAIC,
-     w.08.f.nAIC,w.08.f.lnAIC,w.08.f.gAIC,
-     a.08.f.nAIC,a.08.f.lnAIC,a.08.f.gAIC,
-     d.08.f.nAIC,d.08.f.lnAIC,d.08.f.gAIC,
-     w.09.s.nAIC,w.09.s.lnAIC,w.09.s.gAIC,
-     a.09.s.nAIC,a.09.s.lnAIC,a.09.s.gAIC,
-     d.09.s.nAIC,d.09.s.lnAIC,d.09.s.gAIC,
-     w.09.f.nAIC,w.09.f.lnAIC,w.09.f.gAIC,
-     a.09.f.nAIC,a.09.f.lnAIC,a.09.f.gAIC,
-     d.09.f.nAIC,d.09.f.lnAIC,d.09.f.gAIC,
-     w.10.s.nAIC,w.10.s.lnAIC,w.10.s.gAIC,
-     a.10.s.nAIC,a.10.s.lnAIC,a.10.s.gAIC,
-     d.10.s.nAIC,d.10.s.lnAIC,d.10.s.gAIC,
-     w.11.s.nAIC,w.11.s.lnAIC,w.11.s.gAIC,
-     a.11.s.nAIC,a.11.s.lnAIC,a.11.s.gAIC,
-     d.11.s.nAIC,"NA",d.11.s.gAIC,
-     w.11.f.nAIC,w.11.f.lnAIC,w.11.f.gAIC,
-     a.11.f.nAIC,a.11.f.lnAIC,a.11.f.gAIC,
-     d.11.f.nAIC,d.11.f.lnAIC,d.11.f.gAIC,
-     w.12.f.nAIC,w.12.f.lnAIC,w.12.f.gAIC,
-     a.12.f.nAIC,a.12.f.lnAIC,a.12.f.gAIC,
-     d.12.f.nAIC,d.12.f.lnAIC,d.12.f.gAIC,
-     w.13.f.nAIC,w.13.f.lnAIC,w.13.f.gAIC,
-     a.13.f.nAIC,a.13.f.lnAIC,a.13.f.gAIC,
-     d.13.f.nAIC,"NA",d.13.f.gAIC,
-     w.14.f.nAIC,w.14.f.lnAIC,w.14.f.gAIC,
-     a.14.f.nAIC,a.14.f.lnAIC,a.14.f.gAIC,
-     d.14.f.nAIC,d.14.f.lnAIC,d.14.f.gAIC)
-dist=c("normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma",
-       "normal","lognormal","gamma"
-       )
-aic.table=matrix(c(year,Treatment,dist,Aic),ncol=4)
-
-```
-
 
 ##GLM 
 ```{r}
 w.08.glm=glm(w.08.s.m~w.08.f.m,gaussian)
 plot(w.08.s.m,w.08.f.m)
+totmass.glm=glm(totmass~1,Gamma)
+
+
+wet.glm=glm(w.tot.m~1,Gamma)
+amb.glm=glm(a.tot.m~1,Gamma)
+dry.glm=glm(d.tot.m~1,Gamma)
+```
+
+Wet GLM
+```{r}
+w.08.f.glm=glm(w.08.f.m~w.08.s.m,family=Gamma(inverse))
+w08fsumm=summary(w.08.f.glm)
+plot(w.08.f.m~w.08.s.m)
+seq<-seq(0,105,length=24)
+lines(seq,(w08fsumm$coefficient[1]+w08fsumm$coefficient[2]*seq)^-1)
+w08fglmean=mean((w08fsumm$coefficient[1]+w08fsumm$coefficient[2]*seq)^-1)
+
+w.09.s.glm=glm(w.09.s.m~w.08.f.m,family=Gamma(inverse))
+w09ssumm=summary(w.09.s.glm)
+plot(w.09.s.m~w.08.f.m)
+seq<-seq(0,50,length=24)
+lines(seq,(w09ssumm$coefficient[1]+w09ssumm$coefficient[2]*seq)^-1)
+
+w.09.f.glm=glm(w.09.f.m~w.09.s.m,family=Gamma(inverse))
+w09fsumm=summary(w.09.f.glm)
+plot(w.09.f.m~w.09.s.m)
+seq<-seq(0,45,length=24)
+lines(seq,(w09fsumm$coefficient[1]+w09fsumm$coefficient[2]*seq)^-1)
+
+w.10.s.glm=glm(w.10.s.m~w.09.f.m,family=Gamma(inverse))
+w10ssumm=summary(w.10.s.glm)
+plot(w.10.s.m~w.09.f.m)
+seq<-seq(0,155,length=24)
+lines(seq,(w10ssumm$coefficient[1]+w10ssumm$coefficient[2]*seq)^-1)
+
+w.11.s.glm=glm(w.11.s.m~w.10.s.m,family=Gamma(inverse))
+w11ssumm=summary(w.11.s.glm)
+plot(w.11.s.m~w.10.s.m)
+seq<-seq(0,180,length=24)
+lines(seq,(w11ssumm$coefficient[1]+w11ssumm$coefficient[2]*seq)^-1)
+
+w.11.f.glm=glm(w.11.f.m~w.11.s.m,family=Gamma(inverse))
+w11fsumm=summary(w.11.f.glm)
+plot(w.11.f.m~w.11.s.m)
+seq<-seq(0,105,length=24)
+lines(seq,(w11fsumm$coefficient[1]+w11fsumm$coefficient[2]*seq)^-1)
+
+w.12.f.glm=glm(w.12.f.m~w.11.f.m,family=Gamma(inverse))
+w12fsumm=summary(w.12.f.glm)
+plot(w.12.f.m~w.11.f.m)
+seq<-seq(0,370,length=24)
+lines(seq,(w12fsumm$coefficient[1]+w12fsumm$coefficient[2]*seq)^-1)
+
+
+w.13.f.glm=glm(w.13.f.m~w.12.f.m,family=Gamma(inverse))
+w13fsumm=summary(w.13.f.glm)
+plot(w.13.f.m~w.12.f.m)
+seq<-seq(0,120,length=24)
+lines(seq,(w13fsumm$coefficient[1]+w13fsumm$coefficient[2]*seq)^-1)
+
+
+w.14.f.glm=glm(w.14.f.m~w.13.f.m,family=Gamma(inverse))
+w14fsumm=summary(w.14.f.glm)
+plot(w.14.f.m~w.13.f.m)
+seq<-seq(0,60,length=24)
+lines(seq,(w14fsumm$coefficient[1]+w14fsumm$coefficient[2]*seq)^-1)
+
+
+
 
 ```
 
