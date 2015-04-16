@@ -2109,7 +2109,10 @@ c4.fit.norm = "model{
 #priors
 r ~ dnorm(1,0.5)
 tau ~ dgamma(0.05,0.1)
-x[1,1]~ dnorm(0,0.01)
+for (i in 1:36) {
+    x[1,i]~ dnorm(0,0.01)
+}
+
 sigma ~ dgamma(0.1,0.05)
 #process
   
@@ -2142,7 +2145,7 @@ init = init.cond1
   ## burn-in
   c4   <- coda.samples (model = c4.j.model,
                               variable.names = c("r","x","py","sigma","tau"),
-                              n.iter = 20000)
+                              n.iter = 2000)
 
 c4mcmc <- c4
 c4mcmc.data <- as.data.frame(as.matrix(c4mcmc))
@@ -2153,9 +2156,9 @@ c4grep.py <- grep("py",names(c4mcmc.data))
 c4PY <- apply(c4mcmc.data[,c4grep.py],2,quantile,c(0.025,0.5,0.975))
 
 #plot
-plot(seq1,c4.total)
+plot(c4.matrix)
 #CI's
-lines(seq1,(c4X[1,]),col=5) #2.5%
+lines(years,(c4X[1,]),col=5) #2.5%
 lines(seq1,(c4X[2,]))  #50
 lines(seq1,(c4X[3,]),col=5)  #97.5%
 #Pi's
