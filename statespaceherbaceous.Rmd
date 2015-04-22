@@ -2155,16 +2155,24 @@ c4X <- apply(c4mcmc.data[,c4grep.x],2,quantile,c(0.025,0.5,0.975))
 c4grep.py <- grep("py",names(c4mcmc.data))
 c4PY <- apply(c4mcmc.data[,c4grep.py],2,quantile,c(0.025,0.5,0.975))
 
+for(i in 1:36) {
+
+no.year= c(1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14)
+correction = rep.int(1,36)
+plotnumber = seq(from=1,to=36,by=1)
 #plot
-plot(c4.matrix)
+plot(c4.matrix[,i],main = plotnumber[i] , type="b")
+
 #CI's
-lines(years,(c4X[1,]),col=5) #2.5%
-lines(seq1,(c4X[2,]))  #50
-lines(seq1,(c4X[3,]),col=5)  #97.5%
+lines((c4X[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b") #2.5%
+lines((c4X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2,type="b")  #50
+lines((c4X[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b")  #97.5%
 #Pi's
-lines(seq1,(c4PY[1,]),col=3) #2.5%
-lines(seq1,(c4PY[2,]),col=2)  #50
-lines(seq1,(c4PY[3,]),col=3)  #97.5%
+lines((c4PY[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b") #2.5%
+lines((c4PY[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2,type="b")  #50
+lines((c4PY[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b")  #97.5%
+
+}
 
 ```
 
@@ -2172,17 +2180,21 @@ lines(seq1,(c4PY[3,]),col=3)  #97.5%
 c3.fit.norm = "model{
 #priors
 r ~ dnorm(1,0.5)
-tau ~ dgamma(0.05,0.1)
-x[1]~ dnorm(2600,100)
+tau ~ dgamma(0.05,0.1) 
+for (i in 1:36) {
+    x[1,i]~ dnorm(2600,100)
+}
 sigma ~ dgamma(0.1,0.05)
 #process
-  for (i in 2:n) {
-    u[i] <- x[i-1] - r
-    x[i] ~ dnorm(u[i],sigma)
+for (i  in 1:36){     # 36 plots
+  for (t in 2:n) {    #years process model
+    u[t,i] <- x[t-1,i] - r
+    x[t,i] ~ dnorm(u[t,i],sigma)
   }
-  for (t in 1:n){
-    y[t] ~ dnorm(x[t],tau)
-    py[t]~ dnorm(x[t],tau)
+  for (t in 1:n){       #years data model
+    y[t,i] ~ dnorm(x[t,i],tau)
+    py[t,i]~ dnorm(x[t,i],tau)
+}
 }
 }
 "
@@ -2193,7 +2205,7 @@ init.cond1[[2]] = list("r"=1,"sigma"=0.1,"tau"=0.1)
 init.cond1[[3]] = list("r"=5,"sigma"=1,"tau"=1)
 
 
-c3data = list(n=length(c3.total),y=c3.total)
+c3data = list(n=14,y=c3.matrix)
 init = init.cond1
   ## compile JAGS model
   c3.j.model <- jags.model(file = textConnection(c3.fit.norm),
@@ -2203,7 +2215,7 @@ init = init.cond1
   ## burn-in
   c3   <- coda.samples (model = c3.j.model,
                               variable.names = c("r","x","py","sigma","tau"),
-                              n.iter = 20000)
+                              n.iter = 2000)
 
 c3mcmc <- c3
 c3mcmc.data <- as.data.frame(as.matrix(c3mcmc))
