@@ -18,6 +18,7 @@ d.dat=dat.herb[dat.herb$Treatment=="D",]
 tot.w.bm=as.numeric(w.dat$Total.Mass)
 tot.a.bm=as.numeric(a.dat$Total.Mass)
 tot.d.bm=as.numeric(d.dat$Total.Mass)
+tot.bm=as.numeric(dat.herb$Total.Mass)
 ```
 
 #2008 subsetted by season
@@ -1641,13 +1642,16 @@ totd.glm.points=c((tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* d.08.s
 
 ##
 ```{r}
+plot(Total.Mass~Treatment,data=dat.herb)
 treatmentanova=aov(Total.Mass~Treatment,data=dat.herb)
 summary(treatmentanova)
-model.tables(treatmentanova,"means")
+model.tables(treatmentanova,se=TRUE)
+TukeyHSD(treatmentanova, conf.level = 0.95)
 
-treatmentglm=glm(Total.Mass~Treatment,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
-mean((treatmentglm$coefficient[1]+(treatmentglm$coefficient[2]*Total.Mass)^-1),na.rm=TRUE)
-plot(tot.w.bm,(treatmentglm$coefficient[1]-treatmentglm$coefficient[3]*tot.w.bm)^-1)
+treatmentglm=glm(Total.Mass~Treatment*Season,family=Gamma(link="identity"),dat.herb,na.action=na.omit)
+summary(treatmentglm)
+confint(treatmentglm)
+plot(tot.w.bm,(treatmentglm$coefficient[1]+(treatmentglm$coefficient[3]*tot.w.bm)^-1))
 
 ```
 
