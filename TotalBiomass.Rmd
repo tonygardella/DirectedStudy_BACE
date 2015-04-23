@@ -12,11 +12,12 @@ colnames(dat.tree)<-c("ID","species","Plot","subplot","height","d10","init.stem.
 totalmass=as.numeric(dat.tree$tot.mass)
 dat.herb=read.csv("HerbaceousBiomass.csv",header=TRUE)
 years=c("08S", "08F", "09S", "09F", "10S", "10F", "11S", "11F", "12S", "12F", "13S", "13F", "14S", "14F")
-wet.bm=dat.herb[dat.herb$Total.Mass & dat.herb$Treatment=="W"]
-tot.w.bmean=mean()
-tot.a.bmean=
-tot.d.bmean=
-
+w.dat=dat.herb[dat.herb$Treatment=="W",]
+a.dat=dat.herb[dat.herb$Treatment=="A",]
+d.dat=dat.herb[dat.herb$Treatment=="D",]
+tot.w.bm=as.numeric(w.dat$Total.Mass)
+tot.a.bm=as.numeric(a.dat$Total.Mass)
+tot.d.bm=as.numeric(d.dat$Total.Mass)
 ```
 
 #2008 subsetted by season
@@ -1638,17 +1639,16 @@ tota.glm.points=c((tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* a.08.s
 totd.glm.points=c((tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* d.08.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* d.08.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]* d.09.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]* d.09.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]* d.10.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]* d.10.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]* d.11.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]* d.11.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* d.12.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* d.12.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* d.13.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* d.13.fall.mean)^-1)
 ```
 
-##GLM Gamma
-
-
+##
 ```{r}
-wet.glm=glm(w.tot.m~1,Gamma)
-amb.glm=glm(a.tot.m~1,Gamma)
-dry.glm=glm(d.tot.m~1,Gamma)
+treatmentanova=aov(Total.Mass~Treatment,data=dat.herb)
+summary(treatmentanova)
+model.tables(treatmentanova,"means")
 
-wet.glm=glm(w.tot.m~a.tot.m,family=Gamma(inverse))
-amb.glm=glm(a.tot.m~1,Gamma)
-dry.glm=glm(d.tot.m~1,Gamma)
+treatmentglm=glm(Total.Mass~Treatment,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+mean((treatmentglm$coefficient[1]+(treatmentglm$coefficient[2]*Total.Mass)^-1),na.rm=TRUE)
+plot(tot.w.bm,(treatmentglm$coefficient[1]-treatmentglm$coefficient[3]*tot.w.bm)^-1)
+
 ```
 
 Wet GLM Point Estimates 
