@@ -12,6 +12,10 @@ colnames(dat.tree)<-c("ID","species","Plot","subplot","height","d10","init.stem.
 totalmass=as.numeric(dat.tree$tot.mass)
 dat.herb=read.csv("HerbaceousBiomass.csv",header=TRUE)
 years=c("08S", "08F", "09S", "09F", "10S", "10F", "11S", "11F", "12S", "12F", "13S", "13F", "14S", "14F")
+wet.bm=dat.herb[dat.herb$Total.Mass & dat.herb$Treatment=="W"]
+tot.w.bmean=mean()
+tot.a.bmean=
+tot.d.bmean=
 
 ```
 
@@ -21,8 +25,8 @@ years=c("08S", "08F", "09S", "09F", "10S", "10F", "11S", "11F", "12S", "12F", "1
 dat.08=dat.herb[dat.herb$Year==2008,]
 dat.08.fall=dat.08[dat.08$Season=="Fall",]
 dat.08.summ=dat.08[dat.08$Season=="Summer",]
-dat.08.fall.m=as.numeric(dat.08.fall$Total.Mass)
-dat.08.summ.m=as.numeric(dat.08.summ$Total.Mass)
+dat.08.fall.m=as.numeric(dat.08.fall$Total.Mass[1:72])
+dat.08.summ.m=as.numeric(dat.08.summ$Total.Mass[1:72])
 #Means,95% intervals, standarad deviation, 
 dat.08.fall.95=quantile(dat.08.fall.m,c(.05,.95))
 dat.08.summ.95=quantile(dat.08.summ.m,c(.05,.95))
@@ -233,8 +237,8 @@ p36.08.s.m=sum(as.numeric(p36.08.s$Total.Mass))
 dat.09=dat.herb[dat.herb$Year==2009,]
 dat.09.fall=dat.09[dat.09$Season=="Fall",]
 dat.09.summ=dat.09[dat.09$Season=="Summer",]
-dat.09.fall.m=as.numeric(dat.09.fall$Total.Mass)
-dat.09.summ.m=as.numeric(dat.09.summ$Total.Mass)
+dat.09.fall.m=as.numeric(dat.09.fall$Total.Mass[1:72])
+dat.09.summ.m=as.numeric(dat.09.summ$Total.Mass[1:72])
 #Means,95% intervals, standarad deviation, 
 dat.09.fall.95=quantile(dat.09.fall.m,c(.05,.95))
 dat.09.summ.95=quantile(dat.09.summ.m,c(.05,.95))
@@ -448,6 +452,7 @@ dat.10.summ.m=as.numeric(dat.10.summ$Total.Mass)
 #Means,95% intervals, standarad deviation, 
 dat.10.summ.95=quantile(dat.10.summ.m,c(.05,.95))
 dat.10.summ.mean=mean(dat.10.summ.m)
+dat.10.fall.mean=NA
 dat.10.summ.sd=sd(dat.10.summ.m)
 ```
 
@@ -467,15 +472,19 @@ a.10.s.m=as.numeric(a.10.s$Total.Mass[1:24])
 w.10.summ.95=quantile(w.10.s.m,c(.05,.95),na.rm=TRUE)
 w.10.summ.mean=mean(w.10.s.m,na.rm=TRUE)
 w.10.summ.sd=sd(w.10.s.m,na.rm=TRUE)
+w.10.fall.mean=NA
 
 a.10.summ.95=quantile(a.10.s.m,c(.05,.95),na.rm=TRUE)
 a.10.summ.mean=mean(a.10.s.m,na.rm=TRUE)
 a.10.summ.sd=sd(a.10.s.m,na.rm=TRUE)
+a.10.fall.mean=NA
 
 d.10.summ.95=quantile(d.10.s.m,c(.05,.95),na.rm=TRUE)
 d.10.summ.mean=mean(d.10.s.m,na.rm=TRUE)
 d.10.summ.sd=sd(d.10.s.m,na.rm=TRUE)
+d.10.fall.mean=NA
 ```
+
 
 #2010 Herb subsetted by plot
 ```{r}
@@ -1164,7 +1173,7 @@ p36.13.m=as.numeric(p36.13$tot.mass)
 ## 2013 year subsetted by season 
 dat.13=dat.herb[dat.herb$Year==2013,]
 dat.13.fall=dat.13[dat.13$Season=="Fall",]
-dat.13.fall.m=as.numeric(dat.13.fall$Total.Mass)
+dat.13.fall.m=as.numeric(dat.13.fall$Total.Mass[1:72])
 
 #Means,95% intervals, standarad deviation, 
 dat.13.fall.95=quantile(dat.13.fall.m,c(.05,.95))
@@ -1389,6 +1398,8 @@ dat.14.fall.m=as.numeric(dat.14.fall$Total.Mass)
 dat.14.fall.95=quantile(dat.14.fall.m,c(.05,.95))
 dat.14.fall.mean=mean(dat.14.fall.m)
 dat.14.fall.sd=sd(dat.14.fall.m)
+dat.14.summ.m=as.numeric(rep.int(NA,72))
+dat.10.fall.m=as.numeric(rep.int(NA,72))
 ```
 
 ##2014 subsetted by treatment
@@ -1580,40 +1591,57 @@ rownames(AIC.tab)<-year
 
 ```
 
-##GLM 
+##GLM Gamma Autoregression time series
 ```{r}
-totmass.glm=glm(tot.masss~1,Gamma)
 
-tot.08.m=c(dat.08.fall.m,dat.08.summ.m)
-tot.09.m=c(dat.09.fall.m,dat.09.summ.m)
-tot.10.m=c(dat.10.summ.m)
-tot.11.m=c(dat.11.fall.m,dat.11.summ.m)
-tot.12.m=c(dat.12.fall.m)
-tot.13.m=c(dat.13.fall.m,dat.13.summ.m)
-tot.14.m=c(dat.14.fall.m)
-tot.masss=c(tot.08.m,tot.09.m,tot.10.m,tot.11.m,tot.12.m,tot.13.m,tot.14.m)
+tot.08.m=c(dat.08.summ.m,dat.08.fall.m)
+tot.09.m=c(dat.09.summ.m,dat.09.fall.m)
+tot.10.m=c(dat.10.summ.m,dat.10.fall.m)
+tot.11.m=c(dat.11.summ.m,dat.11.fall.m)
+tot.12.m=c(dat.12.summ.m,dat.12.fall.m)
+tot.13.m=c(dat.13.summ.m,dat.13.fall.m)
+tot.14.m=c(dat.14.summ.m,dat.14.fall.m)
 
-tot.0809.glm=glm(tot.08.m~tot.09.m,family=Gamma(inverse))
-tot.0809.summ=summary(tot.0809.glm)
-plot(tot.08.m~tot.09.m)
-seq<-seq(0,160,length=24)
-lines(seq,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*seq)^-1)
-tot0809glmean=mean((tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*seq)^-1)
+tot.mass=c(tot.08.m,tot.09.m,tot.10.m,tot.11.m,tot.12.m,tot.13.m,tot.14.m)
 
-seq2=c(2008,2008.5,2009,2009.5)
-wet.bm.0809=c(w.08.summ.mean,w.08.fall.mean,w.09.summ.mean, w.09.fall.mean)
-plot(seq2,wet.bm.0809,ylab="Wet plot Aboveground BioMass", type="b",ylim=c(0,100))
-points(2008,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*w.08.summ.mean)^-1)
-points(2008.5,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*w.08.fall.mean)^-1)
-points(2009,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*w.09.summ.mean)^-1)
-points(2009.5,(tot.0809.summ$coefficient[1]+tot.0809.summ$coefficient[2]*w.09.fall.mean)^-1)
+tot.glm=glm(tot.13.m~tot.08.m+tot.09.m+tot.10.m+tot.11.m+tot.12.m,family=Gamma(inverse),na.action=na.exclude)
+tot.sum.glm=summary(tot.glm)
+
+seq2=c(2008,2008.5,2009,2009.5,2010,2010.5,2011,2011.5,2012,2012.5,2013,2013.5)
+tot.bm=c(dat.08.summ.mean,dat.08.fall.mean,dat.09.summ.mean,dat.09.fall.mean,dat.10.summ.mean,dat.10.fall.mean,dat.11.summ.mean,dat.11.fall.mean,dat.12.summ.mean,dat.12.fall.mean,dat.13.summ.mean,dat.13.fall.mean)
+plot(seq2,tot.bm,ylab="Wet plot Aboveground BioMass", type="b",ylim=c(0,100))
+points(2008,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]*dat.08.summ.mean)^-1)
+points(2008.5,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]*dat.08.fall.mean)^-1)
+points(2009,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]*dat.09.summ.mean)^-1)
+points(2009.5,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]*dat.09.fall.mean)^-1)
+points(2010,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]*dat.10.summ.mean)^-1)
+points(2010.5,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]*dat.10.fall.mean)^-1)
+points(2011,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]*dat.11.summ.mean)^-1)
+points(2011.5,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]*dat.11.fall.mean)^-1)
+points(2012,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]*dat.12.summ.mean)^-1)
+points(2012.5,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]*dat.12.fall.mean)^-1)
+points(2013,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]*dat.13.summ.mean)^-1)
+points(2013.5,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]*dat.13.fall.mean)^-1)
+
+plot(seq2,tot.bm,ylab="Wet plot Aboveground BioMass", type="b",ylim=c(0,100))
+lines(seq2,tot.glm.points,type="b",col=2)
+lines(seq2,totw.glm.points,type="b",col=3)
+lines(seq2,tota.glm.points,type="b",col=4)
+lines(seq2,totd.glm.points,type="b",col=5)
+
+tot.glm.points=c((tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]*dat.08.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]*dat.08.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]*dat.09.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]*dat.09.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]*dat.10.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]*dat.10.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]*dat.11.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]*dat.11.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]*dat.12.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]*dat.12.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]*dat.13.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]*dat.13.fall.mean)^-1)
+
+totw.glm.points=c((tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* w.08.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* w.08.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]* w.09.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]* w.09.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]* w.10.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]* w.10.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]* w.11.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]* w.11.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* w.12.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* w.12.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* w.13.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* w.13.fall.mean)^-1)
+
+tota.glm.points=c((tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* a.08.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* a.08.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]* a.09.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]* a.09.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]* a.10.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]* a.10.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]* a.11.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]* a.11.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* a.12.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* a.12.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* a.13.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* a.13.fall.mean)^-1)
+
+totd.glm.points=c((tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* d.08.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[2]* d.08.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]* d.09.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[3]* d.09.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]* d.10.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[4]* d.10.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]* d.11.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[5]* d.11.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* d.12.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* d.12.fall.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* d.13.summ.mean)^-1,(tot.sum.glm$coefficient[1]+tot.sum.glm$coefficient[6]* d.13.fall.mean)^-1)
+```
+
+##GLM Gamma
 
 
-estimate bias,test bias of fall vs spring.
-
-
-
-
+```{r}
 wet.glm=glm(w.tot.m~1,Gamma)
 amb.glm=glm(a.tot.m~1,Gamma)
 dry.glm=glm(d.tot.m~1,Gamma)
