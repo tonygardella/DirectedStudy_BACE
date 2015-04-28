@@ -12,7 +12,7 @@ colnames(dat.tree)<-c("ID","species","Plot","subplot","height","d10","init.stem.
 totalmass=as.numeric(dat.tree$tot.mass)
 dat.herb=read.csv("HerbaceousBiomass.csv",header=TRUE)
 years=c("08S", "08F", "09S", "09F", "10S", "10F", "11S", "11F", "12S", "12F", "13S", "13F", "14S", "14F")
-<<<<<<< HEAD
+
 w.dat=dat.herb[dat.herb$Treatment=="W",]
 a.dat=dat.herb[dat.herb$Treatment=="A",]
 d.dat=dat.herb[dat.herb$Treatment=="D",]
@@ -20,9 +20,7 @@ tot.w.bm=as.numeric(w.dat$Total.Mass)
 tot.a.bm=as.numeric(a.dat$Total.Mass)
 tot.d.bm=as.numeric(d.dat$Total.Mass)
 tot.bm=as.numeric(dat.herb$Total.Mass)
-=======
 
->>>>>>> 7653debd9ea95833611be876268b2d12ba0a3eeb
 ```
 
 #2008 subsetted by season
@@ -1625,7 +1623,24 @@ lines(seq2,tot.glm.points,type="b",col=2)
 lines(seq2,totw.glm.points,type="b",col=3)
 lines(seq2,tota.glm.points,type="b",col=4)
 lines(seq2,totd.glm.points,type="b",col=5)
-yfull=year and plot fukk vs each previosly
+
+bi.08.plots=matrix(1:36,ncol=1)
+bi.09.plots=matrix(1:36,ncol=1)
+bi.10.plots=matrix(1:36,ncol=1)
+bi.11.plots=matrix(1:36,ncol=1)
+bi.12.plots=matrix(1:36,ncol=1)
+bi.13.plots=matrix(1:36,ncol=1)
+bi.14.plots=matrix(1:36,ncol=1)
+
+for (i in 1:36){
+bi.08.plots[i]=sum(c(p[i].[08].f$Total.Mass), (p[i]. [08].s$Total.Mass)))/4
+bi.09.plots[i]=sum(c( (p[i].[09].f$Total.Mass), (p[i].[09].s$Total.Mass)))/4
+bi.10.plots[i]=sum( (p[i].[10].s$Total.Mass)))/2
+bi.11.plots[i]=sum(c( (p[i].[11].f$Total.Mass), (p[i].[11].s$Total.Mass)))/4
+bi.12.plots[i]=sum(c( (p[i].[12].f$Total.Mass), (p[i].[12].s$Total.Mass)))/4
+bi.13.plots[i]=sum(c( (p[i].[13].f$Total.Mass), (p[i].[13].s$Total.Mass)))/4
+bi.14.plots[i]=sum( (p[i].[14].f$Total.Mass))/4
+}
 ```
 
 ```{r}
@@ -1636,10 +1651,11 @@ model.tables(treatmentanova,se=TRUE,"means")
 TukeyHSD(treatmentanova, conf.level = 0.95)
 confint(treatmentanova)
 
-treatmentglm=glm(Total.Mass~Treatment,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+treatmentglm=glm(Total.Mass~Treatment+Year+Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 summary(treatmentglm)
 confint(treatmentglm)
 plot(tot.w.bm,(treatmentglm$coefficient[1]+(treatmentglm$coefficient[3]*tot.w.bm)^-1))
+
 ```
 
 ```{r}
