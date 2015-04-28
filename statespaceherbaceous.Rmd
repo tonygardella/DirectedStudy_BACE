@@ -2282,26 +2282,33 @@ dimnames(c4.matrix) = list(c("08S", "08F", "09S", "09F", "10S", "10F", "11S", "1
 c3.matrix = matrix(c(c3.08s,c3.08f,c3.09s,c3.09f,c3.10s,c3.10f,c3.11s,c3.11f,c3.12s,c3.12f,c3.13s,c3.13f,c3.14s,c3.14f),nrow=14,ncol=36,byrow=TRUE)
 dimnames(c3.matrix) = list(c("08S", "08F", "09S", "09F", "10S", "10F", "11S", "11F", "12S", "12F", "13S", "13F", "14S", "14F"),c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36))
 
+dry = c(1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1)
+wet = c(0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0)
+#treatment <- bdry*dry + bwet*wet
 ```
 
 ```{r}
 c4.fit.norm = "model{
 #priors
-r ~ dnorm(1,0.5)
-tau ~ dgamma(0.5,0.5)
+r ~ dnorm(0,0.5)
+tau0 ~ dgamma(0.5,0.5)
+tau1 ~ dgamma(0.5,0.5)
+bdry ~ dnorm(0,0.5)
+bwet ~ dnorm(0,0.5)
 for (i in 1:36) {
-    x[1,i]~ dnorm(0,0.01)
+    x[1,i]~ dlnorm(0,0.01)
 }
 
-sigma ~ dgamma(0.5,0.5)
+sigma ~ dgamma(0.05,0.05)
 #process
   
 for (i  in 1:36){     # 36 plots
   for (t in 2:n) {    #years process model
-    u[t,i] <- x[t-1,i] + r
-    x[t,i] ~ dnorm(u[t,i],sigma)
+    u[t,i] <- log(x[t-1,i]) + r + bdry*dry[i] + bwet*wet[i]
+    x[t,i] ~ dlnorm(u[t,i],sigma)
   }
   for (t in 1:n){       #years data model
+    tau <- tau0 + tau1
     y[t,i] ~ dnorm(x[t,i],tau)
     py[t,i]~ dnorm(x[t,i],tau)
 }
@@ -2310,12 +2317,12 @@ for (i  in 1:36){     # 36 plots
 "
 
 init.cond1 <- list()
-init.cond1[[1]] = list("r"=0.1,"sigma"=0.5,"tau"=0.5)
+init.cond1[[1]] = list("r"=0.1,"sigma"=0.05,"tau"=0.5)
 init.cond1[[2]] = list("r"=1,"sigma"=0.1,"tau"=0.1)
-init.cond1[[3]] = list("r"=5,"sigma"=0.01,"tau"=0.01)
+init.cond1[[3]] = list("r"=0.01,"sigma"=0.01,"tau"=0.01)
 
 
-data = list(n=14,y=c4.matrix)
+data = list(n=14,y=c4.matrix,dry=dry,wet=wet)
 init = init.cond1
   ## compile JAGS model
   c4.j.model <- jags.model(file = textConnection(c4.fit.norm),
@@ -2324,7 +2331,7 @@ init = init.cond1
                            n.chains = 3)
   ## burn-in
   c4   <- coda.samples (model = c4.j.model,
-                              variable.names = c("r","x","py","sigma","tau"),
+                              variable.names = c("r","x","py","sigma","tau","bwet","bdry"),
                               n.iter = 2000)
 
 c4mcmc <- c4
@@ -2335,25 +2342,26 @@ c4X <- apply(c4mcmc.data[,c4grep.x],2,quantile,c(0.025,0.5,0.975))
 c4grep.py <- grep("py",names(c4mcmc.data))
 c4PY <- apply(c4mcmc.data[,c4grep.py],2,quantile,c(0.025,0.5,0.975))
 
+no.year= c(1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14)
+correction = 1
+plotnumber = seq(from=1,to=36,by=1)
+
 for(i in 1:36) {
 
-no.year= c(1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14)
-correction = rep.int(1,36)
-plotnumber = seq(from=1,to=36,by=1)
 #plot
-plot(c4.matrix[,i],main = plotnumber[i] , type="b")
+plot(c4.matrix[,i],main = plotnumber[i] ,ylab="biomass", type="b")
 
 #points((c4X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
 
 #CI's
-lines((c4X[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b") #2.5%
-lines((c4X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
-lines((c4X[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b")  #97.5%
+lines((c4X[1,(no.year[i]*(i-1)+correction):(14*i)]), col=5,type="b") #2.5%
+lines((c4X[2,(no.year[i]*(i-1)+correction):(14*i)]),col=2)  #50
+lines((c4X[3,(no.year[i]*(i-1)+correction):(14*i)]), col=5,type="b")  #97.5%
 
 #Pi's
-lines((c4PY[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b") #2.5%
-lines((c4PY[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2,type="b")  #50
-lines((c4PY[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b")  #97.5%
+lines((c4PY[1,(no.year[i]*(i-1)+correction):(14*i)]), col=3,type="b") #2.5%
+lines((c4PY[2,(no.year[i]*(i-1)+correction):(14*i)]),col=2,type="b")  #50
+lines((c4PY[3,(no.year[i]*(i-1)+correction):(14*i)]), col=3,type="b")  #97.5%
 
 }
 
@@ -2362,19 +2370,19 @@ lines((c4PY[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b")  #97.5%
 ```{r}
 c3.fit.norm = "model{
 #priors
-r ~ dnorm(2,0.5)
-tau ~ dgamma(1,0.005)
+r ~ dnorm(0,0.5)
+tau ~ dgamma(0.5,0.5)
 for (i in 1:36) {
-    x[1,i]~ dnorm(50,10)
+    x[1,i]~ dlnorm(0,0.01)
 }
 
-sigma ~ dgamma(0.5,0.03)
+sigma ~ dgamma(0.05,0.05)
 #process
   
 for (i  in 1:36){     # 36 plots
   for (t in 2:n) {    #years process model
-    u[t,i] <- x[t-1,i] - r
-    x[t,i] ~ dnorm(u[t,i],sigma)
+    u[t,i] <- log(x[t-1,i]) - r 
+    x[t,i] ~ dlnorm(u[t,i],sigma)
   }
   for (t in 1:n){       #years data model
     y[t,i] ~ dnorm(x[t,i],tau)
@@ -2387,7 +2395,7 @@ for (i  in 1:36){     # 36 plots
 init.cond2 <- list()
 init.cond2[[1]] = list("r"=0.1,"sigma"=0.5,"tau"=0.5)
 init.cond2[[2]] = list("r"=1,"sigma"=0.1,"tau"=0.1)
-init.cond2[[3]] = list("r"=5,"sigma"=0.01,"tau"=0.01)
+init.cond2[[3]] = list("r"=0.01,"sigma"=0.01,"tau"=0.01)
 
 
 data2 = list(n=14,y=c3.matrix)
@@ -2412,23 +2420,20 @@ c3PY <- apply(c3mcmc.data[,c3grep.py],2,quantile,c(0.025,0.5,0.975))
 
 for(i in 1:36) {
 
-no.year= c(1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14)
-correction = rep.int(1,36)
-plotnumber = seq(from=1,to=36,by=1)
 #plot
 plot(c3.matrix[,i],main = plotnumber[i] , type="b")
 
 #points((c3X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
 
 #CI's
-lines((c3X[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b") #2.5%
-lines((c3X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
-lines((c3X[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b")  #97.5%
+lines((c3X[1,(no.year[i]*(i-1)+correction):(14*i)]), col=5,type="b") #2.5%
+lines((c3X[2,(no.year[i]*(i-1)+correction):(14*i)]),col=2)  #50
+lines((c3X[3,(no.year[i]*(i-1)+correction):(14*i)]), col=5,type="b")  #97.5%
 
 #Pi's
-lines((c3PY[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b") #2.5%
-lines((c3PY[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2,type="b")  #50
-lines((c3PY[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b")  #97.5%
+lines((c3PY[1,(no.year[i]*(i-1)+correction):(14*i)]), col=3,type="b") #2.5%
+lines((c3PY[2,(no.year[i]*(i-1)+correction):(14*i)]),col=2,type="b")  #50
+lines((c3PY[3,(no.year[i]*(i-1)+correction):(14*i)]), col=3,type="b")  #97.5%
 
 }
 
@@ -2439,5 +2444,164 @@ densityplot(c3mcmc.data$"tau")
 ```
 
 ```
+#heteroskedastic errors
+```{r}
+c4.fit.norm = "model{
+#priors
+r ~ dnorm(0,0.5)
+tau0 ~ dgamma(1.5,1.5)
+tau1 ~ dgamma(1.5,1.5)
+bdry ~ dnorm(0,0.5)
+bwet ~ dnorm(0,0.5)
+for (i in 1:36) {
+    x[1,i]~ dlnorm(0,0.01)
+}
+
+sigma ~ dgamma(0.05,0.05)
+#process
+  
+for (i  in 1:36){     # 36 plots
+  for (t in 2:n) {    #years process model
+    u[t,i] <- log(x[t-1,i]) + r + bdry*dry[i] + bwet*wet[i]
+    x[t,i] ~ dlnorm(u[t,i],sigma)
+  }
+  for (t in 1:n){       #years data model
+    tau[t,i] <- 1/(tau0 + tau1*x[t,i])^2
+    y[t,i] ~ dnorm(x[t,i],tau[t,i])
+    py[t,i]~ dnorm(x[t,i],tau[t,i])
+}
+}
+}
+"
+
+init.cond1 <- list()
+init.cond1[[1]] = list("r"=0.1,"sigma"=0.05,"tau0"=0.5)
+init.cond1[[2]] = list("r"=1,"sigma"=0.1,"tau0"=0.1)
+init.cond1[[3]] = list("r"=0.01,"sigma"=0.01,"tau0"=0.01)
 
 
+data = list(n=14,y=c4.matrix,dry=dry,wet=wet)
+init = init.cond1
+  ## compile JAGS model
+  c4.j.model <- jags.model(file = textConnection(c4.fit.norm),
+                           data = data,
+                           inits = init,
+                           n.chains = 3)
+  ## burn-in
+  c4   <- coda.samples (model = c4.j.model,
+                              variable.names = c("r","x","py","sigma","bwet","bdry","tau0","tau1"),
+                              n.iter = 2000)
+
+c4mcmc <- c4
+c4mcmc.data <- as.data.frame(as.matrix(c4mcmc))
+
+c4grep.x <- grep("x",names(c4mcmc.data))
+c4X <- apply(c4mcmc.data[,c4grep.x],2,quantile,c(0.025,0.5,0.975))
+c4grep.py <- grep("py",names(c4mcmc.data))
+c4PY <- apply(c4mcmc.data[,c4grep.py],2,quantile,c(0.025,0.5,0.975))
+
+no.year= c(1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14)
+correction = 1
+plotnumber = seq(from=1,to=36,by=1)
+
+for(i in 1:36) {
+
+#plot
+plot(c4.matrix[,i],main = plotnumber[i] ,ylab="biomass", type="b")
+
+#points((c4X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
+
+#CI's
+lines((c4X[1,(no.year[i]*(i-1)+correction):(14*i)]), col=5,type="b") #2.5%
+lines((c4X[2,(no.year[i]*(i-1)+correction):(14*i)]),col=2)  #50
+lines((c4X[3,(no.year[i]*(i-1)+correction):(14*i)]), col=5,type="b")  #97.5%
+
+#Pi's
+lines((c4PY[1,(no.year[i]*(i-1)+correction):(14*i)]), col=3,type="b") #2.5%
+lines((c4PY[2,(no.year[i]*(i-1)+correction):(14*i)]),col=2,type="b")  #50
+lines((c4PY[3,(no.year[i]*(i-1)+correction):(14*i)]), col=3,type="b")  #97.5%
+
+}
+
+```
+
+#heteroerrors+seasons+treatment
+```{r}
+c4.fit.norm = "model{
+#priors
+r ~ dnorm(0,0.5)
+tau0 ~ dgamma(1.5,1.5)
+tau1 ~ dgamma(1.5,1.5)
+bdry ~ dnorm(0,0.5)
+bwet ~ dnorm(0,0.5)
+for (i in 1:36) {
+    x[1,i]~ dlnorm(0,0.01)
+}
+
+sigma ~ dgamma(0.05,0.05)
+#process
+  
+for (i  in 1:36){     # 36 plots
+  for (t in 2:n) {    #years process model
+    u[t,i] <- log(x[t-1,i]) + r + bdry*dry[i] + bwet*wet[i]
+    x[t,i] ~ dlnorm(u[t,i],sigma)
+  }
+  for (t in 1:n){       #years data model
+    tau[t,i] <- 1/(tau0 + tau1*x[t,i])^2
+    y[t,i] ~ dnorm(x[t,i],tau[t,i])
+    py[t,i]~ dnorm(x[t,i],tau[t,i])
+}
+}
+}
+"
+
+init.cond1 <- list()
+init.cond1[[1]] = list("r"=0.1,"sigma"=0.05,"tau0"=0.5)
+init.cond1[[2]] = list("r"=1,"sigma"=0.1,"tau0"=0.1)
+init.cond1[[3]] = list("r"=0.01,"sigma"=0.01,"tau0"=0.01)
+
+
+data = list(n=14,y=c4.matrix,dry=dry,wet=wet)
+init = init.cond1
+  ## compile JAGS model
+  c4.j.model <- jags.model(file = textConnection(c4.fit.norm),
+                           data = data,
+                           inits = init,
+                           n.chains = 3)
+  ## burn-in
+  c4   <- coda.samples (model = c4.j.model,
+                              variable.names = c("r","x","py","sigma","bwet","bdry","tau0","tau1"),
+                              n.iter = 2000)
+
+c4mcmc <- c4
+c4mcmc.data <- as.data.frame(as.matrix(c4mcmc))
+
+c4grep.x <- grep("x",names(c4mcmc.data))
+c4X <- apply(c4mcmc.data[,c4grep.x],2,quantile,c(0.025,0.5,0.975))
+c4grep.py <- grep("py",names(c4mcmc.data))
+c4PY <- apply(c4mcmc.data[,c4grep.py],2,quantile,c(0.025,0.5,0.975))
+
+no.year= c(1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14)
+correction = 1
+plotnumber = seq(from=1,to=36,by=1)
+
+for(i in 1:36) {
+
+#plot
+plot(c4.matrix[,i],main = plotnumber[i] ,ylab="biomass", type="b")
+
+#points((c4X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
+
+#CI's
+lines((c4X[1,(no.year[i]*(i-1)+correction):(14*i)]), col=5,type="b") #2.5%
+lines((c4X[2,(no.year[i]*(i-1)+correction):(14*i)]),col=2)  #50
+lines((c4X[3,(no.year[i]*(i-1)+correction):(14*i)]), col=5,type="b")  #97.5%
+
+#Pi's
+lines((c4PY[1,(no.year[i]*(i-1)+correction):(14*i)]), col=3,type="b") #2.5%
+lines((c4PY[2,(no.year[i]*(i-1)+correction):(14*i)]),col=2,type="b")  #50
+lines((c4PY[3,(no.year[i]*(i-1)+correction):(14*i)]), col=3,type="b")  #97.5%
+
+}
+
+```
