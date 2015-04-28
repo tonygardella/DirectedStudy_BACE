@@ -2444,7 +2444,7 @@ densityplot(c3mcmc.data$"tau")
 ```
 
 ```
-#heteroskedastic errors
+#heteroskedastic errors + treatments
 ```{r}
 c4.fit.norm = "model{
 #priors
