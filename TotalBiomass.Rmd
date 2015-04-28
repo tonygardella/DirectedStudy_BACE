@@ -1625,6 +1625,7 @@ lines(seq2,tot.glm.points,type="b",col=2)
 lines(seq2,totw.glm.points,type="b",col=3)
 lines(seq2,tota.glm.points,type="b",col=4)
 lines(seq2,totd.glm.points,type="b",col=5)
+yfull=year and plot fukk vs each previosly
 ```
 
 ```{r}
@@ -1633,8 +1634,9 @@ treatmentanova=aov(Total.Mass~Treatment,data=dat.herb)
 summary(treatmentanova)
 model.tables(treatmentanova,se=TRUE,"means")
 TukeyHSD(treatmentanova, conf.level = 0.95)
+confint(treatmentanova)
 
-treatmentglm=glm(Total.Mass~Treatment*Year,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+treatmentglm=glm(Total.Mass~Treatment,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 summary(treatmentglm)
 confint(treatmentglm)
 plot(tot.w.bm,(treatmentglm$coefficient[1]+(treatmentglm$coefficient[3]*tot.w.bm)^-1))

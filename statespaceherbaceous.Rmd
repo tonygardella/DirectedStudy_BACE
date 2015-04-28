@@ -1500,7 +1500,187 @@ p36.12.f.C3=sum(as.numeric(p36.12.f$C3))
 p36.12.f.Pr=sum(as.numeric(p36.12.f$Perennial))
 p36.12.f.AB=sum(as.numeric(p36.12.f$Annl.Biennial))
 
-#summer use row of NA's
+#summer 
+p1.12.s.C4=sum(as.numeric(p1.12.s$C4))
+p1.12.s.C3=sum(as.numeric(p1.12.s$C3))
+p1.12.s.Pr=sum(as.numeric(p1.12.s$Perennial))
+p1.12.s.AB=sum(as.numeric(p1.12.s$Annl.Biennial))
+
+p2.12.s.C4=sum(as.numeric(p2.12.s$C4))
+p2.12.s.C3=sum(as.numeric(p2.12.s$C3))
+p2.12.s.Pr=sum(as.numeric(p2.12.s$Perennial))
+p2.12.s.AB=sum(as.numeric(p2.12.s$Annl.Biennial))
+
+p3.12.s.C4=sum(as.numeric(p3.12.s$C4))
+p3.12.s.C3=sum(as.numeric(p3.12.s$C3))
+p3.12.s.Pr=sum(as.numeric(p3.12.s$Perennial))
+p3.12.s.AB=sum(as.numeric(p3.12.s$Annl.Biennial))
+
+p4.12.s.C4=sum(as.numeric(p4.12.s$C4))
+p4.12.s.C3=sum(as.numeric(p4.12.s$C3))
+p4.12.s.Pr=sum(as.numeric(p4.12.s$Perennial))
+p4.12.s.AB=sum(as.numeric(p4.12.s$Annl.Biennial))
+
+p5.12.s.C4=sum(as.numeric(p5.12.s$C4))
+p5.12.s.C3=sum(as.numeric(p5.12.s$C3))
+p5.12.s.Pr=sum(as.numeric(p5.12.s$Perennial))
+p5.12.s.AB=sum(as.numeric(p5.12.s$Annl.Biennial))
+
+p6.12.s.C4=sum(as.numeric(p6.12.s$C4))
+p6.12.s.C3=sum(as.numeric(p6.12.s$C3))
+p6.12.s.Pr=sum(as.numeric(p6.12.s$Perennial))
+p6.12.s.AB=sum(as.numeric(p6.12.s$Annl.Biennial))
+
+p7.12.s.C4=sum(as.numeric(p7.12.s$C4))
+p7.12.s.C3=sum(as.numeric(p7.12.s$C3))
+p7.12.s.Pr=sum(as.numeric(p7.12.s$Perennial))
+p7.12.s.AB=sum(as.numeric(p7.12.s$Annl.Biennial))
+
+p8.12.s.C4=sum(as.numeric(p8.12.s$C4))
+p8.12.s.C3=sum(as.numeric(p8.12.s$C3))
+p8.12.s.Pr=sum(as.numeric(p8.12.s$Perennial))
+p8.12.s.AB=sum(as.numeric(p8.12.s$Annl.Biennial))
+
+p9.12.s.C4=sum(as.numeric(p9.12.s$C4))
+p9.12.s.C3=sum(as.numeric(p9.12.s$C3))
+p9.12.s.Pr=sum(as.numeric(p9.12.s$Perennial))
+p9.12.s.AB=sum(as.numeric(p9.12.s$Annl.Biennial))
+
+p10.12.s.C4=sum(as.numeric(p10.12.s$C4))
+p10.12.s.C3=sum(as.numeric(p10.12.s$C3))
+p10.12.s.Pr=sum(as.numeric(p10.12.s$Perennial))
+p10.12.s.AB=sum(as.numeric(p10.12.s$Annl.Biennial))
+
+p11.12.s.C4=sum(as.numeric(p11.12.s$C4))
+p11.12.s.C3=sum(as.numeric(p11.12.s$C3))
+p11.12.s.Pr=sum(as.numeric(p11.12.s$Perennial))
+p11.12.s.AB=sum(as.numeric(p11.12.s$Annl.Biennial))
+
+p12.12.s.C4=sum(as.numeric(p12.12.s$C4))
+p12.12.s.C3=sum(as.numeric(p12.12.s$C3))
+p12.12.s.Pr=sum(as.numeric(p12.12.s$Perennial))
+p12.12.s.AB=sum(as.numeric(p12.12.s$Annl.Biennial))
+
+p13.12.s.C4=sum(as.numeric(p13.12.s$C4))
+p13.12.s.C3=sum(as.numeric(p13.12.s$C3))
+p13.12.s.Pr=sum(as.numeric(p13.12.s$Perennial))
+p13.12.s.AB=sum(as.numeric(p13.12.s$Annl.Biennial))
+
+p14.12.s.C4=sum(as.numeric(p14.12.s$C4))
+p14.12.s.C3=sum(as.numeric(p14.12.s$C3))
+p14.12.s.Pr=sum(as.numeric(p14.12.s$Perennial))
+p14.12.s.AB=sum(as.numeric(p14.12.s$Annl.Biennial))
+
+p15.12.s.C4=sum(as.numeric(p15.12.s$C4))
+p15.12.s.C3=sum(as.numeric(p15.12.s$C3))
+p15.12.s.Pr=sum(as.numeric(p15.12.s$Perennial))
+p15.12.s.AB=sum(as.numeric(p15.12.s$Annl.Biennial))
+
+p16.12.s.C4=sum(as.numeric(p16.12.s$C4))
+p16.12.s.C3=sum(as.numeric(p16.12.s$C3))
+p16.12.s.Pr=sum(as.numeric(p16.12.s$Perennial))
+p16.12.s.AB=sum(as.numeric(p16.12.s$Annl.Biennial))
+
+p17.12.s.C4=sum(as.numeric(p17.12.s$C4))
+p17.12.s.C3=sum(as.numeric(p17.12.s$C3))
+p17.12.s.Pr=sum(as.numeric(p17.12.s$Perennial))
+p17.12.s.AB=sum(as.numeric(p17.12.s$Annl.Biennial))
+
+p18.12.s.C4=sum(as.numeric(p18.12.s$C4))
+p18.12.s.C3=sum(as.numeric(p18.12.s$C3))
+p18.12.s.Pr=sum(as.numeric(p18.12.s$Perennial))
+p18.12.s.AB=sum(as.numeric(p18.12.s$Annl.Biennial))
+
+p19.12.s.C4=sum(as.numeric(p19.12.s$C4))
+p19.12.s.C3=sum(as.numeric(p19.12.s$C3))
+p19.12.s.Pr=sum(as.numeric(p19.12.s$Perennial))
+p19.12.s.AB=sum(as.numeric(p19.12.s$Annl.Biennial))
+
+p20.12.s.C4=sum(as.numeric(p20.12.s$C4))
+p20.12.s.C3=sum(as.numeric(p20.12.s$C3))
+p20.12.s.Pr=sum(as.numeric(p20.12.s$Perennial))
+p20.12.s.AB=sum(as.numeric(p20.12.s$Annl.Biennial))
+
+p21.12.s.C4=sum(as.numeric(p21.12.s$C4))
+p21.12.s.C3=sum(as.numeric(p21.12.s$C3))
+p21.12.s.Pr=sum(as.numeric(p21.12.s$Perennial))
+p21.12.s.AB=sum(as.numeric(p21.12.s$Annl.Biennial))
+
+p22.12.s.C4=sum(as.numeric(p22.12.s$C4))
+p22.12.s.C3=sum(as.numeric(p22.12.s$C3))
+p22.12.s.Pr=sum(as.numeric(p22.12.s$Perennial))
+p22.12.s.AB=sum(as.numeric(p22.12.s$Annl.Biennial))
+
+p23.12.s.C4=sum(as.numeric(p23.12.s$C4))
+p23.12.s.C3=sum(as.numeric(p23.12.s$C3))
+p23.12.s.Pr=sum(as.numeric(p23.12.s$Perennial))
+p23.12.s.AB=sum(as.numeric(p23.12.s$Annl.Biennial))
+
+p24.12.s.C4=sum(as.numeric(p24.12.s$C4))
+p24.12.s.C3=sum(as.numeric(p24.12.s$C3))
+p24.12.s.Pr=sum(as.numeric(p24.12.s$Perennial))
+p24.12.s.AB=sum(as.numeric(p24.12.s$Annl.Biennial))
+
+p25.12.s.C4=sum(as.numeric(p25.12.s$C4))
+p25.12.s.C3=sum(as.numeric(p25.12.s$C3))
+p25.12.s.Pr=sum(as.numeric(p25.12.s$Perennial))
+p25.12.s.AB=sum(as.numeric(p25.12.s$Annl.Biennial))
+
+p26.12.s.C4=sum(as.numeric(p26.12.s$C4))
+p26.12.s.C3=sum(as.numeric(p26.12.s$C3))
+p26.12.s.Pr=sum(as.numeric(p26.12.s$Perennial))
+p26.12.s.AB=sum(as.numeric(p26.12.s$Annl.Biennial))
+
+p27.12.s.C4=sum(as.numeric(p27.12.s$C4))
+p27.12.s.C3=sum(as.numeric(p27.12.s$C3))
+p27.12.s.Pr=sum(as.numeric(p27.12.s$Perennial))
+p27.12.s.AB=sum(as.numeric(p27.12.s$Annl.Biennial))
+
+p28.12.s.C4=sum(as.numeric(p28.12.s$C4))
+p28.12.s.C3=sum(as.numeric(p28.12.s$C3))
+p28.12.s.Pr=sum(as.numeric(p28.12.s$Perennial))
+p28.12.s.AB=sum(as.numeric(p28.12.s$Annl.Biennial))
+
+p29.12.s.C4=sum(as.numeric(p29.12.s$C4))
+p29.12.s.C3=sum(as.numeric(p29.12.s$C3))
+p29.12.s.Pr=sum(as.numeric(p29.12.s$Perennial))
+p29.12.s.AB=sum(as.numeric(p29.12.s$Annl.Biennial))
+
+p30.12.s.C4=sum(as.numeric(p30.12.s$C4))
+p30.12.s.C3=sum(as.numeric(p30.12.s$C3))
+p30.12.s.Pr=sum(as.numeric(p30.12.s$Perennial))
+p30.12.s.AB=sum(as.numeric(p30.12.s$Annl.Biennial))
+
+p31.12.s.C4=sum(as.numeric(p31.12.s$C4))
+p31.12.s.C3=sum(as.numeric(p31.12.s$C3))
+p31.12.s.Pr=sum(as.numeric(p31.12.s$Perennial))
+p31.12.s.AB=sum(as.numeric(p31.12.s$Annl.Biennial))
+
+p32.12.s.C4=sum(as.numeric(p32.12.s$C4))
+p32.12.s.C3=sum(as.numeric(p32.12.s$C3))
+p32.12.s.Pr=sum(as.numeric(p32.12.s$Perennial))
+p32.12.s.AB=sum(as.numeric(p32.12.s$Annl.Biennial))
+
+p33.12.s.C4=sum(as.numeric(p33.12.s$C4))
+p33.12.s.C3=sum(as.numeric(p33.12.s$C3))
+p33.12.s.Pr=sum(as.numeric(p33.12.s$Perennial))
+p33.12.s.AB=sum(as.numeric(p33.12.s$Annl.Biennial))
+
+p34.12.s.C4=sum(as.numeric(p34.12.s$C4))
+p34.12.s.C3=sum(as.numeric(p34.12.s$C3))
+p34.12.s.Pr=sum(as.numeric(p34.12.s$Perennial))
+p34.12.s.AB=sum(as.numeric(p34.12.s$Annl.Biennial))
+
+p35.12.s.C4=sum(as.numeric(p35.12.s$C4))
+p35.12.s.C3=sum(as.numeric(p35.12.s$C3))
+p35.12.s.Pr=sum(as.numeric(p35.12.s$Perennial))
+p35.12.s.AB=sum(as.numeric(p35.12.s$Annl.Biennial))
+
+p36.12.s.C4=sum(as.numeric(p36.12.s$C4))
+p36.12.s.C3=sum(as.numeric(p36.12.s$C3))
+p36.12.s.Pr=sum(as.numeric(p36.12.s$Perennial))
+p36.12.s.AB=sum(as.numeric(p36.12.s$Annl.Biennial))
+
 
 ```
 
@@ -2068,7 +2248,7 @@ c4.10s = c(p1.10.s.C4,p2.10.s.C4,p3.10.s.C4,p4.10.s.C4,p5.10.s.C4,p6.10.s.C4,p7.
 c4.11f = c(p1.11.f.C4,p2.11.f.C4,p3.11.f.C4,p4.11.f.C4,p5.11.f.C4,p6.11.f.C4,p7.11.f.C4,p8.11.f.C4,p9.11.f.C4,p10.11.f.C4,p11.11.f.C4,p12.11.f.C4,p13.11.f.C4,p14.11.f.C4,p15.11.f.C4,p16.11.f.C4,p17.11.f.C4,p18.11.f.C4,p19.11.f.C4,p20.11.f.C4,p21.11.f.C4,p22.11.f.C4,p23.11.f.C4,p24.11.f.C4,p25.11.f.C4,p26.11.f.C4,p27.11.f.C4,p28.11.f.C4,p29.11.f.C4,p30.11.f.C4,p31.11.f.C4,p32.11.f.C4,p33.11.f.C4,p34.11.f.C4,p35.11.f.C4,p36.11.f.C4)
 c4.11s = c(p1.11.s.C4,p2.11.s.C4,p3.11.s.C4,p4.11.s.C4,p5.11.s.C4,p6.11.s.C4,p7.11.s.C4,p8.11.s.C4,p9.11.s.C4,p10.11.s.C4,p11.11.s.C4,p12.11.s.C4,p13.11.s.C4,p14.11.s.C4,p15.11.s.C4,p16.11.s.C4,p17.11.s.C4,p18.11.s.C4,p19.11.s.C4,p20.11.s.C4,p21.11.s.C4,p22.11.s.C4,p23.11.s.C4,p24.11.s.C4,p25.11.s.C4,p26.11.s.C4,p27.11.s.C4,p28.11.s.C4,p29.11.s.C4,p30.11.s.C4,p31.11.s.C4,p32.11.s.C4,p33.11.s.C4,p34.11.s.C4,p35.11.s.C4,p36.11.s.C4)
 c4.12f = c(p1.12.f.C4,p2.12.f.C4,p3.12.f.C4,p4.12.f.C4,p5.12.f.C4,p6.12.f.C4,p7.12.f.C4,p8.12.f.C4,p9.12.f.C4,p10.12.f.C4,p11.12.f.C4,p12.12.f.C4,p13.12.f.C4,p14.12.f.C4,p15.12.f.C4,p16.12.f.C4,p17.12.f.C4,p18.12.f.C4,p19.12.f.C4,p20.12.f.C4,p21.12.f.C4,p22.12.f.C4,p23.12.f.C4,p24.12.f.C4,p25.12.f.C4,p26.12.f.C4,p27.12.f.C4,p28.12.f.C4,p29.12.f.C4,p30.12.f.C4,p31.12.f.C4,p32.12.f.C4,p33.12.f.C4,p34.12.f.C4,p35.12.f.C4,p36.12.f.C4)
-c4.12s = na.vec
+c4.12s = c(p1.12.s.C4,p2.12.s.C4,p3.12.s.C4,p4.12.s.C4,p5.12.s.C4,p6.12.s.C4,p7.12.s.C4,p8.12.s.C4,p9.12.s.C4,p10.12.s.C4,p11.12.s.C4,p12.12.s.C4,p13.12.s.C4,p14.12.s.C4,p15.12.s.C4,p16.12.s.C4,p17.12.s.C4,p18.12.s.C4,p19.12.s.C4,p20.12.s.C4,p21.12.s.C4,p22.12.s.C4,p23.12.s.C4,p24.12.s.C4,p25.12.s.C4,p26.12.s.C4,p27.12.s.C4,p28.12.s.C4,p29.12.s.C4,p30.12.s.C4,p31.12.s.C4,p32.12.s.C4,p33.12.s.C4,p34.12.s.C4,p35.12.s.C4,p36.12.s.C4)
 c4.13f = c(p1.13.f.C4,p2.13.f.C4,p3.13.f.C4,p4.13.f.C4,p5.13.f.C4,p6.13.f.C4,p7.13.f.C4,p8.13.f.C4,p9.13.f.C4,p10.13.f.C4,p11.13.f.C4,p12.13.f.C4,p13.13.f.C4,p14.13.f.C4,p15.13.f.C4,p16.13.f.C4,p17.13.f.C4,p18.13.f.C4,p19.13.f.C4,p20.13.f.C4,p21.13.f.C4,p22.13.f.C4,p23.13.f.C4,p24.13.f.C4,p25.13.f.C4,p26.13.f.C4,p27.13.f.C4,p28.13.f.C4,p29.13.f.C4,p30.13.f.C4,p31.13.f.C4,p32.13.f.C4,p33.13.f.C4,p34.13.f.C4,p35.13.f.C4,p36.13.f.C4)
 c4.13s = c(p1.13.s.C4,p2.13.s.C4,p3.13.s.C4,p4.13.s.C4,p5.13.s.C4,p6.13.s.C4,p7.13.s.C4,p8.13.s.C4,p9.13.s.C4,p10.13.s.C4,p11.13.s.C4,p12.13.s.C4,p13.13.s.C4,p14.13.s.C4,p15.13.s.C4,p16.13.s.C4,p17.13.s.C4,p18.13.s.C4,p19.13.s.C4,p20.13.s.C4,p21.13.s.C4,p22.13.s.C4,p23.13.s.C4,p24.13.s.C4,p25.13.s.C4,p26.13.s.C4,p27.13.s.C4,p28.13.s.C4,p29.13.s.C4,p30.13.s.C4,p31.13.s.C4,p32.13.s.C4,p33.13.s.C4,p34.13.s.C4,p35.13.s.C4,p36.13.s.C4)
 c4.14s = na.vec
@@ -2084,7 +2264,7 @@ c3.10s = c(p1.10.s.C3,p2.10.s.C3,p3.10.s.C3,p4.10.s.C3,p5.10.s.C3,p6.10.s.C3,p7.
 c3.11f = c(p1.11.f.C3,p2.11.f.C3,p3.11.f.C3,p4.11.f.C3,p5.11.f.C3,p6.11.f.C3,p7.11.f.C3,p8.11.f.C3,p9.11.f.C3,p10.11.f.C3,p11.11.f.C3,p12.11.f.C3,p13.11.f.C3,p14.11.f.C3,p15.11.f.C3,p16.11.f.C3,p17.11.f.C3,p18.11.f.C3,p19.11.f.C3,p20.11.f.C3,p21.11.f.C3,p22.11.f.C3,p23.11.f.C3,p24.11.f.C3,p25.11.f.C3,p26.11.f.C3,p27.11.f.C3,p28.11.f.C3,p29.11.f.C3,p30.11.f.C3,p31.11.f.C3,p32.11.f.C3,p33.11.f.C3,p34.11.f.C3,p35.11.f.C3,p36.11.f.C3)
 c3.11s = c(p1.11.s.C3,p2.11.s.C3,p3.11.s.C3,p4.11.s.C3,p5.11.s.C3,p6.11.s.C3,p7.11.s.C3,p8.11.s.C3,p9.11.s.C3,p10.11.s.C3,p11.11.s.C3,p12.11.s.C3,p13.11.s.C3,p14.11.s.C3,p15.11.s.C3,p16.11.s.C3,p17.11.s.C3,p18.11.s.C3,p19.11.s.C3,p20.11.s.C3,p21.11.s.C3,p22.11.s.C3,p23.11.s.C3,p24.11.s.C3,p25.11.s.C3,p26.11.s.C3,p27.11.s.C3,p28.11.s.C3,p29.11.s.C3,p30.11.s.C3,p31.11.s.C3,p32.11.s.C3,p33.11.s.C3,p34.11.s.C3,p35.11.s.C3,p36.11.s.C3)
 c3.12f = c(p1.12.f.C3,p2.12.f.C3,p3.12.f.C3,p4.12.f.C3,p5.12.f.C3,p6.12.f.C3,p7.12.f.C3,p8.12.f.C3,p9.12.f.C3,p10.12.f.C3,p11.12.f.C3,p12.12.f.C3,p13.12.f.C3,p14.12.f.C3,p15.12.f.C3,p16.12.f.C3,p17.12.f.C3,p18.12.f.C3,p19.12.f.C3,p20.12.f.C3,p21.12.f.C3,p22.12.f.C3,p23.12.f.C3,p24.12.f.C3,p25.12.f.C3,p26.12.f.C3,p27.12.f.C3,p28.12.f.C3,p29.12.f.C3,p30.12.f.C3,p31.12.f.C3,p32.12.f.C3,p33.12.f.C3,p34.12.f.C3,p35.12.f.C3,p36.12.f.C3)
-c3.12s = na.vec
+c3.12s = c(p1.12.s.C3,p2.12.s.C3,p3.12.s.C3,p4.12.s.C3,p5.12.s.C3,p6.12.s.C3,p7.12.s.C3,p8.12.s.C3,p9.12.s.C3,p10.12.s.C3,p11.12.s.C3,p12.12.s.C3,p13.12.s.C3,p14.12.s.C3,p15.12.s.C3,p16.12.s.C3,p17.12.s.C3,p18.12.s.C3,p19.12.s.C3,p20.12.s.C3,p21.12.s.C3,p22.12.s.C3,p23.12.s.C3,p24.12.s.C3,p25.12.s.C3,p26.12.s.C3,p27.12.s.C3,p28.12.s.C3,p29.12.s.C3,p30.12.s.C3,p31.12.s.C3,p32.12.s.C3,p33.12.s.C3,p34.12.s.C3,p35.12.s.C3,p36.12.s.C3)
 c3.13f = c(p1.13.f.C3,p2.13.f.C3,p3.13.f.C3,p4.13.f.C3,p5.13.f.C3,p6.13.f.C3,p7.13.f.C3,p8.13.f.C3,p9.13.f.C3,p10.13.f.C3,p11.13.f.C3,p12.13.f.C3,p13.13.f.C3,p14.13.f.C3,p15.13.f.C3,p16.13.f.C3,p17.13.f.C3,p18.13.f.C3,p19.13.f.C3,p20.13.f.C3,p21.13.f.C3,p22.13.f.C3,p23.13.f.C3,p24.13.f.C3,p25.13.f.C3,p26.13.f.C3,p27.13.f.C3,p28.13.f.C3,p29.13.f.C3,p30.13.f.C3,p31.13.f.C3,p32.13.f.C3,p33.13.f.C3,p34.13.f.C3,p35.13.f.C3,p36.13.f.C3)
 c3.13s = c(p1.13.s.C3,p2.13.s.C3,p3.13.s.C3,p4.13.s.C3,p5.13.s.C3,p6.13.s.C3,p7.13.s.C3,p8.13.s.C3,p9.13.s.C3,p10.13.s.C3,p11.13.s.C3,p12.13.s.C3,p13.13.s.C3,p14.13.s.C3,p15.13.s.C3,p16.13.s.C3,p17.13.s.C3,p18.13.s.C3,p19.13.s.C3,p20.13.s.C3,p21.13.s.C3,p22.13.s.C3,p23.13.s.C3,p24.13.s.C3,p25.13.s.C3,p26.13.s.C3,p27.13.s.C3,p28.13.s.C3,p29.13.s.C3,p30.13.s.C3,p31.13.s.C3,p32.13.s.C3,p33.13.s.C3,p34.13.s.C3,p35.13.s.C3,p36.13.s.C3)
 c3.14s = na.vec
@@ -2108,12 +2288,12 @@ dimnames(c3.matrix) = list(c("08S", "08F", "09S", "09F", "10S", "10F", "11S", "1
 c4.fit.norm = "model{
 #priors
 r ~ dnorm(1,0.5)
-tau ~ dgamma(0.05,0.1)
+tau ~ dgamma(0.5,0.5)
 for (i in 1:36) {
     x[1,i]~ dnorm(0,0.01)
 }
 
-sigma ~ dgamma(0.1,0.05)
+sigma ~ dgamma(0.5,0.5)
 #process
   
 for (i  in 1:36){     # 36 plots
@@ -2131,8 +2311,8 @@ for (i  in 1:36){     # 36 plots
 
 init.cond1 <- list()
 init.cond1[[1]] = list("r"=0.1,"sigma"=0.5,"tau"=0.5)
-init.cond1[[2]] = list("r"=1,"sigma"=1,"tau"=1)
-init.cond1[[3]] = list("r"=5,"sigma"=5,"tau"=5)
+init.cond1[[2]] = list("r"=1,"sigma"=0.1,"tau"=0.1)
+init.cond1[[3]] = list("r"=5,"sigma"=0.01,"tau"=0.01)
 
 
 data = list(n=14,y=c4.matrix)
@@ -2163,10 +2343,13 @@ plotnumber = seq(from=1,to=36,by=1)
 #plot
 plot(c4.matrix[,i],main = plotnumber[i] , type="b")
 
+#points((c4X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
+
 #CI's
 lines((c4X[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b") #2.5%
-lines((c4X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2,type="b")  #50
+lines((c4X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
 lines((c4X[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b")  #97.5%
+
 #Pi's
 lines((c4PY[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b") #2.5%
 lines((c4PY[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2,type="b")  #50
@@ -2179,13 +2362,15 @@ lines((c4PY[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b")  #97.5%
 ```{r}
 c3.fit.norm = "model{
 #priors
-r ~ dnorm(1,0.5)
-tau ~ dgamma(0.05,0.1) 
+r ~ dnorm(2,0.5)
+tau ~ dgamma(1,0.005)
 for (i in 1:36) {
-    x[1,i]~ dnorm(2600,100)
+    x[1,i]~ dnorm(50,10)
 }
-sigma ~ dgamma(0.1,0.05)
+
+sigma ~ dgamma(0.5,0.03)
 #process
+  
 for (i  in 1:36){     # 36 plots
   for (t in 2:n) {    #years process model
     u[t,i] <- x[t-1,i] - r
@@ -2199,18 +2384,18 @@ for (i  in 1:36){     # 36 plots
 }
 "
 
-init.cond1 <- list()
-init.cond1[[1]] = list("r"=0.1,"sigma"=0.5,"tau"=0.5)
-init.cond1[[2]] = list("r"=1,"sigma"=0.1,"tau"=0.1)
-init.cond1[[3]] = list("r"=5,"sigma"=1,"tau"=1)
+init.cond2 <- list()
+init.cond2[[1]] = list("r"=0.1,"sigma"=0.5,"tau"=0.5)
+init.cond2[[2]] = list("r"=1,"sigma"=0.1,"tau"=0.1)
+init.cond2[[3]] = list("r"=5,"sigma"=0.01,"tau"=0.01)
 
 
-c3data = list(n=14,y=c3.matrix)
-init = init.cond1
+data2 = list(n=14,y=c3.matrix)
+init2 = init.cond2
   ## compile JAGS model
   c3.j.model <- jags.model(file = textConnection(c3.fit.norm),
-                           data = c3data,
-                           inits = init,
+                           data = data2,
+                           inits = init2,
                            n.chains = 3)
   ## burn-in
   c3   <- coda.samples (model = c3.j.model,
@@ -2225,21 +2410,34 @@ c3X <- apply(c3mcmc.data[,c3grep.x],2,quantile,c(0.025,0.5,0.975))
 c3grep.py <- grep("py",names(c3mcmc.data))
 c3PY <- apply(c3mcmc.data[,c3grep.py],2,quantile,c(0.025,0.5,0.975))
 
+for(i in 1:36) {
+
+no.year= c(1,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14,14)
+correction = rep.int(1,36)
+plotnumber = seq(from=1,to=36,by=1)
 #plot
-plot(seq1,c3.total)
+plot(c3.matrix[,i],main = plotnumber[i] , type="b")
+
+#points((c3X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
+
 #CI's
-lines(seq1,(c3X[1,]),col=5) #2.5%
-lines(seq1,(c3X[2,]))  #50
-lines(seq1,(c3X[3,]),col=5)  #97.5%
+lines((c3X[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b") #2.5%
+lines((c3X[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2)  #50
+lines((c3X[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=5,type="b")  #97.5%
+
 #Pi's
-lines(seq1,(c3PY[1,]),col=3) #2.5%
-lines(seq1,(c3PY[2,]),col=2)  #50
-lines(seq1,(c3PY[3,]),col=3)  #97.5%
+lines((c3PY[1,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b") #2.5%
+lines((c3PY[2,(no.year[i]*(i-1)+correction[i]):(14*i)]),col=2,type="b")  #50
+lines((c3PY[3,(no.year[i]*(i-1)+correction[i]):(14*i)]), col=3,type="b")  #97.5%
+
+}
 
 #densityplots
 
 densityplot(c3mcmc.data$"r")
 densityplot(c3mcmc.data$"tau")
+```
+
 ```
 
 
