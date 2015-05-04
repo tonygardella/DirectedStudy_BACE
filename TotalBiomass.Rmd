@@ -20,6 +20,16 @@ tot.w.bm=as.numeric(w.dat$Total.Mass)
 tot.a.bm=as.numeric(a.dat$Total.Mass)
 tot.d.bm=as.numeric(d.dat$Total.Mass)
 tot.bm=as.numeric(dat.herb$Total.Mass)
+w.mean=mean(tot.w.bm,na.rm=TRUE)
+a.mean=mean(tot.a.bm,na.rm=TRUE)
+d.mean=mean(tot.d.bm,na.rm=TRUE)
+
+summer.dat=dat.herb[dat.herb$Season=="Fall",]
+fall.dat=dat.herb[dat.herb$Season=="Summer",]
+tot.fall.bm=as.numeric(fall.dat$Total.Mass)
+tot.summer.bm=as.numeric(summer.dat$Total.Mass)
+fall.mean=mean(tot.fall.bm,na.rm=TRUE)
+summer.mean=mean(tot.summer.bm,na.rm=TRUE)
 
 ```
 
@@ -1650,11 +1660,47 @@ summary(treatmentanova)
 model.tables(treatmentanova,se=TRUE,"means")
 TukeyHSD(treatmentanova, conf.level = 0.95)
 confint(treatmentanova)
+------------------------------------------------
+treatmentglm=glm(Total.Mass~Treatment,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+seasonglm=glm(Total.Mass~Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+yearglm=glm(Total.Mass~Year,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 
-treatmentglm=glm(Total.Mass~Treatment+Year+Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
-summary(treatmentglm)
-confint(treatmentglm)
-plot(tot.w.bm,(treatmentglm$coefficient[1]+(treatmentglm$coefficient[3]*tot.w.bm)^-1))
+treatseasonglm=glm(Total.Mass~Treatment*Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+treatyearglm=glm(Total.Mass~Treatment*Year,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+------------------------------------------------
+treatglm.summ=summary(treatmentglm)
+seasonglm.summ=summary(seasonglm)
+year.glm=summary(yearglm)
+treatseason.glm=summary(treatseasonglm)
+treatyear.glm=summary(treatyearglm)
+-------------------------------------------------------------------------------
+treatment.bm=data.frame(tot.w.bm,tot.d.bm,tot.a.bm)
+treatment.bm.melt=melt(treatment.bm)
+ggplot2.boxplot(data=treatment.bm.melt,xName='variable',yName='value',addMean=TRUE)
+                
+
+
+  
+  
+-------------------------------------------------------------------------------
+treatmentglm.summ=summary(treatmentglm)
+boxplot(tot.w.bm,tot.d.bm,tot.a.bm)
+lines(1,(1/treatmentglm.summ$coefficient[1])+(1/(treatmentglm.summ$coefficient[2]*w.mean)),col=2)
+lines(2,(1/treatmentglm.summ$coefficient[1])+(1/(treatmentglm.summ$coefficient[3]*d.mean)),col=2)
+lines(3,(1/treatmentglm.summ$coefficient[1])+(1/(treatmentglm.summ$coefficient[1]*d.mean)),col=2)
+--------------------------------------------------
+seasonglm.summ=summary.glm(seasonglm)
+boxplot(tot.fall.bm,tot.summer.bm)
+points(1,(1/seasonglm.summ$coefficient[1])+(1/(seasonglm.summ$coefficient[1]*w.mean)),col=2)
+points(2,(1/seasonglm.summ$coefficient[1])+(1/(seasonglm.summ$coefficient[2]*d.mean)),col=2)
+-----------------------------------------------------
+yearglm=glm(Total.Mass~Year,family=Gamma(link="inverse"),dat.08,na.action=na.omit)
+summary(yearglm)
+
+------------------------------------------------------------
+
+
+
 
 ```
 
