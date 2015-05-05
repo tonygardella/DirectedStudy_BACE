@@ -13,6 +13,8 @@ totalmass=as.numeric(dat.tree$tot.mass)
 dat.herb=read.csv("HerbaceousBiomass.csv",header=TRUE)
 years=c("08S", "08F", "09S", "09F", "10S", "10F", "11S", "11F", "12S", "12F", "13S", "13F", "14S", "14F")
 
+tot.herb.mass=mean(as.numeric(dat.herb$Total.Mass))
+
 w.dat=dat.herb[dat.herb$Treatment=="W",]
 a.dat=dat.herb[dat.herb$Treatment=="A",]
 d.dat=dat.herb[dat.herb$Treatment=="D",]
@@ -24,6 +26,26 @@ w.mean=mean(tot.w.bm,na.rm=TRUE)
 a.mean=mean(tot.a.bm,na.rm=TRUE)
 d.mean=mean(tot.d.bm,na.rm=TRUE)
 
+w.fall.dat=w.dat[w.dat$Season == "Fall",]
+w.summer.dat=w.dat[w.dat$Season == "Summer",]
+a.fall.dat=a.dat[a.dat$Season == "Fall",]
+a.summer.dat=a.dat[a.dat$Season == "Summer",]
+d.fall.dat=d.dat[a.dat$Season == "Fall",]
+d.summer.dat=d.dat[a.dat$Season == "Summer",]
+tot.w.fall.bm=as.numeric(w.fall.dat$Total.Mass)
+tot.w.summer.bm=as.numeric(w.summer.dat$Total.Mass)
+tot.a.fall.bm=as.numeric(a.fall.dat$Total.Mass)
+tot.a.summer.bm=as.numeric(a.summer.dat$Total.Mass)
+tot.d.fall.bm=as.numeric(d.fall.dat$Total.Mass)
+tot.d.summer.bm=as.numeric(d.summer.dat$Total.Mass)
+
+w.fall.m=mean(tot.w.fall.bm,na.rm=TRUE)
+w.summer.m=mean(tot.w.summer.bm,na.rm=TRUE)
+a.fall.m=mean(tot.a.fall.bm,na.rm=TRUE)
+a.summer.m=mean(tot.a.summer.bm,na.rm=TRUE)
+d.fall.m=mean(tot.d.fall.bm,na.rm=TRUE)
+d.summer.m=mean(tot.d.summer.bm,na.rm=TRUE)
+
 summer.dat=dat.herb[dat.herb$Season=="Fall",]
 fall.dat=dat.herb[dat.herb$Season=="Summer",]
 tot.fall.bm=as.numeric(fall.dat$Total.Mass)
@@ -31,6 +53,29 @@ tot.summer.bm=as.numeric(summer.dat$Total.Mass)
 fall.mean=mean(tot.fall.bm,na.rm=TRUE)
 summer.mean=mean(tot.summer.bm,na.rm=TRUE)
 
+dat.08=dat.herb[dat.herb$Year==2008,]
+dat.09=dat.herb[dat.herb$Year==2009,]
+dat.10=dat.herb[dat.herb$Year==2010,]
+dat.11=dat.herb[dat.herb$Year==2011,]
+dat.12=dat.herb[dat.herb$Year==2012,]
+dat.13=dat.herb[dat.herb$Year==2013,]
+dat.14=dat.herb[dat.herb$Year==2014,]
+
+bm.08=as.numeric(dat.08$Total.Mass)
+bm.09=as.numeric(dat.09$Total.Mass)
+bm.10=as.numeric(dat.10$Total.Mass)
+bm.11=as.numeric(dat.11$Total.Mass)
+bm.12=as.numeric(dat.12$Total.Mass)
+bm.13=as.numeric(dat.13$Total.Mass)
+bm.14=as.numeric(dat.14$Total.Mass)
+
+bm.08.mean=mean(bm.08)
+bm.09.mean=mean(bm.09)
+bm.10.mean=mean(bm.10)
+bm.11.mean=mean(bm.11)
+bm.12.mean=mean(bm.12)
+bm.13.mean=mean(bm.13)
+bm.14.mean=mean(bm.14)
 ```
 
 #2008 subsetted by season
@@ -1663,45 +1708,56 @@ confint(treatmentanova)
 ------------------------------------------------
 treatmentglm=glm(Total.Mass~Treatment,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 seasonglm=glm(Total.Mass~Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
-yearglm=glm(Total.Mass~Year,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+yearglm=glm(Total.Mass~as.factor(Year),family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 
 treatseasonglm=glm(Total.Mass~Treatment*Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 treatyearglm=glm(Total.Mass~Treatment*Year,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+treatseasyearglm=glm(Total.Mass~Treatment*Year*Season, family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+
 ------------------------------------------------
 treatglm.summ=summary(treatmentglm)
 seasonglm.summ=summary(seasonglm)
-year.glm=summary(yearglm)
-treatseason.glm=summary(treatseasonglm)
-treatyear.glm=summary(treatyearglm)
+yearglm.summ=summary(yearglm)
+treatseasonglm.summ=summary(treatseasonglm)
+treatyearglm.summ=summary(treatyearglm)
+treatseasonyearglm.summ=summary(treatseasyearglm)
 -------------------------------------------------------------------------------
-treatment.bm=data.frame(tot.w.bm,tot.d.bm,tot.a.bm)
-treatment.bm.melt=melt(treatment.bm)
-ggplot2.boxplot(data=treatment.bm.melt,xName='variable',yName='value',addMean=TRUE)
-                
-
-
-  
-  
--------------------------------------------------------------------------------
-treatmentglm.summ=summary(treatmentglm)
-boxplot(tot.w.bm,tot.d.bm,tot.a.bm)
-lines(1,(1/treatmentglm.summ$coefficient[1])+(1/(treatmentglm.summ$coefficient[2]*w.mean)),col=2)
-lines(2,(1/treatmentglm.summ$coefficient[1])+(1/(treatmentglm.summ$coefficient[3]*d.mean)),col=2)
-lines(3,(1/treatmentglm.summ$coefficient[1])+(1/(treatmentglm.summ$coefficient[1]*d.mean)),col=2)
+tb = coef(treatmentglm)
+t.est = tb[1]
+for(i in 2:length(tb))t.est[i] =b[1]+b[i]
+t.est = 1/t.est                                   
+treatbplot<-barplot(c(w.mean,d.mean,a.mean))
+lines(treatbplot,t.est,col=2)
+points(treatbplot,t.est,col=2)
 --------------------------------------------------
-seasonglm.summ=summary.glm(seasonglm)
-boxplot(tot.fall.bm,tot.summer.bm)
-points(1,(1/seasonglm.summ$coefficient[1])+(1/(seasonglm.summ$coefficient[1]*w.mean)),col=2)
-points(2,(1/seasonglm.summ$coefficient[1])+(1/(seasonglm.summ$coefficient[2]*d.mean)),col=2)
+sb = coef(seasonglm)
+s.est = tb[1]
+for(i in 2:length(sb))s.est[i] =b[1]+b[i]
+t.est = 1/t.est
+points(seasonbplot,season.est,col=2)
+lines(seasonbplot,season.est,col=2)
 -----------------------------------------------------
-yearglm=glm(Total.Mass~Year,family=Gamma(link="inverse"),dat.08,na.action=na.omit)
-summary(yearglm)
+b = coef(yearglm)
+year.est = b[1]
+for(i in 2:length(b))year.est[i] =b[1]+b[i]
+year.est = 1/year.est
 
+yearbplot<-barplot(c(bm.08.mean,bm.09.mean,bm.10.mean,bm.11.mean,bm.12.mean,bm.13.mean,bm.14.mean))
+points(yearbplot,year.est)
+lines(yearbplot,year.est)
 ------------------------------------------------------------
+tsb = coef(treatseasonglm)
+ts.est = c(tsb[1]+tsb[3]+tsb[4]+tsb[6],tsb[1]+tsb[4],tsb[1]+tsb[2]+tsb[5],tsb[1]+tsb[3],tsb[1],tsb[1]+tsb[2])
+ts.est = 1/ts.est
+treatmentseason=matrix(c( w.summer.m,a.summer.m,d.summer.m,w.fall.m,a.fall.m,d.fall.m),ncol=2)
+tsbplot<-barplot(treatmentseason,beside=TRUE)
+points(tsbplot,ts.est)
+lines(tsbplot,ts.est)
+-------------------------------------------------------------
+tsyb = coef(treatseasyearglm)
+tsyb.est = c()
 
-
-
-
+tsymatrix=matrix(c())
 ```
 
 ```{r}
