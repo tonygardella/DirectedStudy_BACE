@@ -76,6 +76,24 @@ bm.11.mean=mean(bm.11)
 bm.12.mean=mean(bm.12)
 bm.13.mean=mean(bm.13)
 bm.14.mean=mean(bm.14)
+
+ys.dat.08=dat.08[dat.08$Season == "Summer",]
+yf.dat.08=dat.08[dat.08$Season == "Fall",]
+ys.dat.09=dat.09[dat.09$Season == "Summer",]
+yf.dat.09=dat.09[dat.09$Season == "Fall",]
+ys.dat.10=dat.10[dat.10$Season == "Summer",]
+yf.dat.10=rep(NA,each=78)
+ys.dat.11=dat.11[dat.11$Season == "Summer",]
+yf.dat.11=dat.11[dat.11$Season == "Fall",]
+ys.dat.12=dat.12[dat.12$Season == "Summer",]
+yf.dat.12=dat.12[dat.12$Season == "Fall",]
+ys.dat.13=dat.13[dat.13$Season == "Summer",]
+yf.dat.13=dat.13[dat.13$Season == "Fall",]
+ys.dat.14=rep(NA,each=78)
+yf.dat.14=dat.14[dat.14$Season == "Fall",]
+
+ys.bm.08=
+
 ```
 
 #2008 subsetted by season
