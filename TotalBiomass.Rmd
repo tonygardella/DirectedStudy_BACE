@@ -1785,7 +1785,7 @@ points(tsbplot,ts.est)
 lines(tsbplot,ts.est)
 -------------------------------------------------------------
 tsyb = coef(treatseasyearglm)
-array(tsyb)
+tsyb=data.frame(tsyb)
 tsyb.est = c(tsyb)
 
 tsymatrix=matrix(c(ys.bmm.08,yf.bmm.08,ys.bmm.09,yf.bmm.09,ys.bmm.10
