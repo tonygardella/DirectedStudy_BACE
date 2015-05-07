@@ -92,8 +92,20 @@ yf.dat.13=dat.13[dat.13$Season == "Fall",]
 ys.dat.14=rep(NA,each=78)
 yf.dat.14=dat.14[dat.14$Season == "Fall",]
 
-ys.bm.08=
-
+ys.bmm.08=mean(as.numeric(ys.dat.08$Total.Mass),na.rm=TRUE)
+yf.bmm.08=mean(as.numeric(yf.dat.08$Total.Mass),na.rm=TRUE)
+ys.bmm.09=mean(as.numeric(ys.dat.09$Total.Mass),na.rm=TRUE)
+yf.bmm.09=mean(as.numeric(yf.dat.09$Total.Mass),na.rm=TRUE)
+ys.bmm.10=mean(as.numeric(ys.dat.10$Total.Mass),na.rm=TRUE)
+yf.bmm.10=NA
+ys.bmm.11=mean(as.numeric(ys.dat.11$Total.Mass),na.rm=TRUE)
+yf.bmm.11=mean(as.numeric(yf.dat.11$Total.Mass),na.rm=TRUE)
+ys.bmm.12=mean(as.numeric(ys.dat.12$Total.Mass),na.rm=TRUE)
+yf.bmm.12=mean(as.numeric(yf.dat.12$Total.Mass),na.rm=TRUE)
+ys.bmm.13=mean(as.numeric(ys.dat.13$Total.Mass),na.rm=TRUE)
+yf.bmm.13=mean(as.numeric(yf.dat.13$Total.Mass),na.rm=TRUE)
+ys.bmm.14=NA
+yf.bmm.14=mean(as.numeric(yf.dat.14$Total.Mass),na.rm=TRUE)
 ```
 
 #2008 subsetted by season
@@ -1730,7 +1742,7 @@ yearglm=glm(Total.Mass~as.factor(Year),family=Gamma(link="inverse"),dat.herb,na.
 
 treatseasonglm=glm(Total.Mass~Treatment*Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 treatyearglm=glm(Total.Mass~Treatment*Year,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
-treatseasyearglm=glm(Total.Mass~Treatment*Year*Season, family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+treatseasyearglm=glm(Total.Mass~Treatment*as.factor(Year)*Season, family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 
 ------------------------------------------------
 treatglm.summ=summary(treatmentglm)
@@ -1773,9 +1785,12 @@ points(tsbplot,ts.est)
 lines(tsbplot,ts.est)
 -------------------------------------------------------------
 tsyb = coef(treatseasyearglm)
-tsyb.est = c()
+array(tsyb)
+tsyb.est = c(tsyb)
 
-tsymatrix=matrix(c())
+tsymatrix=matrix(c(ys.bmm.08,yf.bmm.08,ys.bmm.09,yf.bmm.09,ys.bmm.10
+,yf.bmm.10,ys.bmm.11,yf.bmm.11,ys.bmm.12,yf.bmm.12,ys.bmm.13,yf.bmm.13,ys.bmm.14,yf.bmm.14),ncol=7)
+
 ```
 
 ```{r}
