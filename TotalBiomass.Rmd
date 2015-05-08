@@ -108,6 +108,13 @@ ys.bmm.14=NA
 yf.bmm.14=mean(as.numeric(yf.dat.14$Total.Mass),na.rm=TRUE)
 ```
 
+# histograms of biomass by plot
+```{r}
+hist(tot.w.bm,breaks=30,main="Wet Plots",xlab="Biomass (g)", col="blue")
+hist(tot.a.bm,breaks=30,main="Ambient Plots",xlab="Biomass (g)",col="green")
+hist(tot.d.bm,breaks=30,main="Dry Plots",xlab="Biomass (g)",col="red")
+hist(tot.bm,breaks=30,main="All Plots",xlab="Biomass (g)",col="white")
+```  
 #2008 subsetted by season
 ```{r}
 ## 2008 year subsetted by season 
@@ -1755,36 +1762,29 @@ tsyaic=treatseasonyearglm.summ$aic
 aic.model.matrix=matrix(c(taic,saic,yaic,tsaic,tyaic,tsyaic),ncol=1)
 #####################################################
 tb = coef(treatmentglm)
-t.est =c(tb[1]+tb[3],tb[1],tb[1]+tb[2])
-t.est = 1/t.est                                   
-treatbplot<-barplot(c(w.mean,a.mean,d.mean),ylim=c(0,80),col=c("blue","green","red"),main="Total Aboveground Biomass in each Treatment",xlab="Treatment",legend.text=TRUE, names.arg=c("Wet", "Ambient", "Dry"))
-legend("topright",c("Wet","Ambient","Dry","Estimate"),col=c("blue","green","red","black"),pch=c(15,15,15,2))
-lines(treatbplot,t.est,col="black")
-points(treatbplot,t.est,col="black",pch=2)
-#######################################################
-sb = coef(seasonglm)
-s.est = c(sb[1],sb[1]+sb[2])
-s.est = 1/s.est
-seasonbplot=barplot(c(summer.mean,fall.mean),ylim=c(0,70),col=c("yellow","brown"),main="Aboveground Biomass Season",xlab ="Season")
-legend("topleft",c("Summer","Fall","Estimate"),col=c("yellow","brown","black"),pch=c(15,15,2))
-points(seasonbplot,s.est,col="black",pch=2)
-lines(seasonbplot,s.est,col="black")
-#######################################################
-b = coef(yearglm)
-year.est = b[1]
-for(i in 2:length(b))year.est[i] =b[1]+b[i]
-year.est = 1/year.est
-yearbplot<-barplot(c(bm.08.mean,bm.09.mean,bm.10.mean,bm.11.mean,bm.12.mean,bm.13.mean,bm.14.mean),names.arg=c(2008,2009,2010,2011,2012,2013,2014),xlab="Year",ylim=c(0,100))
-points(yearbplot,year.est)
-lines(yearbplot,year.est)
+t.est.w =(tb[1]+tb[3])
+t.est.w=1/t.est.w
+t.est.d = (tb[1]+tb[2])  
+t.est.d=1/t.est.d
+
+treatbplot<-barplot(a.mean,ylim=c(0,80),col="green",main="Treatment GLM Estimate",ylab="Biomass(g)",legend.text=TRUE, names.arg="Ambient",width=0.5,xlim=c(0,0.75))
+legend("topright",c("Wet Estimate","Dry Estimate"),col=c("blue","red"),pch=c(15,17))
+points(treatbplot,t.est.w,col="blue",pch=15,cex=2)
+points(treatbplot,t.est.d,col="red",pch=17,cex=2)
+
 #########################################################
 tsb = coef(treatseasonglm)
-ts.est = c(tsb[1]+tsb[3]+tsb[4]+tsb[6],tsb[1]+tsb[4],tsb[1]+tsb[2]+tsb[5],tsb[1]+tsb[3],tsb[1],tsb[1]+tsb[2])
-ts.est = 1/ts.est
-treatmentseason=matrix(c( w.summer.m,a.summer.m,d.summer.m,w.fall.m,a.fall.m,d.fall.m),ncol=2)
-tsbplot<-barplot(treatmentseason,beside=TRUE,xlab="Season",names.arg=c("Summer","Fall"),col=c(4,3,2,4,3,2),)
-points(tsbplot,ts.est)
-lines(tsbplot,ts.est)
+ts.est.w =c(tsb[1]+tsb[3]+tsb[4]+tsb[6],tsb[1]+tsb[3])
+ts.est.w=1/ts.est.w
+ts.est.a= c(tsb[1]+tsb[4],tsb[1])
+ts.est.a=1/ts.est.a
+ts.est.d=c(tsb[1]+tsb[2]+tsb[5],tsb[1]+tsb[2])
+ts.est.d = 1/ts.est.d
+treatmentseason=matrix(c( a.summer.m,a.fall.m),ncol=2)
+tsbplot<-barplot(treatmentseason,beside=TRUE,ylab="Biomass (g)",names.arg=c("Summer","Fall"),col=c(3,3),main="Treatment/Season Interaction GLM Estimate",ylim=c(0,80),xlab="Ambient")
+legend("topright",c("Wet Estimate","Dry Estimate"),col=c("blue","red"),pch=c(15,17))
+points(tsbplot,ts.est.w,col="blue",pch=15,cex=2)
+points(tsbplot,ts.est.d,col="red",pch=17,cex=2)
 ########################################################
 tyb = coef(treatyearglm)
 data.frame(tyb)
@@ -1797,28 +1797,28 @@ ty.est.d= c(tyb[1]+tyb[2],tyb[1]+tyb[2]+tyb[4]+tyb[10],tyb[1]+tyb[2]+tyb[5]+tyb[
 ty.est.d = 1/ty.est.d 
 treatmentyear=c( bm.08.mean,bm.09.mean,bm.10.mean,bm.11.mean,bm.12.mean,bm.13.mean,bm.14.mean)
 years=c(2008,2009,2010,2011,2012,2013,2014)
-tybplot<-barplot(treatmentyear,names.arg=years,ylim=c(0,100))
-points(tybplot,ty.est.w,col=4)
-lines(tybplot,ty.est.w,col=4)
-points(tybplot,ty.est.a,col=3)
-lines(tybplot,ty.est.a,col=3)
-points(tybplot,ty.est.d,col=2)
-lines(tybplot,ty.est.d,col=2)
+tybplot<-barplot(treatmentyear,names.arg=years,ylim=c(0,110),ylab="Biomass(g)",main="Treatment/Year Interaction GLM Estimate",xlab="Year")
+legend("topleft",c("Wet Estimate","Ambient Estimate","Dry Estimate"),col=c("blue","green","red"),pch=c(15,16,17))
+points(tybplot,ty.est.w,col="blue",pch=15)
+lines(tybplot,ty.est.w,col="blue",pch=15)
+points(tybplot,ty.est.a,col="green",pch=16)
+lines(tybplot,ty.est.a,col="green",pch=16)
+points(tybplot,ty.est.d,col="red",pch=17)
+lines(tybplot,ty.est.d,col="red",pch=17)
 ##########################################################
 tsyb = coef(treatseasyearglm)
 data.frame(tsyb)
-tsyb.est.w = c(tsyb[1]+tsyb[3]+tsyb[10]+tsyb[24],tsyb[1]+tsyb[3],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[10]+tsyb[12]+tsyb[24]+tsyb[25]+tsyb[32],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[12],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[10]+tsyb[14]+tsyb[24]+tsyb[26]+tsyb[34],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[14],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[10]+tsyb[16]+tsyb[24]+tsyb[27]+tsyb[36],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[16],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[10]+tsyb[18]+tsyb[24]+tsyb[28]+tsyb[38],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[18],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[10]+tsyb[20]+tsyb[24]+tsyb[29]+tsyb[40],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[20],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[10]+tsyb[22]+tsyb[24]+tsyb[30]+tsyb[42],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[22])
+tsyb.est.w = c(tsyb[1]+tsyb[3]+tsyb[10]+tsyb[24],tsyb[1]+tsyb[3],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[10]+tsyb[12]+tsyb[24]+tsyb[25]+tsyb[32],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[12],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[10]+tsyb[14]+tsyb[24],NA,tsyb[1]+tsyb[3]+tsyb[6]+tsyb[10]+tsyb[16]+tsyb[24]+tsyb[27]+tsyb[36],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[16],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[10]+tsyb[18]+tsyb[24]+tsyb[28]+tsyb[38],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[18],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[10]+tsyb[20]+tsyb[24]+tsyb[29]+tsyb[40],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[20],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[10]+tsyb[22]+tsyb[24]+tsyb[30]+tsyb[42],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[22])
 tsyb.est.w= 1/tsyb.est.w
 
-tsyb.est.a = c(tsyb[1]+tsyb[10],tsyb[1],tsyb[1]+tsyb[4]+tsyb[10]+tsyb[25],tsyb[1]+tsyb[4],tsyb[1]+tsyb[5]+tsyb[10]+tsyb[26],tsyb[1]+tsyb[5],tsyb[1]+tsyb[6]+tsyb[10]+tsyb[27],tsyb[1]+tsyb[6],tsyb[1]+tsyb[7]+tsyb[10]+tsyb[28],tsyb[1]+tsyb[7],tsyb[1]+tsyb[8]+tsyb[10]+tsyb[29],tsyb[1]+tsyb[8],tsyb[1]+tsyb[9]+tsyb[10]+tsyb[30],tsyb[1]+tsyb[9])
+tsyb.est.a = c(tsyb[1]+tsyb[10],tsyb[1],tsyb[1]+tsyb[4]+tsyb[10]+tsyb[25],tsyb[1]+tsyb[4],tsyb[1]+tsyb[5]+tsyb[10],tsyb[1]+tsyb[5],NA,tsyb[1]+tsyb[6],tsyb[1]+tsyb[7]+tsyb[10]+tsyb[28],tsyb[1]+tsyb[7],tsyb[1]+tsyb[8]+tsyb[10]+tsyb[29],tsyb[1]+tsyb[8],tsyb[1]+tsyb[9]+tsyb[10]+tsyb[30],tsyb[1]+tsyb[9])
 tsyb.est.a= 1/tsyb.est.a
 
-tsyb.est.d =c(tsyb[1]+tsyb[2]+tsyb[10]+tsyb[23],tsyb[1]+tsyb[2],tsyb[1]+tsyb[2]+tsyb[4]+tsyb[10]+tsyb[11]+tsyb[23]+tsyb[25]+tsyb[31],tsyb[1]+tsyb[2]+tsyb[4]+tsyb[11],tsyb[1]+tsyb[2]+tsyb[5]+tsyb[10]+tsyb[13]+tsyb[23]+tsyb[26]+tsyb[33],
-tsyb[1]+tsyb[2]+tsyb[5]+tsyb[13],tsyb[1]+tsyb[2]+tsyb[6]+tsyb[10]+tsyb[15]+tsyb[23]+tsyb[27]+tsyb[34],tsyb[1]+tsyb[2]+tsyb[6]+tsyb[15],tsyb[1]+tsyb[2]+tsyb[7]+tsyb[10]+tsyb[17]+tsyb[23]+tsyb[28]+tsyb[35],tsyb[1]+tsyb[2]+tsyb[7]+tsyb[17],tsyb[1]+tsyb[2]+tsyb[8]+tsyb[10]+tsyb[19]+tsyb[23]+tsyb[29]+tsyb[39],tsyb[1]+tsyb[2]+tsyb[8]+tsyb[19],tsyb[1]+tsyb[2]+tsyb[9]+tsyb[10]+tsyb[21]+tsyb[23]+tsyb[30]+tsyb[41],tsyb[1]+tsyb[2]+tsyb[9]+tsyb[21])
+tsyb.est.d =c(tsyb[1]+tsyb[2]+tsyb[10]+tsyb[23],tsyb[1]+tsyb[2],tsyb[1]+tsyb[2]+tsyb[4]+tsyb[10]+tsyb[11]+tsyb[23]+tsyb[25]+tsyb[31],tsyb[1]+tsyb[2]+tsyb[4]+tsyb[11],tsyb[1]+tsyb[2]+tsyb[5]+tsyb[10]+tsyb[13]+tsyb[23],tsyb[1]+tsyb[2]+tsyb[5]+tsyb[13],tsyb[1]+tsyb[2]+tsyb[6]+tsyb[10]+tsyb[15]+tsyb[23]+tsyb[27]+tsyb[34],tsyb[1]+tsyb[2]+tsyb[6]+tsyb[15],tsyb[1]+tsyb[2]+tsyb[7]+tsyb[10]+tsyb[17]+tsyb[23]+tsyb[28]+tsyb[35],tsyb[1]+tsyb[2]+tsyb[7]+tsyb[17],tsyb[1]+tsyb[2]+tsyb[8]+tsyb[10]+tsyb[19]+tsyb[23]+tsyb[29]+tsyb[39],tsyb[1]+tsyb[2]+tsyb[8]+tsyb[19],tsyb[1]+tsyb[2]+tsyb[9]+tsyb[10]+tsyb[21]+tsyb[23]+tsyb[30]+tsyb[41],tsyb[1]+tsyb[2]+tsyb[9]+tsyb[21])
 tsyb.est.d= 1/tsyb.est.d
 
 tsymatrix=matrix(c(ys.bmm.08,yf.bmm.08,ys.bmm.09,yf.bmm.09,ys.bmm.10
-,yf.bmm.10,ys.bmm.11,yf.bmm.11,ys.bmm.12,yf.bmm.12,ys.bmm.13,yf.bmm.13,ys.bmm.14,yf.bmm.14),ncol=7)
+,NA,ys.bmm.11,yf.bmm.11,ys.bmm.12,yf.bmm.12,ys.bmm.13,yf.bmm.13,NA,yf.bmm.14),ncol=7)
 tsyplot=barplot(tsymatrix,beside=TRUE,ylim=c(0,120))
 points(tsyplot,tsyb.est.w,col=2)
 lines(tsyplot,tsyb.est.w,col=2)
@@ -1826,6 +1826,7 @@ points(tsyplot,tsyb.est.a,col=3)
 lines(tsyplot,tsyb.est.a,col=3)
 points(tsyplot,tsyb.est.d,col=4)
 lines(tsyplot,tsyb.est.d,col=4)
+tsyb.est.d
 
 ```
 
@@ -1868,6 +1869,23 @@ a.int=c(d.08.summ.95,a.08.fall.95,a.09.summ.95,a.09.fall.95,NA,NA,NA,a.11.fall.9
 summary.data=c(years,m.bm,standev.m)
 
 summary.table=matrix(summary.data,nrow=14,ncol=4,byrow=FALSE,)
+
+#######################################################
+sb = coef(seasonglm)
+s.est = c(sb[1],sb[1]+sb[2])
+s.est = 1/s.est
+seasonbplot=barplot(c(summer.mean,fall.mean),ylim=c(0,70),col=c("yellow","brown"),main="Aboveground Biomass Season",xlab ="Season")
+legend("topleft",c("Summer","Fall","Estimate"),col=c("yellow","brown","black"),pch=c(15,15,2))
+points(seasonbplot,s.est,col="black",pch=2)
+lines(seasonbplot,s.est,col="black")
+#######################################################
+b = coef(yearglm)
+year.est = b[1]
+for(i in 2:length(b))year.est[i] =b[1]+b[i]
+year.est = 1/year.est
+yearbplot<-barplot(c(bm.08.mean,bm.09.mean,bm.10.mean,bm.11.mean,bm.12.mean,bm.13.mean,bm.14.mean),names.arg=c(2008,2009,2010,2011,2012,2013,2014),xlab="Year",ylim=c(0,100))
+points(yearbplot,year.est)
+lines(yearbplot,year.est)
 ```
 
 ### FunctionalGroup/Plot 
