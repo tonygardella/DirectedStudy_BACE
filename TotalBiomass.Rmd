@@ -1731,54 +1731,80 @@ bi.14.plots[i]=sum( (p[i].[14].f$Total.Mass))/4
 ```{r}
 ------------------------------------------------
 treatmentglm=glm(Total.Mass~Treatment,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+
 seasonglm=glm(Total.Mass~Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 yearglm=glm(Total.Mass~as.factor(Year),family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 
 treatseasonglm=glm(Total.Mass~Treatment*Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
-treatyearglm=glm(Total.Mass~Treatment*Year,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
+treatyearglm=glm(Total.Mass~Treatment*as.factor(Year),family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 treatseasyearglm=glm(Total.Mass~Treatment*as.factor(Year)*Season, family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 
-------------------------------------------------
+#####################################################
 treatglm.summ=summary(treatmentglm)
 seasonglm.summ=summary(seasonglm)
 yearglm.summ=summary(yearglm)
 treatseasonglm.summ=summary(treatseasonglm)
 treatyearglm.summ=summary(treatyearglm)
 treatseasonyearglm.summ=summary(treatseasyearglm)
--------------------------------------------------------------------------------
+taic=treatglm.summ$aic
+saic=seasonglm.summ$aic
+yaic=yearglm.summ$aic
+tsaic=treatseasonglm.summ$aic
+tyaic=treatyearglm.summ$aic
+tsyaic=treatseasonyearglm.summ$aic
+aic.model.matrix=matrix(c(taic,saic,yaic,tsaic,tyaic,tsyaic),ncol=1)
+#####################################################
 tb = coef(treatmentglm)
-t.est = tb[1]
-for(i in 2:length(tb))t.est[i] =b[1]+b[i]
+t.est =c(tb[1]+tb[3],tb[1],tb[1]+tb[2])
 t.est = 1/t.est                                   
-treatbplot<-barplot2(c(w.mean,d.mean,a.mean),ylim=c(0,80))
-lines(treatbplot,t.est,col=2)
-points(treatbplot,t.est,col=2)
---------------------------------------------------
+treatbplot<-barplot(c(w.mean,a.mean,d.mean),ylim=c(0,80),col=c("blue","green","red"),main="Total Aboveground Biomass in each Treatment",xlab="Treatment",legend.text=TRUE, names.arg=c("Wet", "Ambient", "Dry"))
+legend("topright",c("Wet","Ambient","Dry","Estimate"),col=c("blue","green","red","black"),pch=c(15,15,15,2))
+lines(treatbplot,t.est,col="black")
+points(treatbplot,t.est,col="black",pch=2)
+#######################################################
 sb = coef(seasonglm)
-s.est = sb[1]
-for(i in 2:length(sb))s.est[i] =b[1]+b[i]
+s.est = c(sb[1],sb[1]+sb[2])
 s.est = 1/s.est
-seasonbplot=barplot(c(fall.mean,summer.mean))
-points(seasonbplot,season.est,col=2)
-lines(seasonbplot,season.est,col=2)
------------------------------------------------------
+seasonbplot=barplot(c(summer.mean,fall.mean),ylim=c(0,70),col=c("yellow","brown"),main="Aboveground Biomass Season",xlab ="Season")
+legend("topleft",c("Summer","Fall","Estimate"),col=c("yellow","brown","black"),pch=c(15,15,2))
+points(seasonbplot,s.est,col="black",pch=2)
+lines(seasonbplot,s.est,col="black")
+#######################################################
 b = coef(yearglm)
 year.est = b[1]
 for(i in 2:length(b))year.est[i] =b[1]+b[i]
 year.est = 1/year.est
-
-yearbplot<-barplot(c(bm.08.mean,bm.09.mean,bm.10.mean,bm.11.mean,bm.12.mean,bm.13.mean,bm.14.mean))
+yearbplot<-barplot(c(bm.08.mean,bm.09.mean,bm.10.mean,bm.11.mean,bm.12.mean,bm.13.mean,bm.14.mean),names.arg=c(2008,2009,2010,2011,2012,2013,2014),xlab="Year",ylim=c(0,100))
 points(yearbplot,year.est)
 lines(yearbplot,year.est)
-------------------------------------------------------------
+#########################################################
 tsb = coef(treatseasonglm)
 ts.est = c(tsb[1]+tsb[3]+tsb[4]+tsb[6],tsb[1]+tsb[4],tsb[1]+tsb[2]+tsb[5],tsb[1]+tsb[3],tsb[1],tsb[1]+tsb[2])
 ts.est = 1/ts.est
 treatmentseason=matrix(c( w.summer.m,a.summer.m,d.summer.m,w.fall.m,a.fall.m,d.fall.m),ncol=2)
-tsbplot<-barplot(treatmentseason,beside=TRUE)
+tsbplot<-barplot(treatmentseason,beside=TRUE,xlab="Season",names.arg=c("Summer","Fall"),col=c(4,3,2,4,3,2),)
 points(tsbplot,ts.est)
 lines(tsbplot,ts.est)
--------------------------------------------------------------
+########################################################
+tyb = coef(treatyearglm)
+data.frame(tyb)
+ty.est.w = c(tyb[1]+tyb[3],tyb[1]+tyb[3]+tyb[4]+tyb[11],tyb[1]+tyb[3]+tyb[5]+tyb[13],tyb[1]+tyb[3]+tyb[6]+tyb[15],tyb[1]+tyb[3]+tyb[7]+tyb[17],tyb[1]+tyb[3]+tyb[8]+tyb[19],tyb[1]+tyb[3]+tyb[9]+tyb[21])
+ty.est.w = 1/ty.est.w 
+
+ty.est.a= c(tyb[1],tyb[1]+tyb[4],tyb[1]+tyb[5],tyb[1]+tyb[6],tyb[1]+tyb[7],tyb[1]+tyb[8],tyb[1]+tyb[9])
+ty.est.a= 1/ty.est.a
+ty.est.d= c(tyb[1]+tyb[2],tyb[1]+tyb[2]+tyb[4]+tyb[10],tyb[1]+tyb[2]+tyb[5]+tyb[12],tyb[1]+tyb[2]+tyb[6]+tyb[14],tyb[1]+tyb[2]+tyb[7]+tyb[16],tyb[1]+tyb[2]+tyb[8]+tyb[18],tyb[1]+tyb[2]+tyb[9]+tyb[20])
+ty.est.d = 1/ty.est.d 
+treatmentyear=c( bm.08.mean,bm.09.mean,bm.10.mean,bm.11.mean,bm.12.mean,bm.13.mean,bm.14.mean)
+years=c(2008,2009,2010,2011,2012,2013,2014)
+tybplot<-barplot(treatmentyear,names.arg=years,ylim=c(0,100))
+points(tybplot,ty.est.w,col=4)
+lines(tybplot,ty.est.w,col=4)
+points(tybplot,ty.est.a,col=3)
+lines(tybplot,ty.est.a,col=3)
+points(tybplot,ty.est.d,col=2)
+lines(tybplot,ty.est.d,col=2)
+##########################################################
 tsyb = coef(treatseasyearglm)
 data.frame(tsyb)
 tsyb.est.w = c(tsyb[1]+tsyb[3]+tsyb[10]+tsyb[24],tsyb[1]+tsyb[3],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[10]+tsyb[12]+tsyb[24]+tsyb[25]+tsyb[32],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[12],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[10]+tsyb[14]+tsyb[24]+tsyb[26]+tsyb[34],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[14],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[10]+tsyb[16]+tsyb[24]+tsyb[27]+tsyb[36],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[16],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[10]+tsyb[18]+tsyb[24]+tsyb[28]+tsyb[38],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[18],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[10]+tsyb[20]+tsyb[24]+tsyb[29]+tsyb[40],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[20],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[10]+tsyb[22]+tsyb[24]+tsyb[30]+tsyb[42],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[22])
