@@ -1729,12 +1729,6 @@ bi.14.plots[i]=sum( (p[i].[14].f$Total.Mass))/4
 ```
 
 ```{r}
-plot(Total.Mass~Treatment,data=dat.herb)
-treatmentanova=aov(Total.Mass~Treatment,data=dat.herb)
-summary(treatmentanova)
-model.tables(treatmentanova,se=TRUE,"means")
-TukeyHSD(treatmentanova, conf.level = 0.95)
-confint(treatmentanova)
 ------------------------------------------------
 treatmentglm=glm(Total.Mass~Treatment,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
 seasonglm=glm(Total.Mass~Season,family=Gamma(link="inverse"),dat.herb,na.action=na.omit)
@@ -1756,14 +1750,15 @@ tb = coef(treatmentglm)
 t.est = tb[1]
 for(i in 2:length(tb))t.est[i] =b[1]+b[i]
 t.est = 1/t.est                                   
-treatbplot<-barplot(c(w.mean,d.mean,a.mean))
+treatbplot<-barplot2(c(w.mean,d.mean,a.mean),ylim=c(0,80))
 lines(treatbplot,t.est,col=2)
 points(treatbplot,t.est,col=2)
 --------------------------------------------------
 sb = coef(seasonglm)
-s.est = tb[1]
+s.est = sb[1]
 for(i in 2:length(sb))s.est[i] =b[1]+b[i]
-t.est = 1/t.est
+s.est = 1/s.est
+seasonbplot=barplot(c(fall.mean,summer.mean))
 points(seasonbplot,season.est,col=2)
 lines(seasonbplot,season.est,col=2)
 -----------------------------------------------------
@@ -1785,8 +1780,8 @@ points(tsbplot,ts.est)
 lines(tsbplot,ts.est)
 -------------------------------------------------------------
 tsyb = coef(treatseasyearglm)
-tsyb.est.w = c(tsyb[1]+tsyb[3]+tsyb[10]+tsyb[24],
-tsyb[1]+tsyb[3],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[10]+tsyb[12]+tsyb[24]+tsyb[25]+tsyb[32],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[12],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[10]+tsyb[14]+tsyb[24]+tsyb[26]+tsyb[34],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[14],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[10]+tsyb[16]+tsyb[24]+tsyb[27]+tsyb[36],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[16],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[10]+tsyb[18]+tsyb[24]+tsyb[28]+tsyb[38],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[18],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[10]+tsyb[20]+tsyb[24]+tsyb[29]+tsyb[40],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[20],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[10]+tsyb[22]+tsyb[24]+tsyb[30]+tsyb[42],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[22])
+data.frame(tsyb)
+tsyb.est.w = c(tsyb[1]+tsyb[3]+tsyb[10]+tsyb[24],tsyb[1]+tsyb[3],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[10]+tsyb[12]+tsyb[24]+tsyb[25]+tsyb[32],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[12],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[10]+tsyb[14]+tsyb[24]+tsyb[26]+tsyb[34],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[14],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[10]+tsyb[16]+tsyb[24]+tsyb[27]+tsyb[36],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[16],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[10]+tsyb[18]+tsyb[24]+tsyb[28]+tsyb[38],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[18],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[10]+tsyb[20]+tsyb[24]+tsyb[29]+tsyb[40],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[20],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[10]+tsyb[22]+tsyb[24]+tsyb[30]+tsyb[42],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[22])
 tsyb.est.w= 1/tsyb.est.w
 
 tsyb.est.a = c(tsyb[1]+tsyb[10],tsyb[1],tsyb[1]+tsyb[4]+tsyb[10]+tsyb[25],tsyb[1]+tsyb[4],tsyb[1]+tsyb[5]+tsyb[10]+tsyb[26],tsyb[1]+tsyb[5],tsyb[1]+tsyb[6]+tsyb[10]+tsyb[27],tsyb[1]+tsyb[6],tsyb[1]+tsyb[7]+tsyb[10]+tsyb[28],tsyb[1]+tsyb[7],tsyb[1]+tsyb[8]+tsyb[10]+tsyb[29],tsyb[1]+tsyb[8],tsyb[1]+tsyb[9]+tsyb[10]+tsyb[30],tsyb[1]+tsyb[9])
@@ -1807,92 +1802,6 @@ points(tsyplot,tsyb.est.d,col=4)
 lines(tsyplot,tsyb.est.d,col=4)
 
 ```
-
-```{r}
-wet.glm=glm(w.tot.m~1,Gamma)
-amb.glm=glm(a.tot.m~1,Gamma)
-dry.glm=glm(d.tot.m~1,Gamma)
-
-
-wet.glm=glm(w.tot.m~a.tot.m,family=Gamma(inverse))
-amb.glm=glm(a.tot.m~1,Gamma)
-dry.glm=glm(d.tot.m~1,Gamma)
-```
-
-Wet GLM Point Estimates 
-```{r}
-w.08.f.glm=glm(w.08.f.m~w.08.s.m,family=Gamma(inverse))
-w08fsumm=summary(w.08.f.glm)
-plot(w.08.f.m~w.08.s.m)
-seq<-seq(0,105,length=24)
-lines(seq,(w08fsumm$coefficient[1]+w08fsumm$coefficient[2]*seq)^-1)
-w08fglmean=mean((w08fsumm$coefficient[1]+w08fsumm$coefficient[2]*seq)^-1)
-
-w.09.s.glm=glm(w.09.s.m~w.08.f.m,family=Gamma(inverse))
-w09ssumm=summary(w.09.s.glm)
-plot(w.09.s.m~w.08.f.m)
-seq<-seq(0,50,length=24)
-lines(seq,(w09ssumm$coefficient[1]+w09ssumm$coefficient[2]*seq)^-1)
-w09sglmean=mean((w09ssumm$coefficient[1]+w09ssumm$coefficient[2]*seq)^-1)
-
-w.09.f.glm=glm(w.09.f.m~w.09.s.m,family=Gamma(inverse))
-w09fsumm=summary(w.09.f.glm)
-plot(w.09.f.m~w.09.s.m)
-seq<-seq(0,45,length=24)
-lines(seq,(w09fsumm$coefficient[1]+w09fsumm$coefficient[2]*seq)^-1)
-w09fglmean=mean((w09fsumm$coefficient[1]+w09fsumm$coefficient[2]*seq)^-1)
-
-w.10.s.glm=glm(w.10.s.m~w.09.f.m,family=Gamma(inverse))
-w10ssumm=summary(w.10.s.glm)
-plot(w.10.s.m~w.09.f.m)
-seq<-seq(0,155,length=24)
-lines(seq,(w10ssumm$coefficient[1]+w10ssumm$coefficient[2]*seq)^-1)
-w10sglmean=mean((w10ssumm$coefficient[1]+w10ssumm$coefficient[2]*seq)^-1)
-
-w.11.s.glm=glm(w.11.s.m~w.10.s.m,family=Gamma(inverse))
-w11ssumm=summary(w.11.s.glm)
-plot(w.11.s.m~w.10.s.m)
-seq<-seq(0,180,length=24)
-lines(seq,(w11ssumm$coefficient[1]+w11ssumm$coefficient[2]*seq)^-1)
-w11sglmean=mean((w11ssumm$coefficient[1]+w11ssumm$coefficient[2]*seq)^-1)
-
-w.11.f.glm=glm(w.11.f.m~w.11.s.m,family=Gamma(inverse))
-w11fsumm=summary(w.11.f.glm)
-plot(w.11.f.m~w.11.s.m)
-seq<-seq(0,105,length=24)
-lines(seq,(w11fsumm$coefficient[1]+w11fsumm$coefficient[2]*seq)^-1)
-w11fglmean=mean((w11fsumm$coefficient[1]+w11fsumm$coefficient[2]*seq)^-1)
-
-w.12.f.glm=glm(w.12.f.m~w.11.f.m,family=Gamma(inverse))
-w12fsumm=summary(w.12.f.glm)
-plot(w.12.f.m~w.11.f.m)
-seq<-seq(0,370,length=24)
-lines(seq,(w12fsumm$coefficient[1]+w12fsumm$coefficient[2]*seq)^-1)
-w12fglmean=mean((w12fsumm$coefficient[1]+w12fsumm$coefficient[2]*seq)^-1)
-
-w.13.f.glm=glm(w.13.f.m~w.12.f.m,family=Gamma(inverse))
-w13fsumm=summary(w.13.f.glm)
-plot(w.13.f.m~w.12.f.m)
-seq<-seq(0,120,length=24)
-lines(seq,(w13fsumm$coefficient[1]+w13fsumm$coefficient[2]*seq)^-1)
-w13fglmean=mean((w13fsumm$coefficient[1]+w13fsumm$coefficient[2]*seq)^-1)
-
-w.14.f.glm=glm(w.14.f.m~w.13.f.m,family=Gamma(inverse))
-w14fsumm=summary(w.14.f.glm)
-plot(w.14.f.m~w.13.f.m)
-seq<-seq(0,60,length=24)
-lines(seq,(w14fsumm$coefficient[1]+w14fsumm$coefficient[2]*seq)^-1)
-w14fglmean=mean((w14fsumm$coefficient[1]+w14fsumm$coefficient[2]*seq)^-1)
-
-wetglmeans=c(NA,w08fglmean,w09sglmean,w09fglmean,w10sglmean,NA,w11sglmean,w11fglmean,NA,w12fglmean,NA,w13fglmean,NA,w14fglmean)
-plot(seq1,wet.m.bm,ylab="Wet plot Aboveground BioMass", type="b",ylim=c(0,150))
-points(seq1,wetglmeans,col=2)
-
-
-
-```
-
-
 
 ```{r}
 years=c(1:14)
