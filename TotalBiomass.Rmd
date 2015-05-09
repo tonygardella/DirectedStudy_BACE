@@ -1811,22 +1811,23 @@ data.frame(tsyb)
 tsyb.est.w = c(tsyb[1]+tsyb[3]+tsyb[10]+tsyb[24],tsyb[1]+tsyb[3],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[10]+tsyb[12]+tsyb[24]+tsyb[25]+tsyb[32],tsyb[1]+tsyb[3]+tsyb[4]+tsyb[12],tsyb[1]+tsyb[3]+tsyb[5]+tsyb[10]+tsyb[14]+tsyb[24],NA,tsyb[1]+tsyb[3]+tsyb[6]+tsyb[10]+tsyb[16]+tsyb[24]+tsyb[27]+tsyb[36],tsyb[1]+tsyb[3]+tsyb[6]+tsyb[16],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[10]+tsyb[18]+tsyb[24]+tsyb[28]+tsyb[38],tsyb[1]+tsyb[3]+tsyb[7]+tsyb[18],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[10]+tsyb[20]+tsyb[24]+tsyb[29]+tsyb[40],tsyb[1]+tsyb[3]+tsyb[8]+tsyb[20],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[10]+tsyb[22]+tsyb[24]+tsyb[30]+tsyb[42],tsyb[1]+tsyb[3]+tsyb[9]+tsyb[22])
 tsyb.est.w= 1/tsyb.est.w
 
-tsyb.est.a = c(tsyb[1]+tsyb[10],tsyb[1],tsyb[1]+tsyb[4]+tsyb[10]+tsyb[25],tsyb[1]+tsyb[4],tsyb[1]+tsyb[5]+tsyb[10],tsyb[1]+tsyb[5],NA,tsyb[1]+tsyb[6],tsyb[1]+tsyb[7]+tsyb[10]+tsyb[28],tsyb[1]+tsyb[7],tsyb[1]+tsyb[8]+tsyb[10]+tsyb[29],tsyb[1]+tsyb[8],tsyb[1]+tsyb[9]+tsyb[10]+tsyb[30],tsyb[1]+tsyb[9])
+tsyb.est.a = c(tsyb[1]+tsyb[10],tsyb[1],tsyb[1]+tsyb[4]+tsyb[10]+tsyb[25],tsyb[1]+tsyb[4],tsyb[1]+tsyb[5]+tsyb[10],NA,tsyb[1]+tsyb[6]+tsyb[10]+tsyb[27],tsyb[1]+tsyb[6],tsyb[1]+tsyb[7]+tsyb[10]+tsyb[28],tsyb[1]+tsyb[7],tsyb[1]+tsyb[8]+tsyb[10]+tsyb[29],tsyb[1]+tsyb[8],tsyb[1]+tsyb[9]+tsyb[10]+tsyb[30],tsyb[1]+tsyb[9])
 tsyb.est.a= 1/tsyb.est.a
 
-tsyb.est.d =c(tsyb[1]+tsyb[2]+tsyb[10]+tsyb[23],tsyb[1]+tsyb[2],tsyb[1]+tsyb[2]+tsyb[4]+tsyb[10]+tsyb[11]+tsyb[23]+tsyb[25]+tsyb[31],tsyb[1]+tsyb[2]+tsyb[4]+tsyb[11],tsyb[1]+tsyb[2]+tsyb[5]+tsyb[10]+tsyb[13]+tsyb[23],tsyb[1]+tsyb[2]+tsyb[5]+tsyb[13],tsyb[1]+tsyb[2]+tsyb[6]+tsyb[10]+tsyb[15]+tsyb[23]+tsyb[27]+tsyb[34],tsyb[1]+tsyb[2]+tsyb[6]+tsyb[15],tsyb[1]+tsyb[2]+tsyb[7]+tsyb[10]+tsyb[17]+tsyb[23]+tsyb[28]+tsyb[35],tsyb[1]+tsyb[2]+tsyb[7]+tsyb[17],tsyb[1]+tsyb[2]+tsyb[8]+tsyb[10]+tsyb[19]+tsyb[23]+tsyb[29]+tsyb[39],tsyb[1]+tsyb[2]+tsyb[8]+tsyb[19],tsyb[1]+tsyb[2]+tsyb[9]+tsyb[10]+tsyb[21]+tsyb[23]+tsyb[30]+tsyb[41],tsyb[1]+tsyb[2]+tsyb[9]+tsyb[21])
+tsyb.est.d =c(tsyb[1]+tsyb[2]+tsyb[10]+tsyb[23],tsyb[1]+tsyb[2],tsyb[1]+tsyb[2]+tsyb[4]+tsyb[10]+tsyb[11]+tsyb[23]+tsyb[25]+tsyb[31],tsyb[1]+tsyb[2]+tsyb[4]+tsyb[11],tsyb[1]+tsyb[2]+tsyb[5]+tsyb[10]+tsyb[13]+tsyb[23],NA,tsyb[1]+tsyb[2]+tsyb[6]+tsyb[10]+tsyb[15]+tsyb[23]+tsyb[27],tsyb[1]+tsyb[2]+tsyb[6]+tsyb[15],tsyb[1]+tsyb[2]+tsyb[7]+tsyb[10]+tsyb[17]+tsyb[23]+tsyb[28]+tsyb[37],tsyb[1]+tsyb[2]+tsyb[7]+tsyb[17],tsyb[1]+tsyb[2]+tsyb[8]+tsyb[10]+tsyb[19]+tsyb[23]+tsyb[29]+tsyb[39],tsyb[1]+tsyb[2]+tsyb[8]+tsyb[19],tsyb[1]+tsyb[2]+tsyb[9]+tsyb[10]+tsyb[21]+tsyb[23]+tsyb[30]+tsyb[41],tsyb[1]+tsyb[2]+tsyb[9]+tsyb[21])
 tsyb.est.d= 1/tsyb.est.d
 
 tsymatrix=matrix(c(ys.bmm.08,yf.bmm.08,ys.bmm.09,yf.bmm.09,ys.bmm.10
 ,NA,ys.bmm.11,yf.bmm.11,ys.bmm.12,yf.bmm.12,ys.bmm.13,yf.bmm.13,NA,yf.bmm.14),ncol=7)
-tsyplot=barplot(tsymatrix,beside=TRUE,ylim=c(0,120))
-points(tsyplot,tsyb.est.w,col=2)
-lines(tsyplot,tsyb.est.w,col=2)
-points(tsyplot,tsyb.est.a,col=3)
-lines(tsyplot,tsyb.est.a,col=3)
-points(tsyplot,tsyb.est.d,col=4)
-lines(tsyplot,tsyb.est.d,col=4)
-tsyb.est.d
+tsyplot=barplot(tsymatrix,beside=TRUE,ylim=c(0,160),main="Treatment/Season/Year Interaction GLM Estimate",names.arg=c("S","F","S","F","S","F","S","F","S","F","S","F","S","F"),xlab="Years 2008-2014",ylab="Biomass (g)")
+legend("topleft",c("Wet Estimate","Ambient Estimate","Dry Estimate"),col=c("blue","green","red"),pch=c(15,16,17))
+points(tsyplot,tsyb.est.w,col="blue",pch=15)
+lines(tsyplot,tsyb.est.w,col="blue",pch=15)
+points(tsyplot,tsyb.est.a,col="green",pch=16)
+lines(tsyplot,tsyb.est.a,col="green",pch=16)
+points(tsyplot,tsyb.est.d,col="red",pch=17)
+lines(tsyplot,tsyb.est.d,col="red",pch=17)
+
 
 ```
 
